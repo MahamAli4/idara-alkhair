@@ -1,245 +1,95 @@
-/* Base Styles & Variables */
-:root {
-    --primary-color: #1a5f7a;
-    --secondary-color: #57cc99;
-    --accent-color: #ff6b6b;
-    --light-color: #f8f9fa;
-    --dark-color: #343a40;
-    --idara-teal: #074b54;
-    --text-dark: #333;
-    --idara-orange: #f37335;
-    --idara-cyan: #00bcd4;
-    --idara-navy-dark: #031249;
-    --idara-navy-light: #074b54;
+@import "tailwindcss";
+
+@theme {
+    --color-idara-orange: #f37335;
+    --color-idara-navy: #031249;
+    --color-idara-cyan: #00bcd4;
+    --color-idara-teal: #074b54;
+    --color-idara-yellow: #FFB300;
+
+    --font-montserrat: "Montserrat", "Inter", sans-serif;
 }
 
 body {
-    font-family: 'Montserrat', 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: var(--text-dark);
-    overflow-x: hidden;
-    background-color: #ffffff;
+    @apply font-montserrat text-[#333] overflow-x-hidden bg-white;
 }
 
-/* Navbar Styles */
-.navbar {
-    padding: 10px 0;
-    transition: all 0.3s ease;
-    border-bottom: 2px solid #e1e9ed;
+/* Custom Base Styles */
+@layer components {
+    .nav-link-custom {
+        @apply text-[#333] font-medium text-[1.2rem] px-0 py-[10px] mx-[25px] relative transition-colors duration-300 no-underline cursor-pointer;
+    }
+
+    .nav-link-custom::after {
+        content: '';
+        @apply absolute bottom-[-2px] left-0 w-0 h-[3px] bg-idara-orange transition-all duration-300 ease-in-out;
+    }
+
+    .nav-link-custom:hover::after,
+    .nav-link-custom.active::after {
+        @apply w-full;
+    }
+
+    .nav-link-custom.active {
+        @apply text-idara-orange;
+    }
+
+    .btn-donate {
+        @apply bg-idara-orange text-white px-[28px] py-[10px] rounded-[6px] font-semibold transition-all duration-300 hover:bg-[#d65d20];
+    }
+
+    .btn-help-family {
+        @apply bg-idara-navy text-white px-[35px] py-[12px] rounded-[10px] text-[1.5rem] font-semibold transition-all duration-300 hover:opacity-90 hover:scale-105;
+    }
+
 }
 
-.nav-link-custom {
-    color: #333 !important;
-    font-weight: 600;
-    font-size: 1rem;
-    padding: 8px 0 !important;
-    margin: 0 15px;
-    position: relative;
-    transition: color 0.3s;
-}
-
-.nav-link-custom.active {
-    color: var(--idara-orange) !important;
-}
-
-.nav-link-custom.active::after {
-    content: '';
-    position: absolute;
-    bottom: -2.5px;
-    left: 0;
-    width: 100%;
-    height: 2.5px;
-    background-color: var(--idara-orange);
-}
-
-.btn-donate {
-    background-color: var(--idara-orange);
-    color: white !important;
-    padding: 8px 22px;
-    border-radius: 8px;
-    font-weight: 600;
-    border: none;
-    transition: all 0.3s;
-}
-
-/* Hero Section Refinement */
-.hero-blob-bg {
-    position: absolute;
-    top: 50%;
-    right: 10%;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(0, 188, 212, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
-    z-index: 0;
-    transform: translateY(-50%);
-}
-
+/* Hero Section Refinements */
 .hero-title {
-    font-size: 3.5rem;
-    font-weight: 900;
-    line-height: 1.1;
-    color: var(--idara-navy-light);
+    @apply text-[3.9rem] leading-[1.05] text-[#03114b] mb-10 -tracking-[2px];
 }
 
-.hero-title span.orange {
-    color: var(--idara-orange);
+.hero-graphic-container {
+    @apply relative w-full h-[650px] flex items-center justify-center;
 }
 
-/* Who We Are Section */
-.who-we-are {
-    background-color: var(--idara-navy-dark);
-    color: white;
+/* Background Shapes - Pixel Perfect Match */
+
+
+/* Navy top pill */
+.shape-pill-navy-top {
+    @apply absolute right-[0%] top-[18%] w-[160px] h-[80px] bg-[#03114b] rounded-full z-1;
 }
 
-.stat-box {
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-    color: white;
-    min-width: 120px;
+/* Main hero image */
+.hero-main-image {
+    @apply relative z-1 w-full max-w-[95%] h-auto object-contain drop-shadow-2xl translate-x-2 translate-y-[-5%];
 }
 
-.stat-box.cyan {
-    background-color: #00bcd4;
+/* Orange tall shape (top straight, bottom oval — image jesi) */
+.shape-pill-orange {
+    @apply absolute left-[2%] top-[7%] w-[300px] h-[550px] bg-[#f57b32] z-1;
+    border-radius: 0 0 50% 50%;
 }
 
-.stat-box.orange {
-    background-color: var(--idara-orange);
+/* Yellow tall shape (same style) */
+.shape-pill-yellow {
+    @apply absolute right-[6%] bottom-0 w-[300px] h-[480px] bg-[#ffb400] z-1;
+    border-radius: 0 0 50% 50%;
 }
 
-.stat-box.yellow {
-    background-color: #ffc107;
-    color: #000;
+/* Cyan circle */
+.shape-circle-cyan {
+    @apply absolute left-[45%] top-[20%] w-[70px] h-[70px] bg-[#00bcd8] rounded-full z-2;
 }
 
-.stat-box h3 {
-    font-size: 1.8rem;
-    font-weight: 800;
-    margin-bottom: 0;
+/* Navy bottom circle */
+.shape-circle-navy-bottom {
+    @apply absolute left-[40%] bottom-[0%] w-[110px] h-[110px] bg-[#03114b] rounded-full z-4;
 }
 
-.stat-box p {
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin: 0;
-    line-height: 1.2;
-}
-
-/* What We Do Section */
-.service-card {
-    background: #00bcd4;
-    color: white;
-    padding: 40px 20px;
-    border-radius: 20px;
-    text-align: center;
-    transition: transform 0.3s;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-}
-
-.service-icon-bg {
-    width: 80px;
-    height: 80px;
-    background: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
-    color: #00bcd4;
-}
-
-/* Real Stories / Map Section */
-.real-stories {
-    background-color: var(--idara-navy-dark);
-    color: white;
-    position: relative;
-    overflow: hidden;
-}
-
-.map-collage-container {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.pakistan-map-mask {
-    mask-image: url('https://upload.wikimedia.org/wikipedia/commons/4/45/Pakistan_map_blank.svg');
-    mask-size: contain;
-    mask-repeat: no-repeat;
-    mask-position: center;
-    -webkit-mask-image: url('https://upload.wikimedia.org/wikipedia/commons/4/45/Pakistan_map_blank.svg');
-    -webkit-mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    background-image: url('https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2070&auto=format&fit=crop');
-    background-size: cover;
-    height: 500px;
-    width: 100%;
-}
-
-/* How You Can Help */
-.help-card {
-    position: relative;
-    height: 250px;
-    border-radius: 0;
-    overflow: hidden;
-    border: 5px solid white;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.help-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.help-card-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: #ffffff;
-    padding: 10px;
-    text-align: center;
-}
-
-.btn-help {
-    background-color: transparent;
-    border: 1px solid #ddd;
-    width: 100%;
-    padding: 5px;
-    font-weight: 700;
-    color: #333;
-}
-
-/* Utility */
-.text-cyan {
-    color: #00bcd4 !important;
-}
-
-.text-orange {
-    color: var(--idara-orange) !important;
-}
-
-.bg-navy {
-    background-color: var(--idara-navy-dark) !important;
-}
-
-.section-padding-custom {
-    padding: 80px 0;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Cyan triangle */
+.hero-tri-cyan {
+    @apply absolute -right-[30px] bottom-[20%] w-[85px] h-[85px] bg-[#00bcd8] z-2;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
 }
