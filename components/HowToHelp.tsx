@@ -41,7 +41,7 @@ const HowToHelp: React.FC = () => {
                                 alt={option.title}
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                                 <h3 className="text-3xl font-black text-white mb-6 uppercase tracking-tight">{option.title}</h3>
                                 <button className="w-full py-4 bg-idara-orange text-white font-bold rounded-[12px] transition-all duration-300 hover:bg-[#d65d20] shadow-lg">
                                     {option.btnText}

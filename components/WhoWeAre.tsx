@@ -38,7 +38,7 @@ const WhoWeAre: React.FC = () => {
                             </p>
 
                             {/* Thematic Quote */}
-                            <p className="text-[1rem] lg:text-[1rem] italic font-semibold text-[#ffd033] mb-12 leading-snug">
+                            <p className="text-[1.1rem] lg:text-[1rem] italic font-semibold text-[#ffd033] mb-12 leading-snug">
                                 "We believe charity should not only relieve pain, but also restore hope."
                             </p>
 
