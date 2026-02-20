@@ -41,11 +41,11 @@ const AboutIntro = () => {
                             <div className="absolute top-6 -right-20 w-10 md:w-14 h-40 md:h-48 bg-[#001f54] rounded-full z-0"></div>
 
                             {/* Cyan Circle */}
-                            <div className="absolute bottom-[38%] -right-20 w-14 md:w-16 h-14 md:h-16 bg-[#00bcd4] rounded-full z-20"></div>
+                            <div className="absolute bottom-[38%] -right-20 w-14 md:w-16 h-14 md:h-16 bg-idara-cyan rounded-full z-20"></div>
 
                             {/* Bottom Left Triangle - EXACT MATCH */}
                             <div
-                                className="absolute -bottom-6 -left-2 w-16 h-16 bg-[#00bcd4] z-0"
+                                className="absolute -bottom-6 -left-2 w-16 h-16 bg-idara-cyan z-0"
                                 style={{
                                     // Isse triangle ka rukh (diagonal) image jaisa ho jayega
                                     clipPath: 'polygon(0 0, 0% 100%, 100% 100%)'

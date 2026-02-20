@@ -90,7 +90,7 @@ const RealStories: React.FC = () => {
 
                                 {/* COLLAGE CONTENT */}
                                 <foreignObject mask="url(#final-pakistan-mask)" width="944.09" height="1252.4">
-                                    <div className="w-full h-full grid grid-cols-12 md:grid-cols-16 gap-[1px] bg-white/5">
+                                    <div className="w-full h-full grid grid-cols-12 md:grid-cols-16 gap-px bg-white/5">
                                         {[...Array(256)].map((_, i) => (
                                             <div key={i} className="aspect-square w-full h-full">
                                                 <img

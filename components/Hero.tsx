@@ -43,14 +43,14 @@ const Hero: React.FC = () => {
                             <div className="absolute top-[22%] right-[-2%] w-[28%] h-14 bg-[#012060] rounded-full z-10"></div>
 
                             {/* 4. Small Cyan Circle (Between the two students) */}
-                            <div className="absolute top-[20%] left-[44%] w-14 h-14 bg-[#00bcd4] rounded-full z-20 shadow-sm"></div>
+                            <div className="absolute top-[20%] left-[44%] w-14 h-14 bg-idara-cyan rounded-full z-20 shadow-sm"></div>
 
                             {/* 5. Dark Navy Large Circle (Bottom Center - Overlapping) */}
                             <div className="absolute -bottom-6 left-[32%] w-28 h-28 bg-[#012060] rounded-full z-20"></div>
 
                             {/* 6. Cyan Triangle (Left Side - Specific Position) */}
                             <div
-                                className="absolute top-[55%] -left-10 w-16 h-16 bg-[#00bcd4] z-20"
+                                className="absolute top-[55%] -left-10 w-16 h-16 bg-idara-cyan z-20"
                                 style={{ clipPath: 'polygon(0 0, 0% 100%, 100% 100%)' }}
                             ></div>
 
