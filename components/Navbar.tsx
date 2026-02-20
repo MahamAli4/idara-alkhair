@@ -14,7 +14,9 @@ import {
     LifeBuoy,
     Heart,
     ChevronDown,
-    Menu
+    Menu,
+    ClipboardCheck,
+    Mail
 } from 'lucide-react';
 
 const Navbar: React.FC = () => {
@@ -24,7 +26,12 @@ const Navbar: React.FC = () => {
         { name: 'Home', href: '/' },
         { name: 'About Us', href: '/about' },
         { name: 'Projects', href: '/projects' },
-        { name: 'Contact Us', href: '/contact' },
+        { name: 'Contact', href: '/contact' },
+    ];
+
+    const contactLinks = [
+        { name: 'APPLICATION VOLUNTEER FORM', href: '/volunteer-form', icon: ClipboardCheck },
+        { name: 'Contact Us', href: '/contact', icon: Mail },
     ];
 
     const projectLinks = [
@@ -67,7 +74,7 @@ const Navbar: React.FC = () => {
                                             <ChevronDown className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:rotate-180" />
                                         </button>
 
-                                        {/* Dropdown Menu */}
+                                        {/* Projects Dropdown Menu */}
                                         <div className="absolute top-full left-0 w-80 bg-white shadow-lg rounded-md overflow-hidden transform scale-95 opacity-0 invisible group-hover:scale-100 group-hover:opacity-100 group-hover:visible transition-all duration-300 origin-top-left z-50 mt-2 border-t-4 border-orange-500">
                                             <div className="py-2">
                                                 {projectLinks.map((project) => {
@@ -82,6 +89,36 @@ const Navbar: React.FC = () => {
                                                                 <Icon size={18} />
                                                             </span>
                                                             <span className="text-sm font-medium">{project.name}</span>
+                                                        </Link>
+                                                    );
+                                                })}
+                                            </div>
+                                        </div>
+                                    </>
+                                ) : link.name === 'Contact' ? (
+                                    <>
+                                        <button
+                                            className={`nav-link-custom flex items-center ${pathname.startsWith('/contact') || pathname === '/volunteer-form' ? 'active' : ''}`}
+                                        >
+                                            {link.name}
+                                            <ChevronDown className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:rotate-180" />
+                                        </button>
+
+                                        {/* Contact Dropdown Menu */}
+                                        <div className="absolute top-full left-0 w-80 bg-white shadow-lg rounded-md overflow-hidden transform scale-95 opacity-0 invisible group-hover:scale-100 group-hover:opacity-100 group-hover:visible transition-all duration-300 origin-top-left z-50 mt-2 border-t-4 border-orange-500">
+                                            <div className="py-2">
+                                                {contactLinks.map((item) => {
+                                                    const Icon = item.icon;
+                                                    return (
+                                                        <Link
+                                                            key={item.href}
+                                                            href={item.href}
+                                                            className="group/item flex items-center px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors border-b border-gray-100 last:border-0"
+                                                        >
+                                                            <span className="mr-3 text-gray-400 group-hover/item:text-orange-500 transition-colors duration-300 group-hover/item:translate-x-1">
+                                                                <Icon size={18} />
+                                                            </span>
+                                                            <span className="text-sm font-medium">{item.name}</span>
                                                         </Link>
                                                     );
                                                 })}
