@@ -13,7 +13,7 @@ export default function AboutPage() {
             <AboutHero />
             <AboutIntro />
             <MissionVision />
-            <OurValues />
+            {/* OurValues is now merged into MissionVision as per reference image */}
             <AboutGallery />
             <Footer />
         </main>

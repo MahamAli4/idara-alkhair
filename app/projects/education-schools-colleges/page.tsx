@@ -130,7 +130,7 @@ export default function EducationSchoolsCollegesPage() {
                     className="w-full h-full object-cover"
                 />
                 {/* Subtle navy overlay at bottom for transition to footer */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a2351]/40 to-transparent"></div>
+                <div className="absolute inset-0 from-[#0a2351]/40 to-transparent"></div>
             </section>
 
             {/* ===== FOOTER ===== */}

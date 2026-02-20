@@ -15,7 +15,7 @@ const OurValues = () => {
                     <h2 className="text-4xl lg:text-6xl font-black text-idara-navy">
                         Our <span className="text-white relative inline-block">
                             <span className="relative z-10">Values</span>
-                            <svg className="absolute w-full h-full left-0 top-0 -z-0 text-idara-orange opacity-90" viewBox="0 0 100 100" preserveAspectRatio="none">
+                            <svg className="absolute w-full h-full left-0 top-0 z-0 text-idara-orange opacity-90" viewBox="0 0 100 100" preserveAspectRatio="none">
                                 <path d="M0 100 C 20 0 50 0 100 100 Z" fill="currentColor" />
                             </svg>
                         </span>

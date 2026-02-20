@@ -11,7 +11,8 @@
 }
 
 body {
-    @apply font-montserrat text-[#333] overflow-x-hidden bg-white;
+    font-family: var(--font-montserrat);
+    @apply text-[#333] overflow-x-hidden bg-white;
 }
 
 /* Custom Base Styles */
@@ -53,43 +54,3 @@ body {
     @apply relative w-full h-[650px] flex items-center justify-center;
 }
 
-/* Background Shapes - Pixel Perfect Match */
-
-
-/* Navy top pill */
-.shape-pill-navy-top {
-    @apply absolute right-[0%] top-[18%] w-[160px] h-[80px] bg-[#03114b] rounded-full z-1;
-}
-
-/* Main hero image */
-.hero-main-image {
-    @apply relative z-1 w-full max-w-[95%] h-auto object-contain drop-shadow-2xl translate-x-2 translate-y-[-5%];
-}
-
-/* Orange tall shape (top straight, bottom oval — image jesi) */
-.shape-pill-orange {
-    @apply absolute left-[2%] top-[7%] w-[300px] h-[550px] bg-[#f57b32] z-1;
-    border-radius: 0 0 50% 50%;
-}
-
-/* Yellow tall shape (same style) */
-.shape-pill-yellow {
-    @apply absolute right-[6%] bottom-0 w-[300px] h-[480px] bg-[#ffb400] z-1;
-    border-radius: 0 0 50% 50%;
-}
-
-/* Cyan circle */
-.shape-circle-cyan {
-    @apply absolute left-[45%] top-[20%] w-[70px] h-[70px] bg-[#00bcd8] rounded-full z-2;
-}
-
-/* Navy bottom circle */
-.shape-circle-navy-bottom {
-    @apply absolute left-[40%] bottom-[0%] w-[110px] h-[110px] bg-[#03114b] rounded-full z-4;
-}
-
-/* Cyan triangle */
-.hero-tri-cyan {
-    @apply absolute -right-[30px] bottom-[20%] w-[85px] h-[85px] bg-[#00bcd8] z-2;
-    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-}

@@ -18,7 +18,7 @@ export default function TechnicalTrainingCentersPage() {
                 {/* Title */}
                 <div className="absolute inset-0 flex items-center justify-center">
                     <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white text-center tracking-tight">
-                        Technical <span className="text-idara-orange">Technical</span> Centers
+                        Technical <span className="text-idara-orange">Training</span> Centers
                     </h1>
                 </div>
             </section>

@@ -26,21 +26,40 @@ const Hero: React.FC = () => {
                     </div>
 
                     {/* Right Graphic Side */}
-                    <div className="lg:w-1/2 w-full mt-12 lg:mt-0">
-                        <div className="hero-graphic-container transform lg:translate-x-12">
-                            {/* Background Shapes */}
-                            <div className="shape-pill-orange shadow-lg"></div>
-                            <div className="shape-pill-yellow shadow-lg"></div>
+                    <div className="lg:w-1/2 w-full mt-12 lg:mt-0 flex justify-center items-center">
+                        <div className="relative w-full max-w-[550px] h-[550px] md:h-[650px]">
 
-                            <div className="shape-circle-cyan shadow-md"></div>
-                            <div className="shape-pill-navy-top shadow-md"></div>
-                            <div className="shape-circle-navy-bottom shadow-md"></div>
+                            {/* 1. Orange Background Shape (Bachi ke peeche) */}
+                            {/* Notice the border-radius: Top-left is 0, others are large */}
+                            <div
+                                className="absolute top-[10%] left-[1%] w-[50%] h-[75%] bg-[#f37021] z-0"
+                                style={{ borderRadius: '0px 150px 150px 150px' }}
+                            ></div>
 
-                            {/* Main Hero Image Students */}
+                            {/* 2. Yellow Background Pill (Bache ke peeche) */}
+                            <div className="absolute top-[20%] right-[3%] w-[42%] h-[75%] bg-[#ffc20e] rounded-full z-0"></div>
+
+                            {/* 3. Navy Blue Horizontal Pill (Top Right) */}
+                            <div className="absolute top-[22%] right-[-2%] w-[28%] h-14 bg-[#012060] rounded-full z-10"></div>
+
+                            {/* 4. Small Cyan Circle (Between the two students) */}
+                            <div className="absolute top-[20%] left-[44%] w-14 h-14 bg-[#00bcd4] rounded-full z-20 shadow-sm"></div>
+
+                            {/* 5. Dark Navy Large Circle (Bottom Center - Overlapping) */}
+                            <div className="absolute -bottom-6 left-[32%] w-28 h-28 bg-[#012060] rounded-full z-20"></div>
+
+                            {/* 6. Cyan Triangle (Left Side - Specific Position) */}
+                            <div
+                                className="absolute top-[55%] -left-10 w-16 h-16 bg-[#00bcd4] z-20"
+                                style={{ clipPath: 'polygon(0 0, 0% 100%, 100% 100%)' }}
+                            ></div>
+
+                            {/* 7. Main Hero Image (Transparent PNG) */}
+                            {/* Scale-110 thora bara dikhane ke liye aur perfect placement ke liye */}
                             <img
                                 src="/images/hero.png"
-                                alt="Idara Al-Khair Welfare Society"
-                                className="hero-main-image"
+                                alt="Idara Al-Khair Students"
+                                className="absolute inset-0 w-full h-full object-contain z-30 transform scale-105 drop-shadow-2xl"
                             />
                         </div>
                     </div>
