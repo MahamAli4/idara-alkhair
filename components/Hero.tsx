@@ -57,9 +57,9 @@ const Hero: React.FC = () => {
                             {/* 7. Main Hero Image (Transparent PNG) */}
                             {/* Scale-110 thora bara dikhane ke liye aur perfect placement ke liye */}
                             <img
-                                src="/images/hero.png"
+                                src="/website media/Homepage/Homepage Picture.jpg"
                                 alt="Idara Al-Khair Students"
-                                className="absolute inset-0 w-full h-full object-contain z-30 transform scale-105 drop-shadow-2xl"
+                                className="absolute inset-0 w-full h-full object-contain z-30 transform scale-150"
                             />
                         </div>
                     </div>

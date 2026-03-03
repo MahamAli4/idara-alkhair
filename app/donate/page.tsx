@@ -9,7 +9,7 @@ export default function DonatePage() {
             {/* ===== HERO BANNER ===== */}
             <section className="relative mt-[100px] mx-4 md:mx-8 rounded-2xl overflow-hidden h-[220px] md:h-[300px]">
                 <img
-                    src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&auto=format&fit=crop"
+                    src="/website media/Donate Now/Header.jpg"
                     alt="Donate Now"
                     className="w-full h-full object-cover"
                 />
@@ -50,7 +50,7 @@ export default function DonatePage() {
                 {/* Grayscale background image */}
                 <div className="absolute inset-0 z-0">
                     <img
-                        src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?q=80&w=2070&auto=format&fit=crop"
+                        src="/website media/Donate Now/Background Image.jpg"
                         alt=""
                         className="w-full h-full object-cover grayscale opacity-15"
                     />

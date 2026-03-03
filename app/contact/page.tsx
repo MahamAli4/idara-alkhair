@@ -13,7 +13,7 @@ export default function ContactPage() {
             {/* ===== HERO SECTION ===== */}
             <section className="relative mt-[115px] h-[350px] md:h-[450px] overflow-hidden">
                 <img
-                    src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop"
+                    src="/website media/Contact Us/Banner Image.jpg"
                     alt="IT Lab"
                     className="absolute inset-0 w-full h-full object-cover"
                 />
@@ -52,7 +52,7 @@ export default function ContactPage() {
                         {/* Decorative Shapes below form */}
                         <div className="absolute -bottom-10 -left-10 w-24 h-24 bg-idara-orange z-0" style={{ clipPath: 'polygon(100% 0, 0% 100%, 100% 100%)' }}></div>
                         <div className="absolute -top-10 -right-4 w-24 h-24 bg-idara-cyan z-0 shadow-lg" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%)' }}></div>
-                        <div className="absolute -top-6 -left-2 w-16 h-1 w-24 h-24 bg-idara-orange opacity-20 z-0" style={{ display: 'none' }}></div> {/* Placeholder for more shapes if needed */}
+                        <div className="absolute -top-6 -left-2 w-24 h-24 bg-idara-orange opacity-20 z-0" style={{ display: 'none' }}></div> {/* Placeholder for more shapes if needed */}
 
                         <div className="relative z-10 bg-white p-8 md:p-10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-100">
                             <form className="space-y-6">

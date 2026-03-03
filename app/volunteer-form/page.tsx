@@ -12,7 +12,7 @@ export default function VolunteerFormPage() {
             {/* ===== HERO SECTION ===== */}
             <section className="relative mt-[115px] h-[350px] md:h-[450px] overflow-hidden">
                 <img
-                    src="https://images.unsplash.com/photo-1559027615-cd2671c15b82?q=80&w=2070&auto=format&fit=crop"
+                    src="/website media/Application Volunteer Form/Banner Image.jpg"
                     alt="Volunteering Students"
                     className="absolute inset-0 w-full h-full object-cover"
                 />
@@ -25,142 +25,136 @@ export default function VolunteerFormPage() {
             </section>
 
             {/* ===== BE PART OF THE CHANGE SECTION ===== */}
-            <section className="container mx-auto px-6 py-20 relative">
-                <div className="max-w-4xl">
-                    <h2 className="text-4xl md:text-5xl font-black text-idara-navy mb-8">
-                        Be Part of the <span className="text-idara-orange">Change</span>
+            <section className="container mx-auto px-6 py-16 lg:py-24 relative">
+                <div className="max-w-4xl relative z-10">
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 transition-all duration-300">
+                        <span className="text-idara-navy">Be Part of the </span>
+                        <span className="text-idara-orange">Change</span>
                     </h2>
-                    <p className="text-gray-700 text-lg md:text-xl font-medium mb-4">
-                        Join Idara Al-Khair as a volunteer and contribute your time, skills, and passion toward meaningful causes.
-                    </p>
-                    <p className="text-gray-700 text-lg md:text-xl font-medium">
-                        Every helping hand matters.
-                    </p>
+                    <div className="space-y-6">
+                        <p className="text-gray-700 text-lg md:text-xl lg:text-2xl font-medium leading-relaxed max-w-3xl">
+                            Join Idara Al-Khair as a volunteer and contribute your time, skills, and passion toward meaningful causes.
+                        </p>
+                        <p className="text-gray-700 text-lg md:text-xl lg:text-2xl font-medium italic opacity-80">
+                            Every helping hand matters.
+                        </p>
+                    </div>
                 </div>
 
-                {/* Decorative Shape on Right (Matching Image) */}
-                <div className="absolute top-10 right-10 hidden lg:block w-32 h-32">
+                {/* Decorative Geometric Shape (Idara Branding - Exact Match) */}
+                <div className="absolute top-0 right-0 lg:right-10 w-48 h-48 lg:w-64 lg:h-64 pointer-events-none opacity-90 hidden md:block">
                     <div className="relative w-full h-full">
-                        {/* Triangle shapes mimicking the Idara style logo components */}
+                        {/* Orange Triangle (Top Left) */}
                         <div
-                            className="absolute inset-0 bg-idara-orange"
-                            style={{ clipPath: 'polygon(50% 0%, 50% 100%, 100% 50%)' }}
+                            className="absolute top-[10%] left-[10%] w-[45%] h-[45%] bg-idara-orange"
+                            style={{ clipPath: 'polygon(0% 0%, 100% 0%, 0% 100%)' }}
                         ></div>
+                        {/* Cyan Triangle (Bottom Left) */}
                         <div
-                            className="absolute inset-0 bg-idara-cyan opacity-80"
-                            style={{ clipPath: 'polygon(0% 50%, 50% 100%, 0% 100%)' }}
+                            className="absolute bottom-[10%] left-[10%] w-[45%] h-[45%] bg-idara-cyan"
+                            style={{ clipPath: 'polygon(0% 0%, 100% 100%, 0% 100%)' }}
                         ></div>
+                        {/* Yellow/Orange Triangle (Right Arrow) */}
                         <div
-                            className="absolute inset-0 bg-idara-navy opacity-40"
-                            style={{ clipPath: 'polygon(0% 0%, 50% 0%, 0% 50%)' }}
+                            className="absolute top-1/2 -translate-y-1/2 right-[10%] w-[45%] h-[45%] bg-idara-yellow"
+                            style={{ clipPath: 'polygon(0% 0%, 100% 50%, 0% 100%)' }}
                         ></div>
                     </div>
                 </div>
             </section>
 
             {/* ===== VOLUNTEER FORM SECTION ===== */}
-            <section className="container mx-auto px-6 pb-32">
+            <section className="container mx-auto px-6 pb-24">
                 <div className="max-w-4xl mx-auto">
-                    <h3 className="text-3xl font-black text-idara-navy text-center mb-12 uppercase tracking-tight">
+                    <h3 className="text-4xl lg:text-5xl font-bold text-[#002060] text-center mb-20 tracking-normal">
                         Volunteer form
                     </h3>
 
-                    <form className="space-y-8">
-                        {/* Row: Name */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div className="flex flex-col gap-2">
-                                <label className="text-sm font-bold text-idara-navy">Your name</label>
+                    <form className="space-y-12">
+                        {/* Row: Your name */}
+                        <div className="space-y-3">
+                            <label className="text-base font-bold text-[#002060] block px-1">Your name</label>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <input
                                     type="text"
                                     placeholder="First"
-                                    className="w-full px-4 py-3 rounded border border-gray-300 focus:border-idara-orange outline-none transition-all text-sm"
+                                    className="w-full px-5 py-4 rounded-sm border border-gray-200 bg-white focus:border-idara-orange ring-0! outline-none transition-all text-sm placeholder:text-gray-300"
                                 />
-                            </div>
-                            <div className="flex flex-col gap-2 pt-6">
                                 <input
                                     type="text"
                                     placeholder="Last"
-                                    className="w-full px-4 py-3 rounded border border-gray-300 focus:border-idara-orange outline-none transition-all text-sm"
+                                    className="w-full px-5 py-4 rounded-sm border border-gray-200 bg-white focus:border-idara-orange ring-0! outline-none transition-all text-sm placeholder:text-gray-300"
                                 />
                             </div>
                         </div>
 
-                        {/* Row: Email Address */}
-                        <div className="flex flex-col gap-2">
-                            <label className="text-sm font-bold text-idara-navy">Your email address</label>
+                        {/* Row: Your email address */}
+                        <div className="space-y-3">
+                            <label className="text-base font-bold text-idara-navy block px-1">Your email address</label>
                             <input
                                 type="email"
                                 placeholder="Email Address"
-                                className="w-full px-4 py-3 rounded border border-gray-300 focus:border-idara-orange outline-none transition-all text-sm"
+                                className="w-full px-5 py-4 rounded-sm border border-gray-200 bg-white focus:border-idara-orange ring-0! outline-none transition-all text-sm placeholder:text-gray-300"
                             />
                         </div>
 
                         {/* Row: The volunteer name */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div className="flex flex-col gap-2">
-                                <label className="text-sm font-bold text-idara-navy">The volunteer name</label>
+                        <div className="space-y-3">
+                            <label className="text-base font-bold text-idara-navy block px-1">The volunteer name</label>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <input
                                     type="text"
                                     placeholder="First"
-                                    className="w-full px-4 py-3 rounded border border-gray-300 focus:border-idara-orange outline-none transition-all text-sm"
+                                    className="w-full px-5 py-4 rounded-sm border border-gray-200 bg-white focus:border-idara-orange ring-0! outline-none transition-all text-sm placeholder:text-gray-300"
                                 />
-                            </div>
-                            <div className="flex flex-col gap-2 pt-6">
                                 <input
                                     type="text"
                                     placeholder="Last"
-                                    className="w-full px-4 py-3 rounded border border-gray-300 focus:border-idara-orange outline-none transition-all text-sm"
+                                    className="w-full px-5 py-4 rounded-sm border border-gray-200 bg-white focus:border-idara-orange ring-0! outline-none transition-all text-sm placeholder:text-gray-300"
                                 />
                             </div>
                         </div>
 
                         {/* Row: The volunteer email address */}
-                        <div className="flex flex-col gap-2">
-                            <label className="text-sm font-bold text-idara-navy">The volunteer email address</label>
+                        <div className="space-y-3">
+                            <label className="text-base font-bold text-idara-navy block px-1">The volunteer email address</label>
                             <input
                                 type="email"
                                 placeholder="Email Address"
-                                className="w-full px-4 py-3 rounded border border-gray-300 focus:border-idara-orange outline-none transition-all text-sm"
+                                className="w-full px-5 py-4 rounded-sm border border-gray-200 bg-white focus:border-idara-orange ring-0! outline-none transition-all text-sm placeholder:text-gray-300"
                             />
                         </div>
 
                         {/* Row: The volunteer age */}
-                        <div className="flex flex-col gap-2">
-                            <label className="text-sm font-bold text-idara-navy">The volunteer age</label>
+                        <div className="space-y-3">
+                            <label className="text-base font-bold text-idara-navy block px-1">The volunteer age</label>
                             <input
                                 type="text"
                                 placeholder="Email Address"
-                                className="w-full px-4 py-3 rounded border border-gray-300 focus:border-idara-orange outline-none transition-all text-sm"
+                                className="w-full px-5 py-4 rounded-sm border border-gray-200 bg-white focus:border-idara-orange ring-0! outline-none transition-all text-sm placeholder:text-gray-300"
                             />
                         </div>
 
                         {/* Row: Availability */}
-                        <div className="space-y-4 pt-4">
-                            <label className="text-sm font-bold text-idara-navy block">Availability</label>
-
-                            <label className="flex items-center gap-3 p-3 border border-gray-200 rounded cursor-pointer hover:bg-gray-50 transition-all">
-                                <input type="checkbox" className="w-4 h-4 accent-idara-navy" />
-                                <span className="text-sm font-medium text-gray-700">Weekends</span>
-                            </label>
-
-                            <label className="flex items-center gap-3 p-3 border border-gray-200 rounded cursor-pointer hover:bg-gray-50 transition-all">
-                                <input type="checkbox" className="w-4 h-4 accent-idara-navy" />
-                                <span className="text-sm font-medium text-gray-700">1 day a week</span>
-                            </label>
-
-                            <label className="flex items-center gap-3 p-3 border border-gray-200 rounded cursor-pointer hover:bg-gray-50 transition-all">
-                                <input type="checkbox" className="w-4 h-4 accent-idara-navy" />
-                                <span className="text-sm font-medium text-gray-700">2 days a week</span>
-                            </label>
-
-                            <label className="flex items-center gap-3 p-3 border border-gray-200 rounded cursor-pointer hover:bg-gray-50 transition-all">
-                                <input type="checkbox" className="w-4 h-4 accent-idara-navy" />
-                                <span className="text-sm font-medium text-gray-700">4th any day</span>
-                            </label>
+                        <div className="space-y-6 pt-4">
+                            <label className="text-base font-bold text-[#002060] block px-1">Availability</label>
+                            <div className="space-y-3">
+                                {['Weekends', '1 day a week', '2 days a week', '4th any day'].map((item) => (
+                                    <label key={item} className="flex items-center gap-4 p-4 border border-gray-200 rounded-sm cursor-pointer hover:bg-gray-50 transition-all bg-white group">
+                                        <div className="relative flex items-center justify-center">
+                                            <input type="checkbox" className="peer w-5 h-5 appearance-none border border-gray-300 rounded-sm checked:bg-[#002060] checked:border-[#002060] transition-all cursor-pointer" />
+                                            <svg className="absolute w-3.5 h-3.5 text-white opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                        </div>
+                                        <span className="text-sm font-semibold text-gray-700 group-hover:text-[#002060] transition-colors">{item}</span>
+                                    </label>
+                                ))}
+                            </div>
                         </div>
 
                         <div className="flex justify-end pt-8">
-                            <button type="submit" className="bg-[#012060] text-white px-12 py-3 rounded font-bold uppercase tracking-widest hover:opacity-90 transition-all shadow-md">
+                            <button type="submit" className="bg-[#002060] text-white px-16 py-3.5 rounded-sm font-bold text-lg hover:bg-[#001c54] transition-all shadow-lg active:scale-[0.98]">
                                 Submit
                             </button>
                         </div>

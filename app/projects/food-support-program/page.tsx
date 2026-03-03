@@ -9,7 +9,7 @@ export default function FoodSupportProgramPage() {
             {/* ===== HERO BANNER ===== */}
             <section className="relative mt-[100px] mx-4 md:mx-8 rounded-2xl overflow-hidden h-[220px] md:h-[300px]">
                 <img
-                    src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&auto=format&fit=crop"
+                    src="/website media/Food Support Program/Banner.jpg"
                     alt="Food Support Program"
                     className="w-full h-full object-cover"
                 />
@@ -99,7 +99,7 @@ export default function FoodSupportProgramPage() {
                     {/* Main Image - B&W style child */}
                     <div className="relative z-5 md:ml-[15%] rounded-xl overflow-hidden shadow-2xl">
                         <img
-                            src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&auto=format&fit=crop"
+                            src="/website media/Food Support Program/Center Image.png"
                             alt="Child smiling - food support"
                             className="w-full h-[300px] md:h-[420px] object-cover grayscale"
                         />
@@ -109,14 +109,14 @@ export default function FoodSupportProgramPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 relative z-6 -mt-12 md:-mt-20">
                         <div className="rounded-xl overflow-hidden shadow-2xl border-4 border-white">
                             <img
-                                src="https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=2070&auto=format&fit=crop"
+                                src="/website media/Food Support Program/Footer.jpg"
                                 alt="Food distribution to families"
                                 className="w-full h-[200px] md:h-[260px] object-cover"
                             />
                         </div>
                         <div className="rounded-xl overflow-hidden shadow-2xl border-4 border-white">
                             <img
-                                src="https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=2070&auto=format&fit=crop"
+                                src="/website media/About us/Background Image.jpg"
                                 alt="Community food drive"
                                 className="w-full h-[200px] md:h-[260px] object-cover"
                             />

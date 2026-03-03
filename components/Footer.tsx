@@ -2,9 +2,14 @@
 import React from 'react';
 import { Facebook, Instagram, Youtube, Linkedin, MapPin, Phone, Mail } from 'lucide-react';
 
+import { usePathname } from 'next/navigation';
+
 const Footer: React.FC = () => {
+    const pathname = usePathname();
+    const isHomepage = pathname === '/';
+
     return (
-        <footer className="bg-[#0a2351] text-white relative overflow-hidden pt-64 pb-10 md:pt-80">
+        <footer className={`bg-[#0a2351] text-white relative overflow-hidden pb-10 ${isHomepage ? 'pt-64 md:pt-80' : 'pt-20'}`}>
             {/* 1. Dotted Background Pattern - Exactly like image */}
             <div
                 className="absolute inset-0 opacity-20 pointer-events-none"
@@ -89,13 +94,13 @@ const Footer: React.FC = () => {
             </div>
 
             {/* Copyright Section */}
-            <div className="relative z-10 border-t border-white/20 mt-16">
+            {/* <div className="relative z-10 border-t border-white/20 mt-16">
                 <div className="container mx-auto px-4 py-6">
                     <p className="text-white/70 text-sm text-center">
                         Copyright © 1987 - 2025 All rights reserved | Idara Al-Khair
                     </p>
                 </div>
-            </div>
+            </div> */}
         </footer>
     );
 };

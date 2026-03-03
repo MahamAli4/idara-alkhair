@@ -9,7 +9,7 @@ export default function ITInstitutePage() {
             {/* ===== HERO BANNER ===== */}
             <section className="relative mt-[100px] mx-4 md:mx-8 rounded-2xl overflow-hidden h-[220px] md:h-[300px]">
                 <img
-                    src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070&auto=format&fit=crop"
+                    src="/website media/IT Institute/Banner.jpg"
                     alt="IT Institute Classroom"
                     className="w-full h-full object-cover"
                 />
@@ -67,14 +67,14 @@ export default function ITInstitutePage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 relative z-5">
                         <div className="rounded-xl overflow-hidden shadow-2xl">
                             <img
-                                src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?q=80&w=2070&auto=format&fit=crop"
+                                src="/website media/IT Institute/Image 01.jpg"
                                 alt="IT students in computer lab"
                                 className="w-full h-[220px] md:h-[300px] object-cover"
                             />
                         </div>
                         <div className="rounded-xl overflow-hidden shadow-2xl">
                             <img
-                                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2070&auto=format&fit=crop"
+                                src="/website media/IT Institute/Image 02.jpg"
                                 alt="Students learning digital skills"
                                 className="w-full h-[220px] md:h-[300px] object-cover"
                             />
@@ -84,7 +84,7 @@ export default function ITInstitutePage() {
                     {/* Image 3 - Lower overlapping wider image */}
                     <div className="relative z-6 -mt-10 md:-mt-16 mx-4 md:mx-8 rounded-xl overflow-hidden shadow-2xl border-4 border-white">
                         <img
-                            src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop"
+                            src="/website media/IT Institute/Image 03.jpg"
                             alt="IT training session"
                             className="w-full h-[250px] md:h-[350px] object-cover"
                         />
@@ -95,7 +95,7 @@ export default function ITInstitutePage() {
             {/* ===== FULL-WIDTH BOTTOM IMAGE WITH CYAN TINT ===== */}
             <section className="relative mx-4 md:mx-8 rounded-2xl overflow-hidden h-[200px] md:h-[280px] mb-0">
                 <img
-                    src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070&auto=format&fit=crop"
+                    src="/website media/IT Institute/Footer Image.jpg"
                     alt="IT Institute students working"
                     className="w-full h-full object-cover"
                 />

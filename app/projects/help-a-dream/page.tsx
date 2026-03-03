@@ -9,7 +9,7 @@ export default function HelpADreamPage() {
             {/* ===== HERO BANNER ===== */}
             <section className="relative mt-[100px] mx-4 md:mx-8 rounded-2xl overflow-hidden h-[220px] md:h-[300px]">
                 <img
-                    src="https://images.unsplash.com/photo-1497015434107-578bb7967919?q=80&w=2070&auto=format&fit=crop"
+                    src="/website media/Help a Dream/Banner.jpg"
                     alt="Help a Dream"
                     className="w-full h-full object-cover"
                 />
@@ -58,7 +58,7 @@ export default function HelpADreamPage() {
                         {/* Image Frame */}
                         <div className="relative z-10 rounded-3xl overflow-hidden border-8 border-white shadow-[0_20px_50px_rgba(0,0,0,0.1)]">
                             <img
-                                src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2040&auto=format&fit=crop"
+                                src="/website media/Help a Dream/Center image.png"
                                 alt="Child dreaming"
                                 className="w-full h-auto aspect-4/5 object-cover"
                             />

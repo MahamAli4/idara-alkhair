@@ -9,7 +9,7 @@ export default function EducationSchoolsCollegesPage() {
             {/* ===== HERO BANNER ===== */}
             <section className="relative mt-[100px] mx-4 md:mx-8 rounded-2xl overflow-hidden h-[220px] md:h-[300px]">
                 <img
-                    src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2070&auto=format&fit=crop"
+                    src="/website media/Education School & College/Banner.jpg"
                     alt="Education Schools & College"
                     className="w-full h-full object-cover"
                 />
@@ -54,7 +54,7 @@ export default function EducationSchoolsCollegesPage() {
                         {/* Student Image */}
                         <div className="relative z-5 w-[280px] md:w-[350px] rounded-xl overflow-hidden shadow-2xl">
                             <img
-                                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop"
+                                src="/website media/Education School & College/Boy Image.jpg"
                                 alt="Student in school uniform"
                                 className="w-full h-[350px] md:h-[430px] object-cover"
                             />
@@ -99,21 +99,21 @@ export default function EducationSchoolsCollegesPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div className="rounded-xl overflow-hidden shadow-lg border-4 border-white">
                             <img
-                                src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=2073&auto=format&fit=crop"
+                                src="/website media/Education School & College/Image 01.jpeg"
                                 alt="Students in classroom"
                                 className="w-full h-[180px] md:h-[200px] object-cover"
                             />
                         </div>
                         <div className="rounded-xl overflow-hidden shadow-lg border-4 border-white">
                             <img
-                                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2032&auto=format&fit=crop"
+                                src="/website media/Education School & College/Image 02.jpeg"
                                 alt="Students learning together"
                                 className="w-full h-[180px] md:h-[200px] object-cover"
                             />
                         </div>
                         <div className="rounded-xl overflow-hidden shadow-lg border-4 border-white">
                             <img
-                                src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2070&auto=format&fit=crop"
+                                src="/website media/Education School & College/Image 03.jpg"
                                 alt="Happy students"
                                 className="w-full h-[180px] md:h-[200px] object-cover"
                             />
@@ -125,7 +125,7 @@ export default function EducationSchoolsCollegesPage() {
             {/* ===== FULL-WIDTH BOTTOM IMAGE ===== */}
             <section className="relative mx-4 md:mx-8 mt-6 rounded-2xl overflow-hidden h-[220px] md:h-[320px]">
                 <img
-                    src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=2070&auto=format&fit=crop"
+                    src="/website media/Education School & College/Footer.jpg"
                     alt="School children crowd"
                     className="w-full h-full object-cover"
                 />

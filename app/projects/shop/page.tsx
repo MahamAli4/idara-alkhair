@@ -11,7 +11,7 @@ export default function ShopPage() {
             {/* ===== HERO BANNER ===== */}
             <section className="relative mt-[100px] mx-4 md:mx-8 rounded-2xl overflow-hidden h-[250px] md:h-[350px]">
                 <img
-                    src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=2070&auto=format&fit=crop"
+                    src="/website media/Shop Page/Banner.jpg"
                     alt="Idara Shop"
                     className="w-full h-full object-cover"
                 />
@@ -58,9 +58,9 @@ export default function ShopPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {/* Product 1 */}
                     <div className="group">
-                        <div className="relative aspect-3/4 rounded-[30px] overflow-hidden bg-gray-100 mb-6 transition-transform group-hover:-translate-y-2">
+                        <div className="relative aspect-3/4 rounded-4xl overflow-hidden bg-gray-100 mb-6 transition-transform group-hover:-translate-y-2">
                             <img
-                                src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=2000&auto=format&fit=crop"
+                                src="/website media/Shop Page/Image 01.jpg"
                                 alt="Handmade Tote Bag"
                                 className="w-full h-full object-cover"
                             />
@@ -79,9 +79,9 @@ export default function ShopPage() {
 
                     {/* Product 2 */}
                     <div className="group">
-                        <div className="relative aspect-3/4 rounded-[30px] overflow-hidden bg-gray-100 mb-6 transition-transform group-hover:-translate-y-2">
+                        <div className="relative aspect-3/4 rounded-4xl overflow-hidden bg-gray-100 mb-6 transition-transform group-hover:-translate-y-2">
                             <img
-                                src="https://images.unsplash.com/photo-1596462502278-27bfad450516?q=80&w=2000&auto=format&fit=crop"
+                                src="/website media/Shop Page/Image 02.jpg"
                                 alt="Eco Notebook"
                                 className="w-full h-full object-cover"
                             />
@@ -100,9 +100,9 @@ export default function ShopPage() {
 
                     {/* Product 3 */}
                     <div className="group">
-                        <div className="relative aspect-3/4 rounded-[30px] overflow-hidden bg-gray-100 mb-6 transition-transform group-hover:-translate-y-2">
+                        <div className="relative aspect-3/4 rounded-4xl overflow-hidden bg-gray-100 mb-6 transition-transform group-hover:-translate-y-2">
                             <img
-                                src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=2000&auto=format&fit=crop"
+                                src="/website media/Shop Page/Image 03.jpg"
                                 alt="Support Tee"
                                 className="w-full h-full object-cover"
                             />
@@ -121,9 +121,9 @@ export default function ShopPage() {
 
                     {/* Product 4 */}
                     <div className="group">
-                        <div className="relative aspect-3/4 rounded-[30px] overflow-hidden bg-gray-100 mb-6 transition-transform group-hover:-translate-y-2">
+                        <div className="relative aspect-3/4 rounded-4xl overflow-hidden bg-gray-100 mb-6 transition-transform group-hover:-translate-y-2">
                             <img
-                                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=2000&auto=format&fit=crop"
+                                src="/website media/Shop Page/Image 04.jpg"
                                 alt="Impact Watch"
                                 className="w-full h-full object-cover"
                             />

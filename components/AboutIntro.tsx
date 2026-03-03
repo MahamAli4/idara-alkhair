@@ -3,13 +3,13 @@ import React from 'react';
 const AboutIntro = () => {
     return (
         <section className="py-12 md:py-20 bg-white overflow-hidden">
-            <div className="container mx-auto px-6 lg:px-20 max-w-7xl font-montserrat">
+            <div className="container mx-auto px-4 font-montserrat">
                 <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
                     {/* Text Column */}
                     <div className="lg:w-[60%]">
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 text-[#012060] tracking-tight">
-                            About <span className="text-idara-orange">Us</span>
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#012060] tracking-tight">
+                            About <span className="text-idara-orange font-black">Us</span>
                         </h2>
                         <div className="space-y-6 text-base md:text-lg text-gray-800 leading-relaxed max-w-2xl">
                             <p className="font-medium">
@@ -30,11 +30,11 @@ const AboutIntro = () => {
                                 className="relative z-10 w-[260px] md:w-[300px] h-[380px] md:h-[480px] overflow-hidden bg-gray-100 shadow-xl"
                                 style={{ borderRadius: '0px 180px 180px 180px' }}
                             >
-                                <img
-                                    src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&auto=format&fit=crop"
+                                {/* <img
+                                    src="/website media/About us/Pic 01.jpg"
                                     alt="Children smiling"
                                     className="w-full h-full object-cover"
-                                />
+                                /> */}
                             </div>
 
                             {/* Dark Blue Pillar - Placed precisely */}
