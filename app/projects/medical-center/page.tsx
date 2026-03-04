@@ -59,7 +59,7 @@ export default function MedicalCenterPage() {
                             {/* <div className="absolute left-0 top-[15%] w-[60px] md:w-[90px] h-[220px] md:h-[300px] bg-[#001c54] rounded-full z-10 shadow-lg"></div> */}
 
                             {/* Large Yellow Circle - Below Navy Pill */}
-                            <div className="absolute left-0 top-[50%] w-[80px] md:w-[120px] h-[80px] md:h-[120px] bg-idara-yellow rounded-full z-10 shadow-lg transform -translate-x-4"></div>
+                            {/* <div className="absolute left-0 top-[50%] w-[80px] md:w-[120px] h-[80px] md:h-[120px] bg-idara-yellow rounded-full z-10 shadow-lg transform -translate-x-4"></div> */}
 
                             {/* Cyan triangle arrows near text */}
                             {/* <div className="absolute right-[5%] top-[10%] w-8 h-8 md:w-10 md:h-10 bg-idara-cyan z-20"
