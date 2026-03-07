@@ -14,7 +14,7 @@ export default function DisasterReliefProgramPage() {
                     className="w-full h-full object-cover"
                 />
                 {/* Dark overlay */}
-                <div className="absolute inset-0 bg-[#012060]/55"></div>
+                {/* <div className="absolute inset-0 bg-[#012060]/55"></div> */}
                 {/* Title */}
                 <div className="absolute inset-0 flex items-center justify-center">
                     <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white text-center tracking-tight">
@@ -41,7 +41,7 @@ export default function DisasterReliefProgramPage() {
             </section>
 
             {/* ===== CREATIVE IMAGE LAYOUT ===== */}
-            <section className="relative container mx-auto px-6 md:px-12 pb-8 md:pb-12">
+            <section className="w-full h-full mx-auto px-6 md:px-12">
                 <div className="relative max-w-4xl mx-auto">
 
                     {/* Decorative Shapes */}
@@ -85,7 +85,7 @@ export default function DisasterReliefProgramPage() {
                     </div>
 
                     {/* Lower overlapping images */}
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3 relative z-6 -mt-10 md:-mt-16 mx-2 md:mx-6">
+                    {/* <div className="grid grid-cols-2 md:grid-cols-3 gap-3 relative z-6 -mt-10 md:-mt-16 mx-2 md:mx-6">
                         <div className="rounded-xl overflow-hidden shadow-2xl border-4 border-white">
                             <img
                                 src="/website media/Disaster Relief Program/Footer Image.jpg"
@@ -107,7 +107,7 @@ export default function DisasterReliefProgramPage() {
                                 className="w-full h-[220px] object-cover"
                             />
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </section>
 
