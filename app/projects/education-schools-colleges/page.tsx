@@ -7,14 +7,14 @@ export default function EducationSchoolsCollegesPage() {
             <Navbar />
 
             {/* ===== HERO BANNER ===== */}
-            <section className="relative mt-[100px] mx-4 md:mx-8 rounded-2xl overflow-hidden h-[220px] md:h-[300px]">
+            <section className="relative mt-[100px] overflow-hidden h-[250px] md:h-[350px]">
                 <img
                     src="/website media/Education School & College/Banner.jpg"
                     alt="Education Schools & College"
                     className="w-full h-full object-cover"
                 />
                 {/* Dark navy overlay */}
-                <div className="absolute inset-0 bg-[#012060]/60"></div>
+                <div className="absolute inset-0 "></div>
                 {/* Title */}
                 <div className="absolute inset-0 flex items-center justify-center">
                     <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white text-center tracking-tight">
@@ -29,7 +29,7 @@ export default function EducationSchoolsCollegesPage() {
                     {/* Left - Text */}
                     <div className="md:w-1/2">
                         <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
-                            <span className="text-[#012060]">Educating Minds,</span>
+                            <span className="text-[#012060] text-4xl">Educating Minds,</span>
                             <br />
                             <span className="text-idara-orange italic">Empowering Futures</span>
                         </h2>
@@ -44,17 +44,17 @@ export default function EducationSchoolsCollegesPage() {
                     {/* Right - Student Image with Decorative Shapes */}
                     <div className="md:w-1/2 relative flex justify-center">
                         {/* Navy rounded rectangle - behind image */}
-                        <div className="absolute right-[5%] md:right-[10%] -top-4 w-[50px] md:w-[65px] h-[130px] md:h-[170px] bg-[#012060] rounded-full z-0"></div>
+                        {/* <div className="absolute right-[5%] md:right-[10%] -top-4 w-[50px] md:w-[65px] h-[130px] md:h-[170px] bg-[#012060] rounded-full z-0"></div> */}
                         {/* Orange circle - bottom right */}
-                        <div className="absolute right-[0%] md:right-[5%] bottom-[5%] w-[50px] md:w-[60px] h-[50px] md:h-[60px] bg-idara-orange rounded-full z-0"></div>
+                        {/* <div className="absolute right-[0%] md:right-[5%] bottom-[5%] w-[50px] md:w-[60px] h-[50px] md:h-[60px] bg-idara-orange rounded-full z-0"></div> */}
                         {/* Cyan triangle - bottom left */}
-                        <div className="absolute left-[10%] bottom-[10%] w-[40px] md:w-[50px] h-[40px] md:h-[50px] bg-idara-cyan z-0"
-                            style={{ clipPath: 'polygon(0 0, 100% 50%, 0 100%)' }}></div>
+                        {/* <div className="absolute left-[10%] bottom-[10%] w-[40px] md:w-[50px] h-[40px] md:h-[50px] bg-idara-cyan z-0"
+                            style={{ clipPath: 'polygon(0 0, 100% 50%, 0 100%)' }}></div> */}
 
                         {/* Student Image */}
                         <div className="relative z-5 w-[280px] md:w-[350px] rounded-xl overflow-hidden shadow-2xl">
                             <img
-                                src="/website media/Education School & College/Boy Image.jpg"
+                                src="/website media/Education School & College/Boy-image.png"
                                 alt="Student in school uniform"
                                 className="w-full h-[350px] md:h-[430px] object-cover"
                             />
