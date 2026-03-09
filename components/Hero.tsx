@@ -4,7 +4,7 @@ import React from 'react';
 
 const Hero: React.FC = () => {
     return (
-        <section className="pt-[180px] pb-[120px] bg-white overflow-hidden">
+        <section className="pt-45 pb-30 bg-white overflow-hidden">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col lg:flex-row items-center">
                     {/* Left Content Side */}
@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
 
                     {/* Right Graphic Side */}
                     <div className="lg:w-1/2 w-full mt-12 lg:mt-0 flex justify-center items-center">
-                        <div className="relative w-full max-w-[550px] h-[550px] md:h-[650px]">
+                        <div className="relative w-full max-w-137.5 h-137.5 md:h-162.5">
 
                             {/* 1. Orange Background Shape (Bachi ke peeche) */}
                             {/* Notice the border-radius: Top-left is 0, others are large */}

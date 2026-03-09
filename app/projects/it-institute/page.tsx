@@ -7,7 +7,7 @@ export default function ITInstitutePage() {
             <Navbar />
 
             {/* ===== HERO BANNER ===== */}
-            <section className="relative mt-[100px] mx-4 md:mx-8 rounded-2xl overflow-hidden h-[220px] md:h-[300px]">
+            <section className="relative mt-25 mx-4 md:mx-8 rounded-2xl overflow-hidden h-55 md:h-75">
                 <img
                     src="/website media/IT Institute/Banner.jpg"
                     alt="IT Institute Classroom"
@@ -49,53 +49,51 @@ export default function ITInstitutePage() {
 
                     {/* Decorative Shapes */}
                     {/* Navy rounded pill - top right */}
-                    <div className="absolute right-0 md:right-[-20px] top-[0%] w-[40px] md:w-[55px] h-[100px] md:h-[140px] bg-[#012060] rounded-full z-10"></div>
+                    <div className="absolute right-0 md:-right-5 top-[0%] w-10 md:w-13.75 h-25 md:h-35 bg-[#012060] rounded-full z-10"></div>
                     {/* Small orange/yellow dot - top right near pill */}
-                    <div className="absolute right-[-5px] md:right-[-10px] top-[18%] w-[18px] md:w-[22px] h-[18px] md:h-[22px] bg-idara-orange rounded-full z-10"></div>
+                    <div className="absolute -right-1.25 md:-right-2.5 top-[18%] w-4.5 md:w-5.5 h-4.5 md:h-5.5 bg-idara-orange rounded-full z-10"></div>
                     {/* Orange/Yellow circle - left side */}
-                    <div className="absolute -left-4 md:left-[-20px] top-[38%] w-[50px] md:w-[65px] h-[50px] md:h-[65px] bg-idara-yellow rounded-full z-10"></div>
+                    <div className="absolute -left-4 md:-left-5 top-[38%] w-12.5 md:w-16.25 h-12.5 md:h-16.25 bg-idara-yellow rounded-full z-10"></div>
                     {/* Cyan circle - right side */}
-                    <div className="absolute -right-4 md:right-[-20px] top-[55%] w-[55px] md:w-[70px] h-[55px] md:h-[70px] bg-idara-cyan rounded-full z-10"></div>
+                    <div className="absolute -right-4 md:-right-5 top-[55%] w-13.75 md:w-17.5 h-13.75 md:h-17.5 bg-idara-cyan rounded-full z-10"></div>
                     {/* Orange triangle - center */}
-                    <div className="absolute left-[48%] top-[52%] w-[35px] md:w-[45px] h-[35px] md:h-[45px] bg-idara-orange z-10"
+                    <div className="absolute left-[48%] top-[52%] w-8.75 md:w-11.25 h-8.75 md:h-11.25 bg-idara-orange z-10"
                         style={{ clipPath: 'polygon(0 0, 100% 50%, 0 100%)' }}></div>
                     {/* Cyan triangle - bottom left */}
-                    <div className="absolute left-4 md:left-8 bottom-[15%] w-[40px] md:w-[50px] h-[40px] md:h-[50px] bg-idara-cyan z-10"
+                    <div className="absolute left-4 md:left-8 bottom-[15%] w-10 md:w-12.5 h-10 md:h-12.5 bg-idara-cyan z-10"
                         style={{ clipPath: 'polygon(0 0, 100% 50%, 0 100%)' }}></div>
 
                     {/* Two side-by-side images */}
-                    <div className="flex flex-col gap-4 relative z-5">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div className="rounded-xl overflow-hidden shadow-md">
-                                <img
-                                    src="/website media/IT Institute/Image 01.jpg"
-                                    alt="IT students in computer lab"
-                                    className="w-full h-[220px] md:h-[300px] object-cover"
-                                />
-                            </div>
-                            <div className="rounded-xl overflow-hidden shadow-md">
-                                <img
-                                    src="/website media/IT Institute/Image 02.jpg"
-                                    alt="Students learning digital skills"
-                                    className="w-full h-[220px] md:h-[300px] object-cover"
-                                />
-                            </div>
-                        </div>
-
-                        {/* Image 3 - Lower wider image */}
-                        <div className="rounded-xl overflow-hidden shadow-md w-full">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 relative z-5">
+                        <div className="rounded-xl overflow-hidden shadow-2xl">
                             <img
-                                src="/website media/IT Institute/Image 03.jpg"
-                                alt="IT training session"
-                                className="w-full h-[250px] md:h-[350px] object-cover"
+                                src="/website media/IT Institute/Image 01.jpg"
+                                alt="IT students in computer lab"
+                                className="w-full h-[220px] md:h-[300px] object-cover"
                             />
                         </div>
+                        <div className="rounded-xl overflow-hidden shadow-2xl">
+                            <img
+                                src="/website media/IT Institute/Image 02.jpg"
+                                alt="Students learning digital skills"
+                                className="w-full h-[220px] md:h-[300px] object-cover"
+                            />
+                        </div>
+                    </div>
+
+                    {/* Image 3 - Lower overlapping wider image */}
+                    <div className="relative z-6 -mt-10 md:-mt-16 mx-4 md:mx-8 rounded-xl overflow-hidden shadow-2xl border-4 border-white">
+                        <img
+                            src="/website media/IT Institute/Image 03.jpg"
+                            alt="IT training session"
+                            className="w-full h-[250px] md:h-[350px] object-cover"
+                        />
                     </div>
                 </div>
             </section>
 
             {/* ===== FULL-WIDTH BOTTOM IMAGE WITH CYAN TINT ===== */}
-            <section className="relative mx-4 md:mx-8 rounded-2xl overflow-hidden h-[200px] md:h-[280px] mb-0">
+            <section className="relative mx-4 md:mx-8 rounded-2xl overflow-hidden h-50 md:h-70 mb-0">
                 <img
                     src="/website media/IT Institute/Footer Image.jpg"
                     alt="IT Institute students working"
