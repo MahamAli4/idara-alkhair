@@ -44,8 +44,8 @@ export default function ITInstitutePage() {
             </section>
 
             {/* ===== CREATIVE IMAGE LAYOUT ===== */}
-            <section className="relative container mx-auto px-6 md:px-12 pb-8 md:pb-12">
-                <div className="relative max-w-4xl mx-auto">
+            <section className="container mx-auto px-6 md:px-12">
+                <div className="relative">
 
                     {/* Decorative Shapes */}
                     {/* Navy rounded pill - top right */}
@@ -64,30 +64,32 @@ export default function ITInstitutePage() {
                         style={{ clipPath: 'polygon(0 0, 100% 50%, 0 100%)' }}></div>
 
                     {/* Two side-by-side images */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 relative z-5">
-                        <div className="rounded-xl overflow-hidden shadow-2xl">
-                            <img
-                                src="/website media/IT Institute/Image 01.jpg"
-                                alt="IT students in computer lab"
-                                className="w-full h-[220px] md:h-[300px] object-cover"
-                            />
+                    <div className="flex flex-col gap-4 relative z-5">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div className="rounded-xl overflow-hidden shadow-md">
+                                <img
+                                    src="/website media/IT Institute/Image 01.jpg"
+                                    alt="IT students in computer lab"
+                                    className="w-full h-[220px] md:h-[300px] object-cover"
+                                />
+                            </div>
+                            <div className="rounded-xl overflow-hidden shadow-md">
+                                <img
+                                    src="/website media/IT Institute/Image 02.jpg"
+                                    alt="Students learning digital skills"
+                                    className="w-full h-[220px] md:h-[300px] object-cover"
+                                />
+                            </div>
                         </div>
-                        <div className="rounded-xl overflow-hidden shadow-2xl">
-                            <img
-                                src="/website media/IT Institute/Image 02.jpg"
-                                alt="Students learning digital skills"
-                                className="w-full h-[220px] md:h-[300px] object-cover"
-                            />
-                        </div>
-                    </div>
 
-                    {/* Image 3 - Lower overlapping wider image */}
-                    <div className="relative z-6 -mt-10 md:-mt-16 mx-4 md:mx-8 rounded-xl overflow-hidden shadow-2xl border-4 border-white">
-                        <img
-                            src="/website media/IT Institute/Image 03.jpg"
-                            alt="IT training session"
-                            className="w-full h-[250px] md:h-[350px] object-cover"
-                        />
+                        {/* Image 3 - Lower wider image */}
+                        <div className="rounded-xl overflow-hidden shadow-md w-full">
+                            <img
+                                src="/website media/IT Institute/Image 03.jpg"
+                                alt="IT training session"
+                                className="w-full h-[250px] md:h-[350px] object-cover"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
