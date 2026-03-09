@@ -7,7 +7,7 @@ export default function MedicalCenterPage() {
             <Navbar />
 
             {/* ===== HERO BANNER ===== */}
-            <section className="relative mt-[100px] overflow-hidden h-[250px] md:h-[350px]">
+            <section className="relative mt-25 overflow-hidden h-62.5 md:h-87.5">
                 <img
                     src="/website media/Medical Center/banner.jpg"
                     alt="Al-Khair Medical Center"

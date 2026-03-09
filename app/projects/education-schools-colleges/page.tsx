@@ -7,7 +7,7 @@ export default function EducationSchoolsCollegesPage() {
             <Navbar />
 
             {/* ===== HERO BANNER ===== */}
-            <section className="relative mt-[100px] overflow-hidden h-[250px] md:h-[350px]">
+            <section className="relative mt-25 overflow-hidden h-62.5 md:h-87.5">
                 <img
                     src="/website media/Education School & College/Banner.jpg"
                     alt="Education Schools & College"
@@ -52,14 +52,14 @@ export default function EducationSchoolsCollegesPage() {
                         <img
                             src="/website media/Education School & College/Boy-image.png"
                             alt="Student in school uniform"
-                            className="w-full max-w-[350px] h-auto object-contain drop-shadow-xl"
+                            className="w-full max-w-87.5 h-auto object-contain drop-shadow-xl"
                         />
                     </div>
 
                 </div>
             </section>
             {/* ===== WHAT WE PROVIDE - Yellow Section ===== */}
-            <section className="relative bg-gradient-to-b from-yellow-400 to-yellow-300 py-12 md:py-16 overflow-hidden">
+            <section className="relative bg-linear-to-b from-yellow-400 to-yellow-300 py-12 md:py-16 overflow-hidden">
 
                 <div className="container mx-auto px-6">
 
@@ -102,7 +102,7 @@ export default function EducationSchoolsCollegesPage() {
                             <img
                                 src="/website media/Education School & College/Image 01.jpeg"
                                 alt="Students in classroom"
-                                className="w-full h-[180px] md:h-[200px] object-cover"
+                                className="w-full h-45 md:h-50 object-cover"
                             />
                         </div>
 
@@ -110,7 +110,7 @@ export default function EducationSchoolsCollegesPage() {
                             <img
                                 src="/website media/Education School & College/Image 02.jpeg"
                                 alt="Students learning together"
-                                className="w-full h-[180px] md:h-[200px] object-cover"
+                                className="w-full h-45 md:h-50 object-cover"
                             />
                         </div>
 
@@ -118,7 +118,7 @@ export default function EducationSchoolsCollegesPage() {
                             <img
                                 src="/website media/Education School & College/Image 03.jpg"
                                 alt="Happy students"
-                                className="w-full h-[180px] md:h-[200px] object-cover"
+                                className="w-full h-45 md:h-50 object-cover"
                             />
                         </div>
 
