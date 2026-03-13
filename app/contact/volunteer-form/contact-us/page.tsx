@@ -1,25 +1,40 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Phone, Mail, MapPin } from 'lucide-react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function ContactPage() {
+    useEffect(() => {
+        AOS.init({ 
+            duration: 800, // default animation duration
+            easing: 'ease-in-out', 
+            once: true,    // animation only once per scroll
+            mirror: false  // do not animate out when scrolling up
+        });
+    }, []);
+
     return (
         <main className="bg-white min-h-screen">
             <Navbar />
 
             {/* ===== HERO SECTION ===== */}
-            <section className="relative mt-[115px] h-[350px] md:h-[450px] overflow-hidden">
+             <section className="relative mt-[118px] w-full overflow-hidden h-[220px] md:h-[320px]">
                 <img
                     src="/website media/Contact Us/Banner Image.jpg"
                     alt="IT Lab"
                     className="absolute inset-0 w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black/40"></div>
-                <div className="relative z-10 h-full flex items-center justify-center text-center">
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white uppercase tracking-tighter">
+              <div className="absolute inset-0 bg-[#012060]/10"></div>
+
+                <div 
+                    className="absolute inset-0 flex items-center justify-center px-4"
+                    data-aos="zoom-in" // Zoom-in effect for the main title
+                >
+                    <h1 className="text-4xl md:text-6xl lg:text-4xl font-bold text-white text-center tracking-tighter">
                         CONTACT <span className="text-idara-orange">US</span>
                     </h1>
                 </div>
@@ -28,8 +43,9 @@ export default function ContactPage() {
             {/* ===== LET'S CONNECT SECTION ===== */}
             <section className="container mx-auto px-6 py-20">
                 <div className="flex flex-col lg:flex-row gap-16 lg:items-start">
+
                     {/* Left SIDE: TEXT */}
-                    <div className="w-full lg:w-1/2">
+                    <div className="w-full lg:w-1/2" data-aos="fade-right">
                         <div className="max-w-md">
                             <h2 className="text-4xl md:text-5xl font-black text-idara-navy mb-8">
                                 Let's <span className="text-idara-orange uppercase">Connect</span>
@@ -47,14 +63,13 @@ export default function ContactPage() {
                         </div>
                     </div>
 
-                    {/* Right SIDE: DECORATIVE FORM */}
-                    <div className="w-full lg:w-1/2 relative">
-                        {/* Decorative Shapes below form */}
+                    {/* Right SIDE: FORM */}
+                    <div className="w-full lg:w-1/2 relative" data-aos="fade-left" data-aos-delay={150}>
+                        {/* Decorative Shapes */}
                         <div className="absolute -bottom-10 -left-10 w-24 h-24 bg-idara-orange z-0" style={{ clipPath: 'polygon(100% 0, 0% 100%, 100% 100%)' }}></div>
                         <div className="absolute -top-10 -right-4 w-24 h-24 bg-idara-cyan z-0 shadow-lg" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%)' }}></div>
-                        <div className="absolute -top-6 -left-2 w-24 h-24 bg-idara-orange opacity-20 z-0" style={{ display: 'none' }}></div> {/* Placeholder for more shapes if needed */}
 
-                        <div className="relative z-10 bg-white p-8 md:p-10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-100">
+                        <div className="relative z-10 bg-gray-200 p-8 md:p-10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-100">
                             <form className="space-y-6">
                                 <div className="grid grid-cols-1 gap-2">
                                     <div className="flex items-center gap-4">
@@ -94,22 +109,22 @@ export default function ContactPage() {
             </section>
 
             {/* ===== CONTACT INFO CARDS SECTION ===== */}
-            <section className="bg-gray-200 py-20 px-6">
+            <section className="bg-gray-200 py-20 mt-15 px-6">
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                         {/* Phone Card */}
-                        <div className="text-center group">
-                            <div className="w-24 h-24 bg-idara-cyan rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg transform group-hover:scale-110 transition-transform">
+                        <div className="text-center group" data-aos="fade-up">
+                            <div className="w-24 h-24 bg-idara-cyan rounded-full flex items-center -mt-31 justify-center mx-auto mb-6 shadow-lg transform group-hover:scale-110 transition-transform">
                                 <Phone className="text-white w-10 h-10" />
                             </div>
-                            <h3 className="text-4xl font-black text-idara-navy mb-4 uppercase">Phone</h3>
+                            <h3 className="text-4xl font-black  text-idara-navy mb-4 uppercase">Phone</h3>
                             <p className="text-lg font-medium text-gray-700">0300-2992469</p>
                             <p className="text-lg font-medium text-gray-700">03002112609</p>
                         </div>
 
                         {/* Email Card */}
-                        <div className="text-center group">
-                            <div className="w-24 h-24 bg-idara-orange rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg transform group-hover:scale-110 transition-transform">
+                        <div className="text-center group" data-aos="fade-up" data-aos-delay={100}>
+                            <div className="w-24 h-24 bg-idara-orange rounded-full flex -mt-31 items-center justify-center mx-auto mb-6 shadow-lg transform group-hover:scale-110 transition-transform">
                                 <Mail className="text-white w-10 h-10" />
                             </div>
                             <h3 className="text-4xl font-black text-idara-navy mb-4 uppercase">Email</h3>
@@ -118,8 +133,8 @@ export default function ContactPage() {
                         </div>
 
                         {/* Address Card */}
-                        <div className="text-center group">
-                            <div className="w-24 h-24 bg-[#ffc20e] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg transform group-hover:scale-110 transition-transform">
+                        <div className="text-center group" data-aos="fade-up" data-aos-delay={200}>
+                            <div className="w-24 h-24 bg-[#ffc20e] rounded-full flex -mt-31 items-center justify-center mx-auto mb-6 shadow-lg transform group-hover:scale-110 transition-transform">
                                 <MapPin className="text-white w-10 h-10" />
                             </div>
                             <h3 className="text-4xl font-black text-idara-navy mb-4 uppercase">Address</h3>

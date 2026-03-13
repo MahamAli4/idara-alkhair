@@ -1,157 +1,174 @@
 'use client';
 
+import { useEffect } from 'react'; // Added useEffect
+import AOS from 'aos'; // Added AOS
+import 'aos/dist/aos.css'; // Added AOS styles
+
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export default function ShopPage() {
+    
+    // Initialize AOS
+    useEffect(() => {
+        AOS.init({
+            duration: 1000, // Animation speed
+            once: true,     // Whether animation should happen only once - while scrolling down
+            easing: 'ease-out',
+            offset: 100,    // Trigger point (px)
+        });
+    }, []);
+
     return (
         <main className="overflow-x-hidden bg-white">
             <Navbar />
 
             {/* ===== HERO BANNER ===== */}
-            <section className="relative mt-[100px] mx-4 md:mx-8 rounded-2xl overflow-hidden h-[250px] md:h-[350px]">
+            {/* Using fade-in for the banner */}
+            <section 
+                className="relative mt-[80px] w-full overflow-hidden h-[220px] md:h-[320px]"
+                data-aos="fade"
+            >
                 <img
                     src="/website media/Shop Page/Banner.jpg"
                     alt="Idara Shop"
                     className="w-full h-full object-cover"
                 />
-                {/* Vibrant Gradient Overlay */}
-                <div className="absolute inset-0 bg-linear-to-r from-[#012060]/80 to-transparent"></div>
-                {/* Title and Breadcrumb-like title */}
-                <div className="absolute inset-0 flex flex-col items-start justify-center px-10 md:px-20">
-                    <span className="text-idara-orange font-bold tracking-widest uppercase mb-2">Social Enterprise</span>
-                    <h1 className="text-4xl md:text-6xl font-black text-white tracking-tight">
-                        IDARA <span className="italic font-light">SHOP</span>
+
+                <div className="absolute inset-0 flex items-center justify-center px-4">
+                    <h1 
+                        className="text-4xl md:text-6xl lg:text-5xl font-bold text-white text-center tracking-tighter"
+                        data-aos="zoom-in" 
+                        data-aos-delay="200"
+                    >
+                        IAK <span className="text-idara-orange">Shops</span>
                     </h1>
-                    <p className="text-white/80 mt-4 max-w-md font-medium">
-                        Every purchase you make directly supports the education and welfare of children at Idara Al-Khair.
-                    </p>
                 </div>
             </section>
 
             {/* ===== MISSION STATEMENT ===== */}
-            <section className="py-12 px-6 md:px-12 bg-idara-orange text-white text-center">
-                <div className="container mx-auto">
-                    <h2 className="text-2xl md:text-3xl font-bold italic">
-                        "Shop with a Purpose, Wear with Pride, Give with Love."
+            <section className="container mx-auto px-6 md:px-12 py-16 md:py-24">
+                <div className="max-w-4xl">
+                    <h2 
+                        className="text-3xl md:text-5xl font-semibold leading-tight mb-6"
+                        data-aos="slide-up"
+                    >
+                        <span className="text-[#012060]">Purpose‐Driven </span>
+                        <span className="text-idara-orange font-extrabold">Shopping</span>
                     </h2>
+                    <p 
+                        className="text-black mt-6 text-lg text-center whitespace-nowrap"
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                    >
+                        Support our welfare initiatives by purchasing from our shop. Every purchase contributes directly to our programs.
+                    </p>
                 </div>
             </section>
 
-            {/* ===== PRODUCT HIGHLIGHTS ===== */}
-            <section className="container mx-auto px-6 md:px-12 py-20">
-                <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-                    <div>
-                        <h3 className="text-idara-navy text-4xl md:text-5xl font-black mb-2">Our <span className="text-idara-orange italic">Favorites</span></h3>
-                        <p className="text-gray-500 font-medium">Hand-picked collection of items made by our beneficiaries.</p>
+            <div className="flex justify-center py-10 relative">
+                <div 
+                    className="w-[90%] md:w-[70%] rounded-lg -mt-14 overflow-visible shadow-[0_-10px_20px_rgba(0,0,0,0.25),-10px_0_20px_rgba(0,0,0,0.2),10px_0_20px_rgba(0,0,0,0.2)] relative"
+                    data-aos="fade-up"
+                >
+                    <img
+                        src="/Website Media/Shop Page/instagram Picture.jpg"
+                        alt="Instagram"
+                        className="w-full h-auto object-cover"
+                    />
+                    {/* Triangle 1 */}
+                    <div
+                        className="absolute right-[8%] top-[1%] w-0 h-0 z-20 rotate-3"
+                        style={{
+                            borderTop: "50px solid #facc15",
+                            borderRight: "50px solid transparent"
+                        }}
+                        data-aos="zoom-in"
+                        data-aos-delay="500"
+                    ></div>
+
+                    {/* Triangle 2 */}
+                    <div
+                        className="absolute right-[0%] -top-[4%] w-0 h-0 z-20 rotate-270"
+                        style={{
+                            borderTop: "60px solid #f97316",
+                            borderRight: "60px solid transparent"
+                        }}
+                        data-aos="zoom-in"
+                        data-aos-delay="700"
+                    ></div>
+
+                    {/* Triangle 3 */}
+                    <div
+                        className="absolute right-[5%] top-[7%] w-0 h-0 z-40 rotate-90"
+                        style={{
+                            borderTop: "60px solid #06b6d4",
+                            borderRight: "60px solid transparent"
+                        }}
+                        data-aos="zoom-in"
+                        data-aos-delay="900"
+                    ></div>
+                </div>
+            </div>
+
+            <section className="bg-gray-300 py-45 -mt-29">
+                <h2 
+                    className="text-3xl md:text-4xl font-black font-semibold -mt-23 text-center text-[#012060]"
+                    data-aos="fade-right"
+                >
+                    Shop with purpose, <span className="text-idara-orange font-extrabold">Give with impact</span>
+                </h2>
+            </section>
+
+            <div className="flex flex-col justify-center py-10 relative">
+                <div className="flex flex-col justify-center py-10 relative">
+                    {/* Big main image */}
+                    <div 
+                        className="w-[95%] md:w-[85%] -mt-75 overflow-hidden relative mx-auto"
+                        data-aos="zoom-out"
+                    >
+                        <img
+                            src="/Website Media/Shop Page/Image 01.jpg"
+                            alt="Instagram"
+                            className="w-full h-[500px] md:h-[800px] object-cover rounded-lg"
+                        />
                     </div>
-                    <div className="flex gap-4">
-                        <button className="px-6 py-2 rounded-full border-2 border-idara-navy text-idara-navy font-bold hover:bg-idara-navy hover:text-white transition-all">
-                            Filter
+
+                    {/* Three grid images - staggered animation */}
+                    <div className="flex justify-center gap-6 -mt-35 relative z-10">
+                        <img
+                            src="/Website Media/Shop Page/Image 02.jpg"
+                            alt="Grid 1"
+                            className="w-[30%] md:w-[25%] h-auto object-cover rounded-xl border-white shadow-lg"
+                            data-aos="fade-up"
+                            data-aos-delay="100"
+                        />
+                        <img
+                            src="/Website Media/Shop Page/Image 03.jpg"
+                            alt="Grid 2"
+                            className="w-[30%] md:w-[25%] h-auto object-cover rounded-xl border-white shadow-lg"
+                            data-aos="fade-up"
+                            data-aos-delay="300"
+                        />
+                        <img
+                            src="/Website Media/Shop Page/Image 04.jpg"
+                            alt="Grid 3"
+                            className="w-[30%] md:w-[25%] h-auto object-cover rounded-xl border-white shadow-lg"
+                            data-aos="fade-up"
+                            data-aos-delay="500"
+                        />
+                    </div>
+                    <div 
+                        className="flex justify-center mt-8"
+                        data-aos="zoom-in"
+                        data-aos-anchor-placement="top-bottom"
+                    >
+                        <button className="bg-idara-orange px-16 py-3 text-2xl font-medium text-white rounded-[4px] hover:bg-opacity-90 transition-all active:scale-95 shadow-sm">
+                            Shop Now
                         </button>
-                        <button className="px-6 py-2 rounded-full bg-idara-navy text-white font-bold hover:opacity-90 transition-all">
-                            Latest
-                        </button>
                     </div>
                 </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {/* Product 1 */}
-                    <div className="group">
-                        <div className="relative aspect-3/4 rounded-4xl overflow-hidden bg-gray-100 mb-6 transition-transform group-hover:-translate-y-2">
-                            <img
-                                src="/website media/Shop Page/Image 01.jpg"
-                                alt="Handmade Tote Bag"
-                                className="w-full h-full object-cover"
-                            />
-                            <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-1 rounded-full text-idara-navy font-bold text-sm">
-                                $25.00
-                            </div>
-                            <div className="absolute inset-0 bg-idara-navy/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                <button className="bg-white text-idara-navy px-8 py-3 rounded-full font-black text-sm uppercase tracking-wider transform translate-y-4 group-hover:translate-y-0 transition-transform">
-                                    Add to Cart
-                                </button>
-                            </div>
-                        </div>
-                        <h4 className="text-xl font-bold text-idara-navy">Artisan Tote Bag</h4>
-                        <p className="text-gray-500 italic">Crafted by Technical Center</p>
-                    </div>
-
-                    {/* Product 2 */}
-                    <div className="group">
-                        <div className="relative aspect-3/4 rounded-4xl overflow-hidden bg-gray-100 mb-6 transition-transform group-hover:-translate-y-2">
-                            <img
-                                src="/website media/Shop Page/Image 02.jpg"
-                                alt="Eco Notebook"
-                                className="w-full h-full object-cover"
-                            />
-                            <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-1 rounded-full text-idara-navy font-bold text-sm">
-                                $12.00
-                            </div>
-                            <div className="absolute inset-0 bg-idara-navy/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                <button className="bg-white text-idara-navy px-8 py-3 rounded-full font-black text-sm uppercase tracking-wider transform translate-y-4 group-hover:translate-y-0 transition-transform">
-                                    Add to Cart
-                                </button>
-                            </div>
-                        </div>
-                        <h4 className="text-xl font-bold text-idara-navy">Eco Diary</h4>
-                        <p className="text-gray-500 italic">Handmade Paper</p>
-                    </div>
-
-                    {/* Product 3 */}
-                    <div className="group">
-                        <div className="relative aspect-3/4 rounded-4xl overflow-hidden bg-gray-100 mb-6 transition-transform group-hover:-translate-y-2">
-                            <img
-                                src="/website media/Shop Page/Image 03.jpg"
-                                alt="Support Tee"
-                                className="w-full h-full object-cover"
-                            />
-                            <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-1 rounded-full text-idara-navy font-bold text-sm">
-                                $30.00
-                            </div>
-                            <div className="absolute inset-0 bg-idara-navy/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                <button className="bg-white text-idara-navy px-8 py-3 rounded-full font-black text-sm uppercase tracking-wider transform translate-y-4 group-hover:translate-y-0 transition-transform">
-                                    Add to Cart
-                                </button>
-                            </div>
-                        </div>
-                        <h4 className="text-xl font-bold text-idara-navy">Official Logo Tee</h4>
-                        <p className="text-gray-500 italic">Premium Cotton</p>
-                    </div>
-
-                    {/* Product 4 */}
-                    <div className="group">
-                        <div className="relative aspect-3/4 rounded-4xl overflow-hidden bg-gray-100 mb-6 transition-transform group-hover:-translate-y-2">
-                            <img
-                                src="/website media/Shop Page/Image 04.jpg"
-                                alt="Impact Watch"
-                                className="w-full h-full object-cover"
-                            />
-                            <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-1 rounded-full text-idara-navy font-bold text-sm">
-                                $45.00
-                            </div>
-                            <div className="absolute inset-0 bg-idara-navy/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                <button className="bg-white text-idara-navy px-8 py-3 rounded-full font-black text-sm uppercase tracking-wider transform translate-y-4 group-hover:translate-y-0 transition-transform">
-                                    Add to Cart
-                                </button>
-                            </div>
-                        </div>
-                        <h4 className="text-xl font-bold text-idara-navy">Impact Watch</h4>
-                        <p className="text-gray-500 italic">Limited Edition</p>
-                    </div>
-                </div>
-            </section>
-
-            {/* ===== SOCIAL PROOF / QUOTE ===== */}
-            <section className="bg-idara-navy py-10 overflow-hidden">
-                <div className="flex whitespace-nowrap animate-marquee">
-                    {[...Array(10)].map((_, i) => (
-                        <span key={i} className="text-white text-5xl md:text-8xl font-black italic opacity-20 mx-10">
-                            SHOP TO SUPPORT EDUCATION •
-                        </span>
-                    ))}
-                </div>
-            </section>
+            </div>
 
             <Footer />
 
