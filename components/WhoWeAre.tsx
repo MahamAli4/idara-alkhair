@@ -84,8 +84,8 @@ const WhoWeAre: React.FC = () => {
                                     <p className="text-[0.8rem] lg:text-[1.5rem] font-bold uppercase tracking-wide">
                                         Years
                                     </p>
-                                    <p className="text-[0.6rem] lg:text-[0.7rem] font-bold opacity-80 mt-1 uppercase leading-tight text-black">
-                                        of continuous <br /> service
+                                    <p className="text-[10px] sm:text-[0.6rem] lg:text-[0.7rem] font-bold opacity-80 mt-1 uppercase leading-tight text-black">
+                                        of continuous <br className="hidden sm:block" /> service
                                     </p>
                                 </div>
 
@@ -94,7 +94,7 @@ const WhoWeAre: React.FC = () => {
                                     <p className="text-[0.8rem] lg:text-[1rem] font-bold uppercase tracking-wide">
                                         Individuals
                                     </p>
-                                    <p className="text-[0.6rem] lg:text-[0.7rem] text-black font-bold opacity-80 mt-1 uppercase leading-tight">
+                                    <p className="text-[10px] sm:text-[0.6rem] lg:text-[0.7rem] text-black font-bold opacity-80 mt-1 uppercase leading-tight">
                                         supported
                                     </p>
                                 </div>
@@ -104,8 +104,8 @@ const WhoWeAre: React.FC = () => {
                                     <p className="text-[0.8rem] lg:text-[1rem] font-bold uppercase tracking-wide">
                                         Students
                                     </p>
-                                    <p className="text-[0.6rem] lg:text-[0.7rem] text-black font-bold opacity-80 mt-1 uppercase leading-tight">
-                                        currently <br /> benefiting
+                                    <p className="text-[10px] sm:text-[0.6rem] lg:text-[0.7rem] text-black font-bold opacity-80 mt-1 uppercase leading-tight">
+                                        currently <br className="hidden sm:block" /> benefiting
                                     </p>
                                 </div>
                             </div>
@@ -118,7 +118,7 @@ const WhoWeAre: React.FC = () => {
                             >
                                 <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
 
-                                <h4 className="text-[1.1rem] lg:text-[2.1rem] font-black leading-none relative z-10 italic">
+                                <h4 className="text-xl md:text-[1.1rem] lg:text-[2.1rem] font-black leading-tight relative z-10 italic">
                                     Multiple Welfare Programs
                                 </h4>
 

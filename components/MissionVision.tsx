@@ -46,6 +46,7 @@ const MissionVisionValues = () => {
 
                     {/* Our Values */}
                     <div className="w-full">
+<<<<<<< HEAD
                         <h2
                             className="text-5xl md:text-5xl font-medium text-idara-navy text-center mb-18 tracking-tighter  drop-shadow-lg"
                             data-aos="fade-up"
@@ -54,12 +55,20 @@ const MissionVisionValues = () => {
                         </h2>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 text-center gap-x-44 gap-y-12 px-8 lg:px-33">
+=======
+                        <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-[#002e82] text-center mb-10 md:mb-16 uppercase tracking-tighter drop-shadow-lg">
+                            Our <span className='text-white font-black'>Values</span>
+                        </h2>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-8 md:gap-y-12 px-4 md:px-8 lg:px-20">
+>>>>>>> eb9d2f8ba66949931884d44be0414745c204e5f5
                             {[
                                 "Compassion & Integrity",
                                 "Sustainability",
                                 "Transparency & Accountability",
                                 "Community-Driven Impact"
                             ].map((value, index) => (
+<<<<<<< HEAD
                                 <div
                                     key={index}
                                     className="flex items-center space-x-6"
@@ -68,6 +77,11 @@ const MissionVisionValues = () => {
                                 >
                                     <div className="w-3.5 h-3.5 bg-[#012060] rounded-full shrink-0 shadow-sm"></div>
                                     <span className="text-2xl md:text-3xl lg:text-2xl font-bold text-idara-navy tracking-tight">
+=======
+                                <div key={index} className="flex items-center space-x-4 md:space-x-6">
+                                    <div className="w-3 md:w-3.5 h-3 md:h-3.5 bg-[#002e82] rounded-full shrink-0 shadow-sm"></div>
+                                    <span className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold text-[#012060] tracking-tight">
+>>>>>>> eb9d2f8ba66949931884d44be0414745c204e5f5
                                         {value}
                                     </span>
                                 </div>

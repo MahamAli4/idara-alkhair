@@ -5,69 +5,31 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Hero: React.FC = () => {
+    return (
+        <section className="pt-[180px] pb-[120px] bg-white overflow-hidden">
+            <div className="container mx-auto px-4">
+                <div className="flex flex-col lg:flex-row items-center">
+                    {/* Left Content Side */}
+                    <div className="lg:w-1/2 mb-10 lg:mb-0 relative z-10">
+                        <h1 className="hero-title font-bold">
+                            Changing <span className="text-idara-orange font-black">Lives</span><br />
+                            Today. Building a Better<br />
+                            <span className="text-idara-orange font-black">Tomorrow.</span>
+                        </h1>
+                        <p className="text-[1.5rem] text-idara-navy opacity-80 mb-12 max-w-full">
+                            For over 38 years, Idara Al-Khair Welfare Society has been serving humanity with compassion, transparency, and purpose. From educating children to feeding the hungry and providing healthcare to those who cannot afford it, we stand with those who need support the most.
+                        </p>
+                        <button className="btn-help-family">
+                            Help a Family Today
+                        </button>
 
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true,
-      easing: 'ease-out-cubic',
-      offset: 100
-    });
-  }, []);
+                        {/* Cyan Triangle behind text area */}
+                        <div className="hero-tri-cyan shadow-sm"></div>
+                    </div>
 
-  return (
-    <section className="pt-[180px] pb-[120px] bg-white overflow-hidden">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center">
-
-          {/* Left Content Side */}
-          <div
-            data-aos="fade-right"
-            className="lg:w-1/2 mb-10 lg:mb-0 relative z-10"
-          >
-            <h1
-              data-aos="fade-up"
-              data-aos-delay="100"
-              className="hero-title font-bold"
-            >
-              Changing <span className="text-idara-orange font-black">Lives</span><br />
-              Today. Building a Better<br />
-              <span className="text-idara-orange font-black">Tomorrow.</span>
-            </h1>
-
-            <p
-              data-aos="fade-up"
-              data-aos-delay="250"
-              className="text-[1.4rem] text-idara-navy opacity-80 mb-12 max-w-full"
-            >
-              For over 38 years, Idara Al-Khair Welfare Society has been serving
-              humanity with compassion, transparency, and purpose. From educating
-              children to feeding the hungry and providing healthcare to those who
-              cannot afford it, we stand with those who need support the most.
-            </p>
-
-            <button
-              data-aos="zoom-in"
-              data-aos-delay="200"
-              className="btn-help-family"
-            >
-              Help a Family Today
-            </button>
-
-            {/* Cyan Triangle */}
-            <div
-              data-aos="zoom-in"
-              data-aos-delay="500"
-              className="hero-tri-cyan mt-35 shadow-sm"
-            ></div>
-          </div>
-
-          {/* Right Graphic Side */}
-          <div
-            data-aos="fade-left"
-            className="lg:w-1/2 w-full mt-12 lg:mt-0 flex justify-center items-center"
-          >
-            <div className="relative w-full max-w-[550px] h-[550px] md:h-[650px]">
+                    {/* Right Graphic Side */}
+                    <div className="lg:w-1/2 w-full mt-12 lg:mt-0 flex justify-center items-center">
+                        <div className="relative w-full max-w-[550px] h-[550px] md:h-[650px]">
 
               {/* Orange Shape */}
               <div

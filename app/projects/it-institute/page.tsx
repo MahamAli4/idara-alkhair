@@ -23,10 +23,14 @@ export default function ITInstitutePage() {
             <Navbar />
 
             {/* ===== HERO BANNER ===== */}
+<<<<<<< HEAD
             <section 
                 className="relative mt-[80px] w-full overflow-hidden h-[220px] md:h-[320px]"
                 data-aos="fade"
             >
+=======
+            <section className="relative mt-25 mx-4 md:mx-8 rounded-2xl overflow-hidden h-55 md:h-75">
+>>>>>>> eb9d2f8ba66949931884d44be0414745c204e5f5
                 <img
                     src="/website media/IT Institute/Banner.jpg"
                     alt="IT Institute Classroom"
@@ -82,9 +86,10 @@ export default function ITInstitutePage() {
             </section>
 
             {/* ===== CREATIVE IMAGE LAYOUT ===== */}
-            <section className="relative container mx-auto px-6 md:px-12 pb-8 md:pb-12">
-                <div className="relative max-w-4xl mx-auto">
+            <section className="container mx-auto px-6 md:px-12">
+                <div className="relative">
 
+<<<<<<< HEAD
                     {/* Decorative Shapes - Animated to appear like a UI loading */}
                     <div 
                         className="absolute right-0 md:right-[-150px] top-[-10%] w-[40px] md:w-[44px] h-[100px] md:h-[120px] bg-[#012060] rounded-full z-10"
@@ -123,6 +128,23 @@ export default function ITInstitutePage() {
                         data-aos="fade-up-right"
                         data-aos-delay="600"
                     ></div>
+=======
+                    {/* Decorative Shapes */}
+                    {/* Navy rounded pill - top right */}
+                    <div className="absolute right-0 md:-right-5 top-[0%] w-10 md:w-13.75 h-25 md:h-35 bg-[#012060] rounded-full z-10"></div>
+                    {/* Small orange/yellow dot - top right near pill */}
+                    <div className="absolute -right-1.25 md:-right-2.5 top-[18%] w-4.5 md:w-5.5 h-4.5 md:h-5.5 bg-idara-orange rounded-full z-10"></div>
+                    {/* Orange/Yellow circle - left side */}
+                    <div className="absolute -left-4 md:-left-5 top-[38%] w-12.5 md:w-16.25 h-12.5 md:h-16.25 bg-idara-yellow rounded-full z-10"></div>
+                    {/* Cyan circle - right side */}
+                    <div className="absolute -right-4 md:-right-5 top-[55%] w-13.75 md:w-17.5 h-13.75 md:h-17.5 bg-idara-cyan rounded-full z-10"></div>
+                    {/* Orange triangle - center */}
+                    <div className="absolute left-[48%] top-[52%] w-8.75 md:w-11.25 h-8.75 md:h-11.25 bg-idara-orange z-10"
+                        style={{ clipPath: 'polygon(0 0, 100% 50%, 0 100%)' }}></div>
+                    {/* Cyan triangle - bottom left */}
+                    <div className="absolute left-4 md:left-8 bottom-[15%] w-10 md:w-12.5 h-10 md:h-12.5 bg-idara-cyan z-10"
+                        style={{ clipPath: 'polygon(0 0, 100% 50%, 0 100%)' }}></div>
+>>>>>>> eb9d2f8ba66949931884d44be0414745c204e5f5
 
                     {/* Two side-by-side images */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-70 relative z-5">
@@ -164,11 +186,16 @@ export default function ITInstitutePage() {
                 </div>
             </section>
 
+<<<<<<< HEAD
             {/* ===== FULL-WIDTH BOTTOM IMAGE ===== */}
             <section 
                 className="relative mt-[80px] w-full overflow-hidden h-[220px] md:h-[320px]"
                 data-aos="fade-up"
             >
+=======
+            {/* ===== FULL-WIDTH BOTTOM IMAGE WITH CYAN TINT ===== */}
+            <section className="relative mx-4 md:mx-8 rounded-2xl overflow-hidden h-50 md:h-70 mb-0">
+>>>>>>> eb9d2f8ba66949931884d44be0414745c204e5f5
                 <img
                     src="/website media/IT Institute/Footer Image.jpg"
                     alt="IT Institute students working"
