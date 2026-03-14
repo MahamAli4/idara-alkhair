@@ -216,7 +216,7 @@ const Navbar: React.FC = () => {
                                                             href={project.href}
                                                             className={`flex items-start py-3 px-3 rounded-lg transition-colors ${isActive ? 'bg-orange-50 text-idara-orange' : 'text-gray-600 hover:bg-gray-50 hover:text-idara-orange'}`}
                                                         >
-                                                            <Icon size={18} className={`mr-3 mt-0.5 flex-shrink-0 ${isActive ? 'text-idara-orange' : 'text-gray-400'}`} />
+                                                            <Icon size={18} className={`mr-3 mt-0.5 shrink-0 ${isActive ? 'text-idara-orange' : 'text-gray-400'}`} />
                                                             <span className="text-sm font-medium leading-tight">{project.name}</span>
                                                         </Link>
                                                     );
@@ -246,7 +246,7 @@ const Navbar: React.FC = () => {
                                                             href={item.href}
                                                             className={`flex items-start py-3 px-3 rounded-lg transition-colors ${isActive ? 'bg-orange-50 text-idara-orange shadow-sm' : 'text-gray-600 hover:bg-gray-50 hover:text-idara-orange'}`}
                                                         >
-                                                            <Icon size={18} className={`mr-3 mt-0.5 flex-shrink-0 ${isActive ? 'text-idara-orange' : 'text-gray-400'}`} />
+                                                            <Icon size={18} className={`mr-3 mt-0.5 shrink-0 ${isActive ? 'text-idara-orange' : 'text-gray-400'}`} />
                                                             <span className="text-sm font-medium leading-tight">{item.name}</span>
                                                         </Link>
                                                     );
