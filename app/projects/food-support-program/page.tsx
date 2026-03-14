@@ -1,61 +1,143 @@
+'use client';
+
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export default function FoodSupportProgramPage() {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: 'ease-out-cubic',
+            offset: 50,
+        });
+    }, []);
+
     return (
         <main className="overflow-x-hidden bg-white">
             <Navbar />
 
             {/* ===== HERO BANNER ===== */}
-            <section className="relative mt-[100px] mx-4 md:mx-8 rounded-2xl overflow-hidden h-[220px] md:h-[300px]">
+            <section 
+                className="relative mt-[80px] w-full overflow-hidden h-[220px] md:h-[320px]"
+                data-aos="fade"
+            >
                 <img
                     src="/website media/Food Support Program/Banner.jpg"
                     alt="Food Support Program"
                     className="w-full h-full object-cover"
                 />
-                {/* Dark overlay */}
-                <div className="absolute inset-0 bg-[#012060]/50"></div>
-                {/* Title */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white text-center tracking-tight">
-                        Food <span className="text-idara-orange italic">Support</span> Program
+
+                <div className="absolute inset-0 bg-[#012060]/20"></div>
+
+                <div className="absolute inset-0 flex items-center justify-center px-4">
+                    <h1 
+                        className="text-4xl md:text-6xl lg:text-5xl font-bold text-white text-center tracking-tighter"
+                        data-aos="zoom-out-up"
+                        data-aos-delay="200"
+                    >
+                        Food <span className="text-[#ed7d31]">Support</span> Program
                     </h1>
                 </div>
             </section>
 
-            {/* ===== CONTENT SECTION WITH YELLOW CURVE ===== */}
-            <section className="relative overflow-hidden">
-                {/* Yellow curved background shape */}
-                <div className="absolute top-0 left-0 right-0 h-[350px] md:h-[300px]">
-                    <svg viewBox="0 0 1440 400" className="w-full h-full" preserveAspectRatio="none">
-                        <path
-                            d="M0,0 L0,200 Q360,380 720,250 Q1080,120 1440,280 L1440,0 Z"
-                            fill="#FFB300"
-                        />
-                    </svg>
-                </div>
 
-                <div className="relative z-10 container mx-auto px-6 md:px-12 pt-12 pb-8 md:pt-16 md:pb-12">
-                    <div className="max-w-4xl">
-                        <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
-                            <span className="text-[#012060]">Fighting Hunger </span>
-                            <span className="text-white italic font-black">with Dignity</span>
-                        </h2>
-                        <p className="text-[#012060]/90 text-base md:text-lg leading-relaxed mb-5 max-w-3xl">
-                            No family should sleep hungry. Our Food Support Program provides daily meals, monthly ration distributions, and seasonal food drives to families facing food insecurity.
-                        </p>
-                        <p className="text-base md:text-lg">
-                            <span className="text-idara-orange font-semibold italic">Program Highlights :-</span>
-                            <span className="text-[#012060]/80"> Daily meals for students & staff · Monthly ration packs · Ramadan & emergency food drives</span>
-                        </p>
+            {/* ===== FULL BACKGROUND IMAGE SECTION ===== */}
+            <section className="relative w-full min-h-[1210px] overflow-hidden">
+
+                {/* Background Image - Slight zoom on entrance for depth */}
+                <img
+                    src="/images/CenterImage.png"
+                    alt="Child smiling"
+                    className="absolute inset-0 w-full h-full object-cover"
+                    data-aos="zoom-out"
+                    data-aos-duration="2000"
+                />
+
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-white/20"></div>
+
+                {/* CONTENT + CREATIVE LAYOUT */}
+                <div className="relative z-10">
+
+                    {/* TEXT CONTENT */}
+                    <div className="container mx-auto px-6 md:px-12 pt-12 pb-8 md:pt-16 md:pb-12">
+                        <div className="max-w-4xl" data-aos="fade-right">
+                            <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-4">
+                                <span className="text-[#012060]">Fighting Hunger </span>
+                                <span className="text-[#ed7d31] font-black">with Dignity</span>
+                            </h2>
+
+                            <p className="text-black text-base md:text-lg leading-relaxed mb-5 max-w-3xl">
+                                No family should sleep hungry. Our Food Support Program provides daily meals, monthly ration distributions, and seasonal food drives to families facing food insecurity.
+                            </p>
+
+                            <p className="text-base md:text-lg">
+                                <span className="text-[#ed7d31] font-bold">
+                                    Program Highlights :-
+                                </span>
+                                <span className="text-black">
+                                    {" "}Daily meals for students & staff · Monthly ration packs · Ramadan & emergency food drives
+                                </span>
+                            </p>
+                        </div>
                     </div>
+
+
+                    {/* CREATIVE IMAGE LAYOUT */}
+                    <section className="relative container mx-auto px-6 md:px-12 pb-16">
+                        <div className="relative max-w-4xl mx-auto">
+                            
+                            {/* Stylized Quote - Staggered entrance */}
+                            <div className="relative z-20 mt-15 mb-8 max-w-[340px] md:max-w-[400px]">
+                                <p className="leading-[1.1] font-montserrat select-none">
+                                    <span 
+                                        className="text-idara-orange font-black text-3xl md:text-5xl inline-block"
+                                        data-aos="fade-up"
+                                        data-aos-delay="300"
+                                    >
+                                        "Your support
+                                    </span>
+                                    <br />
+                                    <span 
+                                        className="text-[#012060] font-black text-5xl md:text-7xl inline-block"
+                                        data-aos="fade-up"
+                                        data-aos-delay="500"
+                                    >
+                                        ensures
+                                    </span>
+                                    <br />
+                                    <span 
+                                        className="text-[#ffc000] font-black text-3xl md:text-4xl inline-block"
+                                        data-aos="fade-up"
+                                        data-aos-delay="700"
+                                    >
+                                        no plate remain
+                                    </span>
+                                    <br />
+                                    <span 
+                                        className="text-[#012060] font-black text-5xl md:text-8xl inline-block"
+                                        data-aos="fade-up"
+                                        data-aos-delay="900"
+                                    >
+                                        empty"
+                                    </span>
+                                </p>
+                            </div>
+
+                        </div>
+                    </section>
+
                 </div>
             </section>
 
-            {/* ===== CREATIVE IMAGE LAYOUT ===== */}
-            <section className="relative container mx-auto px-6 md:px-12 pb-8 md:pb-12">
-                <div className="relative max-w-4xl mx-auto">
 
+<<<<<<< HEAD
                     {/* Decorative Shapes */}
                     {/* Navy rounded pill - right */}
                     <div className="absolute -right-4 md:right-[-20px] top-[20%] w-[45px] md:w-[60px] h-[110px] md:h-[150px] bg-[#012060] rounded-full z-10"></div>
@@ -123,10 +205,22 @@ export default function FoodSupportProgramPage() {
                         </div>
                     </div>
                 </div>
+=======
+            {/* ===== BOTTOM IMAGE ===== */}
+            <section 
+                className="relative w-full overflow-hidden"
+                data-aos="fade-up"
+            >
+                <img
+                    src="/website media/Food Support Program/Footer.jpg"
+                    alt="Food distribution"
+                    className="w-full h-auto object-cover"
+                />
+>>>>>>> ffb34603a41677c9d7ebf3cb37c9c094e6ea9a10
             </section>
 
-            {/* ===== FOOTER ===== */}
             <Footer />
+
         </main>
     );
 }

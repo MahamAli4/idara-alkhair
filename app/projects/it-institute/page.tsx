@@ -1,24 +1,51 @@
+'use client';
+
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export default function ITInstitutePage() {
+    
+    useEffect(() => {
+        AOS.init({
+            duration: 900,
+            once: true,
+            easing: 'ease-in-out',
+            offset: 80,
+        });
+    }, []);
+
     return (
         <main className="overflow-x-hidden bg-white">
             <Navbar />
 
             {/* ===== HERO BANNER ===== */}
+<<<<<<< HEAD
             <section className="relative mt-25 mx-4 md:mx-8 rounded-2xl overflow-hidden h-55 md:h-75">
+=======
+            <section 
+                className="relative mt-[80px] w-full overflow-hidden h-[220px] md:h-[320px]"
+                data-aos="fade"
+            >
+>>>>>>> ffb34603a41677c9d7ebf3cb37c9c094e6ea9a10
                 <img
                     src="/website media/IT Institute/Banner.jpg"
                     alt="IT Institute Classroom"
                     className="w-full h-full object-cover"
                 />
-                {/* Cyan Overlay */}
-                <div className="absolute inset-0 bg-idara-cyan/65"></div>
-                {/* Title */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white text-center tracking-tight">
-                        IT <span className="text-idara-orange italic">Institute</span>
+
+                <div className="absolute inset-0 bg-[#012060]/20"></div>
+
+                <div className="absolute inset-0 flex items-center justify-center px-4">
+                    <h1 
+                        className="text-4xl md:text-6xl lg:text-5xl font-bold text-white text-center tracking-tighter"
+                        data-aos="zoom-out"
+                        data-aos-delay="200"
+                    >
+                        IT <span className="text-idara-orange">Institute</span>
                     </h1>
                 </div>
             </section>
@@ -26,18 +53,33 @@ export default function ITInstitutePage() {
             {/* ===== CONTENT SECTION ===== */}
             <section className="container mx-auto px-6 md:px-12 py-16 md:py-24">
                 <div className="max-w-4xl">
-                    <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
+                    <h2 
+                        className="text-3xl md:text-5xl font-semibold leading-tight mb-6"
+                        data-aos="fade-right"
+                    >
                         <span className="text-[#012060]">Digital Skills for </span>
-                        <span className="text-idara-orange italic">a Digital World</span>
+                        <span className="text-idara-orange font-extrabold">a Digital World</span>
                     </h2>
-                    <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6 max-w-3xl">
+                    <p 
+                        className="text-black text-base md:text-lg leading-relaxed mb-6 max-w-3xl"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
                         The IT Institute prepares students for modern careers by providing training in essential digital and technology-based skills.
                     </p>
-                    <p className="text-base md:text-lg mb-2">
-                        <span className="text-idara-orange font-semibold italic">Focus Areas :-</span>
-                        <span className="text-gray-700">  Computer Literacy · IT & Software Basics · Freelancing & Digital Skills</span>
+                    <p 
+                        className="text-base md:text-lg mb-2"
+                        data-aos="fade-up"
+                        data-aos-delay="400"
+                    >
+                        <span className="text-idara-orange font-bold ">Focus Areas :-</span>
+                        <span className="text-black">  Computer Literacy · IT & Software Basics · Freelancing & Digital Skills</span>
                     </p>
-                    <p className="text-gray-600 text-base italic">
+                    <p 
+                        className="text-black text-base"
+                        data-aos="fade-up"
+                        data-aos-delay="600"
+                    >
                         Our goal is to prepare youth for sustainable income opportunities in today's digital economy.
                     </p>
                 </div>
@@ -47,6 +89,7 @@ export default function ITInstitutePage() {
             <section className="container mx-auto px-6 md:px-12">
                 <div className="relative">
 
+<<<<<<< HEAD
                     {/* Decorative Shapes */}
                     {/* Navy rounded pill - top right */}
                     <div className="absolute right-0 md:-right-5 top-[0%] w-10 md:w-13.75 h-25 md:h-35 bg-[#012060] rounded-full z-10"></div>
@@ -62,48 +105,105 @@ export default function ITInstitutePage() {
                     {/* Cyan triangle - bottom left */}
                     <div className="absolute left-4 md:left-8 bottom-[15%] w-10 md:w-12.5 h-10 md:h-12.5 bg-idara-cyan z-10"
                         style={{ clipPath: 'polygon(0 0, 100% 50%, 0 100%)' }}></div>
+=======
+                    {/* Decorative Shapes - Animated to appear like a UI loading */}
+                    <div 
+                        className="absolute right-0 md:right-[-150px] top-[-10%] w-[40px] md:w-[44px] h-[100px] md:h-[120px] bg-[#012060] rounded-full z-10"
+                        data-aos="slide-down"
+                        data-aos-delay="400"
+                    ></div>
+                    <div 
+                        className="absolute right-[-8px] md:right-[-149px] top-[9%] w-[18px] md:w-[45px] h-[18px] md:h-[45px] bg-idara-yellow rounded-full z-10"
+                        data-aos="zoom-in"
+                        data-aos-delay="700"
+                    ></div>
+                    <div 
+                        className="absolute -left-4 md:left-[-170px] top-[52%] w-[50px] md:w-[90px] h-[50px] md:h-[85px] bg-idara-yellow rounded-full z-10"
+                        data-aos="fade-right"
+                        data-aos-delay="500"
+                    ></div>
+                    <div 
+                        className="absolute -right-8 md:right-[-170px] top-[52%] w-[55px] md:w-[100px] h-[55px] md:h-[105px] bg-idara-cyan rounded-full z-10"
+                        data-aos="fade-left"
+                        data-aos-delay="500"
+                    ></div>
+                    
+                    <div
+                        className="absolute right-[46%] top-[54%] w-0 h-0 z-20"
+                        style={{
+                            borderTop: "50px solid #facc15",
+                            borderRight: "50px solid transparent"
+                        }}
+                        data-aos="zoom-in"
+                        data-aos-delay="800"
+                    ></div>
+
+                    <div 
+                        className="absolute left-[-160] bottom-[-10%] md:bottom-[11%] w-[120px] md:w-[100px] h-[120px] md:h-[100px] bg-idara-cyan z-30"
+                        style={{ clipPath: 'polygon(0% 70%, 70% 70%, 0% 0%)' }}
+                        data-aos="fade-up-right"
+                        data-aos-delay="600"
+                    ></div>
+>>>>>>> ffb34603a41677c9d7ebf3cb37c9c094e6ea9a10
 
                     {/* Two side-by-side images */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 relative z-5">
-                        <div className="rounded-xl overflow-hidden shadow-2xl">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-70 relative z-5">
+                        <div 
+                            className="relative mt-6 overflow-hidden h-[220px] md:h-[370px] -mx-8 md:-mx-34"
+                            data-aos="fade-up"
+                        >
                             <img
                                 src="/website media/IT Institute/Image 01.jpg"
                                 alt="IT students in computer lab"
-                                className="w-full h-[220px] md:h-[300px] object-cover"
+                                className="w-full h-[220px] md:h-[370px] object-container"
                             />
                         </div>
-                        <div className="rounded-xl overflow-hidden shadow-2xl">
+                        <div 
+                            className="relative mt-6 overflow-hidden h-[220px] md:h-[370px] -mx-8 md:-mx-30"
+                            data-aos="fade-up"
+                            data-aos-delay="200"
+                        >
                             <img
                                 src="/website media/IT Institute/Image 02.jpg"
                                 alt="Students learning digital skills"
-                                className="w-full h-[220px] md:h-[300px] object-cover"
+                                className="w-full h-full object-container"
                             />
                         </div>
                     </div>
 
                     {/* Image 3 - Lower overlapping wider image */}
-                    <div className="relative z-6 -mt-10 md:-mt-16 mx-4 md:mx-8 rounded-xl overflow-hidden shadow-2xl border-4 border-white">
+                    <div 
+                        className="relative mt-3 overflow-hidden h-[200px] md:h-[290px] mb-[-90] -mx-6 md:-mx-34"
+                        data-aos="zoom-in-up"
+                        data-aos-delay="400"
+                    >
                         <img
                             src="/website media/IT Institute/Image 03.jpg"
                             alt="IT training session"
-                            className="w-full h-[250px] md:h-[350px] object-cover"
+                            className="w-auto min-w-full h-[250px] md:h-[350px] object-container"
                         />
                     </div>
                 </div>
             </section>
 
+<<<<<<< HEAD
             {/* ===== FULL-WIDTH BOTTOM IMAGE WITH CYAN TINT ===== */}
             <section className="relative mx-4 md:mx-8 rounded-2xl overflow-hidden h-50 md:h-70 mb-0">
+=======
+            {/* ===== FULL-WIDTH BOTTOM IMAGE ===== */}
+            <section 
+                className="relative mt-[80px] w-full overflow-hidden h-[220px] md:h-[320px]"
+                data-aos="fade-up"
+            >
+>>>>>>> ffb34603a41677c9d7ebf3cb37c9c094e6ea9a10
                 <img
                     src="/website media/IT Institute/Footer Image.jpg"
                     alt="IT Institute students working"
                     className="w-full h-full object-cover"
                 />
-                {/* Cyan tint overlay */}
                 <div className="absolute inset-0 bg-idara-cyan/60 mix-blend-multiply"></div>
             </section>
 
-            {/* ===== FOOTER ===== */}
             <Footer />
         </main>
     );

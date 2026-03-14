@@ -1,26 +1,35 @@
+"use client";
+import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function TechnicalTrainingCentersPage() {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: 'ease-out-quad',
+        });
+    }, []);
+
     return (
         <main className="overflow-x-hidden bg-white">
             <Navbar />
 
             {/* ===== HERO BANNER ===== */}
-            <section className="relative mt-[100px] mx-4 md:mx-8 rounded-2xl overflow-hidden h-[250px] md:h-[350px]">
+            <section className="relative mt-[80px] w-full overflow-hidden h-[220px] md:h-[320px]">
                 <img
                     src="/website media/Technical Training Centers/Banner.jpg"
                     alt="Technical Training Centers"
                     className="w-full h-full object-cover"
                 />
-
-                {/* Darker Overlay for text readability */}
-                {/* <div className="absolute inset-0 bg-black/40"></div> */}
-
-
-                {/* Title */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold text-white text-center tracking-tight">
+                <div
+                    className="absolute inset-0 flex items-center justify-center px-4"
+                    data-aos="zoom-in"
+                >
+                    <h1 className="text-4xl md:text-6xl lg:text-5xl font-bold text-white text-center tracking-tighter">
                         Technical <span className="text-idara-orange">Training</span> Centers
                     </h1>
                 </div>
@@ -29,31 +38,41 @@ export default function TechnicalTrainingCentersPage() {
             {/* ===== CONTENT SECTION ===== */}
             <section className="container mx-auto px-6 md:px-12 py-16 md:py-24">
                 <div className="max-w-4xl">
-                    <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
+                    <h2
+                        className="text-4xl md:text-5xl font-semibold leading-tight mb-8"
+                        data-aos="fade-right"
+                    >
                         <span className="text-[#012060]">Skills That Create</span>
                         <br />
-                        <span className="text-idara-orange italic">Independence</span>
+                        <span className="text-idara-orange font-bold">Independence</span>
                     </h2>
-                    <p className="text-gray-700 text-lg md:text-xl font-medium leading-relaxed mb-8 max-w-3xl">
+                    <p
+                        className="text-gray-700 text-lg md:text-xl font-medium leading-relaxed mb-8 max-w-3xl"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
                         Our Technical Training Centers equip youth with practical, job-ready skills that lead to employment and self-reliance.
                     </p>
-                    <p className="text-lg md:text-xl">
+                    <p
+                        className="text-lg md:text-xl"
+                        data-aos="fade-up"
+                        data-aos-delay="400"
+                    >
                         <span className="text-idara-orange font-bold">Courses Include:-</span>
                         <span className="text-gray-700 font-medium"> Electrical & Mechanical Training · Vocational Skills · Hands-on Practical Learning</span>
                     </p>
                 </div>
             </section>
 
-            {/* ===== CREATIVE HIGHER-FIDELITY LAYOUT (EXACT MATCH) ===== */}
+            {/* ===== CREATIVE HIGHER-FIDELITY LAYOUT ===== */}
             <section className="container mx-auto px-6 md:px-12">
-                {/* Full Width Background Image Section with Text on Right */}
-                <div className="relative w-full h-[600px] md:h-[700px] lg:h-[1000px]" style={{ backgroundImage: "url('/website media/Technical Training Centers/Center Image.png')", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center" }}>
-
-                    {/* Overlay to ensure text readability */}
-                    {/* <div className="absolute inset-0 bg-white/70 lg:bg-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-white/70 lg:to-white/95"></div> */}
-
-                    {/* Container to align text with navbar/footer padding */}
+                <div
+                    className="relative w-full h-[600px] md:h-[500px] lg:h-[800px] -mx-6 md:-mx-21"
+                    style={{ backgroundImage: "url('/images/techtrainingcenterimg.png')", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center" }}
+                    data-aos="fade-in"
+                >
                     <div className="relative z-30 container h-full">
+<<<<<<< HEAD
                         <div className="w-full flex flex-col font-montserrat select-none text-[#012060] pt-12 md:pt-0">
                             <span className="italic text-2xl md:text-4xl font-bold tracking-tight mt-12 md:mt-24">We don't</span>
                             <h3 className="font-bold text-5xl md:text-[6.5rem] italic tracking-tighter leading-[0.8] mb-2 text-[#012060]">just teach</h3>
@@ -69,21 +88,65 @@ export default function TechnicalTrainingCentersPage() {
                             </div>
 
                             <h3 className="font-bold text-5xl md:text-[6.5rem] italic tracking-tighter leading-[0.8] mt-3 md:mt-5 text-[#012060] text-right md:text-left pr-4 md:pr-0">livelihoods</h3>
+=======
+                        <div className="w-full flex flex-col font-montserrat select-none text-[#012060]">
+                            <span
+                                className="italic text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight mt-17 ml-6 md:ml-17"
+                                data-aos="fade-right"
+                                data-aos-delay="100"
+                            >
+                                We don't
+                            </span>
+
+                            <h3
+                                className="font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-7xl italic tracking-tighter leading-[0.8] mb-2 text-[#012060] ml-6 md:ml-17"
+                                data-aos="fade-right"
+                                data-aos-delay="300"
+                            >
+                                just teach
+                            </h3>
+
+                            <div
+                                className="gap-6 ml-16 md:ml-40 -mt-2"
+                                data-aos="fade-right"
+                                data-aos-delay="500"
+                            >
+                                <span className="italic text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight ml-16 md:ml-47">skills,</span>
+                            </div>
+
+                            <div
+                                className="relative mt-8 md:mt-5 ml-4"
+                                data-aos="fade-left"
+                                data-aos-delay="700"
+                            >
+                                <span className="italic text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight ml-16 md:ml-37">We create</span>
+                            </div>
+
+                            <h3
+                                className="font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-7xl italic tracking-tighter leading-[0.8] mt-5 text-[#012060] ml-16 md:ml-14"
+                                data-aos="zoom-out-up"
+                                data-aos-delay="900"
+                            >
+                                livelihoods
+                            </h3>
+>>>>>>> ffb34603a41677c9d7ebf3cb37c9c094e6ea9a10
                         </div>
                     </div>
                 </div>
             </section>
-            <section>
-                <div className="w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
-                    <img
-                        src="/website media/Technical Training Centers/Footer Image.jpg"
-                        alt="Idara Al-Khair Students Group"
-                        className="w-full h-full object-cover"
-                    />
-                </div>
+
+            {/* ===== BOTTOM IMAGE SECTION ===== */}
+            <section
+                className="relative w-full overflow-hidden"
+                data-aos="fade-up"
+            >
+                <img
+                    src="/website media/Technical Training Centers/Footer Image.jpg"
+                    alt="Idara Al-Khair Students Group"
+                    className="w-full h-auto object-cover"
+                />
             </section>
 
-            {/* ===== FOOTER ===== */}
             <Footer />
         </main>
     );
