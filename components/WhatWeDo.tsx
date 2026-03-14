@@ -18,11 +18,11 @@ const WhatWeDo: React.FC = () => {
                 {/* Content */}
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="text-center mb-16">
-                        <h2 className="text-[3.5rem] lg:text-[4.5rem] text-[#012060] font-bold mb-4">
+                        <h2 className="text-4xl md:text-5xl lg:text-[4.5rem] text-[#012060] font-bold mb-4">
                             What we <span className="text-idara-orange font-black">Do?</span>
                         </h2>
-                        <p className="text-[1.5rem] text-gray-900 max-w-3xl mx-auto leading-relaxed">
-                            Providing quality education through schools, colleges, <br /> technical centers, and IT institutes to break the cycle of <br /> poverty.
+                        <p className="text-lg md:text-[1.5rem] text-gray-900 max-w-3xl mx-auto leading-relaxed">
+                            Providing quality education through schools, colleges, <br className="hidden md:block" /> technical centers, and IT institutes to break the cycle of <br className="hidden md:block" /> poverty.
                         </p>
                     </div>
 

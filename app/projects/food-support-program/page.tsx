@@ -86,13 +86,13 @@ export default function FoodSupportProgramPage() {
                     {/* Stylized Quote Text */}
                     <div className="relative z-20 mb-6 max-w-[340px] md:max-w-[400px]">
                         <p className="leading-[1.1]">
-                            <span className="text-idara-orange font-black text-3xl md:text-4xl">"Your support</span>
+                            <span className="text-idara-orange font-black text-2xl md:text-4xl">"Your support</span>
                             <br />
-                            <span className="text-white font-black text-5xl md:text-7xl" style={{ WebkitTextStroke: '2px #012060', paintOrder: 'stroke fill' }}>ensures</span>
+                            <span className="text-white font-black text-4xl sm:text-5xl md:text-7xl" style={{ WebkitTextStroke: '2px #012060', paintOrder: 'stroke fill' }}>ensures</span>
                             <br />
-                            <span className="text-[#012060] italic text-xl md:text-2xl font-medium">no plate remain</span>
+                            <span className="text-[#012060] italic text-lg md:text-2xl font-medium">no plate remain</span>
                             <br />
-                            <span className="text-[#012060] font-black text-5xl md:text-7xl italic">empty"</span>
+                            <span className="text-[#012060] font-black text-4xl sm:text-5xl md:text-7xl italic">empty"</span>
                         </p>
                     </div>
 

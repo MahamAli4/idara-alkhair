@@ -53,17 +53,17 @@ export default function MedicalCenterPage() {
                 />
 
                 {/* Text Overlay */}
-                <div className="absolute top-[2%] right-6 sm:right-5 md:right-8 lg:right-12 xl:right-20 2xl:right-37 text-right md:px--22 sm:px-22  lg:pe-2 xl:px-30 2xl:px-22">
+                <div className="absolute top-[5%] md:top-[2%] right-4 sm:right-5 md:right-8 lg:right-12 xl:right-20 2xl:right-37 text-right">
 
-                    <p className="text-xs sm:text-2xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-blue-900 leading-tight font-semibold">
+                    <p className="text-xl sm:text-2xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-blue-900 leading-tight font-semibold">
                         "Reliable Care for
                     </p>
 
-                    <p className="text-xl sm:text-3xl md:text-5xl lg:text-7xl xl:text-8xl 2xl:text-8xl font-bold text-yellow-500 leading-tight">
+                    <p className="text-4xl sm:text-3xl md:text-5xl lg:text-7xl xl:text-8xl 2xl:text-8xl font-bold text-yellow-500 leading-tight">
                         Healthier
                     </p>
 
-                    <p className="text-xs sm:text-2xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-blue-900 leading-tight font-semibold">
+                    <p className="text-xl sm:text-2xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-blue-900 leading-tight font-semibold">
                         Communities”
                     </p>
 

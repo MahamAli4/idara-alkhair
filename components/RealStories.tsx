@@ -23,10 +23,10 @@ const RealStories: React.FC = () => {
                     {/* Left SIDE: CONTENT */}
                     <div className="w-full lg:w-1/2 mb-12 lg:mb-0">
                         <div className="max-w-xl">
-                            <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-white uppercase tracking-tighter mb-0 leading-tight">
+                            <h2 className="text-4xl md:text-5xl lg:text-7xl font-black text-white uppercase tracking-tighter mb-0 leading-tight">
                                 Real Stories
                             </h2>
-                            <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-[#f18e1d] leading-[0.85] uppercase tracking-tighter mb-16">
+                            <h2 className="text-4xl md:text-5xl lg:text-7xl font-black text-[#f18e1d] leading-[0.85] uppercase tracking-tighter mb-12 md:mb-16">
                                 Real Impact.
                             </h2>
 

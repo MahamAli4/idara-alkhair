@@ -8,21 +8,21 @@ const Hero: React.FC = () => {
             <div className="container mx-auto px-4">
                 <div className="flex flex-col lg:flex-row items-center">
                     {/* Left Content Side */}
-                    <div className="lg:w-1/2 mb-10 lg:mb-0 relative z-10">
-                        <h1 className="hero-title font-bold">
+                    <div className="lg:w-1/2 mb-10 lg:mb-0 relative z-10 text-center lg:text-left">
+                        <h1 className="text-4xl sm:text-5xl lg:text-[4.5rem] leading-tight font-bold text-[#012060]">
                             Changing <span className="text-idara-orange font-black">Lives</span><br />
                             Today. Building a Better<br />
                             <span className="text-idara-orange font-black">Tomorrow.</span>
                         </h1>
-                        <p className="text-[1.5rem] text-idara-navy opacity-80 mb-12 max-w-full">
+                        <p className="text-lg md:text-[1.5rem] text-idara-navy opacity-80 mb-8 md:mb-12 max-w-full">
                             For over 38 years, Idara Al-Khair Welfare Society has been serving humanity with compassion, transparency, and purpose. From educating children to feeding the hungry and providing healthcare to those who cannot afford it, we stand with those who need support the most.
                         </p>
-                        <button className="btn-help-family">
+                        <button className="btn-help-family mx-auto lg:mx-0">
                             Help a Family Today
                         </button>
 
                         {/* Cyan Triangle behind text area */}
-                        <div className="hero-tri-cyan shadow-sm"></div>
+                        <div className="hero-tri-cyan shadow-sm hidden lg:block"></div>
                     </div>
 
                     {/* Right Graphic Side */}
