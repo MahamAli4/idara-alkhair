@@ -111,9 +111,9 @@ export default function ShopPage() {
                 </div>
             </div>
 
-            <section className="bg-gray-300 py-45 -mt-29">
+            <section className="bg-gray-300 py-16 md:py-45 -mt-10 md:-mt-29">
                 <h2 
-                    className="text-3xl md:text-4xl font-black font-semibold -mt-23 text-center text-[#012060]"
+                    className="text-3xl md:text-4xl font-black mt-4 md:-mt-23 text-center text-[#012060]"
                     data-aos="fade-right"
                 >
                     Shop with purpose, <span className="text-idara-orange font-extrabold">Give with impact</span>
@@ -124,7 +124,7 @@ export default function ShopPage() {
                 <div className="flex flex-col justify-center py-10 relative">
                     {/* Big main image */}
                     <div 
-                        className="w-[95%] md:w-[85%] -mt-75 overflow-hidden relative mx-auto"
+                        className="w-[95%] md:w-[85%] -mt-20 md:-mt-75 overflow-hidden relative mx-auto"
                         data-aos="zoom-out"
                     >
                         <img
@@ -135,25 +135,25 @@ export default function ShopPage() {
                     </div>
 
                     {/* Three grid images - staggered animation */}
-                    <div className="flex justify-center gap-6 -mt-35 relative z-10">
+                    <div className="flex flex-wrap md:flex-nowrap justify-center gap-4 md:gap-6 -mt-10 md:-mt-35 relative z-10 px-4 md:px-0">
                         <img
                             src="/Website Media/Shop Page/Image 02.jpg"
                             alt="Grid 1"
-                            className="w-[30%] md:w-[25%] h-auto object-cover rounded-xl border-white shadow-lg"
+                            className="w-[45%] md:w-[25%] h-auto object-cover rounded-xl border-4 border-white shadow-lg"
                             data-aos="fade-up"
                             data-aos-delay="100"
                         />
                         <img
                             src="/Website Media/Shop Page/Image 03.jpg"
                             alt="Grid 2"
-                            className="w-[30%] md:w-[25%] h-auto object-cover rounded-xl border-white shadow-lg"
+                            className="w-[45%] md:w-[25%] h-auto object-cover rounded-xl border-4 border-white shadow-lg"
                             data-aos="fade-up"
                             data-aos-delay="300"
                         />
                         <img
                             src="/Website Media/Shop Page/Image 04.jpg"
                             alt="Grid 3"
-                            className="w-[30%] md:w-[25%] h-auto object-cover rounded-xl border-white shadow-lg"
+                            className="w-[45%] md:w-[25%] h-auto object-cover rounded-xl border-4 border-white shadow-lg"
                             data-aos="fade-up"
                             data-aos-delay="500"
                         />

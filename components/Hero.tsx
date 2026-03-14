@@ -5,34 +5,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Hero: React.FC = () => {
-<<<<<<< HEAD
-    return (
-        <section className="pt-45 pb-30 bg-white overflow-hidden">
-            <div className="container mx-auto px-4">
-                <div className="flex flex-col lg:flex-row items-center">
-                    {/* Left Content Side */}
-                    <div className="lg:w-1/2 mb-10 lg:mb-0 relative z-10 text-center lg:text-left">
-                        <h1 className="text-4xl sm:text-5xl lg:text-[4.5rem] leading-tight font-bold text-[#012060]">
-                            Changing <span className="text-idara-orange font-black">Lives</span><br />
-                            Today. Building a Better<br />
-                            <span className="text-idara-orange font-black">Tomorrow.</span>
-                        </h1>
-                        <p className="text-lg md:text-[1.5rem] text-idara-navy opacity-80 mb-8 md:mb-12 max-w-full">
-                            For over 38 years, Idara Al-Khair Welfare Society has been serving humanity with compassion, transparency, and purpose. From educating children to feeding the hungry and providing healthcare to those who cannot afford it, we stand with those who need support the most.
-                        </p>
-                        <button className="btn-help-family mx-auto lg:mx-0">
-                            Help a Family Today
-                        </button>
-
-                        {/* Cyan Triangle behind text area */}
-                        <div className="hero-tri-cyan shadow-sm hidden lg:block"></div>
-                    </div>
-
-                    {/* Right Graphic Side */}
-                    <div className="lg:w-1/2 w-full mt-12 lg:mt-0 flex justify-center items-center">
-                        <div className="relative w-full max-w-137.5 h-137.5 md:h-162.5">
-=======
-
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -46,7 +18,6 @@ const Hero: React.FC = () => {
     <section className="pt-[180px] pb-[120px] bg-white overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center">
->>>>>>> ffb34603a41677c9d7ebf3cb37c9c094e6ea9a10
 
           {/* Left Content Side */}
           <div
@@ -95,7 +66,7 @@ const Hero: React.FC = () => {
             data-aos="fade-left"
             className="lg:w-1/2 w-full mt-12 lg:mt-0 flex justify-center items-center"
           >
-            <div className="relative w-full max-w-[550px] h-[550px] md:h-[650px]">
+            <div className="relative w-full max-w-[550px] h-[350px] sm:h-[450px] md:h-[650px] mx-auto">
 
               {/* Orange Shape */}
               <div
@@ -147,7 +118,7 @@ const Hero: React.FC = () => {
                 data-aos-delay="800"
                 src="/website media/Homepage/Homepage Picture.jpg"
                 alt="Idara Al-Khair Students"
-                className="absolute inset-0 w-full h-full object-contain z-30 transform scale-150"
+                className="absolute inset-0 w-full h-full object-contain z-30 transform scale-[1.15] sm:scale-125 md:scale-150"
               />
 
             </div>

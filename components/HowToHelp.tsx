@@ -6,18 +6,6 @@ import 'aos/dist/aos.css';
 
 const HowToHelp: React.FC = () => {
 
-<<<<<<< HEAD
-    return (
-        <section className="bg-white pt-24 relative overflow-visible">
-            <div className="container mx-auto px-4 text-center mb-16">
-                <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-[#012060] mb-3">
-                    How You Can <span className="text-[#f15a24]">Help?</span>
-                </h2>
-                <p className="text-lg md:text-[1.5rem] text-gray-700 mx-auto">
-                    Your support can <span className="font-semibold">change lives</span>, immediately and forever.
-                </p>
-            </div>
-=======
   useEffect(() => {
     AOS.init({
       duration: 900,
@@ -26,7 +14,6 @@ const HowToHelp: React.FC = () => {
       offset: 120
     });
   }, []);
->>>>>>> ffb34603a41677c9d7ebf3cb37c9c094e6ea9a10
 
   const helpOptions = [
     { title: "Donate", image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&auto=format&fit=crop" },
@@ -41,7 +28,7 @@ const HowToHelp: React.FC = () => {
       <div className="container mx-auto px-4 text-center mb-16">
         <h2
           data-aos="fade-up"
-          className="text-5xl md:text-7xl font-bold text-[#012060] mb-3"
+          className="text-4xl md:text-5xl lg:text-7xl font-bold text-[#012060] mb-3"
         >
           How You Can <span className="text-[#f15a24]">Help?</span>
         </h2>
@@ -49,7 +36,7 @@ const HowToHelp: React.FC = () => {
         <p
           data-aos="fade-up"
           data-aos-delay="150"
-          className="text-[1.5rem] text-gray-700 mx-auto"
+          className="text-lg md:text-[1.5rem] text-gray-700 mx-auto"
         >
           Your support can <span className="font-semibold">change lives</span>, immediately and forever.
         </p>

@@ -25,23 +25,14 @@ export default function DisasterReliefProgramPage() {
                     alt="Disaster Relief Program"
                     className="w-full h-full object-cover"
                 />
-<<<<<<< HEAD
-                {/* Dark overlay */}
-                {/* <div className="absolute inset-0 bg-[#012060]/55"></div> */}
-                {/* Title */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white text-center tracking-tight">
-                        <span className="text-idara-orange font-black italic">DISASTER</span> Relief Program
-=======
                 <div className="absolute inset-0 bg-[#012060]/10"></div>
 
                 <div 
                     className="absolute inset-0 flex items-center justify-center px-4"
-                    data-aos="zoom-in" // Zoom-in effect for the main title
+                    data-aos="zoom-in"
                 >
-                    <h1 className="text-4xl md:text-6xl lg:text-4xl font-bold text-white text-center tracking-tighter">
-                        <span className="text-idara-orange font-black">DISASTER</span> Relief Program
->>>>>>> ffb34603a41677c9d7ebf3cb37c9c094e6ea9a10
+                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white text-center tracking-tight">
+                        <span className="text-idara-orange font-black italic">DISASTER</span> Relief Program
                     </h1>
                 </div>
             </section>
@@ -135,33 +126,7 @@ export default function DisasterReliefProgramPage() {
                         />
                     </div>
 
-<<<<<<< HEAD
-                    {/* Lower overlapping images */}
-                    {/* <div className="grid grid-cols-2 md:grid-cols-3 gap-3 relative z-6 -mt-10 md:-mt-16 mx-2 md:mx-6">
-                        <div className="rounded-xl overflow-hidden shadow-2xl border-4 border-white">
-                            <img
-                                src="/website media/Disaster Relief Program/Footer Image.jpg"
-                                alt="Relief workers helping"
-                                className="w-full h-[160px] md:h-[220px] object-cover"
-                            />
-                        </div>
-                        <div className="rounded-xl overflow-hidden shadow-2xl border-4 border-white">
-                            <img
-                                src="/website media/Food Support Program/Footer.jpg"
-                                alt="Supply distribution"
-                                className="w-full h-[160px] md:h-[220px] object-cover"
-                            />
-                        </div>
-                        <div className="hidden md:block rounded-xl overflow-hidden shadow-2xl border-4 border-white">
-                            <img
-                                src="/website media/Homepage/Background Image 02.jpg"
-                                alt="Rehabilitation support"
-                                className="w-full h-[220px] object-cover"
-                            />
-                        </div>
-                    </div> */}
-=======
->>>>>>> ffb34603a41677c9d7ebf3cb37c9c094e6ea9a10
+                    {/* Lower overlapping images removed */}
                 </div>
             </section>
 

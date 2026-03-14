@@ -18,17 +18,6 @@ const RealStories: React.FC = () => {
   return (
     <section className="relative min-h-[700px] flex items-center py-20 overflow-hidden bg-[#012060]">
 
-<<<<<<< HEAD
-                    {/* Left SIDE: CONTENT */}
-                    <div className="w-full lg:w-1/2 mb-12 lg:mb-0">
-                        <div className="max-w-xl">
-                            <h2 className="text-4xl md:text-5xl lg:text-7xl font-black text-white uppercase tracking-tighter mb-0 leading-tight">
-                                Real Stories
-                            </h2>
-                            <h2 className="text-4xl md:text-5xl lg:text-7xl font-black text-[#f18e1d] leading-[0.85] uppercase tracking-tighter mb-12 md:mb-16">
-                                Real Impact.
-                            </h2>
-=======
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -37,7 +26,6 @@ const RealStories: React.FC = () => {
           className="w-full h-full object-cover opacity-100"
         />
       </div>
->>>>>>> ffb34603a41677c9d7ebf3cb37c9c094e6ea9a10
 
       <div className="container mx-auto px-6 relative z-10 p-10">
         <div className="flex flex-col lg:flex-row items-center">

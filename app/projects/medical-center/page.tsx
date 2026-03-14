@@ -23,13 +23,6 @@ export default function MedicalCenterPage() {
             <Navbar />
 
             {/* ===== HERO BANNER ===== */}
-<<<<<<< HEAD
-            <section className="relative mt-25 overflow-hidden h-62.5 md:h-87.5">
-                <img
-                    src="/website media/Medical Center/banner.jpg"
-                    alt="Al-Khair Medical Center"
-                    className="w-full h-full object-cover "
-=======
             <section
                 className="relative mt-[118px] w-full overflow-hidden h-[220px] md:h-[320px]"
                 data-aos="fade"
@@ -37,8 +30,7 @@ export default function MedicalCenterPage() {
                 <img
                     src="/website media/Medical Center/banner.jpg"
                     alt="Al-Khair Medical Center"
-                    className="w-full h-full object-container"
->>>>>>> ffb34603a41677c9d7ebf3cb37c9c094e6ea9a10
+                    className="w-full h-full object-cover"
                 />
 
                 <div className="absolute inset-0 flex items-center justify-center px-4">
@@ -53,37 +45,18 @@ export default function MedicalCenterPage() {
             </section>
 
             {/* ===== CONTENT SECTION ===== */}
-<<<<<<< HEAD
-            <section className="container px-6 md:px-12 py-16 md:py-24">
-                <div>
-                    <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
-=======
             <section className="container mx-auto px-6 md:px-12 py-16 md:py-24">
                 <div data-aos="fade-up">
-                    <h2 className="text-4xl md:text-4xl font-bold leading-tight mb-8">
->>>>>>> ffb34603a41677c9d7ebf3cb37c9c094e6ea9a10
+                    <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
                         <span className="text-[#012060]">Healthcare for Those </span>
                         <span className="text-idara-orange font-extrabold">Who Cannot Afford It</span>
                     </h2>
                     <p className="text-gray-700 text-lg md:text-xl font-medium leading-relaxed mb-8">
                         Our Medical Center provides accessible healthcare services to underserved communities.
                     </p>
-<<<<<<< HEAD
-                    <p className="text-lg md:text-xl">
-                        <span className="text-idara-orange font-bold">Services Include :-</span>
-                        <span className="text-gray-700 font-medium"> OPD consultations · Basic diagnostics · Affordable medicines</span>
-                        <br />
-                        <span className="text-gray-700 font-medium italic block">Health is not a privilege - it is a right.</span>
-                    </p>
-                </div>
-            </section>
-
-            {/* ===== CREATIVE HIGHER-FIDELITY LAYOUT (EXACT MATCH) ===== */}
-            <section className="relative w-full h-[30vh] sm:h-[50vh] lg:h-screen bg-cover bg-center bg-no-repeat">
-=======
                     <div data-aos="fade-up" data-aos-delay="300">
                         <p className="text-lg md:text-xl">
-                            <span className="text-idara-orange font-extrabold">Services Include :-</span>
+                            <span className="text-idara-orange font-bold">Services Include :-</span>
                             <span className="text-gray-700 font-medium"> OPD consultations · Basic diagnostics · Affordable medicines</span>
                             <br />
                             <span className="text-gray-500 font-medium italic block mt-2">Health is not a privilege - it is a right.</span>
@@ -95,11 +68,10 @@ export default function MedicalCenterPage() {
             {/* ===== CREATIVE HIGHER-FIDELITY LAYOUT ===== */}
             <section className="container mx-auto px-6 md:px-12 bg-white">
                 <div
-                    className="relative w-full h-[600px] md:h-[700px] lg:h-[1000px]"
-                    style={{ backgroundImage: "url('/website media/Medical Center/Center Image.png')", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center" }}
+                    className="relative w-full h-[600px] md:h-[700px] lg:h-[1000px] bg-cover bg-center bg-no-repeat"
+                    style={{ backgroundImage: "url('/website media/Medical Center/Center-Image.png')" }}
                     data-aos="fade-up"
                 >
->>>>>>> ffb34603a41677c9d7ebf3cb37c9c094e6ea9a10
 
                 {/* Image */}
                 <img
@@ -108,44 +80,6 @@ export default function MedicalCenterPage() {
                     className="w-full h-full object-cover object-top "
                 />
 
-<<<<<<< HEAD
-                {/* Text Overlay */}
-                <div className="absolute top-[5%] md:top-[2%] right-4 sm:right-5 md:right-8 lg:right-12 xl:right-20 2xl:right-37 text-right">
-
-                    <p className="text-xl sm:text-2xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-blue-900 leading-tight font-semibold">
-                        "Reliable Care for
-                    </p>
-
-                    <p className="text-4xl sm:text-3xl md:text-5xl lg:text-7xl xl:text-8xl 2xl:text-8xl font-bold text-yellow-500 leading-tight">
-                        Healthier
-                    </p>
-
-                    <p className="text-xl sm:text-2xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-blue-900 leading-tight font-semibold">
-                        Communities”
-                    </p>
-
-                </div>
-            </section>
-
-
-
-
-
-
-            {/* =============2nd img============ */}
-            <section className="w-full">
-                <img
-                    src="/website media/Medical Center/Footer.jpg"
-                    alt="Medical Center"
-                    className="w-full h-auto object-cover"
-                />
-            </section>
-
-
-
-
-            {/* ===== FOOTER ===== */}
-=======
                         {/* Decorative Branding Shapes */}
                         <div className="absolute inset-0 pointer-events-none">
                             {/* Yellow Circle - Slides in from left */}
@@ -182,7 +116,6 @@ export default function MedicalCenterPage() {
                                 >
                                     <span className="text-[#012060] font-black text-2xl sm:text-3xl md:text-4xl lg:text-6xl tracking-tighter italic">Communities"</span>
                                 </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -195,14 +128,12 @@ export default function MedicalCenterPage() {
                     data-aos="fade-up"
                 >
                     <img
-                        src="/images/medicalfooter.jpg"
+                        src="/website media/Medical Center/Footer.jpg"
                         alt="Idara Al-Khair Medical Team"
                         className="w-full h-auto object-cover"
                     />
                 </div>
             </section>
-
->>>>>>> ffb34603a41677c9d7ebf3cb37c9c094e6ea9a10
             <Footer />
         </main>
     );
