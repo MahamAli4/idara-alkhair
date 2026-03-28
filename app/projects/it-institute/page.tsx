@@ -28,7 +28,7 @@ export default function ITInstitutePage() {
                 data-aos="fade"
             >
                 <img
-                    src="/website media/IT Institute/Banner.jpg"
+                    src="/website-media/itinstitute/banner.jpg"
                     alt="IT Institute Classroom"
                     className="w-full h-full object-cover"
                 />
@@ -131,7 +131,7 @@ export default function ITInstitutePage() {
                             data-aos="fade-up"
                         >
                             <img
-                                src="/website media/IT Institute/Image 01.jpg"
+                                src="/website-media/itinstitute/image01.jpg"
                                 alt="IT students in computer lab"
                                 className="w-full h-55 md:h-92.5 object-container"
                             />
@@ -142,7 +142,7 @@ export default function ITInstitutePage() {
                             data-aos-delay="200"
                         >
                             <img
-                                src="/website media/IT Institute/Image 02.jpg"
+                                src="/website-media/itinstitute/image02.jpg"
                                 alt="Students learning digital skills"
                                 className="w-full h-full object-container"
                             />
@@ -156,7 +156,7 @@ export default function ITInstitutePage() {
                         data-aos-delay="400"
                     >
                         <img
-                            src="/website media/IT Institute/Image 03.jpg"
+                            src="/website-media/itinstitute/image03.jpg"
                             alt="IT training session"
                             className="w-auto min-w-full h-62.5 md:h-87.5 object-container"
                         />
@@ -170,7 +170,7 @@ export default function ITInstitutePage() {
                 data-aos="fade-up"
             >
                 <img
-                    src="/website media/IT Institute/Footer Image.jpg"
+                    src="/website-media/itinstitute/footerimage.jpg"
                     alt="IT Institute students working"
                     className="w-full h-full object-cover"
                 />

@@ -24,7 +24,7 @@ export default function MedicalCenterPage() {
             {/* ===== HERO BANNER ===== */}
             <section className="relative mt-29.5 w-full overflow-hidden h-55 md:h-80" data-aos="fade">
                 <img
-                    src="/website media/Medical Center/banner.jpg"
+                    src="/website-media/medicalcenter/banner.jpg"
                     alt="Al-Khair Medical Center"
                     className="w-full h-full object-cover"  // changed object-container → object-cover
                 />

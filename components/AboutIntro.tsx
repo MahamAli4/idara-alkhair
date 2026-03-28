@@ -48,7 +48,7 @@ const AboutIntro = () => {
                                 data-aos-delay="200"
                             >
                                 <img
-                                    src="/images/About us 03.jpeg"
+                                    src="/images/aboutus03.jpeg"
                                     alt="Children smiling"
                                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-110"
                                 />

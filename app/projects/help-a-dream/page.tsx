@@ -28,7 +28,7 @@ export default function HelpADreamPage() {
                 data-aos="fade"
             >
                 <img
-                    src="/website media/Help a Dream/Banner.jpg"
+                    src="/website-media/helpadream/banner.jpg"
                     alt="Help a Dream"
                     className="w-full h-full object-cover"
                 />
@@ -72,7 +72,7 @@ export default function HelpADreamPage() {
                 <div className="w-full overflow-hidden" data-aos="zoom-in" data-aos-duration="1200">
                     <div className="relative w-full h-75 md:h-162.5">
                         <img
-                            src="/website media/Help a Dream/Center image.png"
+                            src="/website-media/helpadream/centerimage.png"
                             alt="Child dreaming"
                             className="w-full h-full object-cover"
                         />

@@ -8,7 +8,7 @@ const MissionVisionValues = () => {
                 {/* Grayscale Background */}
                 <div className="absolute inset-0 z-0">
                     <img
-                        src="/website media/About us/Background Image.jpg"
+                        src="/website-media/aboutus/backgroundimage.jpg"
                         alt="Students background"
                         className="w-full h-full object-cover grayscale opacity-70"
                     />
@@ -85,7 +85,7 @@ const MissionVisionValues = () => {
             {/* Footer Banner Image */}
             <div className="w-full h-100 md:h-125 lg:h-150 overflow-hidden">
                 <img
-                    src="/website media/About us/Footer Image.jpg"
+                    src="/website-media/aboutus/footerimage.jpg"
                     alt="Idara Al-Khair Students Group"
                     className="w-full h-full object-cover"
                     data-aos="zoom-in"

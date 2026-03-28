@@ -79,7 +79,7 @@ const Hero: React.FC = () => {
               <img
                 data-aos="zoom-in"
                 data-aos-delay="800"
-                src="/website media/Homepage/Homepage Picture.jpg"
+                src="/website-media/homepage/homepagepicture.jpg"
                 alt="Idara Al-Khair Students"
                 className="absolute inset-0 w-full h-full object-contain z-30 transform scale-150"
               />

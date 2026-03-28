@@ -1,0 +1,64 @@
+website-media/about-us/About Us.pdf -> website-media/about-us/aboutus.pdf
+website-media/about-us/Background Image.jpg -> website-media/about-us/backgroundimage.jpg
+website-media/about-us/Footer Image.jpg -> website-media/about-us/footerimage.jpg
+website-media/about-us/Pic 01.jpg -> website-media/about-us/pic01.jpg
+website-media/about-us/Top Banner.jpg -> website-media/about-us/topbanner.jpg
+website-media/application-volunteerform/APPLICATION VOLUNTEER FORM.pdf -> website-media/application-volunteerform/applicationvolunteerform.pdf
+website-media/application-volunteerform/Banner Image.jpg -> website-media/application-volunteerform/bannerimage.jpg
+website-media/contactus/Banner Image.jpg -> website-media/contactus/bannerimage.jpg
+website-media/contactus/Contact Us...pdf -> website-media/contactus/contactus...pdf
+website-media/disasterreliefprogram/Banner Image copy.jpg -> website-media/disasterreliefprogram/bannerimagecopy.jpg
+website-media/disasterreliefprogram/Banner Image.pdf -> website-media/disasterreliefprogram/bannerimage.pdf
+website-media/disasterreliefprogram/Center Image.jpg -> website-media/disasterreliefprogram/centerimage.jpg
+website-media/disasterreliefprogram/DISASTER RELIEF PROGRAM.pdf -> website-media/disasterreliefprogram/disasterreliefprogram.pdf
+website-media/disasterreliefprogram/Footer Image.jpg -> website-media/disasterreliefprogram/footerimage.jpg
+website-media/donatenow/Background Image.jpg -> website-media/donatenow/backgroundimage.jpg
+website-media/donatenow/DONATE NOW PAGE.pdf -> website-media/donatenow/donatenowpage.pdf
+website-media/donatenow/Header.jpg -> website-media/donatenow/header.jpg
+website-media/educationschool&college/Banner.jpg -> website-media/educationschool&college/banner.jpg
+website-media/educationschool&college/Boy Image.jpg -> website-media/educationschool&college/boyimage.jpg
+website-media/educationschool&college/Boy-Image.png -> website-media/educationschool&college/boy-image.png
+website-media/educationschool&college/Education Schools & Colleges.pdf -> website-media/educationschool&college/educationschools&colleges.pdf
+website-media/educationschool&college/Footer.jpg -> website-media/educationschool&college/footer.jpg
+website-media/educationschool&college/Image 01.jpeg -> website-media/educationschool&college/image01.jpeg
+website-media/educationschool&college/Image 02.jpeg -> website-media/educationschool&college/image02.jpeg
+website-media/educationschool&college/Image 03.jpg -> website-media/educationschool&college/image03.jpg
+website-media/foodsupportprogram/Banner.jpg -> website-media/foodsupportprogram/banner.jpg
+website-media/foodsupportprogram/Center Image.png -> website-media/foodsupportprogram/centerimage.png
+website-media/foodsupportprogram/Food Support Program.pdf -> website-media/foodsupportprogram/foodsupportprogram.pdf
+website-media/foodsupportprogram/Footer.jpg -> website-media/foodsupportprogram/footer.jpg
+website-media/helpadream/Banner.jpg -> website-media/helpadream/banner.jpg
+website-media/helpadream/Center image.png -> website-media/helpadream/centerimage.png
+website-media/helpadream/Footer Image.png -> website-media/helpadream/footerimage.png
+website-media/helpadream/Help a Dream.pdf -> website-media/helpadream/helpadream.pdf
+website-media/homepage/Background Image 02.jpg -> website-media/homepage/backgroundimage02.jpg
+website-media/homepage/Background Image.jpg -> website-media/homepage/backgroundimage.jpg
+website-media/homepage/Center Image.jpg -> website-media/homepage/centerimage.jpg
+website-media/homepage/Homepage copy.pdf -> website-media/homepage/homepagecopy.pdf
+website-media/homepage/Homepage Picture.jpg -> website-media/homepage/homepagepicture.jpg
+website-media/homepage/pakistan map.png -> website-media/homepage/pakistanmap.png
+website-media/homepage/Seaprater Image.jpg -> website-media/homepage/seapraterimage.jpg
+website-media/itinstitute/Banner.jpg -> website-media/itinstitute/banner.jpg
+website-media/itinstitute/Footer Image.jpg -> website-media/itinstitute/footerimage.jpg
+website-media/itinstitute/Image 01.jpg -> website-media/itinstitute/image01.jpg
+website-media/itinstitute/Image 02.jpg -> website-media/itinstitute/image02.jpg
+website-media/itinstitute/Image 03.jpg -> website-media/itinstitute/image03.jpg
+website-media/itinstitute/IT Institute.pdf -> website-media/itinstitute/itinstitute.pdf
+website-media/medicalcenter/Center-Image.png -> website-media/medicalcenter/center-image.png
+website-media/medicalcenter/Center-img1.png -> website-media/medicalcenter/center-img1.png
+website-media/medicalcenter/Footer.jpg -> website-media/medicalcenter/footer.jpg
+website-media/medicalcenter/Medical Center.pdf -> website-media/medicalcenter/medicalcenter.pdf
+website-media/medicalcenter/Screenshot 2026-03-04 152557.png -> website-media/medicalcenter/screenshot2026-03-04152557.png
+website-media/rotibank/Banner.jpg -> website-media/rotibank/banner.jpg
+website-media/rotibank/Roti Bank.pdf -> website-media/rotibank/rotibank.pdf
+website-media/shoppage/Banner.jpg -> website-media/shoppage/banner.jpg
+website-media/shoppage/Image 01.jpg -> website-media/shoppage/image01.jpg
+website-media/shoppage/Image 02.jpg -> website-media/shoppage/image02.jpg
+website-media/shoppage/Image 03.jpg -> website-media/shoppage/image03.jpg
+website-media/shoppage/Image 04.jpg -> website-media/shoppage/image04.jpg
+website-media/shoppage/instagram Picture.jpg -> website-media/shoppage/instagrampicture.jpg
+website-media/shoppage/Shop Page.pdf -> website-media/shoppage/shoppage.pdf
+website-media/technicaltrainingcenters/Banner.jpg -> website-media/technicaltrainingcenters/banner.jpg
+website-media/technicaltrainingcenters/Center Image.png -> website-media/technicaltrainingcenters/centerimage.png
+website-media/technicaltrainingcenters/Footer Image.jpg -> website-media/technicaltrainingcenters/footerimage.jpg
+website-media/technicaltrainingcenters/Technical Training Centers.pdf -> website-media/technicaltrainingcenters/technicaltrainingcenters.pdf

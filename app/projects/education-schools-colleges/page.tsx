@@ -28,7 +28,7 @@ export default function EducationSchoolsCollegesPage() {
                 data-aos="fade-up"
             >
                 <img
-                    src="/website media/Education School & College/Banner.jpg"
+                    src="/website-media/educationschool&college/banner.jpg"
                     alt="Education Schools & College"
                     className="w-full h-full object-cover"
                 />
@@ -98,7 +98,7 @@ export default function EducationSchoolsCollegesPage() {
                         {/* Image */}
                         <div className="relative z-5 w-70 md:w-82.5 overflow-hidden">
                             <img
-                                src="/website media/Education School & College/Boy Image.jpg"
+                                src="/website-media/educationschool&college/boyimage.jpg"
                                 alt="Student"
                                 className="w-full h-87.5 md:h-107.5 object-cover"
                             />
@@ -161,7 +161,7 @@ export default function EducationSchoolsCollegesPage() {
                                 data-aos-delay={i * 200}
                             >
                                 <img
-                                    src={`/website media/Education School & College/Image 0${img}.${img === 3 ? 'jpg' : 'jpeg'}`}
+                                    src={`/website-media/Education School & College/Image 0${img}.${img === 3 ? 'jpg' : 'jpeg'}`}
                                     className="w-full h-45 md:h-50 object-cover"
                                 />
                             </div>
@@ -177,7 +177,7 @@ export default function EducationSchoolsCollegesPage() {
                 data-aos="fade-up"
             >
                 <img
-                    src="/website media/Education School & College/Footer.jpg"
+                    src="/website-media/educationschool&college/footer.jpg"
                     alt="School children"
                     className="w-full h-full object-cover"
                 />

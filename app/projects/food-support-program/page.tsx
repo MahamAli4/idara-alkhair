@@ -28,7 +28,7 @@ export default function FoodSupportProgramPage() {
                 data-aos="fade"
             >
                 <img
-                    src="/website media/Food Support Program/Banner.jpg"
+                    src="/website-media/foodsupportprogram/banner.jpg"
                     alt="Food Support Program"
                     className="w-full h-full object-cover"
                 />
@@ -52,7 +52,7 @@ export default function FoodSupportProgramPage() {
 
                 {/* Background Image - Slight zoom on entrance for depth */}
                 <img
-                    src="/images/CenterImage.png"
+                    src="/images/centerimage.png"
                     alt="Child smiling"
                     className="absolute inset-0 w-full h-full object-cover"
                     data-aos="zoom-out"
@@ -143,7 +143,7 @@ export default function FoodSupportProgramPage() {
                 data-aos="fade-up"
             >
                 <img
-                    src="/website media/Food Support Program/Footer.jpg"
+                    src="/website-media/foodsupportprogram/footer.jpg"
                     alt="Food distribution"
                     className="w-full h-auto object-cover"
                 />

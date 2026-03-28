@@ -27,7 +27,7 @@ const WhoWeAre: React.FC = () => {
                         className="lg:w-1/2 w-full relative min-h-[450px] lg:min-h-full"
                     >
                         <img
-                            src="/website media/Homepage/Center Image.jpg"
+                            src="/website-media/homepage/centerimage.jpg"
                             alt="Who We Are - Students"
                             className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                         />

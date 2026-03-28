@@ -25,7 +25,7 @@ export default function DonatePage() {
             {/* ===== HERO BANNER ===== */}
             <section className="relative mt-[80px] w-full overflow-hidden h-[220px] md:h-[320px]">
                 <img
-                    src="/website media/Donate Now/Header.jpg"
+                    src="/website-media/donatenow/header.jpg"
                     alt="Donate Now"
                     className="w-full h-full object-cover"
                     data-aos="fade"
@@ -96,7 +96,7 @@ export default function DonatePage() {
             <section className="relative overflow-hidden -mt-1">
                 <div className="absolute inset-0 z-0">
                     <img
-                        src="/website media/Donate Now/Background Image.jpg"
+                        src="/website-media/donatenow/backgroundimage.jpg"
                         alt=""
                         className="w-full h-full object-cover grayscale opacity-90"
                     />

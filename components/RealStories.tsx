@@ -21,7 +21,7 @@ const RealStories: React.FC = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/website media/Homepage/Background Image 02.jpg"
+          src="/website-media/homepage/backgroundimage02.jpg"
           alt="Background Collage"
           className="w-full h-full object-cover opacity-100"
         />
@@ -98,7 +98,7 @@ const RealStories: React.FC = () => {
 
               {/* Map Image */}
               <img
-                src="/website media/Homepage/pakistan map.png"
+                src="/website-media/homepage/pakistanmap.png"
                 alt="Pakistan Map Collage"
                 className="w-full h-auto drop-shadow-[0_40px_60px_rgba(0,0,0,0.6)]"
               />

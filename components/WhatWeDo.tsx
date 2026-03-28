@@ -21,7 +21,7 @@ const WhatWeDo: React.FC = () => {
       <section
         className="py-24 relative overflow-hidden"
         style={{
-          backgroundImage: `url('/website media/Homepage/Background Image.jpg')`,
+          backgroundImage: `url('/website-media/Homepage/Background Image.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -156,7 +156,7 @@ const WhatWeDo: React.FC = () => {
         className="relative w-full h-[300px] md:h-[400px] lg:h-[500px]"
       >
         <img
-          src="/website media/Homepage/Seaprater Image.jpg"
+          src="/website-media/homepage/seapraterimage.jpg"
           alt="What We Do Gallery"
           className="w-full h-full object-cover"
         />

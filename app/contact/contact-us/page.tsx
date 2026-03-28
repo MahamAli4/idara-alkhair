@@ -25,7 +25,7 @@ export default function ContactPage() {
             {/* ===== HERO SECTION ===== */}
              <section className="relative mt-29.5 w-full overflow-hidden h-55 md:h-80">
                 <img
-                    src="/website media/Contact Us/Banner Image.jpg"
+                    src="/website-media/contactus/bannerimage.jpg"
                     alt="IT Lab"
                     className="absolute inset-0 w-full h-full object-cover"
                 />

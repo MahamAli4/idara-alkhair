@@ -30,7 +30,7 @@ export default function ShopPage() {
                 data-aos="fade"
             >
                 <img
-                    src="/website media/Shop Page/Banner.jpg"
+                    src="/website-media/shoppage/banner.jpg"
                     alt="Idara Shop"
                     className="w-full h-full object-cover"
                 />

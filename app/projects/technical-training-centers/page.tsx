@@ -21,7 +21,7 @@ export default function TechnicalTrainingCentersPage() {
             {/* ===== HERO BANNER ===== */}
             <section className="relative mt-20 w-full overflow-hidden h-55 md:h-80">
                 <img
-                    src="/website media/Technical Training Centers/Banner.jpg"
+                    src="/website-media/technicaltrainingcenters/banner.jpg"
                     alt="Technical Training Centers"
                     className="w-full h-full object-cover"
                 />
@@ -123,7 +123,7 @@ export default function TechnicalTrainingCentersPage() {
                 data-aos="fade-up"
             >
                 <img
-                    src="/website media/Technical Training Centers/Footer Image.jpg"
+                    src="/website-media/technicaltrainingcenters/footerimage.jpg"
                     alt="Idara Al-Khair Students Group"
                     className="w-full h-auto object-cover"
                 />

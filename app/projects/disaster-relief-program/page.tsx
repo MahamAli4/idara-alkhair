@@ -21,7 +21,7 @@ export default function DisasterReliefProgramPage() {
             {/* ===== HERO BANNER ===== */}
             <section className="relative mt-29.5 w-full overflow-hidden h-55 md:h-80">
                 <img
-                    src="/website media/Disaster Relief Program/Banner Image copy.jpg"
+                    src="/website-media/disasterreliefprogram/bannerimagecopy.jpg"
                     alt="Disaster Relief Program"
                     className="w-full h-full object-cover"
                 />
@@ -120,7 +120,7 @@ export default function DisasterReliefProgramPage() {
                         data-aos="fade-up"
                     >
                         <img
-                            src="/website media/Disaster Relief Program/Center Image.jpg"
+                            src="/website-media/disasterreliefprogram/centerimage.jpg"
                             alt="Disaster relief work"
                             className="w-full h-75 md:h-142.5 object-cover transition-transform duration-700 hover:scale-105"
                         />
@@ -135,7 +135,7 @@ export default function DisasterReliefProgramPage() {
                 data-aos="fade-up"
             >
                 <img
-                    src="/images/Footer Image.jpg"
+                    src="/images/footerimage.jpg"
                     alt="relief workers helping"
                     className="w-full h-full object-cover"
                 />
