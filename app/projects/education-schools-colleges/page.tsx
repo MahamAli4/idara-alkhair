@@ -11,10 +11,10 @@ export default function EducationSchoolsCollegesPage() {
     
     useEffect(() => {
         AOS.init({
-            duration: 1000,
+            duration: 900,
             once: true,
-            easing: 'ease-out-quad',
-            offset: 100,
+            easing: 'ease-out-cubic',
+            offset: 80,
         });
     }, []);
 
@@ -23,137 +23,165 @@ export default function EducationSchoolsCollegesPage() {
             <Navbar />
 
             {/* ===== HERO BANNER ===== */}
-            <section className="relative mt-[100px] mx-4 md:mx-8 rounded-2xl overflow-hidden h-[220px] md:h-[300px]">
+            <section 
+                className="relative mt-20 w-full overflow-hidden h-55 md:h-80"
+                data-aos="fade-up"
+            >
                 <img
                     src="/website media/Education School & College/Banner.jpg"
                     alt="Education Schools & College"
                     className="w-full h-full object-cover"
                 />
-                {/* Dark navy overlay */}
-                <div className="absolute inset-0 bg-[#012060]/60"></div>
-                {/* Title */}
+                <div className="absolute inset-0 bg-[#012060]/10"></div>
+
                 <div className="absolute inset-0 flex items-center justify-center">
-                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white text-center tracking-tight">
-                        <span className="text-idara-orange italic">Education</span> - Schools & College
+                    <h1 
+                        className="text-3xl md:text-5xl lg:text-5xl font-bold text-white text-center tracking-tight"
+                        data-aos="fade-down"
+                        data-aos-delay="200"
+                    >
+                        <span className="text-idara-orange">Education</span> - Schools & College
                     </h1>
                 </div>
             </section>
 
-            {/* ===== CONTENT SECTION - Two Column ===== */}
+            {/* ===== CONTENT SECTION ===== */}
             <section className="container mx-auto px-5 md:px-8 py-8 md:py-20">
                 <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
 
-                    {/* Left - Text */}
+                    {/* Left Text */}
                     <div className="md:w-1/2">
-                        <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
+                        <h2 
+                            className="text-3xl md:text-5xl font-bold leading-tight mb-6"
+                            data-aos="fade-right"
+                        >
                             <span className="text-[#012060]">Educating Minds,</span>
                             <br />
                             <span className="text-idara-orange lg:text-5xl font-bold">Empowering Futures</span>
                         </h2>
 
-                        <p className="text-gray-800 text-base md:text-lg leading-relaxed mb-5">
-                            Education is at the heart of Idara Al-Khair's mission. We operate multiple
-                            schools and colleges that provide quality education to students from
-                            low-income backgrounds, enabling them to break the cycle of poverty.
+                        <p 
+                            className="text-gray-800 text-base md:text-lg leading-relaxed mb-5"
+                            data-aos="fade-right"
+                            data-aos-delay="200"
+                        >
+                            Education is at the heart of Idara Al-Khair's mission...
                         </p>
-                        <p className="text-gray-600 text-base italic">
+
+                        <p 
+                            className="text-gray-600 text-base italic"
+                            data-aos="fade-right"
+                            data-aos-delay="350"
+                        >
                             Our institutions focus on academic excellence, character building, and life skills.
                         </p>
                     </div>
 
-                    {/* Right - Student Image with Decorative Shapes */}
-                    <div className="md:w-1/2 relative flex justify-center">
-                        {/* Navy rounded rectangle - behind image */}
-                        <div className="absolute right-[5%] md:right-[10%] -top-4 w-[50px] md:w-[65px] h-[130px] md:h-[170px] bg-[#012060] rounded-full z-0"></div>
-                        {/* Orange circle - bottom right */}
-                        <div className="absolute right-[0%] md:right-[5%] bottom-[5%] w-[50px] md:w-[60px] h-[50px] md:h-[60px] bg-idara-orange rounded-full z-0"></div>
-                        {/* Cyan triangle - bottom left */}
-                        <div className="absolute left-[10%] bottom-[10%] w-[40px] md:w-[50px] h-[40px] md:h-[50px] bg-idara-cyan z-0"
-                            style={{ clipPath: 'polygon(0 0, 100% 50%, 0 100%)' }}></div>
+                    {/* Right Image */}
+                    <div 
+                        className="md:w-1/2 relative flex justify-center"
+                        data-aos="zoom-in"
+                        data-aos-delay="200"
+                    >
+                        {/* Shapes */}
+                        <div className="absolute right-[5%] md:right-[10%] -top-4 w-12.5 md:w-16.25 h-32.5 md:h-42.5 bg-[#012060] rounded-full z-0" data-aos="zoom-in" data-aos-delay="300"></div>
 
-                        {/* Student Image */}
-                        <div className="relative z-5 w-[280px] md:w-[350px] rounded-xl overflow-hidden shadow-2xl">
+                        <div className="absolute right-[0%] md:right-[5%] bottom-[5%] w-12.5 md:w-15 h-12.5 md:h-15 bg-idara-orange rounded-full z-0" data-aos="zoom-in" data-aos-delay="400"></div>
+
+                        <div 
+                            className="absolute left-[10%] bottom-[10%] w-10 md:w-12.5 h-10 md:h-12.5 bg-idara-cyan z-0"
+                            style={{ clipPath: 'polygon(0 0, 100% 50%, 0 100%)' }}
+                            data-aos="fade-up"
+                            data-aos-delay="500"
+                        ></div>
+
+                        {/* Image */}
+                        <div className="relative z-5 w-70 md:w-82.5 overflow-hidden">
                             <img
                                 src="/website media/Education School & College/Boy Image.jpg"
-                                alt="Student in school uniform"
-                                className="w-full h-[350px] md:h-[430px] object-cover"
+                                alt="Student"
+                                className="w-full h-87.5 md:h-107.5 object-cover"
                             />
                         </div>
                     </div>
 
                 </div>
             </section>
-            {/* ===== WHAT WE PROVIDE - Yellow Section ===== */}
-            <section className="relative mx-4 md:mx-8 rounded-2xl overflow-hidden bg-idara-yellow py-12 md:py-16 px-6 md:px-12">
+
+            {/* ===== WHAT WE PROVIDE ===== */}
+            <section 
+                className="relative mx-4 md:mx-0 overflow-hidden bg-idara-yellow py-12 md:py-16 px-6 md:px-12"
+                data-aos="fade-up"
+            >
                 <div className="container mx-auto max-w-5xl">
-                    {/* Heading */}
-                    <h3 className="text-3xl md:text-4xl font-bold text-center mb-4">
+
+                    <h3 
+                        className="text-3xl md:text-4xl font-bold text-center mb-4"
+                        data-aos="fade-down"
+                    >
                         <span className="text-[#012060]">What We </span>
                         <span className="text-idara-orange italic">Provide :</span>
                     </h3>
 
-                    <p className="text-white text-center text-sm md:text-lg mb-10 max-w-3xl mx-auto">
-                        Quality education · Trained faculty · Safe learning environments ·
-                        Affordable or free schooling.
+                    <p 
+                        className="text-white text-center text-sm md:text-lg mb-10 max-w-3xl mx-auto"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+                        Quality education · Trained faculty · Safe learning environments · Affordable or free schooling.
                     </p>
 
-                    {/* Bullet Points - Two Columns */}
+                    {/* Bullets */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-4 mb-10 max-w-2xl mx-auto">
-                        <div className="flex items-center gap-3">
-                            <span className="text-idara-orange text-xl">✦</span>
-                            <span className="text-[#012060] font-bold text-base md:text-lg">Compassion & Integrity</span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                            <span className="text-idara-orange text-xl">✦</span>
-                            <span className="text-[#012060] font-bold text-base md:text-lg">Sustainability</span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                            <span className="text-idara-orange text-xl">✦</span>
-                            <span className="text-[#012060] font-bold text-base md:text-lg">Transparency & Accountability</span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                            <span className="text-idara-orange text-xl">✦</span>
-                            <span className="text-[#012060] font-bold text-base md:text-lg">Community-Driven Impact</span>
-                        </div>
+                        {[
+                            "Compassion & Integrity",
+                            "Sustainability",
+                            "Transparency & Accountability",
+                            "Community-Driven Impact"
+                        ].map((item, i) => (
+                            <div 
+                                key={i}
+                                className="flex items-center gap-3"
+                                data-aos="fade-up"
+                                data-aos-delay={i * 150}
+                            >
+                                <span className="text-idara-orange text-xl">✦</span>
+                                <span className="text-[#012060] font-bold text-base md:text-lg">{item}</span>
+                            </div>
+                        ))}
                     </div>
 
-                    {/* Three Images Row */}
+                    {/* Images */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <div className="rounded-xl overflow-hidden shadow-lg border-4 border-white">
-                            <img
-                                src="/website media/Education School & College/Image 01.jpeg"
-                                alt="Students in classroom"
-                                className="w-full h-[180px] md:h-[200px] object-cover"
-                            />
-                        </div>
-                        <div className="rounded-xl overflow-hidden shadow-lg border-4 border-white">
-                            <img
-                                src="/website media/Education School & College/Image 02.jpeg"
-                                alt="Students learning together"
-                                className="w-full h-[180px] md:h-[200px] object-cover"
-                            />
-                        </div>
-                        <div className="rounded-xl overflow-hidden shadow-lg border-4 border-white">
-                            <img
-                                src="/website media/Education School & College/Image 03.jpg"
-                                alt="Happy students"
-                                className="w-full h-[180px] md:h-[200px] object-cover"
-                            />
-                        </div>
+                        {[1,2,3].map((img, i) => (
+                            <div 
+                                key={i}
+                                className="rounded-xl overflow-hidden shadow-lg border-4 border-white"
+                                data-aos="zoom-in"
+                                data-aos-delay={i * 200}
+                            >
+                                <img
+                                    src={`/website media/Education School & College/Image 0${img}.${img === 3 ? 'jpg' : 'jpeg'}`}
+                                    className="w-full h-45 md:h-50 object-cover"
+                                />
+                            </div>
+                        ))}
                     </div>
 
                 </div>
-
             </section>
 
-            {/* ===== FULL-WIDTH BOTTOM IMAGE ===== */}
-            <section className="relative mx-4 md:mx-8 mt-6 rounded-2xl overflow-hidden h-[220px] md:h-[320px]">
+            {/* ===== FOOTER IMAGE ===== */}
+            <section 
+                className="relative mt-px w-full overflow-hidden h-55 md:h-77.5"
+                data-aos="fade-up"
+            >
                 <img
                     src="/website media/Education School & College/Footer.jpg"
-                    alt="School children crowd"
+                    alt="School children"
                     className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a2351]/40 to-transparent"></div>
+                <div className="absolute inset-0 mix-blend-multiply"></div>
             </section>
 
             <Footer />

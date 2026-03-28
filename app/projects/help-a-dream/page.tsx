@@ -24,7 +24,7 @@ export default function HelpADreamPage() {
 
             {/* ===== HERO BANNER ===== */}
             <section 
-                className="relative mt-[80px] w-full overflow-hidden h-[220px] md:h-[320px]"
+                className="relative mt-20 w-full overflow-hidden h-55 md:h-80"
                 data-aos="fade"
             >
                 <img
@@ -49,7 +49,7 @@ export default function HelpADreamPage() {
             <section className="container mx-auto px-6 md:px-12 py-16 md:pt-24 md:pb-32">
                 <div className="flex flex-col items-start gap-12">
                     <div className="w-full" data-aos="fade-up">
-                        <h2 className="text-3xl md:text-4xl font-semibold font-black leading-[1.1] mb-8 text-[#012060]">
+                        <h2 className="text-3xl md:text-4xl font-black leading-[1.1] mb-8 text-[#012060]">
                             Help a Child <span className="text-idara-orange font-extrabold">Dream Again</span>
                         </h2>
                         <p className="text-black text-base md:text-lg leading-relaxed">
@@ -63,14 +63,14 @@ export default function HelpADreamPage() {
             <section className="container mx-auto px-6 md:px-14 pb-16 md:pb-24 -mt-10 md:-mt-20">
                 <div className="flex flex-col items-start gap-8" data-aos="fade-right">
                     <div className="w-full">
-                        <h2 className="text-3xl md:text-4xl font-semibold font-black leading-[1.1] mb-8 text-[#012060]">
+                        <h2 className="text-3xl md:text-4xl font-black leading-[1.1] mb-8 text-[#012060]">
                             What Your <span className="text-idara-orange font-extrabold">Sponsorships</span> Provides?
                         </h2>
                     </div>
                 </div>
 
                 <div className="w-full overflow-hidden" data-aos="zoom-in" data-aos-duration="1200">
-                    <div className="relative w-full h-[300px] md:h-[650px]">
+                    <div className="relative w-full h-75 md:h-162.5">
                         <img
                             src="/website media/Help a Dream/Center image.png"
                             alt="Child dreaming"
@@ -92,7 +92,7 @@ export default function HelpADreamPage() {
             <section className="bg-gray-300 pt-16 md:pt-24 relative">
                 <div className="container mx-auto px-6">
                     <h2 
-                        className="text-3xl md:text-4xl font-black font-semibold text-center text-[#012060]"
+                        className="text-3xl md:text-4xl font-black  text-center text-[#012060]"
                         data-aos="fade-up"
                     >
                         Why <span className="text-idara-orange font-bold">Sponsor</span> Through Idara Al-Khair
@@ -111,7 +111,7 @@ export default function HelpADreamPage() {
                     </div>
 
                     <h2 
-                        className="text-3xl md:text-4xl font-black font-semibold text-center mt-14 text-[#012060]"
+                        className="text-3xl md:text-4xl font-black text-center mt-14 text-[#012060]"
                         data-aos="fade-up"
                     >
                         One Decision.
@@ -138,14 +138,14 @@ export default function HelpADreamPage() {
 
                 {/* BOTTOM IMAGE */}
                 <div 
-                    className="w-full leading-[0] block"
+                    className="w-full leading-0 block"
                     data-aos="fade-up"
                     data-aos-offset="50"
                 >
                     <img
                         src="/images/helpadreamfooter.png"
                         alt="help a dream"
-                        className="w-full h-auto md:h-[560px] object-cover block"
+                        className="w-full h-full -mt-5 md:h-180 object-cover block"
                     />
                 </div>
             </section>

@@ -19,13 +19,12 @@ export default function DisasterReliefProgramPage() {
             <Navbar />
 
             {/* ===== HERO BANNER ===== */}
-            <section className="relative mt-[118px] w-full overflow-hidden h-[220px] md:h-[320px]">
+            <section className="relative mt-29.5 w-full overflow-hidden h-55 md:h-80">
                 <img
                     src="/website media/Disaster Relief Program/Banner Image copy.jpg"
                     alt="Disaster Relief Program"
                     className="w-full h-full object-cover"
                 />
-<<<<<<< HEAD
                 <div className="absolute inset-0 bg-[#012060]/10"></div>
 
                 <div 
@@ -34,19 +33,11 @@ export default function DisasterReliefProgramPage() {
                 >
                     <h1 className="text-4xl md:text-6xl lg:text-4xl font-bold text-white text-center tracking-tighter">
                         <span className="text-idara-orange font-black">DISASTER</span> Relief Program
-=======
-                {/* Dark overlay */}
-                {/* <div className="absolute inset-0 bg-[#012060]/55"></div> */}
-                {/* Title */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white text-center tracking-tight">
-                        <span className="text-idara-orange font-black italic">DISASTER</span> Relief Program
->>>>>>> eb9d2f8ba66949931884d44be0414745c204e5f5
                     </h1>
                 </div>
             </section>
 
-            {/* ===== CONTENT SECTION ===== */}
+            {/* === CONTENT SECTION === */}
             <section className="container mx-auto px-6 md:px-12 py-16 md:py-24">
                 <div className="max-w-4xl">
                     <h2 
@@ -85,13 +76,13 @@ export default function DisasterReliefProgramPage() {
                     {/* Decorative Shapes with different effects */}
                     <div 
                         data-aos="fade-down"
-                        className="absolute left-0 md:left-[-10px] top-[2%] w-[40px] md:w-[55px] h-[110px] md:h-[150px] bg-[#012060] rounded-full z-10"
+                        className="absolute left-0 md:-left-2.5 top-[2%] w-10 md:w-13.75 h-27.5 md:h-37.5 bg-[#012060] rounded-full z-10"
                     ></div>
 
                     <div 
                         data-aos="zoom-in"
                         data-aos-delay="300"
-                        className="absolute left-0 md:left-[-10px] top-[24%] w-[45px] md:w-[55px] h-[45px] md:h-[55px] bg-idara-yellow rounded-full z-10"
+                        className="absolute left-0 md:-left-2.5 top-[24%] w-11.25 md:w-13.75 h-11.25 md:h-13.75 bg-idara-yellow rounded-full z-10"
                     ></div>
 
                     <div
@@ -105,7 +96,7 @@ export default function DisasterReliefProgramPage() {
 
                     {/* Quote Text */}
                     <div 
-                        className="relative z-20 mb-6 ml-12 md:ml-20 -mt-7 max-w-[380px] md:max-w-[480px]"
+                        className="relative z-20 mb-6 ml-12 md:ml-20 -mt-7 max-w-95 md:max-w-120"
                         data-aos="fade-up"
                     >
                         <p className="leading-[1.1]">
@@ -125,49 +116,22 @@ export default function DisasterReliefProgramPage() {
 
                     {/* Main Image */}
                     <div 
-                        className="relative mt-1 overflow-hidden h-[200px] md:h-[550px] mb-[-70] -mx-6 md:-mx-58"
+                        className="relative mt-1 overflow-hidden h-80 md:h-137.5 mb-[-70] -mx-6 md:-mx-58"
                         data-aos="fade-up"
                     >
                         <img
                             src="/website media/Disaster Relief Program/Center Image.jpg"
                             alt="Disaster relief work"
-                            className="w-full h-[300px] md:h-[570px] object-cover transition-transform duration-700 hover:scale-105"
+                            className="w-full h-75 md:h-142.5 object-cover transition-transform duration-700 hover:scale-105"
                         />
                     </div>
 
-<<<<<<< HEAD
-=======
-                    {/* Lower overlapping images */}
-                    {/* <div className="grid grid-cols-2 md:grid-cols-3 gap-3 relative z-6 -mt-10 md:-mt-16 mx-2 md:mx-6">
-                        <div className="rounded-xl overflow-hidden shadow-2xl border-4 border-white">
-                            <img
-                                src="/website media/Disaster Relief Program/Footer Image.jpg"
-                                alt="Relief workers helping"
-                                className="w-full h-[160px] md:h-[220px] object-cover"
-                            />
-                        </div>
-                        <div className="rounded-xl overflow-hidden shadow-2xl border-4 border-white">
-                            <img
-                                src="/website media/Food Support Program/Footer.jpg"
-                                alt="Supply distribution"
-                                className="w-full h-[160px] md:h-[220px] object-cover"
-                            />
-                        </div>
-                        <div className="hidden md:block rounded-xl overflow-hidden shadow-2xl border-4 border-white">
-                            <img
-                                src="/website media/Homepage/Background Image 02.jpg"
-                                alt="Rehabilitation support"
-                                className="w-full h-[220px] object-cover"
-                            />
-                        </div>
-                    </div> */}
->>>>>>> eb9d2f8ba66949931884d44be0414745c204e5f5
                 </div>
             </section>
 
             {/* ===== FULL-WIDTH BOTTOM IMAGE ===== */}
             <section 
-                className="relative mt-[30px] w-full overflow-hidden h-[220px] md:h-[320px]"
+                className="relative mt-5.5 w-full overflow-hidden h-55 md:h-80"
                 data-aos="fade-up"
             >
                 <img

@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useEffect } from 'react';
@@ -22,7 +23,7 @@ export default function ContactPage() {
             <Navbar />
 
             {/* ===== HERO SECTION ===== */}
-             <section className="relative mt-[118px] w-full overflow-hidden h-[220px] md:h-[320px]">
+             <section className="relative mt-29.5 w-full overflow-hidden h-55 md:h-80">
                 <img
                     src="/website media/Contact Us/Banner Image.jpg"
                     alt="IT Lab"
@@ -73,7 +74,7 @@ export default function ContactPage() {
                             <form className="space-y-6">
                                 <div className="grid grid-cols-1 gap-2">
                                     <div className="flex items-center gap-4">
-                                        <label className="text-sm font-bold text-idara-navy min-w-[60px]">Name :</label>
+                                        <label className="text-sm font-bold text-idara-navy min-w-15">Name :</label>
                                         <input
                                             type="text"
                                             placeholder="Type your name here..."
@@ -81,7 +82,7 @@ export default function ContactPage() {
                                         />
                                     </div>
                                     <div className="flex items-center gap-4">
-                                        <label className="text-sm font-bold text-idara-navy min-w-[60px]">Email :</label>
+                                        <label className="text-sm font-bold text-idara-navy min-w-15">Email :</label>
                                         <input
                                             type="email"
                                             placeholder="Enter your email..."
