@@ -19,7 +19,7 @@ export default function TechnicalTrainingCentersPage() {
             <Navbar />
 
             {/* ===== HERO BANNER ===== */}
-            <section className="relative mt-[80px] w-full overflow-hidden h-[220px] md:h-[320px]">
+            <section className="relative mt-20 w-full overflow-hidden h-55 md:h-80">
                 <img
                     src="/website media/Technical Training Centers/Banner.jpg"
                     alt="Technical Training Centers"
@@ -67,44 +67,51 @@ export default function TechnicalTrainingCentersPage() {
             {/* ===== CREATIVE HIGHER-FIDELITY LAYOUT ===== */}
             <section className="container mx-auto px-6 md:px-12">
                 <div
-                    className="relative w-full h-[600px] md:h-[500px] lg:h-[800px] -mx-6 md:-mx-21"
+                    className="relative w-full h-150 md:h-125 lg:h-200 -mx-6 md:-mx-21"
                     style={{ backgroundImage: "url('/images/techtrainingcenterimg.png')", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center" }}
                     data-aos="fade-in"
                 >
                     <div className="relative z-30 container h-full">
-                        <div className="w-full flex flex-col font-montserrat select-none text-[#012060] pt-12 md:pt-0">
+                        <div className="w-full flex flex-col font-montserrat select-none text-[#012060]">
                             <span
-                                className="italic text-2xl md:text-4xl font-bold tracking-tight mt-12 md:mt-24"
+                                className="italic text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight mt-17 ml-6 md:ml-17"
                                 data-aos="fade-right"
                                 data-aos-delay="100"
-                            >We don't</span>
+                            >
+                                We don't
+                            </span>
+
                             <h3
-                                className="font-bold text-5xl md:text-[6.5rem] italic tracking-tighter leading-[0.8] mb-2 text-[#012060]"
+                                className="font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-7xl italic tracking-tighter leading-[0.8] mb-2 text-[#012060] ml-6 md:ml-17"
                                 data-aos="fade-right"
                                 data-aos-delay="300"
-                            >just teach</h3>
+                            >
+                                just teach
+                            </h3>
 
                             <div
-                                className="flex items-center gap-2 md:gap-6 ml-4 md:ml-40 -mt-2"
+                                className="gap-6 ml-16 md:ml-40 -mt-2"
                                 data-aos="fade-right"
                                 data-aos-delay="500"
                             >
-                                <span className="italic text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight ml-8 md:ml-64">skills,</span>
+                                <span className="italic text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight ml-16 md:ml-47">skills,</span>
                             </div>
 
                             <div
-                                className="relative mt-4 md:mt-9 ml-2 md:ml-4"
+                                className="relative mt-8 md:mt-5 ml-4"
                                 data-aos="fade-left"
                                 data-aos-delay="700"
                             >
-                                <span className="italic text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight ml-8 md:ml-42">We create</span>
+                                <span className="italic text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight ml-16 md:ml-48">We create</span>
                             </div>
 
                             <h3
-                                className="font-bold text-5xl md:text-[6.5rem] italic tracking-tighter leading-[0.8] mt-3 md:mt-5 text-[#012060] text-right md:text-left pr-4 md:pr-0"
+                                className="font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-7xl italic tracking-tighter leading-[0.8] mt-5 text-[#012060] ml-16 md:ml-14"
                                 data-aos="zoom-out-up"
                                 data-aos-delay="900"
-                            >livelihoods</h3>
+                            >
+                                livelihoods
+                            </h3>
                         </div>
                     </div>
                 </div>

@@ -24,7 +24,7 @@ export default function FoodSupportProgramPage() {
 
             {/* ===== HERO BANNER ===== */}
             <section 
-                className="relative mt-[80px] w-full overflow-hidden h-[220px] md:h-[320px]"
+                className="relative mt-20 w-full overflow-hidden h-55 md:h-80"
                 data-aos="fade"
             >
                 <img
@@ -48,7 +48,7 @@ export default function FoodSupportProgramPage() {
 
 
             {/* ===== FULL BACKGROUND IMAGE SECTION ===== */}
-            <section className="relative w-full min-h-[1210px] overflow-hidden">
+            <section className="relative w-full min-h-302.5 overflow-hidden">
 
                 {/* Background Image - Slight zoom on entrance for depth */}
                 <img
@@ -94,7 +94,7 @@ export default function FoodSupportProgramPage() {
                         <div className="relative max-w-4xl mx-auto">
                             
                             {/* Stylized Quote - Staggered entrance */}
-                            <div className="relative z-20 mt-15 mb-8 max-w-[340px] md:max-w-[400px]">
+                            <div className="relative z-20 mt-15 mb-8 max-w-85 md:max-w-100">
                                 <p className="leading-[1.1] font-montserrat select-none">
                                     <span 
                                         className="text-idara-orange font-black text-3xl md:text-5xl inline-block"

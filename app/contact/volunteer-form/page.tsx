@@ -10,7 +10,7 @@ export default function VolunteerFormPage() {
             <Navbar />
 
             {/* ===== HERO SECTION ===== */}
-            <section className="relative mt-[115px] h-[350px] md:h-[450px] overflow-hidden">
+            <section className="relative mt-28.75 h-87.5 md:h-112.5 overflow-hidden">
                 <img
                     src="/website media/Application Volunteer Form/Banner Image.jpg"
                     alt="Volunteering Students"

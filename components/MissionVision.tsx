@@ -3,7 +3,7 @@ import React from 'react';
 const MissionVisionValues = () => {
     return (
         <>
-            <section className="relative py-24 overflow-hidden min-h-[800px] flex items-center">
+            <section className="relative py-24 overflow-hidden min-h-200 flex items-center">
 
                 {/* Grayscale Background */}
                 <div className="absolute inset-0 z-0">
@@ -45,15 +45,17 @@ const MissionVisionValues = () => {
                     </div>
 
                     {/* Our Values */}
-                    <div className="w-full">
+                    <div className="w-full flex flex-col items-center">
+                        {/* Heading */}
                         <h2
-                            className="text-4xl md:text-5xl lg:text-7xl font-bold text-[#002e82] text-center mb-10 md:mb-16 uppercase tracking-tighter drop-shadow-lg"
+                            className="text-5xl md:text-5xl font-medium text-idara-navy text-center mb-20  px-4 md:px-7 lg:px-1 tracking-tighter drop-shadow-lg"
                             data-aos="fade-up"
                         >
                             Our <span className='text-white font-black'>Values</span>
                         </h2>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-8 md:gap-y-12 px-4 md:px-8 lg:px-20">
+                        {/* Values Grid */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 text-left gap-x-55 gap-y-8 px-4 md:px-8 lg:px-16">
                             {[
                                 "Compassion & Integrity",
                                 "Sustainability",
@@ -62,12 +64,15 @@ const MissionVisionValues = () => {
                             ].map((value, index) => (
                                 <div
                                     key={index}
-                                    className="flex items-center space-x-4 md:space-x-6"
+                                    className="flex items-start gap-4 md:gap-6"
                                     data-aos="fade-up"
                                     data-aos-delay={index * 150}
                                 >
-                                    <div className="w-3 md:w-3.5 h-3 md:h-3.5 bg-[#002e82] rounded-full shrink-0 shadow-sm"></div>
-                                    <span className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold text-[#012060] tracking-tight">
+                                    {/* Bullet */}
+                                    <div className="mt-2 w-3.5 h-3.5 bg-[#012060] rounded-full shrink-0 shadow-sm"></div>
+
+                                    {/* Text */}
+                                    <span className="text-2xl md:text-3xl lg:text-2xl font-bold text-idara-navy tracking-tight">
                                         {value}
                                     </span>
                                 </div>
@@ -78,7 +83,7 @@ const MissionVisionValues = () => {
             </section>
 
             {/* Footer Banner Image */}
-            <div className="w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
+            <div className="w-full h-100 md:h-125 lg:h-150 overflow-hidden">
                 <img
                     src="/website media/About us/Footer Image.jpg"
                     alt="Idara Al-Khair Students Group"
