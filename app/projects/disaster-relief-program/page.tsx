@@ -107,7 +107,7 @@ export default function DisasterReliefProgramPage() {
                                 communities when they
                             </span>
                             <br />
-                            <span className="inline-block translate-x-78">
+                            <span className="inline-block translate-x-40">
                                 <span className="text-idara-orange font-black text-5xl md:text-7xl ">need</span>
                                 <span className="text-[#012060] font-black text-2xl md:text-4xl "> it most"</span>
                             </span>
@@ -131,7 +131,7 @@ export default function DisasterReliefProgramPage() {
 
             {/* ===== FULL-WIDTH BOTTOM IMAGE ===== */}
             <section 
-                className="relative mt-5.5 w-full overflow-hidden h-55 md:h-80"
+                className="relative h-55 md:h-90 mt-9 lg:mt-20"
                 data-aos="fade-up"
             >
                 <img

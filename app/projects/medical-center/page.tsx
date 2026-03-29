@@ -63,18 +63,11 @@ export default function MedicalCenterPage() {
             {/* ===== CREATIVE HIGHER-FIDELITY LAYOUT ===== */}
               <section className="cover mx-auto px-6 md:px-12 bg-white">
             <div
-    className="relative w-full h-80 md:h-175 lg:h-300 bg-cover bg-center bg-no-excess md:bg-top"
+    className="relative w-full h-70 md:h-145 lg:h-200 bg-cover bg-center bg-no-excess md:bg-top"
     style={{ backgroundImage: "url('/images/medicalcenter.png')" }}
     data-aos="fade-up"
 >
-                    {/* Decorative Branding Shapes */}
-                    <div className="absolute inset-0 pointer-events-none">
-                        <div
-                            className="absolute left-0 top-[50%] w-20 md:w-30 h-20 md:h-30 bg-idara-yellow rounded-full z-10 shadow-lg transform -translate-x-4"
-                            data-aos="fade-right"
-                            data-aos-delay="800"
-                        ></div>
-                    </div>
+                  
 
                     {/* Stylized Quote/Text Section (Top Right) */}
                     <div className="relative z-40 flex-1 w-full text-right">

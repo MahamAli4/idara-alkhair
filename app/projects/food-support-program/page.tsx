@@ -48,7 +48,7 @@ export default function FoodSupportProgramPage() {
 
 
             {/* ===== FULL BACKGROUND IMAGE SECTION ===== */}
-            <section className="relative w-full min-h-302.5 overflow-hidden">
+            <section className="relative w-full h-[800px] md:h-[500px] lg:h-[1000px] overflow-hidden">
 
                 {/* Background Image - Slight zoom on entrance for depth */}
                 <img
@@ -66,14 +66,14 @@ export default function FoodSupportProgramPage() {
                 <div className="relative z-10">
 
                     {/* TEXT CONTENT */}
-                    <div className="container mx-auto px-6 md:px-12 pt-12 pb-8 md:pt-16 md:pb-12">
-                        <div className="max-w-4xl" data-aos="fade-right">
+                    <div className="container mx-auto px-3 md:px-12 pt-12 pb-8 md:pt-16 md:pb-12">
+                        <div  className="w-full" data-aos="fade-right">
                             <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-4">
                                 <span className="text-[#012060]">Fighting Hunger </span>
                                 <span className="text-[#ed7d31] font-black">with Dignity</span>
                             </h2>
 
-                            <p className="text-black text-base md:text-lg leading-relaxed mb-5 max-w-3xl">
+                            <p className="text-black text-base  md:text-lg leading-relaxed mb-5 ">
                                 No family should sleep hungry. Our Food Support Program provides daily meals, monthly ration distributions, and seasonal food drives to families facing food insecurity.
                             </p>
 

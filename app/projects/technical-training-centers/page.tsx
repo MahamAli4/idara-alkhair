@@ -94,7 +94,7 @@ export default function TechnicalTrainingCentersPage() {
                                 data-aos="fade-right"
                                 data-aos-delay="500"
                             >
-                                <span className="italic text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight ml-16 md:ml-47">skills,</span>
+                                <span className="italic text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight ml-8 md:ml-47">skills,</span>
                             </div>
 
                             <div

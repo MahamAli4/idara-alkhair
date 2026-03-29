@@ -70,7 +70,7 @@ export default function HelpADreamPage() {
                 </div>
 
                 <div className="w-full overflow-hidden" data-aos="zoom-in" data-aos-duration="1200">
-                    <div className="relative w-full h-75 md:h-162.5">
+                    <div className="relative w-full h-60 md:h-90 lg:h-190">
                         <img
                             src="/website media/Help a Dream/Center image.png"
                             alt="Child dreaming"

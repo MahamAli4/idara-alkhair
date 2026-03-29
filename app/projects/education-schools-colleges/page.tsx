@@ -19,7 +19,7 @@ export default function EducationSchoolsCollegesPage() {
     }, []);
 
     return (
-        <main className="overflow-x-hidden bg-white">
+        <main className="overflow-x-hidden ">
             <Navbar />
 
             {/* ===== HERO BANNER ===== */}
@@ -84,7 +84,7 @@ export default function EducationSchoolsCollegesPage() {
                         data-aos-delay="200"
                     >
                         {/* Shapes */}
-                        <div className="absolute right-[5%] md:right-[10%] -top-4 w-12.5 md:w-16.25 h-32.5 md:h-42.5 bg-[#012060] rounded-full z-0" data-aos="zoom-in" data-aos-delay="300"></div>
+                        
 
                         <div className="absolute right-[0%] md:right-[5%] bottom-[5%] w-12.5 md:w-15 h-12.5 md:h-15 bg-idara-orange rounded-full z-0" data-aos="zoom-in" data-aos-delay="400"></div>
 
@@ -98,7 +98,7 @@ export default function EducationSchoolsCollegesPage() {
                         {/* Image */}
                         <div className="relative z-5 w-70 md:w-82.5 overflow-hidden">
                             <img
-                                src="/website media/Education School & College/Boy Image.jpg"
+                                src="/website media/Education School & College/Boy-Image.png"
                                 alt="Student"
                                 className="w-full h-87.5 md:h-107.5 object-cover"
                             />

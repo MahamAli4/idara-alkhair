@@ -108,7 +108,7 @@ export default function ITInstitutePage() {
                     ></div>
                     
                     <div
-                        className="absolute right-[46%] top-[54%] w-0 h-0 z-20"
+                        className="absolute right-[46%] top-[52%] w-0 h-0 z-20"
                         style={{
                             borderTop: "50px solid #facc15",
                             borderRight: "50px solid transparent"
@@ -125,7 +125,7 @@ export default function ITInstitutePage() {
                     ></div>
 
                     {/* Two side-by-side images */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-70 relative z-5">
+                    <div className="grid grid-cols-2 md:grid-cols-2 gap-17 md:gap-70 relative z-5">
                         <div 
                             className="relative mt-6 overflow-hidden h-55 md:h-92.5 -mx-8 md:-mx-34"
                             data-aos="fade-up"
@@ -151,7 +151,7 @@ export default function ITInstitutePage() {
 
                     {/* Image 3 - Lower overlapping wider image */}
                     <div 
-                        className="relative mt-3 overflow-hidden h-50 md:h-72.5 mb-[-90] -mx-6 md:-mx-34"
+                        className="relative mt-3 overflow-hidden h-50 md:h-72.5 mb-[-40] -mx-6 md:-mx-34"
                         data-aos="zoom-in-up"
                         data-aos-delay="400"
                     >

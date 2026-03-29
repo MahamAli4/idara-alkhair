@@ -104,7 +104,7 @@ export default function DonatePage() {
 
                 <div className="relative z-10 container mx-auto px-6 md:px-12 py-14 md:py-20">
                     {/* Four Impact Shapes - Dropping in staggered */}
-                    <div className="flex flex-wrap justify-center gap-6 md:gap-8 -mt-20 mb-13 max-w-4xl mx-auto">
+                    <div className="flex flex-nowwrap justify-center gap-6 scale-100 md:scale-100 md:gap-8 -mt-20 mb-13 max-w-4xl mx-auto">
                         {[
                             { text: "Educating underprivileged children", color: "bg-idara-orange" },
                             { text: "Feeding families facing hunger", color: "bg-idara-yellow" },
@@ -115,7 +115,7 @@ export default function DonatePage() {
                                 key={i}
                                 data-aos="fade-down"
                                 data-aos-delay={i * 200}
-                                className={`${item.color} w-[150px] h-[180px] md:w-[170px] md:h-[200px] rounded-b-[90px] flex items-center justify-center p-5 shadow-lg transform transition-transform hover:scale-105`}
+                                className={`${item.color}  w-[150px] h-[180px] md:w-[170px] md:h-[200px] rounded-b-[90px] flex items-center justify-center p-5 shadow-lg transform transition-transform hover:scale-105`}
                             >
                                 <p className="text-white text-center text-sm md:text-base font-semibold leading-tight">
                                     {item.text}
