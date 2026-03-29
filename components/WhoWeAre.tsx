@@ -24,7 +24,7 @@ const WhoWeAre: React.FC = () => {
                     {/* Left Image */}
                     <div 
                         data-aos="fade-right"
-                        className="lg:w-1/2 w-full relative min-h-[450px] lg:min-h-full"
+                        className="lg:w-1/2 w-full relative min-h-112.5 lg:min-h-full"
                     >
                         <img
                             src="/website media/Homepage/Center Image.jpg"
@@ -79,7 +79,7 @@ const WhoWeAre: React.FC = () => {
                                 className="grid grid-cols-3 gap-4 lg:gap-6 mb-5"
                             >
 
-                                <div className="bg-idara-cyan aspect-square flex flex-col items-center justify-center p-4 rounded-[12px] text-center shadow-lg transition-all hover:-translate-y-2 hover:shadow-idara-cyan/30">
+                                <div className="bg-idara-cyan aspect-square flex flex-col items-center justify-center p-4 rounded-xl text-center shadow-lg transition-all hover:-translate-y-2 hover:shadow-idara-cyan/30">
                                     <h3 className="text-2xl lg:text-4xl font-black ">38 +</h3>
                                     <p className="text-[0.8rem] lg:text-[1.5rem] font-bold uppercase tracking-wide">
                                         Years
@@ -89,7 +89,7 @@ const WhoWeAre: React.FC = () => {
                                     </p>
                                 </div>
 
-                                <div className="bg-idara-orange aspect-square flex flex-col items-center justify-center p-4 rounded-[12px] text-center shadow-lg transition-all hover:-translate-y-2 hover:shadow-idara-orange/30">
+                                <div className="bg-idara-orange aspect-square flex flex-col items-center justify-center p-4 rounded-xl text-center shadow-lg transition-all hover:-translate-y-2 hover:shadow-idara-orange/30">
                                     <h3 className="text-2xl lg:text-4xl font-black">850 K</h3>
                                     <p className="text-[0.8rem] lg:text-[1rem] font-bold uppercase tracking-wide">
                                         Individuals
@@ -99,7 +99,7 @@ const WhoWeAre: React.FC = () => {
                                     </p>
                                 </div>
 
-                                <div className="bg-idara-yellow aspect-square flex flex-col items-center justify-center p-4 rounded-[12px] text-center shadow-lg transition-all hover:-translate-y-2 hover:shadow-idara-yellow/30">
+                                <div className="bg-idara-yellow aspect-square flex flex-col items-center justify-center p-4 rounded-xl text-center shadow-lg transition-all hover:-translate-y-2 hover:shadow-idara-yellow/30">
                                     <h3 className="text-2xl lg:text-4xl font-black mb-1">6000</h3>
                                     <p className="text-[0.8rem] lg:text-[1rem] font-bold uppercase tracking-wide">
                                         Students
