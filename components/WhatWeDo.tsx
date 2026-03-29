@@ -34,7 +34,7 @@ const WhatWeDo: React.FC = () => {
           <div className="text-center mb-16">
             <h2
               data-aos="fade-up"
-              className="text-[3.5rem] lg:text-[4.5rem] text-[#012060] font-bold mb-4"
+              className="text-4xl md:text-5xl lg:text-[4.5rem] text-[#012060] font-bold mb-4"
             >
               What we <span className="text-idara-orange font-black">Do?</span>
             </h2>

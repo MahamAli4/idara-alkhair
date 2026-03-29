@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
     ];
 
     const contactLinks = [
-        { name: 'Volunteer Application Form', href: '/volunteer-form', icon: ClipboardCheck },
+        { name: 'Volunteer Application Form', href: '/contact/volunteer-form', icon: ClipboardCheck },
         { name: 'Contact Us', href: '/contact', icon: Mail },
     ];
 
@@ -121,7 +121,7 @@ const Navbar: React.FC = () => {
                                 ) : link.name === 'Contact Us' ? (
                                     <>
                                         <button
-                                            className={`nav-link-custom flex items-center ${pathname.startsWith('/contact') || pathname === '/volunteer-form' ? 'active' : ''}`}
+                                            className={`nav-link-custom flex items-center ${pathname.startsWith('/contact') ? 'active' : ''}`}
                                         >
                                             {link.name}
                                             <ChevronDown className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:rotate-180" />

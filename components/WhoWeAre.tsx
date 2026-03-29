@@ -45,7 +45,7 @@ const WhoWeAre: React.FC = () => {
                             <h2 
                                 data-aos="fade-up"
                                 data-aos-delay="100"
-                                className="text-[3.5rem] lg:text-[4.5rem] font-bold leading-[1.1] mb-5 tracking-tight"
+                                className="text-4xl md:text-5xl lg:text-[4.5rem] font-bold leading-[1.1] mb-5 tracking-tight"
                             >
                                 Who <span className="text-idara-orange font-black">We</span> Are?
                             </h2>
@@ -67,7 +67,7 @@ const WhoWeAre: React.FC = () => {
                             <p 
                                 data-aos="fade-up"
                                 data-aos-delay="300"
-                                className="text-[1.1rem] lg:text-[1.25rem] italic font-semibold text-[#ffd033] mb-12 leading-snug"
+                                className="text-base md:text-[1.1rem] lg:text-[1.25rem] italic font-semibold text-[#ffd033] mb-8 md:mb-12 leading-snug"
                             >
                                 "We believe charity should not only relieve pain, but also restore hope."
                             </p>
@@ -84,7 +84,7 @@ const WhoWeAre: React.FC = () => {
                                     <p className="text-[0.8rem] lg:text-[1.5rem] font-bold uppercase tracking-wide">
                                         Years
                                     </p>
-                                    <p className="text-[10px] sm:text-[0.6rem] lg:text-[0.7rem] font-bold opacity-80 mt-1 uppercase leading-tight text-black">
+                                    <p className="text-xs sm:text-[0.6rem] lg:text-[0.7rem] font-bold opacity-80 mt-1 uppercase leading-tight text-black">
                                         of continuous <br className="hidden sm:block" /> service
                                     </p>
                                 </div>
@@ -94,7 +94,7 @@ const WhoWeAre: React.FC = () => {
                                     <p className="text-[0.8rem] lg:text-[1rem] font-bold uppercase tracking-wide">
                                         Individuals
                                     </p>
-                                    <p className="text-[10px] sm:text-[0.6rem] lg:text-[0.7rem] text-black font-bold opacity-80 mt-1 uppercase leading-tight">
+                                    <p className="text-xs sm:text-[0.6rem] lg:text-[0.7rem] text-black font-bold opacity-80 mt-1 uppercase leading-tight">
                                         supported
                                     </p>
                                 </div>
@@ -104,7 +104,7 @@ const WhoWeAre: React.FC = () => {
                                     <p className="text-[0.8rem] lg:text-[1rem] font-bold uppercase tracking-wide">
                                         Students
                                     </p>
-                                    <p className="text-[10px] sm:text-[0.6rem] lg:text-[0.7rem] text-black font-bold opacity-80 mt-1 uppercase leading-tight">
+                                    <p className="text-xs sm:text-[0.6rem] lg:text-[0.7rem] text-black font-bold opacity-80 mt-1 uppercase leading-tight">
                                         currently <br className="hidden sm:block" /> benefiting
                                     </p>
                                 </div>
@@ -114,7 +114,7 @@ const WhoWeAre: React.FC = () => {
                             <div 
                                 data-aos="fade-up"
                                 data-aos-delay="500"
-                                className="bg-[#a5c3f7] text-white py-8 px-10 rounded-[18px] text-center shadow-2xl relative overflow-hidden group"
+                                className="bg-[#a5c3f7] text-white py-6 md:py-8 px-6 md:px-10 rounded-[18px] text-center shadow-2xl relative overflow-hidden group"
                             >
                                 <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
 

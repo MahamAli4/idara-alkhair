@@ -24,7 +24,7 @@ export default function ITInstitutePage() {
 
             {/* ===== HERO BANNER ===== */}
             <section 
-                className="relative mt-20 w-full overflow-hidden h-55 md:h-80"
+                className="relative mt-[80px] w-full overflow-hidden h-[220px] md:h-[320px]"
                 data-aos="fade"
             >
                 <img
@@ -92,7 +92,7 @@ export default function ITInstitutePage() {
                         data-aos-delay="400"
                     ></div>
                     <div 
-                        className="absolute -right-2 md:-right-37.25 top-[9%] w-4.5 md:w-11.25 h-4.5 md:h-11.25 bg-idara-yellow rounded-full z-10"
+                        className="absolute right-[-8px] md:right-[-149px] top-[9%] w-[18px] md:w-[45px] h-[18px] md:h-[45px] bg-idara-yellow rounded-full z-10"
                         data-aos="zoom-in"
                         data-aos-delay="700"
                     ></div>
@@ -110,7 +110,7 @@ export default function ITInstitutePage() {
                     <div
                         className="absolute right-[46%] top-[52%] w-0 h-0 z-20"
                         style={{
-                            borderTop: "50px solid #facc15",
+                            borderTop: "50px solid #f37021",
                             borderRight: "50px solid transparent"
                         }}
                         data-aos="zoom-in"
@@ -162,9 +162,9 @@ export default function ITInstitutePage() {
                         />
                     </div>
                 </div>
-            </section>
+</section>
 
-            {/* ===== FULL-WIDTH BOTTOM IMAGE ===== */}
+{/* ===== FULL-WIDTH BOTTOM IMAGE ===== */}
             <section 
                 className="relative mt-12.5 w-full overflow-hidden h-55 md:h-77.5"
                 data-aos="fade-up"

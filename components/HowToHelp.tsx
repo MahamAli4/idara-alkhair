@@ -28,7 +28,7 @@ const HowToHelp: React.FC = () => {
       <div className="container mx-auto px-4 text-center mb-16">
         <h2
           data-aos="fade-up"
-          className="text-5xl md:text-7xl font-bold text-[#012060] mb-3"
+          className="text-4xl md:text-5xl lg:text-7xl font-bold text-[#012060] mb-3"
         >
           How You Can <span className="text-[#f15a24]">Help?</span>
         </h2>
@@ -36,7 +36,7 @@ const HowToHelp: React.FC = () => {
         <p
           data-aos="fade-up"
           data-aos-delay="150"
-          className="text-[1.5rem] text-gray-700 mx-auto"
+          className="text-lg md:text-[1.5rem] text-gray-700 mx-auto"
         >
           Your support can <span className="font-semibold">change lives</span>, immediately and forever.
         </p>
