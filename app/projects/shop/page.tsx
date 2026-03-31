@@ -72,7 +72,7 @@ export default function ShopPage() {
                     data-aos="fade-up"
                 >
                     <img
-                        src="/Website Media/Shop Page/instagram Picture.jpg"
+                        src="/website-media/shoppage/instagrampicture.jpg"
                         alt="Instagram"
                         className="w-full h-auto object-cover"
                     />
@@ -128,7 +128,7 @@ export default function ShopPage() {
                         data-aos="zoom-out"
                     >
                         <img
-                            src="/Website Media/Shop Page/Image 01.jpg"
+                            src="/website-media/shoppage/image01.jpg"
                             alt="Instagram"
                             className="w-full h-[500px] md:h-[800px] object-cover rounded-lg"
                         />
@@ -137,21 +137,21 @@ export default function ShopPage() {
                     {/* Three grid images - staggered animation */}
                     <div className="flex flex-wrap md:flex-nowrap justify-center gap-4 md:gap-6 -mt-10 md:-mt-35 relative z-10 px-4 md:px-0">
                         <img
-                            src="/Website Media/Shop Page/Image 02.jpg"
+                            src="/website-media/shoppage/image02.jpg"
                             alt="Grid 1"
                             className="w-[45%] md:w-[25%] h-auto object-cover rounded-xl border-4 border-white shadow-lg"
                             data-aos="fade-up"
                             data-aos-delay="100"
                         />
                         <img
-                            src="/Website Media/Shop Page/Image 03.jpg"
+                            src="/website-media/shoppage/image03.jpg"
                             alt="Grid 2"
                             className="w-[45%] md:w-[25%] h-auto object-cover rounded-xl border-4 border-white shadow-lg"
                             data-aos="fade-up"
                             data-aos-delay="300"
                         />
                         <img
-                            src="/Website Media/Shop Page/Image 04.jpg"
+                            src="/website-media/shoppage/image04.jpg"
                             alt="Grid 3"
                             className="w-[45%] md:w-[25%] h-auto object-cover rounded-xl border-4 border-white shadow-lg"
                             data-aos="fade-up"

@@ -7,7 +7,7 @@ const AboutHero = () => {
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <img
-                    src="/website-media/aboutus/topbanner.jpg"
+                    src="/website-media/about-us/topbanner.jpg"
                     alt="Idara Al-Khair Students"
                     className="w-full h-full object-cover"
                 />

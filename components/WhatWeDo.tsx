@@ -21,7 +21,7 @@ const WhatWeDo: React.FC = () => {
       <section
         className="py-24 relative overflow-hidden"
         style={{
-          backgroundImage: `url('/website-media/Homepage/Background Image.jpg')`,
+          backgroundImage: `url('/website-media/homepage/backgroundimage.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'

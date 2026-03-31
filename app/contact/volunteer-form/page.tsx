@@ -12,7 +12,7 @@ export default function VolunteerFormPage() {
             {/* ===== HERO SECTION ===== */}
             <section className="relative mt-28.75 h-87.5 md:h-112.5 overflow-hidden">
                 <img
-                    src="/website-media/applicationvolunteerform/bannerimage.jpg"
+                    src="/website-media/application-volunteerform/bannerimage.jpg"
                     alt="Volunteering Students"
                     className="absolute inset-0 w-full h-full object-cover"
                 />

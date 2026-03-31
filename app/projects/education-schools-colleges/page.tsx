@@ -161,7 +161,7 @@ export default function EducationSchoolsCollegesPage() {
                                 data-aos-delay={i * 200}
                             >
                                 <img
-                                    src={`/website-media/Education School & College/Image 0${img}.${img === 3 ? 'jpg' : 'jpeg'}`}
+                                    src={`/website-media/educationschool&college/image0${img}.${img === 3 ? 'jpg' : 'jpeg'}`}
                                     className="w-full h-45 md:h-50 object-cover"
                                 />
                             </div>
