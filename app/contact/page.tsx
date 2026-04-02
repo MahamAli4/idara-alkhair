@@ -1,22 +1,57 @@
 
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Loader2 } from 'lucide-react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 export default function ContactPage() {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [status, setStatus] = useState<{ type: 'success' | 'error', text: string } | null>(null);
+
     useEffect(() => {
         AOS.init({ 
-            duration: 800, // default animation duration
+            duration: 800,
             easing: 'ease-in-out', 
-            once: true,    // animation only once per scroll
-            mirror: false  // do not animate out when scrolling up
+            once: true,
+            mirror: false
         });
     }, []);
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setStatus(null);
+
+        try {
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, email, message }),
+            });
+
+            const data = await res.json();
+
+            if (!res.ok) {
+                throw new Error(data.error || 'Failed to send message');
+            }
+
+            setStatus({ type: 'success', text: 'Thank you! Your message has been sent successfully.' });
+            setName('');
+            setEmail('');
+            setMessage('');
+        } catch (err: any) {
+            setStatus({ type: 'error', text: err.message || 'Something went wrong. Please try again.' });
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
 
     return (
         <main className="bg-white min-h-screen">
@@ -33,7 +68,7 @@ export default function ContactPage() {
 
                 <div 
                     className="absolute inset-0 flex items-center justify-center px-4"
-                    data-aos="zoom-in" // Zoom-in effect for the main title
+                    data-aos="zoom-in"
                 >
                     <h1 className="text-4xl md:text-6xl lg:text-4xl font-bold text-white text-center tracking-tighter">
                         CONTACT <span className="text-idara-orange">US</span>
@@ -70,23 +105,37 @@ export default function ContactPage() {
                         <div className="absolute -bottom-10 -left-10 w-24 h-24 bg-idara-orange z-0" style={{ clipPath: 'polygon(100% 0, 0% 100%, 100% 100%)' }}></div>
                         <div className="absolute -top-10 -right-4 w-24 h-24 bg-idara-cyan z-0 shadow-lg" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%)' }}></div>
 
-                        <div className="relative z-10 bg-gray-200 p-8 md:p-10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-100">
-                            <form className="space-y-6">
+                        <div className="relative z-10 bg-gray-100 p-8 md:p-10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-100">
+                            {status && (
+                                <div className={`mb-6 p-4 rounded-lg text-sm font-bold ${status.type === 'success' ? 'bg-green-100 text-green-700 border border-green-200' : 'bg-red-100 text-red-700 border border-red-200'}`}>
+                                    {status.text}
+                                </div>
+                            )}
+
+                            <form className="space-y-6" onSubmit={handleSubmit}>
                                 <div className="grid grid-cols-1 gap-2">
                                     <div className="flex items-center gap-4">
                                         <label className="text-sm font-bold text-idara-navy min-w-15">Name :</label>
                                         <input
                                             type="text"
+                                            value={name}
+                                            onChange={(e) => setName(e.target.value)}
+                                            required
+                                            disabled={isSubmitting}
                                             placeholder="Type your name here..."
-                                            className="flex-1 bg-gray-50 border border-gray-200 px-4 py-3 rounded outline-none text-sm italic"
+                                            className="flex-1 bg-white border border-gray-200 px-4 py-3 rounded outline-none text-sm italic focus:border-idara-orange transition-colors"
                                         />
                                     </div>
                                     <div className="flex items-center gap-4">
                                         <label className="text-sm font-bold text-idara-navy min-w-15">Email :</label>
                                         <input
                                             type="email"
+                                            value={email}
+                                            onChange={(e) => setEmail(e.target.value)}
+                                            required
+                                            disabled={isSubmitting}
                                             placeholder="Enter your email..."
-                                            className="flex-1 bg-gray-50 border border-gray-200 px-4 py-3 rounded outline-none text-sm italic"
+                                            className="flex-1 bg-white border border-gray-200 px-4 py-3 rounded outline-none text-sm italic focus:border-idara-orange transition-colors"
                                         />
                                     </div>
                                 </div>
@@ -94,13 +143,22 @@ export default function ContactPage() {
                                     <label className="text-sm font-bold text-idara-navy block">What can we help you with?</label>
                                     <textarea
                                         rows={8}
+                                        value={message}
+                                        onChange={(e) => setMessage(e.target.value)}
+                                        required
+                                        disabled={isSubmitting}
                                         placeholder="Enter your message..."
-                                        className="w-full bg-gray-50 border border-gray-200 px-4 py-3 rounded outline-none text-sm italic resize-none"
+                                        className="w-full bg-white border border-gray-200 px-4 py-3 rounded outline-none text-sm italic resize-none focus:border-idara-orange transition-colors"
                                     ></textarea>
                                 </div>
                                 <div className="flex justify-end">
-                                    <button type="submit" className="bg-[#012060] text-white px-8 py-2 rounded font-bold uppercase text-xs shadow-md transform hover:scale-105 transition-all">
-                                        Submit
+                                    <button 
+                                        type="submit" 
+                                        disabled={isSubmitting}
+                                        className="bg-[#012060] text-white px-8 py-2 rounded font-bold uppercase text-xs shadow-md transform hover:scale-105 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                                    >
+                                        {isSubmitting && <Loader2 className="w-3 h-3 animate-spin" />}
+                                        {isSubmitting ? 'Submitting...' : 'Submit'}
                                     </button>
                                 </div>
                             </form>

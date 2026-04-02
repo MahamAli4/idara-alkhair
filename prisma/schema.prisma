@@ -1,0 +1,172 @@
+// Prisma generator and datasource (PostgreSQL)
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  ADMIN
+  USER
+}
+
+enum JobType {
+  FULL_TIME
+  PART_TIME
+  INTERNSHIP
+  CONTRACT
+}
+
+enum JobStatus {
+  OPEN
+  CLOSED
+  HIRED    // ✅ YEH ADD KARO
+}
+
+enum ApplicationStatus {
+  PENDING
+  INTERVIEW
+  HIRED
+  REJECTED
+}
+
+model User {
+  id            Int               @id @default(autoincrement())
+  email         String            @unique
+  name          String?
+  passwordHash  String
+  role          UserRole          @default(USER)
+  createdAt     DateTime          @default(now())
+  updatedAt     DateTime          @updatedAt
+
+  jobPosts       JobPost[]
+  jobApplications JobApplication[]
+}
+
+model JobPost {
+  id          Int          @id @default(autoincrement())
+  title       String
+  description String
+  location    String
+  jobType     JobType
+  status      JobStatus    @default(OPEN)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  isActive    Boolean      @default(true)
+  hiredAt     DateTime?    // When this job was marked as hired
+
+  createdBy   User         @relation(fields: [createdById], references: [id])
+  createdById Int
+
+  applications JobApplication[]
+
+  // Flexible fields for any kind of job
+  category        String?
+  department      String?
+  employmentLevel String?
+  deadlineAt      DateTime?
+  requirements    String?
+  responsibilities String?
+  qualifications  String?
+
+  @@index([createdById])
+}
+
+model JobApplication {
+  id           Int       @id @default(autoincrement())
+  applicantName  String
+  applicantEmail String
+  applicantPhone String?
+  coverLetter    String?
+  resumeUrl      String?
+  yearsOfExperience Int? 
+  highestEducation  String?
+  city              String?
+  status        ApplicationStatus @default(PENDING)
+  createdAt      DateTime  @default(now())
+
+  job        JobPost  @relation(fields: [jobId], references: [id])
+  jobId      Int
+  appliedBy  User?    @relation(fields: [appliedById], references: [id])
+  appliedById Int?
+
+  interviewCandidate InterviewCandidate?
+  hiredCandidate HiredCandidate?
+
+  @@index([jobId])
+  @@index([appliedById])
+}
+
+model InterviewCandidate {
+  id Int @id @default(autoincrement())
+  applicationId Int @unique
+  candidateName String
+  candidateEmail String
+  jobTitle String
+  jobId Int
+  markedAt DateTime @default(now())
+  interviewDate String?
+  interviewTime String?
+  status String @default("SCHEDULED")
+  
+  application JobApplication @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  
+  @@map("interview_candidates")
+}
+
+model HiredCandidate {
+  id Int @id @default(autoincrement())
+  applicationId Int @unique
+  candidateName String
+  candidateEmail String
+  jobTitle String
+  jobId Int
+  hiredAt DateTime @default(now())
+  
+  application JobApplication @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  
+  @@map("hired_candidates")
+}
+
+model ContactMessage {
+  id            Int      @id @default(autoincrement())
+  name          String
+  email         String
+  phone         String?
+  message       String
+  preferredDate String?
+  createdAt     DateTime @default(now())
+}
+
+model Candidate {
+  id          Int      @id @default(autoincrement())
+  name        String
+  email       String   @unique
+  position    String
+  phone       String?
+  experience  String?
+  education   String?
+  status      String   @default("PENDING")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("candidates")
+}
+
+model DonationNotification {
+  id            Int      @id @default(autoincrement())
+  donorName     String
+  donorEmail    String
+  donorPhone    String?
+  amount        Float
+  donorBank     String?
+  targetNgoBank String   
+  reference     String?  
+  status        String   @default("PENDING")
+  createdAt     DateTime @default(now())
+
+  @@map("donation_notifications")
+}
