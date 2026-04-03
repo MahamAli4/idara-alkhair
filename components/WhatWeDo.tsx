@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect } from 'react';
+import Link from 'next/link';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { ShoppingBasket, HeartPulse, HardHat } from 'lucide-react';
@@ -54,12 +55,12 @@ const WhatWeDo: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
             {/* Card 1 */}
-            <div
+            <Link
+              href="/projects/food-support-program"
               data-aos="zoom-in"
               data-aos-delay="100"
-              className="bg-[#01b7c5] text-white p-10 rounded-[30px] text-center transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl flex flex-col items-center relative overflow-hidden group"
+              className="bg-[#01b7c5] text-white p-10 rounded-[30px] text-center transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl flex flex-col items-center relative overflow-hidden group no-underline"
             >
-
               <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500">
                 <div
                   className="absolute inset-0"
@@ -81,16 +82,15 @@ const WhatWeDo: React.FC = () => {
               <p className="text-[1.1rem] opacity-95 leading-relaxed relative z-10 text-[#012060]">
                 Daily meals for our students and emergency food distributions to family in deep hungry.
               </p>
-
-            </div>
+            </Link>
 
             {/* Card 2 */}
-            <div
+            <Link
+              href="/projects/medical-center"
               data-aos="zoom-in"
               data-aos-delay="200"
-              className="bg-[#01b7c5] text-white p-10 rounded-[30px] text-center transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl flex flex-col items-center relative overflow-hidden group"
+              className="bg-[#01b7c5] text-white p-10 rounded-[30px] text-center transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl flex flex-col items-center relative overflow-hidden group no-underline"
             >
-
               <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500">
                 <div
                   className="absolute inset-0"
@@ -112,16 +112,15 @@ const WhatWeDo: React.FC = () => {
               <p className="text-[1.1rem] opacity-95 leading-relaxed relative z-10 text-[#012060]">
                 Affordable medical services for communities with limited access to healthcare.
               </p>
-
-            </div>
+            </Link>
 
             {/* Card 3 */}
-            <div
+            <Link
+              href="/projects/disaster-relief-program"
               data-aos="zoom-in"
               data-aos-delay="300"
-              className="bg-[#01b7c5] text-white p-10 rounded-[30px] text-center transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl flex flex-col items-center relative overflow-hidden group"
+              className="bg-[#01b7c5] text-white p-10 rounded-[30px] text-center transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl flex flex-col items-center relative overflow-hidden group no-underline"
             >
-
               <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500">
                 <div
                   className="absolute inset-0"
@@ -143,8 +142,7 @@ const WhatWeDo: React.FC = () => {
               <p className="text-[1.1rem] opacity-95 leading-relaxed relative z-10 text-[#012060]">
                 Rapid response during disasters and continuous support for vulnerable families.
               </p>
-
-            </div>
+            </Link>
 
           </div>
         </div>

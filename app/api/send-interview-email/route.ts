@@ -6,6 +6,14 @@ const prisma = new PrismaClient();
 
 // Interview confirmation email template
 async function sendInterviewEmail(candidateName: string, candidateEmail: string, interviewDate: string, interviewTime: string, position: string) {
+  // ✅ Check for missing or placeholder credentials
+  if (!process.env.EMAIL_USER || process.env.EMAIL_USER === 'your-email@gmail.com') {
+    throw new Error('SMTP Email not configured. Please update EMAIL_USER in .env');
+  }
+  if (!process.env.EMAIL_PASS || process.env.EMAIL_PASS === 'your-gmail-app-password') {
+    throw new Error('SMTP Password not configured. Please update EMAIL_PASS in .env');
+  }
+
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -61,11 +69,19 @@ async function sendInterviewEmail(candidateName: string, candidateEmail: string,
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { candidateId, candidateName, candidateEmail, interviewDate, interviewTime, position } = body;
+    const { 
+      candidateId, 
+      applicationId, 
+      candidateName, 
+      candidateEmail, 
+      interviewDate, 
+      interviewTime, 
+      position 
+    } = body;
 
-    if (!candidateId || !candidateEmail || !interviewDate || !interviewTime) {
+    if ((!candidateId && !applicationId) || !candidateEmail || !interviewDate || !interviewTime) {
       return new Response(JSON.stringify({ 
-        error: 'Candidate ID, email, interview date and time are required.' 
+        error: 'Missing required parameters. Need ID, email, date, and time.' 
       }), { status: 400 });
     }
 
@@ -74,19 +90,51 @@ export async function POST(req: NextRequest) {
       await sendInterviewEmail(candidateName, candidateEmail, interviewDate, interviewTime, position);
       console.log(`Interview email sent to ${candidateEmail}`);
       
-      // ✅ Update candidate status in database - CAPITAL 'C' use karein
-      try {
-        await prisma.candidate.update({  // ✅ Capital 'C'
-          where: { id: candidateId },
-          data: { 
-            status: 'INTERVIEW_SCHEDULED',
-            interviewDate: interviewDate,
-            interviewTime: interviewTime
-          }
-        });
-      } catch (dbError) {
-        console.error('Database update failed:', dbError);
-        // Continue even if DB update fails
+      // ✅ Handle Candidate Table update (Manual Candidates)
+      if (candidateId && !applicationId) {
+        try {
+          await prisma.candidate.update({
+            where: { id: candidateId },
+            data: { 
+              status: 'INTERVIEW_SCHEDULED'
+            }
+          });
+        } catch (dbError) {
+          console.error('Candidate DB update failed:', dbError);
+        }
+      }
+
+      // ✅ Handle JobApplication & InterviewCandidate update (Career Portal Applications)
+      if (applicationId) {
+        try {
+          // Update Application status
+          await prisma.jobApplication.update({
+            where: { id: applicationId },
+            data: { status: 'INTERVIEW' }
+          });
+
+          // Update or Create InterviewCandidate record
+          await prisma.interviewCandidate.upsert({
+            where: { applicationId },
+            update: {
+              interviewDate,
+              interviewTime,
+              status: 'SCHEDULED'
+            },
+            create: {
+              applicationId,
+              candidateName,
+              candidateEmail,
+              jobTitle: position || 'N/A',
+              jobId: body.jobId || 0,
+              interviewDate,
+              interviewTime,
+              status: 'SCHEDULED'
+            }
+          });
+        } catch (dbError) {
+          console.error('JobApplication/Interview DB update failed:', dbError);
+        }
       }
       
       return new Response(JSON.stringify({ 
@@ -94,10 +142,11 @@ export async function POST(req: NextRequest) {
         message: 'Interview email sent successfully!' 
       }), { status: 200 });
       
-    } catch (emailError) {
-      console.error('Interview email failed:', emailError);
+    } catch (emailError: any) {
+      const errorMessage = emailError?.message || 'Failed to send interview email';
+      console.error('Interview email failed:', errorMessage);
       return new Response(JSON.stringify({ 
-        error: 'Failed to send interview email' 
+        error: errorMessage 
       }), { status: 500 });
     }
 

@@ -4,6 +4,8 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import Link from 'next/link';
+
 const HowToHelp: React.FC = () => {
 
   useEffect(() => {
@@ -16,9 +18,9 @@ const HowToHelp: React.FC = () => {
   }, []);
 
   const helpOptions = [
-    { title: "Donate", image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&auto=format&fit=crop" },
-    { title: "Sponsor a Child", image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop" },
-    { title: "Volunteer", image: "https://images.unsplash.com/photo-1559027615-cd9d7a9bbc52?q=80&w=2070&auto=format&fit=crop" }
+    { title: "Donate", image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&auto=format&fit=crop", href: "/donate" },
+    { title: "Sponsor a Child", image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop", href: "/contact" },
+    { title: "Volunteer", image: "https://images.unsplash.com/photo-1559027615-cd9d7a9bbc52?q=80&w=2070&auto=format&fit=crop", href: "/contact/volunteer-form" }
   ];
 
   return (
@@ -66,9 +68,12 @@ const HowToHelp: React.FC = () => {
 
                 {/* Button */}
                 <div className="absolute bottom-0 left-0 right-0 p-1 bg-white">
-                  <button className="w-full py-3 bg-white text-gray-800 font-black text-xl md:text-2xl uppercase tracking-tighter hover:bg-idara-cyan/45 transition-colors">
+                  <Link 
+                    href={option.href}
+                    className="block w-full py-3 bg-white text-gray-800 font-black text-xl md:text-2xl uppercase tracking-tighter hover:bg-idara-cyan/45 transition-colors text-center no-underline"
+                  >
                     {option.title}
-                  </button>
+                  </Link>
                 </div>
 
               </div>

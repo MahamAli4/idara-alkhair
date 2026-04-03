@@ -15,6 +15,9 @@ const WhoWeAre: React.FC = () => {
         });
     }, []);
 
+    const currentYear = new Date().getFullYear();
+    const yearsOfService = currentYear - 1987;
+
     return (
         <section className="bg-idara-navy relative z-10">
             <div className="container mx-auto ">
@@ -80,7 +83,7 @@ const WhoWeAre: React.FC = () => {
                             >
 
                                 <div className="bg-idara-cyan aspect-square flex flex-col items-center justify-center p-4 rounded-[12px] text-center shadow-lg transition-all hover:-translate-y-2 hover:shadow-idara-cyan/30">
-                                    <h3 className="text-2xl lg:text-4xl font-black ">38 +</h3>
+                                    <h3 className="text-2xl lg:text-4xl font-black ">{yearsOfService} +</h3>
                                     <p className="text-[0.8rem] lg:text-[1.5rem] font-bold uppercase tracking-wide">
                                         Years
                                     </p>
