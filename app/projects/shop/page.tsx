@@ -26,7 +26,7 @@ export default function ShopPage() {
             {/* ===== HERO BANNER ===== */}
             {/* Using fade-in for the banner */}
             <section 
-                className="relative mt-[80px] w-full overflow-hidden h-[220px] md:h-[320px]"
+                className="relative mt-[80px] w-full overflow-hidden h-[80vh]"
                 data-aos="fade"
             >
                 <img
@@ -36,13 +36,15 @@ export default function ShopPage() {
                 />
 
                 <div className="absolute inset-0 flex items-center justify-center px-4">
-                    <h1 
-                        className="text-4xl md:text-6xl lg:text-5xl font-bold text-white text-center tracking-tighter"
-                        data-aos="zoom-in" 
-                        data-aos-delay="200"
-                    >
-                        IAK <span className="text-idara-orange">Shops</span>
-                    </h1>
+                    <div className="max-w-5xl mx-auto text-center px-4">
+                        <h1 
+                            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white text-center tracking-tighter"
+                            data-aos="zoom-in" 
+                            data-aos-delay="200"
+                        >
+                            IAK <span className="text-idara-orange">Shops</span>
+                        </h1>
+                    </div>
                 </div>
             </section>
 

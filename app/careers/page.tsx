@@ -49,18 +49,17 @@ export default function CareersPage() {
             <Navbar />
 
             {/* ===== HERO SECTION ===== */}
-            <section className="relative mt-20 pt-20 pb-20 md:pt-32 md:pb-32 overflow-hidden bg-[#012060]">
+            <section className="relative mt-20 h-[80vh] flex items-center overflow-hidden bg-[#012060]">
                 {/* Decorative background */}
                 <div className="absolute top-0 right-0 w-1/3 h-full bg-white/5 skew-x-12 transform translate-x-20"></div>
                 
                 <div className="container mx-auto px-6 relative z-10 text-center md:text-left">
-                    <div className="max-w-3xl">
+                    <div className="max-w-5xl">
                         <h1 
-                            className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight"
+                            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white mb-6 tracking-tight"
                             data-aos="fade-right"
                         >
-                            Build Your <span className="text-idara-orange">Career</span> <br /> 
-                            at Idara Al-Khair
+                            Build Your <span className="text-idara-orange">Career</span> at Idara Al-Khair
                         </h1>
                         <p 
                             className="text-lg md:text-xl text-blue-100 font-medium leading-relaxed mb-10"

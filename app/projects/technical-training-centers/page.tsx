@@ -19,7 +19,7 @@ export default function TechnicalTrainingCentersPage() {
             <Navbar />
 
             {/* ===== HERO BANNER ===== */}
-            <section className="relative mt-20 w-full overflow-hidden h-55 md:h-80">
+            <section className="relative mt-20 w-full overflow-hidden h-[80vh]">
                 <img
                     src="/website-media/technicaltrainingcenters/banner.jpg"
                     alt="Technical Training Centers"
@@ -29,9 +29,11 @@ export default function TechnicalTrainingCentersPage() {
                     className="absolute inset-0 flex items-center justify-center px-4"
                     data-aos="zoom-in"
                 >
-                    <h1 className="text-4xl md:text-6xl lg:text-5xl font-bold text-white text-center tracking-tighter">
-                        Technical <span className="text-idara-orange">Training</span> Centers
-                    </h1>
+                    <div className="max-w-5xl mx-auto text-center px-4">
+                        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter">
+                            Technical <span className="text-idara-orange">Training</span> Centers
+                        </h1>
+                    </div>
                 </div>
             </section>
 
@@ -65,10 +67,10 @@ export default function TechnicalTrainingCentersPage() {
             </section>
 
             {/* ===== CREATIVE HIGHER-FIDELITY LAYOUT ===== */}
-            <section className="container mx-auto px-6 md:px-12">
+            <section className="container mx-auto px-6 md:px-30 ">
                 <div
-                    className="relative w-full h-150 md:h-125 lg:h-200 -mx-6 md:-mx-21"
-                    style={{ backgroundImage: "url('/images/techtrainingcenterimg.png')", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center" }}
+                    className="relative w-full h-100 md:h-125 lg:h-175 overflow-hidden bg-white"
+                    style={{ backgroundImage: "url('/images/techtrainingcenterimg.png')", backgroundRepeat: "no-repeat", backgroundSize: "contain", backgroundPosition: "right center" }}
                     data-aos="fade-in"
                 >
                     <div className="relative z-30 container h-full">

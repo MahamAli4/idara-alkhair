@@ -88,7 +88,7 @@ export default function DonatePage() {
             <Navbar />
 
             {/* ===== HERO BANNER ===== */}
-            <section className="relative mt-[80px] w-full overflow-hidden h-[220px] md:h-[320px]">
+            <section className="relative mt-[80px] w-full overflow-hidden h-[80vh]">
                 <img
                     src="/website-media/donatenow/header.jpg"
                     alt="Donate Now"
@@ -99,7 +99,7 @@ export default function DonatePage() {
               
                 <div className="absolute inset-0 flex items-center justify-center">
                     <h1 
-                        className="text-3xl md:text-5xl lg:text-5xl font-bold text-white text-center tracking-tight"
+                        className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white text-center tracking-tighter"
                         data-aos="zoom-in"
                         data-aos-delay="200"
                     >

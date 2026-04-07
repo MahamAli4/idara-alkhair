@@ -58,7 +58,7 @@ export default function ContactPage() {
             <Navbar />
 
             {/* ===== HERO SECTION ===== */}
-             <section className="relative mt-29.5 w-full overflow-hidden h-55 md:h-80">
+             <section className="relative mt-29.5 w-full overflow-hidden h-[80vh]">
                 <img
                     src="/website-media/contactus/bannerimage.jpg"
                     alt="IT Lab"
@@ -70,7 +70,7 @@ export default function ContactPage() {
                     className="absolute inset-0 flex items-center justify-center px-4"
                     data-aos="zoom-in"
                 >
-                    <h1 className="text-4xl md:text-6xl lg:text-4xl font-bold text-white text-center tracking-tighter">
+                    <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white text-center tracking-tighter">
                         CONTACT <span className="text-idara-orange">US</span>
                     </h1>
                 </div>

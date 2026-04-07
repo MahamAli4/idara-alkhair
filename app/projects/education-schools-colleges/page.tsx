@@ -24,7 +24,7 @@ export default function EducationSchoolsCollegesPage() {
 
             {/* ===== HERO BANNER ===== */}
             <section 
-                className="relative mt-20 w-full overflow-hidden h-55 md:h-80"
+                className="relative mt-20 w-full overflow-hidden h-[80vh]"
                 data-aos="fade-up"
             >
                 <img
@@ -35,13 +35,15 @@ export default function EducationSchoolsCollegesPage() {
                 <div className="absolute inset-0 bg-[#012060]/10"></div>
 
                 <div className="absolute inset-0 flex items-center justify-center">
-                    <h1 
-                        className="text-3xl md:text-5xl lg:text-5xl font-bold text-white text-center tracking-tight"
-                        data-aos="fade-down"
-                        data-aos-delay="200"
-                    >
-                        <span className="text-idara-orange">Education</span> - Schools & College
-                    </h1>
+                    <div className="max-w-5xl mx-auto text-center px-4">
+                        <h1 
+                            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white text-center tracking-tighter"
+                            data-aos="fade-down"
+                            data-aos-delay="200"
+                        >
+                            <span className="text-idara-orange">EDUCATION</span> <br /> Schools & Colleges
+                        </h1>
+                    </div>
                 </div>
             </section>
 

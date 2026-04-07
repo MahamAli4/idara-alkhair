@@ -19,7 +19,7 @@ export default function DisasterReliefProgramPage() {
             <Navbar />
 
             {/* ===== HERO BANNER ===== */}
-            <section className="relative mt-29.5 w-full overflow-hidden h-55 md:h-80">
+            <section className="relative mt-29.5 w-full overflow-hidden h-[80vh]">
                 <img
                     src="/website-media/disasterreliefprogram/bannerimagecopy.jpg"
                     alt="Disaster Relief Program"
@@ -31,9 +31,11 @@ export default function DisasterReliefProgramPage() {
                     className="absolute inset-0 flex items-center justify-center px-4"
                     data-aos="zoom-in" // Zoom-in effect for the main title
                 >
-                    <h1 className="text-4xl md:text-6xl lg:text-4xl font-bold text-white text-center tracking-tighter">
-                        <span className="text-idara-orange font-black">DISASTER</span> Relief Program
-                    </h1>
+                    <div className="max-w-5xl mx-auto text-center px-4">
+                        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white text-center tracking-tighter">
+                            <span className="text-idara-orange font-black">DISASTER</span> Relief Program
+                        </h1>
+                    </div>
                 </div>
             </section>
 

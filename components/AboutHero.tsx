@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutHero = () => {
     return (
-        <section className="relative h-[250px] md:h-[350px] flex items-center justify-center overflow-hidden mt-[80px] md:mt-[100px]">
+        <section className="relative h-[80vh] flex items-center justify-center overflow-hidden mt-[80px] md:mt-[100px]">
 
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
@@ -18,7 +18,7 @@ const AboutHero = () => {
                 <h1
                     data-aos="fade-up"
                     data-aos-duration="400"
-                    className="text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight"
+                    className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tight"
                 >
                     About <span className="text-idara-orange font-black">Us</span>
                 </h1>

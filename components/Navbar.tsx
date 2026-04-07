@@ -58,14 +58,13 @@ const Navbar: React.FC = () => {
 
     const projectLinks = [
         { name: 'Technical Training Centers', href: '/projects/technical-training-centers', icon: Wrench },
-        { name: 'Shop Page', href: '/projects/shop', icon: ShoppingBag },
         { name: 'Medical Center', href: '/projects/medical-center', icon: Stethoscope },
         { name: 'IT Institute', href: '/projects/it-institute', icon: Monitor },
         { name: 'Help a Dream', href: '/projects/help-a-dream', icon: Zap },
         { name: 'Food Support Program', href: '/projects/food-support-program', icon: Utensils },
         { name: 'Education Schools & Colleges', href: '/projects/education-schools-colleges', icon: GraduationCap },
         { name: 'DISASTER RELIEF PROGRAM', href: '/projects/disaster-relief-program', icon: LifeBuoy },
-        { name: 'DONATE NOW', href: '/donate', icon: Heart },
+        { name: 'Shop Page', href: '/projects/shop', icon: ShoppingBag },
     ];
 
     const toggleMobileDropdown = (dropdownName: string) => {

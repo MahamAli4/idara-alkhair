@@ -24,7 +24,7 @@ export default function HelpADreamPage() {
 
             {/* ===== HERO BANNER ===== */}
             <section 
-                className="relative mt-20 w-full overflow-hidden h-55 md:h-80"
+                className="relative mt-20 w-full overflow-hidden h-[80vh]"
                 data-aos="fade"
             >
                 <img
@@ -35,13 +35,15 @@ export default function HelpADreamPage() {
                 <div className="absolute inset-0 bg-[#012060]/10"></div>
 
                 <div className="absolute inset-0 flex items-center justify-center px-4">
-                    <h1 
-                        className="text-4xl md:text-6xl lg:text-5xl font-semibold text-white text-center tracking-tighter"
-                        data-aos="zoom-in"
-                        data-aos-delay="300"
-                    >
-                        Help a <span className="text-idara-orange font-extrabold">Dream</span>
-                    </h1>
+                    <div className="max-w-5xl mx-auto text-center px-4">
+                        <h1 
+                            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white text-center tracking-tighter"
+                            data-aos="zoom-in"
+                            data-aos-delay="300"
+                        >
+                            Help <span className="text-idara-orange">A Dream</span>
+                        </h1>
+                    </div>
                 </div>
             </section>
 

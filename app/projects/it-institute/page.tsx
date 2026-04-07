@@ -24,7 +24,7 @@ export default function ITInstitutePage() {
 
             {/* ===== HERO BANNER ===== */}
             <section 
-                className="relative mt-20 w-full overflow-hidden h-55 md:h-80"
+                className="relative mt-20 w-full overflow-hidden h-[80vh]"
                 data-aos="fade"
             >
                 <img
@@ -36,13 +36,15 @@ export default function ITInstitutePage() {
                 <div className="absolute inset-0 bg-[#012060]/20"></div>
 
                 <div className="absolute inset-0 flex items-center justify-center px-4">
-                    <h1 
-                        className="text-4xl md:text-6xl lg:text-5xl font-bold text-white text-center tracking-tighter"
-                        data-aos="zoom-out"
-                        data-aos-delay="200"
-                    >
-                        IT <span className="text-idara-orange">Institute</span>
-                    </h1>
+                    <div className="max-w-5xl mx-auto text-center px-4">
+                        <h1 
+                            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white text-center tracking-tighter"
+                            data-aos="zoom-out"
+                            data-aos-delay="200"
+                        >
+                            <span className="text-idara-orange font-black">IT</span> Institute
+                        </h1>
+                    </div>
                 </div>
             </section>
 

@@ -80,7 +80,7 @@ export default function VolunteerFormPage() {
             <Navbar />
 
             {/* ===== HERO SECTION ===== */}
-            <section className="relative mt-28.75 h-87.5 md:h-112.5 overflow-hidden">
+            <section className="relative mt-28.75 h-[80vh] overflow-hidden">
                 <img
                     src="/website-media/application-volunteerform/bannerimage.jpg"
                     alt="Volunteering Students"
@@ -88,7 +88,7 @@ export default function VolunteerFormPage() {
                 />
                 <div className="absolute inset-0 bg-black/40"></div>
                 <div className="relative z-10 h-full flex items-center justify-center text-center px-4">
-                    <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-white uppercase tracking-tighter">
+                    <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white uppercase tracking-tighter">
                         <span className="text-idara-orange">APPLICATION</span> / VOLUNTEER FORM
                     </h1>
                 </div>
