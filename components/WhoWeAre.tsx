@@ -48,7 +48,7 @@ const WhoWeAre: React.FC = () => {
                             <h2 
                                 data-aos="fade-up"
                                 data-aos-delay="100"
-                                className="text-[3.5rem] lg:text-[4.5rem] font-bold leading-[1.1] mb-5 tracking-tight"
+                                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-5 tracking-tight"
                             >
                                 Who <span className="text-idara-orange font-black">We</span> Are?
                             </h2>
@@ -83,7 +83,7 @@ const WhoWeAre: React.FC = () => {
                             >
 
                                 <div className="bg-idara-cyan aspect-square flex flex-col items-center justify-center p-4 rounded-[12px] text-center shadow-lg transition-all hover:-translate-y-2 hover:shadow-idara-cyan/30">
-                                    <h3 className="text-2xl lg:text-4xl font-black ">{yearsOfService} +</h3>
+                                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-black ">{yearsOfService} +</h3>
                                     <p className="text-[0.8rem] lg:text-[1.5rem] font-bold uppercase tracking-wide">
                                         Years
                                     </p>
@@ -93,7 +93,7 @@ const WhoWeAre: React.FC = () => {
                                 </div>
 
                                 <div className="bg-idara-orange aspect-square flex flex-col items-center justify-center p-4 rounded-[12px] text-center shadow-lg transition-all hover:-translate-y-2 hover:shadow-idara-orange/30">
-                                    <h3 className="text-2xl lg:text-4xl font-black">850 K</h3>
+                                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-black">850 K</h3>
                                     <p className="text-[0.8rem] lg:text-[1rem] font-bold uppercase tracking-wide">
                                         Individuals
                                     </p>
@@ -103,7 +103,7 @@ const WhoWeAre: React.FC = () => {
                                 </div>
 
                                 <div className="bg-idara-yellow aspect-square flex flex-col items-center justify-center p-4 rounded-[12px] text-center shadow-lg transition-all hover:-translate-y-2 hover:shadow-idara-yellow/30">
-                                    <h3 className="text-2xl lg:text-4xl font-black mb-1">6000</h3>
+                                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-black mb-1">6000</h3>
                                     <p className="text-[0.8rem] lg:text-[1rem] font-bold uppercase tracking-wide">
                                         Students
                                     </p>
@@ -121,7 +121,7 @@ const WhoWeAre: React.FC = () => {
                             >
                                 <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
 
-                                <h4 className="text-xl md:text-[1.1rem] lg:text-[2.1rem] font-black leading-tight relative z-10 italic">
+                                <h4 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black leading-tight relative z-10 italic">
                                     Multiple Welfare Programs
                                 </h4>
 

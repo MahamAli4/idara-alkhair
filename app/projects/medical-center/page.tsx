@@ -44,7 +44,7 @@ export default function MedicalCenterPage() {
             {/* ===== CONTENT SECTION ===== */}
             <section className="container mx-auto px-6 md:px-12 py-16 md:py-24">
                 <div data-aos="fade-up">
-                    <h2 className="text-4xl md:text-4xl font-bold leading-tight mb-8">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8">
                         <span className="text-[#012060]">Healthcare for Those </span>
                         <span className="text-idara-orange font-extrabold">Who Cannot Afford It</span>
                     </h2>

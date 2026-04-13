@@ -83,14 +83,14 @@ export default function ContactPage() {
                     {/* Left SIDE: TEXT */}
                     <div className="w-full lg:w-1/2" data-aos="fade-right">
                         <div className="max-w-md">
-                            <h2 className="text-4xl md:text-5xl font-black text-idara-navy mb-8">
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-idara-navy mb-8">
                                 Let's <span className="text-idara-orange uppercase">Connect</span>
                             </h2>
                             <p className="text-gray-700 text-lg font-medium mb-12">
                                 Whether you want to donate, volunteer, or partner with us, we'd love to hear from you.
                             </p>
 
-                            <h2 className="text-4xl md:text-5xl font-black text-idara-navy mb-8">
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-idara-navy mb-8">
                                 Contact <span className="text-idara-orange uppercase">Information</span>
                             </h2>
                             <p className="text-gray-700 text-lg font-medium">
@@ -176,7 +176,7 @@ export default function ContactPage() {
                             <div className="w-24 h-24 bg-idara-cyan rounded-full flex items-center -mt-31 justify-center mx-auto mb-6 shadow-lg transform group-hover:scale-110 transition-transform">
                                 <Phone className="text-white w-10 h-10" />
                             </div>
-                            <h3 className="text-4xl font-black  text-idara-navy mb-4 uppercase">Phone</h3>
+                            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-idara-navy mb-4 uppercase">Phone</h3>
                             <p className="text-lg font-medium text-gray-700">0300-2992469</p>
                             <p className="text-lg font-medium text-gray-700">03002112609</p>
                         </div>
@@ -186,7 +186,7 @@ export default function ContactPage() {
                             <div className="w-24 h-24 bg-idara-orange rounded-full flex -mt-31 items-center justify-center mx-auto mb-6 shadow-lg transform group-hover:scale-110 transition-transform">
                                 <Mail className="text-white w-10 h-10" />
                             </div>
-                            <h3 className="text-4xl font-black text-idara-navy mb-4 uppercase">Email</h3>
+                            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-idara-navy mb-4 uppercase">Email</h3>
                             <p className="text-lg font-medium text-gray-700">idaraalkhair@gmail.com</p>
                             <p className="text-lg font-medium text-gray-700">idaraalkhair@hotmail.com</p>
                         </div>
@@ -196,7 +196,7 @@ export default function ContactPage() {
                             <div className="w-24 h-24 bg-[#ffc20e] rounded-full flex -mt-31 items-center justify-center mx-auto mb-6 shadow-lg transform group-hover:scale-110 transition-transform">
                                 <MapPin className="text-white w-10 h-10" />
                             </div>
-                            <h3 className="text-4xl font-black text-idara-navy mb-4 uppercase">Address</h3>
+                            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-idara-navy mb-4 uppercase">Address</h3>
                             <p className="text-lg font-medium text-gray-700">R - 510/15, Federal-B Area,</p>
                             <p className="text-lg font-medium text-gray-700">Karachi.</p>
                         </div>

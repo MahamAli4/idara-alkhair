@@ -22,7 +22,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, fullName, description,
                 
                 {/* Text Content overlaying the image */}
                 <div className="absolute inset-0 flex flex-col justify-end p-6 z-20 text-white">
-                    <h2 className="text-3xl font-black uppercase tracking-tight mb-1 group-hover:text-idara-orange transition-colors">{title}</h2>
+                    <h2 className="text-2xl sm:text-3xl font-black uppercase tracking-tight mb-1 group-hover:text-idara-orange transition-colors">{title}</h2>
                     <p className="text-sm font-semibold opacity-90 mb-3 uppercase tracking-wider">{fullName}</p>
                     
                     {/* Hidden description that slides up on hover */}

@@ -43,7 +43,7 @@ export default function DisasterReliefProgramPage() {
             <section className="container mx-auto px-6 md:px-12 py-16 md:py-24">
                 <div className="max-w-4xl">
                     <h2 
-                        className="text-2xl md:text-4xl font-semibold leading-tight mb-6"
+                        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-6"
                         data-aos="fade-right" // Slide in from left
                     >
                         <span className="text-[#012060]">Standing with </span>
@@ -72,10 +72,10 @@ export default function DisasterReliefProgramPage() {
             </section>
 
             {/* ===== CREATIVE IMAGE LAYOUT ===== */}
-            <section className="w-full h-full mx-auto px-6 md:px-12">
+            <section className="w-full h-full mx-auto px-6 md:px-12 mt-12 md:mt-24">
                 <div className="relative max-w-4xl mx-auto">
 
-                    {/* Decorative Shapes with different effects */}
+                    {/* {Shapes - Removed as requested}
                     <div 
                         data-aos="fade-down"
                         className="absolute left-0 md:-left-2.5 top-[2%] w-10 md:w-13.75 h-27.5 md:h-37.5 bg-[#012060] rounded-full z-10"
@@ -94,7 +94,7 @@ export default function DisasterReliefProgramPage() {
                             borderBottom: "45px solid #06b6d4",
                             borderLeft: "45px solid transparent"
                         }}
-                    ></div>
+                    ></div> */}
 
                     {/* Quote Text */}
                     <div 
@@ -109,26 +109,25 @@ export default function DisasterReliefProgramPage() {
                                 communities when they
                             </span>
                             <br />
-                            <span className="inline-block translate-x-78">
+                            <span className="inline-block translate-x-32 md:translate-x-78">
                                 <span className="text-idara-orange font-black text-5xl md:text-7xl ">need</span>
                                 <span className="text-[#012060] font-black text-2xl md:text-4xl "> it most"</span>
                             </span>
                         </p>
                     </div>
-
-                    {/* Main Image */}
-                    <div 
-                        className="relative mt-1 overflow-hidden h-80 md:h-137.5 mb-[-70] -mx-6 md:-mx-58"
-                        data-aos="fade-up"
-                    >
-                        <img
-                            src="/website-media/disasterreliefprogram/centerimage.jpg"
-                            alt="Disaster relief work"
-                            className="w-full h-75 md:h-142.5 object-cover transition-transform duration-700 hover:scale-105"
-                        />
-                    </div>
-
                 </div>
+            </section>
+
+            {/* Main Full-Width Image */}
+            <section 
+                className="w-full h-[400px] md:h-[700px] overflow-hidden my-16 md:my-24"
+                data-aos="fade-up"
+            >
+                <img
+                    src="/website-media/disasterreliefprogram/centerimage.jpg"
+                    alt="Disaster relief work"
+                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
             </section>
 
             {/* ===== FULL-WIDTH BOTTOM IMAGE ===== */}

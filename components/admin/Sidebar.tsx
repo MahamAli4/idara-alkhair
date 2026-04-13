@@ -27,7 +27,7 @@ const Sidebar: React.FC = () => {
   return (
     <aside className="w-64 bg-[#012060] text-white min-h-screen flex flex-col shadow-xl">
       <div className="p-8">
-        <h1 className="text-2xl font-black tracking-tight text-white flex items-center gap-2">
+        <h1 className="text-xl sm:text-2xl font-black tracking-tight text-white flex items-center gap-2">
           <span className="text-idara-orange">IDARA</span> DASH
         </h1>
         <p className="text-xs text-blue-300 font-medium uppercase tracking-widest mt-1">Admin Portal</p>

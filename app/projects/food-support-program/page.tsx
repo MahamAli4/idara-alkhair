@@ -70,7 +70,7 @@ export default function FoodSupportProgramPage() {
                     {/* TEXT CONTENT */}
                     <div className="container mx-auto px-6 md:px-12 pt-12 pb-8 md:pt-16 md:pb-12">
                         <div className="max-w-4xl" data-aos="fade-right">
-                            <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-4">
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
                                 <span className="text-[#012060]">Fighting Hunger </span>
                                 <span className="text-[#ed7d31] font-black">with Dignity</span>
                             </h2>

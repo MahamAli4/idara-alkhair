@@ -139,7 +139,7 @@ export default function DonatePage() {
                 ></div>
 
                 <div className="max-w-4xl" data-aos="fade-right">
-                    <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-6">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
                         <span className="text-[#012060] font-semibold">Your Donation Can </span>
                         <span className="text-idara-orange font-extrabold">Change a Life Today</span>
                     </h2>
@@ -152,7 +152,7 @@ export default function DonatePage() {
 
             {/* ===== WHERE YOUR DONATION GOES ===== */}
             <div className="bg-white py-6 -mt-12 relative z-20">
-                <h3 className="text-3xl md:text-4xl font-bold text-center" data-aos="fade-up">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center" data-aos="fade-up">
                     <span className="text-[#012060]">Where Your </span>
                     <span className="text-idara-orange">Donation Goes</span>
                 </h3>
@@ -194,7 +194,7 @@ export default function DonatePage() {
                     </p>
 
                     {/* Types of Donation */}
-                    <h3 className="text-3xl md:text-4xl font-bold text-center mb-8" data-aos="fade-up">
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8" data-aos="fade-up">
                         <span className="text-[#012060]">Types of </span>
                         <span className="text-idara-orange">Donation</span>
                     </h3>
@@ -209,7 +209,7 @@ export default function DonatePage() {
                     </div>
 
                     {/* How to Donate */}
-                    <h3 className="text-3xl md:text-4xl font-bold text-center mb-8" data-aos="fade-up">
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8" data-aos="fade-up">
                         <span className="text-[#012060]">How to </span>
                         <span className="text-idara-orange">Donate</span>
                     </h3>
@@ -231,7 +231,7 @@ export default function DonatePage() {
                                     </div>
                                 </div>
                                 <div>
-                                    <h4 className="text-2xl font-black text-[#012060] mb-4">Bank Transfer 1</h4>
+                                    <h4 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-[#012060] mb-4">Bank Transfer 1</h4>
                                     <div className="space-y-2">
                                         <p className="text-gray-500 text-sm font-semibold uppercase tracking-wider">Title Of Account:</p>
                                         <p className="text-[#012060] font-bold text-lg mb-4">Idara Al-Khair Welfare Society</p>
@@ -275,7 +275,7 @@ export default function DonatePage() {
                                     </div>
                                 </div>
                                 <div>
-                                    <h4 className="text-2xl font-black text-[#012060] mb-4">Bank Transfer 2</h4>
+                                    <h4 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-[#012060] mb-4">Bank Transfer 2</h4>
                                     <div className="space-y-2">
                                         <p className="text-gray-500 text-sm font-semibold uppercase tracking-wider">Title Of Account:</p>
                                         <p className="text-[#012060] font-bold text-lg mb-4">Idara Al-Khair Welfare Society</p>
@@ -340,7 +340,7 @@ export default function DonatePage() {
                             >
                                 <X className="w-6 h-6" />
                             </button>
-                            <h2 className="text-3xl font-black mb-2">Donate to <span className="text-idara-orange">Idara Al-Khair</span></h2>
+                            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black mb-2">Donate to <span className="text-idara-orange">Idara Al-Khair</span></h2>
                             <p className="text-blue-100/80 font-medium">Your small contribution makes a big difference.</p>
                         </div>
 
@@ -512,7 +512,7 @@ export default function DonatePage() {
                                 <div className="w-24 h-24 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
                                     <CheckCircle className="w-12 h-12" />
                                 </div>
-                                <h3 className="text-4xl font-black text-[#012060] mb-4">Mubarak!</h3>
+                                <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#012060] mb-4">Mubarak!</h3>
                                 <p className="text-gray-500 text-lg max-w-sm mx-auto mb-8">
                                     Thank you for your generous contribution of <span className="font-black text-[#012060]">Rs. {donorData.amount}</span>. We've received your notification and will verify it soon.
                                 </p>

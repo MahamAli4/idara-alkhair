@@ -54,7 +54,7 @@ export default function EducationSchoolsCollegesPage() {
                     {/* Left Text */}
                     <div className="md:w-1/2">
                         <h2 
-                            className="text-3xl md:text-5xl font-bold leading-tight mb-6"
+                            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
                             data-aos="fade-right"
                         >
                             <span className="text-[#012060]">Educating Minds,</span>
@@ -85,7 +85,7 @@ export default function EducationSchoolsCollegesPage() {
                         data-aos="zoom-in"
                         data-aos-delay="200"
                     >
-                        {/* Shapes */}
+                        {/* {Shapes - Removed as requested}
                         <div className="absolute right-[5%] md:right-[10%] -top-4 w-12.5 md:w-16.25 h-32.5 md:h-42.5 bg-[#012060] rounded-full z-0" data-aos="zoom-in" data-aos-delay="300"></div>
 
                         <div className="absolute right-[0%] md:right-[5%] bottom-[5%] w-12.5 md:w-15 h-12.5 md:h-15 bg-idara-orange rounded-full z-0" data-aos="zoom-in" data-aos-delay="400"></div>
@@ -95,14 +95,14 @@ export default function EducationSchoolsCollegesPage() {
                             style={{ clipPath: 'polygon(0 0, 100% 50%, 0 100%)' }}
                             data-aos="fade-up"
                             data-aos-delay="500"
-                        ></div>
+                        ></div> */}
 
                         {/* Image */}
-                        <div className="relative z-5 w-70 md:w-82.5 overflow-hidden">
+                        <div className="relative z-5 w-full h-[350px] md:h-[500px] flex justify-center">
                             <img
                                 src="/website-media/educationschool&college/boyimage.jpg"
                                 alt="Student"
-                                className="w-full h-87.5 md:h-107.5 object-cover"
+                                className="h-full w-auto object-contain mx-auto"
                             />
                         </div>
                     </div>
@@ -118,7 +118,7 @@ export default function EducationSchoolsCollegesPage() {
                 <div className="container mx-auto max-w-5xl">
 
                     <h3 
-                        className="text-3xl md:text-4xl font-bold text-center mb-4"
+                        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4"
                         data-aos="fade-down"
                     >
                         <span className="text-[#012060]">What We </span>

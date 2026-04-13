@@ -117,7 +117,7 @@ export default function JobApplicationModal({ job, isOpen, onClose }: JobApplica
                             Applying For
                         </span>
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-black mb-4 tracking-tight leading-tight">{job.title}</h2>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-4 tracking-tight leading-tight">{job.title}</h2>
                     <div className="flex flex-wrap items-center gap-6 text-blue-100/70 font-medium">
                         <div className="flex items-center gap-2">
                             <MapPin className="w-4 h-4 text-idara-orange" />
@@ -305,7 +305,7 @@ export default function JobApplicationModal({ job, isOpen, onClose }: JobApplica
                         <div className="w-24 h-24 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-8 shadow-xl shadow-emerald-500/10">
                             <CheckCircle className="w-12 h-12" />
                         </div>
-                        <h3 className="text-4xl font-black text-[#012060] mb-4">Application Received!</h3>
+                        <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#012060] mb-4">Application Received!</h3>
                         <p className="text-gray-500 text-lg max-w-sm mx-auto mb-10 leading-relaxed">
                             Thank you for applying to be a <span className="font-black text-[#012060]">{job.title}</span>. Our HR team will review your application and contact you soon.
                         </p>

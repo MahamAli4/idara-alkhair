@@ -52,7 +52,7 @@ export default function ITInstitutePage() {
             <section className="container mx-auto px-6 md:px-12 py-16 md:py-24">
                 <div className="max-w-4xl">
                     <h2 
-                        className="text-3xl md:text-5xl font-semibold leading-tight mb-6"
+                        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-6"
                         data-aos="fade-right"
                     >
                         <span className="text-[#012060]">Digital Skills for </span>

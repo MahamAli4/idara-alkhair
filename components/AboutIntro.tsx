@@ -12,7 +12,7 @@ const AboutIntro = () => {
                         data-aos="fade-right"
                     >
                         <h2 
-                            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#012060] tracking-tight"
+                            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#012060] tracking-tight"
                             data-aos="fade-up"
                         >
                             About <span className="text-idara-orange font-black">Us</span>

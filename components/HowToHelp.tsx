@@ -45,8 +45,8 @@ const HowToHelp: React.FC = () => {
       </div>
 
       {/* Cards */}
-      <div className="container mx-auto px-4 relative z-30 mb-40 md:-mb-52">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10 max-w-6xl mx-auto">
+      <div className="container mx-auto px-4 relative z-30 mb-20 md:-mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 lg:gap-20 max-w-[320px] md:max-w-7xl mx-auto">
 
           {helpOptions.map((option, index) => (
             <div

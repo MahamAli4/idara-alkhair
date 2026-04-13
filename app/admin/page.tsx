@@ -1151,7 +1151,7 @@ export default function AdminPage() {
               <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 bg-white p-10 rounded-[3rem] shadow-[0_20px_50px_rgba(3,18,73,0.02)] border border-gray-50 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-idara-navy/5 rounded-full -mr-32 -mt-32 blur-3xl"></div>
                 <div className="relative z-10">
-                  <h2 className="text-4xl font-black text-idara-navy tracking-tight mb-2">Welcome Back, Admin</h2>
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-idara-navy tracking-tight mb-2">Welcome Back, Admin</h2>
                   <p className="text-gray-400 font-bold flex items-center gap-2">
                     <Calendar className="w-4 h-4 text-idara-orange" />
                     {new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
@@ -1203,7 +1203,7 @@ export default function AdminPage() {
                 {/* Recent Activity */}
                 <div className="lg:col-span-2 space-y-6">
                   <div className="flex justify-between items-center px-4">
-                    <h3 className="text-2xl font-black text-idara-navy">Recent Inquiries</h3>
+                    <h3 className="text-xl sm:text-2xl font-black text-idara-navy">Recent Inquiries</h3>
                     <button onClick={() => setActiveTab("emails")} className="text-[10px] font-black text-idara-orange uppercase tracking-widest hover:underline flex items-center gap-2">
                       View All <ArrowRight className="w-3 h-3" />
                     </button>
@@ -1237,7 +1237,7 @@ export default function AdminPage() {
 
                 {/* Quick Actions Panel */}
                 <div className="space-y-6">
-                  <h3 className="text-2xl font-black text-idara-navy px-4">Quick Actions</h3>
+                  <h3 className="text-xl sm:text-2xl font-black text-idara-navy px-4">Quick Actions</h3>
                   <div className="bg-idara-navy rounded-[3rem] p-10 shadow-2xl shadow-idara-navy/20 text-white relative overflow-hidden group">
                     <div className="absolute top-0 left-0 w-full h-full bg-idara-orange/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                     <div className="relative z-10 space-y-4">
@@ -1282,7 +1282,7 @@ export default function AdminPage() {
                       ←
                     </button>
                   )}
-                  <h2 className="text-3xl font-black text-idara-navy">
+                  <h2 className="text-2xl sm:text-3xl font-black text-idara-navy">
                     Contact Messages
                   </h2>
                 </div>
@@ -1356,7 +1356,7 @@ export default function AdminPage() {
           {activeTab === "addjob" && (
             <div className="flex justify-center items-start bg-linear-to-br from-gray-50 to-gray-100 p-4 py-6">
               <div className="w-full max-w-6xl">
-                <h2 className="text-4xl font-black mb-8 text-idara-navy flex items-center gap-4">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-8 text-idara-navy flex items-center gap-4">
                   Add New Job
                 </h2>
 
@@ -1436,7 +1436,7 @@ export default function AdminPage() {
           {activeTab === "recentjobs" && (
             <div>
               <div className="flex justify-between items-center mb-8">
-                <h2 className="text-3xl font-black text-idara-navy">
+                <h2 className="text-2xl sm:text-3xl font-black text-idara-navy">
                   Recent Job Postings
                 </h2>
                 <button
@@ -1504,7 +1504,7 @@ export default function AdminPage() {
           {activeTab === "oldjobs" && (
             <div>
               <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-semibold flex items-center gap-2">
+                <h2 className="text-xl sm:text-2xl font-semibold flex items-center gap-2">
                   <Archive className="w-6 h-6" />
                   Old Jobs (Archive)
                 </h2>
@@ -1655,7 +1655,7 @@ export default function AdminPage() {
               )}
 
               <div className="flex justify-between items-center mb-8">
-                <h2 className="text-3xl font-black text-idara-navy flex items-center gap-3">
+                <h2 className="text-2xl sm:text-3xl font-black text-idara-navy flex items-center gap-3">
                   <Heart className="w-8 h-8 text-idara-orange" />
                   Volunteer Applications ({volunteers.length})
                 </h2>
@@ -1785,7 +1785,7 @@ export default function AdminPage() {
           {activeTab === "candidates" && (
             <div>
               <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-semibold flex items-center gap-2">
+                <h2 className="text-xl sm:text-2xl font-semibold flex items-center gap-2">
                   <Users className="w-6 h-6" />
                   Candidates ({candidates.length})
                 </h2>
@@ -2012,7 +2012,7 @@ export default function AdminPage() {
           {activeTab === "interview" && (
             <div>
               <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-semibold flex items-center gap-2">
+                <h2 className="text-xl sm:text-2xl font-semibold flex items-center gap-2">
                   <Calendar className="w-6 h-6" />
                   Interview Candidates ({interviewCandidates.length})
                 </h2>
@@ -2101,7 +2101,7 @@ export default function AdminPage() {
           {activeTab === "hired" && (
             <div>
               <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-semibold flex items-center gap-2">
+                <h2 className="text-xl sm:text-2xl font-semibold flex items-center gap-2">
                   <CheckCircle className="w-6 h-6" />
                   Hired Candidates ({hiredCandidates.length})
                 </h2>

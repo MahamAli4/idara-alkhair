@@ -97,7 +97,7 @@ export default function VolunteerFormPage() {
             {/* ===== BE PART OF THE CHANGE SECTION ===== */}
             <section className="container mx-auto px-6 py-16 lg:py-24 relative">
                 <div className="max-w-4xl relative z-10">
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 transition-all duration-300">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8 transition-all duration-300">
                         <span className="text-idara-navy">Be Part of the </span>
                         <span className="text-idara-orange">Change</span>
                     </h2>
@@ -124,7 +124,7 @@ export default function VolunteerFormPage() {
             {/* ===== VOLUNTEER FORM SECTION ===== */}
             <section className="container mx-auto px-6 pb-24">
                 <div className="max-w-4xl mx-auto">
-                    <h3 className="text-4xl lg:text-5xl font-bold text-[#002060] text-center mb-20 tracking-normal">
+                    <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#002060] text-center mb-20 tracking-normal">
                         Volunteer form
                     </h3>
 
@@ -135,7 +135,7 @@ export default function VolunteerFormPage() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path>
                                 </svg>
                             </div>
-                            <h4 className="text-3xl font-bold text-emerald-800">Application Submitted!</h4>
+                            <h4 className="text-2xl sm:text-3xl font-bold text-emerald-800">Application Submitted!</h4>
                             <p className="text-emerald-700 text-lg">Thank you for your interest. We will contact you soon.</p>
                             <button 
                                 onClick={() => setSubmitted(false)}

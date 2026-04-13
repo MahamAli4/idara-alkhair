@@ -51,7 +51,7 @@ export default function HelpADreamPage() {
             <section className="container mx-auto px-6 md:px-12 py-16 md:pt-24 md:pb-32">
                 <div className="flex flex-col items-start gap-12">
                     <div className="w-full" data-aos="fade-up">
-                        <h2 className="text-3xl md:text-4xl font-black leading-[1.1] mb-8 text-[#012060]">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] mb-8 text-[#012060]">
                             Help a Child <span className="text-idara-orange font-extrabold">Dream Again</span>
                         </h2>
                         <p className="text-black text-base md:text-lg leading-relaxed">
@@ -65,7 +65,7 @@ export default function HelpADreamPage() {
             <section className="container mx-auto px-6 md:px-14 pb-16 md:pb-24 -mt-10 md:-mt-20">
                 <div className="flex flex-col items-start gap-8" data-aos="fade-right">
                     <div className="w-full">
-                        <h2 className="text-3xl md:text-4xl font-black leading-[1.1] mb-8 text-[#012060]">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] mb-8 text-[#012060]">
                             What Your <span className="text-idara-orange font-extrabold">Sponsorships</span> Provides?
                         </h2>
                     </div>
@@ -94,7 +94,7 @@ export default function HelpADreamPage() {
             <section className="bg-gray-300 pt-16 md:pt-24 relative">
                 <div className="container mx-auto px-6">
                     <h2 
-                        className="text-3xl md:text-4xl font-black  text-center text-[#012060]"
+                        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-center text-[#012060]"
                         data-aos="fade-up"
                     >
                         Why <span className="text-idara-orange font-bold">Sponsor</span> Through Idara Al-Khair
@@ -113,7 +113,7 @@ export default function HelpADreamPage() {
                     </div>
 
                     <h2 
-                        className="text-3xl md:text-4xl font-black text-center mt-14 text-[#012060]"
+                        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-center mt-14 text-[#012060]"
                         data-aos="fade-up"
                     >
                         One Decision.

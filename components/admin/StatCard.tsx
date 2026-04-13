@@ -33,7 +33,7 @@ const StatCard: React.FC<StatCardProps> = ({
       </div>
       <div>
         <p className="text-sm font-medium text-gray-500 mb-1">{title}</p>
-        <h3 className="text-2xl font-black text-[#012060]">{value}</h3>
+        <h3 className="text-xl sm:text-2xl font-black text-[#012060]">{value}</h3>
       </div>
     </div>
   );

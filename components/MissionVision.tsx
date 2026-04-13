@@ -24,7 +24,7 @@ const MissionVisionValues = () => {
                             className="flex-1 bg-[#D26F2B]/70 p-7 md:p-12 text-white text-center flex flex-col justify-center items-center"
                             data-aos="fade-right"
                         >
-                            <h2 className="text-4xl md:text-6xl font-medium mb-5">Mission</h2>
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium mb-5">Mission</h2>
                             <p className="text-xl md:text-2xl">
                                 A society where every individual has access to education, healthcare, food, and a dignified life.
                             </p>
@@ -36,7 +36,7 @@ const MissionVisionValues = () => {
                             data-aos="fade-left"
                             data-aos-delay="150"
                         >
-                            <h2 className="text-4xl md:text-6xl font-medium mb-5">Vision</h2>
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium mb-5">Vision</h2>
                             <p className="md:text-2xl">
                                 To empower underprivileged communities through sustainable education, healthcare services, food support, and social welfare programs while maintaining transparency and accountability at every step.
                             </p>
@@ -48,7 +48,7 @@ const MissionVisionValues = () => {
                     <div className="w-full flex flex-col items-center">
                         {/* Heading */}
                         <h2
-                            className="text-5xl md:text-5xl font-medium text-idara-navy text-center mb-20  px-4 md:px-7 lg:px-1 tracking-tighter drop-shadow-lg"
+                            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-idara-navy text-center mb-20 px-4 md:px-7 lg:px-1 tracking-tighter drop-shadow-lg"
                             data-aos="fade-up"
                         >
                             Our <span className='text-white font-black'>Values</span>

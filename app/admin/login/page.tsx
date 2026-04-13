@@ -56,7 +56,7 @@ export default function AdminLoginPage() {
           <div className="w-20 h-20 bg-idara-orange/10 rounded-3xl flex items-center justify-center mx-auto mb-4 border border-idara-orange/20">
             <span className="text-4xl">🚀</span>
           </div>
-          <h2 className="text-3xl font-black text-idara-navy tracking-tight">Admin Login</h2>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-idara-navy tracking-tight">Admin Login</h2>
           <p className="text-gray-500 text-sm font-medium mt-1">IDARA AL-KHAIR Management Portal</p>
         </div>
 

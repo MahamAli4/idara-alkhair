@@ -95,7 +95,7 @@ export default function CareersPage() {
             <section className="container mx-auto px-6 mb-32">
                 <div className="flex items-center justify-between mb-10">
                     <div>
-                        <h2 className="text-3xl font-black text-[#012060]">Open <span className="text-idara-orange">Positions</span></h2>
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-[#012060]">Open <span className="text-idara-orange">Positions</span></h2>
                         <div className="h-1.5 w-20 bg-idara-orange rounded-full mt-2"></div>
                     </div>
                     <span className="bg-gray-100 text-gray-600 px-4 py-1.5 rounded-full text-sm font-bold">
@@ -111,7 +111,7 @@ export default function CareersPage() {
                 ) : filteredJobs.length === 0 ? (
                     <div className="text-center py-20 bg-white rounded-[40px] shadow-sm border border-gray-100">
                         <Briefcase className="w-16 h-16 text-gray-200 mx-auto mb-4" />
-                        <h3 className="text-2xl font-bold text-gray-800">No openings found</h3>
+                        <h3 className="text-xl sm:text-2xl font-bold text-gray-800">No openings found</h3>
                         <p className="text-gray-500 mt-2">Check back later or try a different search.</p>
                     </div>
                 ) : (
@@ -138,7 +138,7 @@ export default function CareersPage() {
                                         )}
                                     </div>
                                     
-                                    <h3 className="text-2xl font-black text-[#012060] mb-4 group-hover:text-idara-orange transition-colors">
+                                    <h3 className="text-xl sm:text-2xl font-black text-[#012060] mb-4 group-hover:text-idara-orange transition-colors">
                                         {job.title}
                                     </h3>
                                     
