@@ -9,13 +9,16 @@ const Footer: React.FC = () => {
     const isHomepage = pathname === '/';
 
     return (
-        <footer className={`bg-[#0a2351] text-white relative overflow-hidden pb-10 ${isHomepage ? 'pt-32 md:pt-64 lg:pt-80' : 'pt-20'}`}>
-            {/* 1. Dotted Background Pattern - Exactly like image */}
+        <footer className={`bg-[#0a2351] text-white relative overflow-hidden pb-20 ${isHomepage ? 'pt-24 md:pt-32 lg:pt-50' : 'pt-20'}`}>
+            {/* 1. Dotted Background Pattern from user folder */}
             <div
-                className="absolute inset-0 opacity-20 pointer-events-none"
+                className="absolute inset-0 pointer-events-none"
                 style={{
-                    backgroundImage: `radial-gradient(circle at 2px 2px, rgba(255,255,255,0.6) 1.5px, transparent 0)`,
-                    backgroundSize: '35px 35px'
+                    backgroundImage: `url('/website-media/footer/footerbackground.png')`,
+                    backgroundSize: '800px', // Scaling down to allow repetition
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'repeat',
+                    opacity: 0.05
                 }}
             />
 
@@ -71,14 +74,17 @@ const Footer: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* Action Buttons - Cyan & White */}
-                        <div className="flex flex-col sm:flex-row gap-4 pt-2 md:pt-4">
-                            <button className="bg-white text-[#0a2351] px-6 md:px-10 py-3 rounded-md font-black text-lg md:text-xl shadow-lg hover:bg-gray-100 transition-all w-full sm:w-auto">
+                        {/* Action Buttons - Cyan & White & Orange */}
+                        <div className="flex flex-col sm:flex-row flex-wrap gap-4 pt-2 md:pt-4">
+                            <a href="/gallery" className="inline-block text-center bg-white text-[#0a2351] px-6 md:px-8 py-3 rounded-md font-black text-lg md:text-xl shadow-lg hover:bg-gray-100 transition-all w-full sm:w-auto">
                                 Gallery
-                            </button>
-                            <button className="bg-idara-cyan text-white px-6 md:px-8 py-3 rounded-md font-black text-lg md:text-xl shadow-lg hover:bg-[#00acc1] transition-all w-full sm:w-auto">
+                            </a>
+                            <a href="/privacy-policy" className="inline-block text-center bg-idara-cyan text-white px-6 md:px-8 py-3 rounded-md font-black text-lg md:text-xl shadow-lg hover:bg-[#00acc1] transition-all w-full sm:w-auto">
                                 Privacy Policy
-                            </button>
+                            </a>
+                            <a href="/donate" className="inline-block text-center bg-idara-orange text-white px-6 md:px-8 py-3 rounded-md font-black text-lg md:text-xl shadow-lg hover:bg-orange-600 transition-all w-full sm:w-auto">
+                                Donate Now
+                            </a>
                         </div>
 
                         {/* Social Media Icons */}
