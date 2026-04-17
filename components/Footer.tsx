@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
                 }}
             />
 
-            <div className="relative z-10 container mx-auto px-6 md:px-12">
+            <div className="relative z-10 container mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
 
                     {/* LEFT SECTION */}
@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
                                     <Mail size={18} className="text-[#0a2351] fill-current" />
                                 </div>
                                 <a href="mailto:info@idaraalkhair.com" className="text-base md:text-lg lg:text-xl font-bold hover:text-idara-cyan transition-colors break-all">
-                                    info@idaraalkhair.com
+                                    info@iak.ngo
                                 </a>
                             </div>
                         </div>

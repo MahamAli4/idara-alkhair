@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
                     <div className="lg:w-1/2 mb-10 lg:mb-0 relative z-40">
                         <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-[4.5rem] font-bold leading-[1.1] text-idara-navy mb-6 tracking-tight">
                             Changing <span className="text-idara-orange font-black">Lives</span><br className="hidden md:block" />
-                            Today. Building a Better <br className="hidden md:block" />
+                            Today. Building a Better<br className="hidden md:block" />
                             <span className="text-idara-orange font-black">Tomorrow.</span>
                         </h1>
                         <p className="text-base sm:text-lg md:text-xl lg:text-[1.5rem] lg:leading-relaxed text-idara-navy opacity-80 mb-8 md:mb-12 max-w-full">

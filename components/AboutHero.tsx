@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutHero = () => {
     return (
-        <section className="relative h-[80vh] flex items-center justify-center overflow-hidden mt-[80px] md:mt-[100px]">
+        <section className="relative h-[60vh] flex items-center justify-center overflow-hidden mt-[80px] md:mt-[100px]">
 
             {/* Background Image */}
             <div className="absolute inset-0 z-0">

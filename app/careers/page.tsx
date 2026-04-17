@@ -34,7 +34,7 @@ export default function CareersPage() {
         }
     };
 
-    const filteredJobs = jobs.filter(job => 
+    const filteredJobs = jobs.filter(job =>
         job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         job.category?.toLowerCase().includes(searchTerm.toLowerCase())
     );
@@ -52,16 +52,16 @@ export default function CareersPage() {
             <section className="relative mt-20 h-[80vh] flex items-center overflow-hidden bg-[#012060]">
                 {/* Decorative background */}
                 <div className="absolute top-0 right-0 w-1/3 h-full bg-white/5 skew-x-12 transform translate-x-20"></div>
-                
+
                 <div className="container mx-auto px-6 relative z-10 text-center md:text-left">
                     <div className="max-w-5xl">
-                        <h1 
+                        <h1
                             className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white mb-6 tracking-tight"
                             data-aos="fade-right"
                         >
                             Build Your <span className="text-idara-orange">Career</span> at Idara Al-Khair
                         </h1>
-                        <p 
+                        <p
                             className="text-lg md:text-xl text-blue-100 font-medium leading-relaxed mb-10"
                             data-aos="fade-right"
                             data-aos-delay="200"
@@ -74,14 +74,14 @@ export default function CareersPage() {
 
             {/* ===== SEARCH & FILTER ===== */}
             <section className="container mx-auto px-6 -mt-10 mb-16 relative z-20">
-                <div 
+                <div
                     className="bg-white p-4 md:p-6 rounded-3xl shadow-xl border border-gray-100 flex flex-col md:flex-row gap-4"
                     data-aos="zoom-in"
                 >
                     <div className="flex-1 relative">
                         <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
-                        <input 
-                            type="text" 
+                        <input
+                            type="text"
                             placeholder="Search by position or category..."
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
@@ -117,7 +117,7 @@ export default function CareersPage() {
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                         {filteredJobs.map((job, idx) => (
-                            <div 
+                            <div
                                 key={job.id}
                                 data-aos="fade-up"
                                 data-aos-delay={idx * 100}
@@ -125,7 +125,7 @@ export default function CareersPage() {
                             >
                                 {/* Floating Gradient */}
                                 <div className="absolute -top-10 -right-10 w-24 h-24 bg-blue-50 rounded-full group-hover:scale-150 transition-transform duration-700 opacity-50"></div>
-                                
+
                                 <div className="relative z-10">
                                     <div className="flex items-center gap-3 mb-6">
                                         <span className="bg-blue-50 text-[#012060] text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full">
@@ -137,11 +137,11 @@ export default function CareersPage() {
                                             </span>
                                         )}
                                     </div>
-                                    
+
                                     <h3 className="text-xl sm:text-2xl font-black text-[#012060] mb-4 group-hover:text-idara-orange transition-colors">
                                         {job.title}
                                     </h3>
-                                    
+
                                     <div className="space-y-3 mb-8">
                                         <div className="flex items-center text-gray-500 font-medium">
                                             <MapPin className="w-4 h-4 mr-2 text-idara-orange" />
@@ -155,7 +155,7 @@ export default function CareersPage() {
                                         )}
                                     </div>
 
-                                    <button 
+                                    <button
                                         onClick={() => openApplication(job)}
                                         className="w-full py-4 bg-[#012060] text-white rounded-2xl font-black flex items-center justify-center gap-2 group-hover:bg-idara-orange transition-all shadow-lg shadow-blue-900/10"
                                     >
@@ -171,10 +171,10 @@ export default function CareersPage() {
 
             <Footer />
 
-            <JobApplicationModal 
-                job={selectedJob} 
-                isOpen={isModalOpen} 
-                onClose={() => setIsModalOpen(false)} 
+            <JobApplicationModal
+                job={selectedJob}
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
             />
         </main>
     );

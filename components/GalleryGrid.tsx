@@ -51,7 +51,7 @@ const GalleryGrid = () => {
                         <img src={images[1]} alt="Gallery 2" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                         
                         {/* Decorative Yellow Triangle (Top Left) */}
-                        <div className="absolute -top-4 -left-4 w-0 h-0 border-l-[30px] border-l-transparent border-b-[30px] border-b-idara-yellow transform -rotate-45 z-10"></div>
+                        <div className="absolute -top-4 -left-4 w-0 h-0 border-l-30 border-l-transparent border-b-30 border-b-idara-yellow transform -rotate-45 z-10"></div>
                     </div>
 
                     {/* Item 3 */}
