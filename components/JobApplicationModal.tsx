@@ -16,6 +16,8 @@ export default function JobApplicationModal({ job, isOpen, onClose }: JobApplica
     const [isSuccess, setIsSuccess] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
+
+
     const [formData, setFormData] = useState({
         applicantName: '',
         applicantEmail: '',
@@ -24,7 +26,8 @@ export default function JobApplicationModal({ job, isOpen, onClose }: JobApplica
         resumeUrl: '',
         yearsOfExperience: '',
         highestEducation: '',
-        city: ''
+        city: '',
+        fieldOfInterest: ''
     });
 
     if (!isOpen || !job) return null;
@@ -73,11 +76,24 @@ export default function JobApplicationModal({ job, isOpen, onClose }: JobApplica
         setIsSubmitting(true);
         setError(null);
 
+        // Prep description with field of interest if it exists
+        const fieldString = formData.fieldOfInterest 
+            ? `Intersted In Tool: ${formData.fieldOfInterest}`
+            : '';
+
+        const submissionData = {
+            ...formData,
+            jobId: job.id,
+            coverLetter: fieldString 
+                ? `${fieldString}\n\n${formData.coverLetter}`
+                : formData.coverLetter
+        };
+
         try {
             const res = await fetch('/api/applications', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ ...formData, jobId: job.id })
+                body: JSON.stringify(submissionData)
             });
 
             if (res.ok) {
@@ -114,19 +130,27 @@ export default function JobApplicationModal({ job, isOpen, onClose }: JobApplica
                     </button>
                     <div className="flex items-center gap-3 mb-4">
                         <span className="bg-idara-orange text-white text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">
-                            Applying For
+                            {job.id === 4 ? 'General Interest' : 'Applying For'}
                         </span>
                     </div>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-4 tracking-tight leading-tight">{job.title}</h2>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-4 tracking-tight leading-tight">
+                        {job.id === 4 ? 'Submit Your Resume' : job.title}
+                    </h2>
                     <div className="flex flex-wrap items-center gap-6 text-blue-100/70 font-medium">
-                        <div className="flex items-center gap-2">
-                            <MapPin className="w-4 h-4 text-idara-orange" />
-                            {job.location}
-                        </div>
-                        <div className="flex items-center gap-2 text-white">
-                            <Briefcase className="w-4 h-4 text-idara-orange" />
-                            {job.jobType.replace('_', ' ')}
-                        </div>
+                        {job.id === 4 ? (
+                            <p className="text-blue-100/60 font-bold italic">Tell us about your skills and we'll match you with a role.</p>
+                        ) : (
+                            <>
+                                <div className="flex items-center gap-2">
+                                    <MapPin className="w-4 h-4 text-idara-orange" />
+                                    {job.location}
+                                </div>
+                                <div className="flex items-center gap-2 text-white">
+                                    <Briefcase className="w-4 h-4 text-idara-orange" />
+                                    {job.jobType.replace('_', ' ')}
+                                </div>
+                            </>
+                        )}
                     </div>
                 </div>
 
@@ -136,6 +160,23 @@ export default function JobApplicationModal({ job, isOpen, onClose }: JobApplica
                             <div className="mb-8 p-4 bg-rose-50 border border-rose-100 text-rose-700 rounded-2xl flex items-center gap-3 text-sm font-bold">
                                 <AlertCircle className="w-5 h-5 shrink-0" />
                                 {error}
+                            </div>
+                        )}
+
+                        {/* Text Input for General Applications */}
+                        {job.id === 4 && (
+                            <div className="mb-10 p-6 bg-blue-50/50 border-2 border-[#012060]/10 rounded-[24px]">
+                                <label className="text-xs font-black text-[#012060] uppercase tracking-widest mb-3 block">
+                                    Which position or field are you interested in? *
+                                </label>
+                                <input 
+                                    type="text"
+                                    required
+                                    placeholder="e.g. IT Instructor, Accountant, etc."
+                                    value={formData.fieldOfInterest}
+                                    onChange={(e) => setFormData({...formData, fieldOfInterest: e.target.value})}
+                                    className="w-full bg-white border-gray-100 border-2 rounded-xl py-4 px-6 outline-none focus:border-[#012060] transition-all font-bold text-[#012060] placeholder:text-gray-300"
+                                />
                             </div>
                         )}
 
@@ -305,9 +346,15 @@ export default function JobApplicationModal({ job, isOpen, onClose }: JobApplica
                         <div className="w-24 h-24 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-8 shadow-xl shadow-emerald-500/10">
                             <CheckCircle className="w-12 h-12" />
                         </div>
-                        <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#012060] mb-4">Application Received!</h3>
+                        <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#012060] mb-4">
+                            {job.id === 4 ? 'Submission Received!' : 'Application Received!'}
+                        </h3>
                         <p className="text-gray-500 text-lg max-w-sm mx-auto mb-10 leading-relaxed">
-                            Thank you for applying to be a <span className="font-black text-[#012060]">{job.title}</span>. Our HR team will review your application and contact you soon.
+                            {job.id === 4 ? (
+                                <>Thank you for sharing your profile. Our team will review your skills and get in touch if a suitable role opens up.</>
+                            ) : (
+                                <>Thank you for applying for the <span className="font-black text-[#012060]">{job.title}</span> position. Our HR team will review your application soon.</>
+                            )}
                         </p>
                         <button 
                             onClick={onClose}

@@ -18,6 +18,8 @@ import {
   Heart,
   XCircle,
   LayoutDashboard,
+  Smartphone,
+  MapPin,
   ArrowRight,
   TrendingUp,
 } from "lucide-react";
@@ -28,7 +30,7 @@ export default function AdminPage() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [loading, setLoading] = useState(false);
   const [authChecking, setAuthChecking] = useState(true);
-  const [isLoadingData, setIsLoadingData] = useState(false); // New state to block UI while loading initial data
+  const [isLoadingData, setIsLoadingData] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [messages, setMessages] = useState<any[]>([]);
   const [activeTab, setActiveTab] = useState<string>("dashboard");
@@ -103,41 +105,44 @@ export default function AdminPage() {
   const [interviewTimeAdmin, setInterviewTimeAdmin] = useState("");
   const [isSchedulingInterview, setIsSchedulingInterview] = useState(false);
 
+  // ✅ Application Segmentation Logic
+  const specificJobApps = useMemo(() => {
+    return jobResponses.filter(res => res.jobId !== 4);
+  }, [jobResponses]);
+
+  const generalInterestApps = useMemo(() => {
+    return jobResponses.filter(res => res.jobId === 4);
+  }, [jobResponses]);
+
   // ✅ HEADER/FOOTER HIDE KARNE WALA USEEFFECT
   useEffect(() => {
     const header = document.querySelector('header');
     const footer = document.querySelector('footer');
     if (header) header.style.display = 'none';
     if (footer) footer.style.display = 'none';
-    return () => {
-      if (header) header.style.display = '';
-      if (footer) footer.style.display = '';
-    };
-  }, []);
 
-  // ✅ AUTHENTICATION CHECK ON COMPONENT MOUNT
-  useEffect(() => {
     const checkAuth = async () => {
       try {
-        const res = await fetch('/api/auth/session', {
-          credentials: 'include'
-        });
-        const data = await res.json();
-
-        if (res.ok && data.user) {
-          setLoggedIn(true);
-        } else {
-          setLoggedIn(false);
+        const res = await fetch("/api/auth/session");
+        if (res.ok) {
+          const data = await res.json();
+          if (data.user) {
+            setLoggedIn(true);
+          }
         }
       } catch (err) {
-        console.error('Auth check failed:', err);
-        setLoggedIn(false);
+        console.error("Auth check error:", err);
       } finally {
         setAuthChecking(false);
       }
     };
 
     checkAuth();
+
+    return () => {
+      if (header) header.style.display = '';
+      if (footer) footer.style.display = '';
+    };
   }, []);
 
   const handleLogout = async () => {
@@ -1067,6 +1072,19 @@ export default function AdminPage() {
               </li>
               <li>
                 <button
+                  onClick={() => { setActiveTab("jobapplications"); setSidebarOpen(false); }}
+                  className={`w-full text-left px-5 py-4 rounded-2xl flex flex-row items-center gap-4 transition-all duration-300 relative group overflow-hidden whitespace-nowrap ${activeTab === "jobapplications"
+                    ? "bg-idara-navy text-white shadow-[0_10px_20px_-5px_rgba(3,18,73,0.3)] translate-x-2"
+                    : "text-gray-400 hover:bg-gray-50 hover:text-idara-navy"
+                    }`}
+                >
+                  <Users className={`w-5 h-5 transition-transform duration-500 ${activeTab === 'jobapplications' ? 'scale-110' : 'group-hover:rotate-12'}`} />
+                  <span className="font-black text-sm tracking-tight">Job Applications</span>
+                  {activeTab === 'jobapplications' && <div className="absolute right-0 top-0 bottom-0 w-1 bg-emerald-500"></div>}
+                </button>
+              </li>
+              <li>
+                <button
                   onClick={() => { setActiveTab("candidates"); setSidebarOpen(false); }}
                   className={`w-full text-left px-5 py-4 rounded-2xl flex flex-row items-center gap-4 transition-all duration-300 relative group overflow-hidden whitespace-nowrap ${activeTab === "candidates"
                     ? "bg-idara-navy text-white shadow-[0_10px_20px_-5px_rgba(3,18,73,0.3)] translate-x-2"
@@ -1573,7 +1591,187 @@ export default function AdminPage() {
           {/* Job Responses */}
           {activeTab === "jobresponse" && (
             <div>
-              {/* ... (Existing job responses code) ... */}
+              <div className="animate-in fade-in duration-500">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+                  <h2 className="text-2xl sm:text-3xl font-black text-idara-navy flex items-center gap-3">
+                    <Briefcase className="w-8 h-8 text-idara-orange" />
+                    Role Responses ({specificJobApps.length})
+                  </h2>
+                  <button
+                    onClick={loadJobResponses}
+                    disabled={responsesLoading}
+                    className="px-6 py-3 bg-white border-2 border-gray-100 text-idara-navy rounded-2xl hover:bg-idara-navy hover:text-white transition-all shadow-sm font-black flex items-center gap-2"
+                  >
+                    <RefreshCw className={`w-4 h-4 ${responsesLoading ? 'animate-spin' : ''}`} />
+                    Refresh
+                  </button>
+                </div>
+
+                {responsesLoading ? (
+                  <div className="flex flex-col items-center justify-center py-20 bg-white rounded-[2.5rem] border text-center">
+                    <RefreshCw className="w-12 h-12 text-idara-orange animate-spin mb-4" />
+                    <p className="text-idara-navy font-black uppercase tracking-widest text-sm">Filtering Responses...</p>
+                  </div>
+                ) : jobResponses.length === 0 ? (
+                  <div className="text-center py-20 bg-white rounded-[2.5rem] border-2 border-dashed border-gray-200">
+                    <Briefcase className="w-20 h-20 text-gray-200 mx-auto mb-6" />
+                    <h3 className="text-xl font-bold text-gray-400">No Role Specific Responses</h3>
+                    <p className="text-gray-400 mt-2">Applications for specific job postings will appear here.</p>
+                  </div>
+                ) : (
+                  <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    {specificJobApps.map((res) => (
+                      <div key={res.id} className="group bg-white border-2 border-gray-100 rounded-[2.5rem] p-8 shadow-sm hover:shadow-2xl transition-all duration-500 relative overflow-hidden flex flex-col h-full text-left">
+                        {/* Decoration */}
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-idara-orange/5 rounded-full -mr-16 -mt-16 group-hover:scale-[1.5] transition-all duration-700"></div>
+                        
+                        <div className="flex justify-between items-start mb-6 relative z-10">
+                          <div className="w-14 h-14 bg-[#012060] text-white rounded-3xl flex items-center justify-center font-black text-xl shadow-xl shadow-blue-900/20 uppercase">
+                            {res.applicantName?.charAt(0)}
+                          </div>
+                          <span className={`text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-sm ${
+                            res.status === 'HIRED' ? 'bg-emerald-50 text-emerald-600 border border-emerald-100' : 
+                            res.status === 'REJECTED' ? 'bg-rose-50 text-rose-600 border border-rose-100' : 
+                            res.status === 'INTERVIEW' ? 'bg-blue-50 text-blue-600 border border-blue-100' :
+                            'bg-amber-50 text-amber-600 border border-amber-100'
+                          }`}>
+                            {res.status}
+                          </span>
+                        </div>
+
+                        <div className="space-y-1 mb-6 relative z-10">
+                          <h3 className="text-2xl font-black text-idara-navy truncate" title={res.applicantName}>{res.applicantName}</h3>
+                          <p className="text-idara-orange font-bold text-sm truncate">{res.applicantEmail}</p>
+                          <div className="flex items-center gap-2 text-gray-400 text-xs font-bold mt-2">
+                             <Smartphone className="w-3 h-3 text-idara-orange" />
+                             {res.applicantPhone || 'N/A'}
+                          </div>
+                        </div>
+
+                        <div className="bg-gray-50 rounded-4xl p-6 mb-8 border border-gray-100 relative z-10 grow">
+                          <div className="mb-4">
+                              <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest block mb-1">Applying For</span>
+                              <p className="font-black text-idara-navy truncate">{res.job?.title || 'Unknown Position'}</p>
+                          </div>
+                          
+                          <div className="pt-2 border-t border-gray-100">
+                             <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest block mb-1">Message / Area of Interest</span>
+                             <p className="text-xs text-gray-600 font-medium line-clamp-4 italic bg-white/50 p-3 rounded-2xl border border-dotted border-gray-200">
+                                {res.coverLetter || 'No message provided'}
+                             </p>
+                          </div>
+                        </div>
+
+                        <div className="flex flex-wrap gap-3 relative z-10 mt-auto">
+                          {res.resumeUrl && (
+                            <a 
+                              href={res.resumeUrl} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="flex-1 bg-white border-2 border-blue-900 text-blue-900 font-black py-3 rounded-2xl hover:bg-blue-900 hover:text-white transition-all text-xs flex items-center justify-center gap-2"
+                            >
+                              <FileText className="w-4 h-4" /> View CV
+                            </a>
+                          )}
+                          {res.status !== 'INTERVIEW' && res.status !== 'HIRED' && (
+                            <button 
+                              onClick={() => markForInterview(res)}
+                              className="flex-1 bg-idara-orange text-white font-black py-3 rounded-2xl hover:brightness-110 shadow-lg shadow-idara-orange/20 transition-all text-xs flex items-center justify-center gap-2"
+                            >
+                              <Calendar className="w-4 h-4" /> Interview
+                            </button>
+                          )}
+                        </div>
+
+                        <div className="flex items-center justify-between mt-8 pt-4 border-t border-gray-50 relative z-10 text-[10px] text-gray-400 font-black uppercase tracking-widest">
+                           <div className="flex items-center gap-2">
+                              <Calendar className="w-3 h-3 text-idara-orange" />
+                              {new Date(res.createdAt).toLocaleDateString()}
+                           </div>
+                           <span>#APP-{res.id}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+
+          {/* Job Applications (General Interest) */}
+          {activeTab === "jobapplications" && (
+            <div className="animate-in fade-in duration-500">
+              <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+                <h2 className="text-2xl sm:text-3xl font-black text-idara-navy flex items-center gap-3">
+                  <Users className="w-8 h-8 text-emerald-500" />
+                  General Interest Apps ({generalInterestApps.length})
+                </h2>
+                <button
+                  onClick={loadJobResponses}
+                  disabled={responsesLoading}
+                  className="px-6 py-3 bg-white border-2 border-gray-100 text-idara-navy rounded-2xl hover:bg-idara-navy hover:text-white transition-all shadow-sm font-black flex items-center gap-2"
+                >
+                  <RefreshCw className={`w-4 h-4 ${responsesLoading ? 'animate-spin' : ''}`} />
+                  Refresh
+                </button>
+              </div>
+
+              {responsesLoading ? (
+                <div className="flex flex-col items-center justify-center py-20 bg-white rounded-[2.5rem] border text-center">
+                  <RefreshCw className="w-12 h-12 text-emerald-500 animate-spin mb-4" />
+                  <p className="text-idara-navy font-black uppercase tracking-widest text-sm">Searching Database...</p>
+                </div>
+              ) : generalInterestApps.length === 0 ? (
+                <div className="text-center py-20 bg-white rounded-[2.5rem] border-2 border-dashed border-gray-200">
+                  <Users className="w-20 h-20 text-gray-200 mx-auto mb-6" />
+                  <h3 className="text-xl font-bold text-gray-400">No General Submissions</h3>
+                  <p className="text-gray-400 mt-2">Applications from the 'Upload' button will show up here.</p>
+                </div>
+              ) : (
+                <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                  {generalInterestApps.map((res) => (
+                    <div key={res.id} className="group bg-white border-2 border-emerald-100 rounded-[2.5rem] p-8 shadow-sm hover:shadow-2xl transition-all duration-500 relative overflow-hidden flex flex-col h-full text-left">
+                      <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full -mr-16 -mt-16 group-hover:scale-[1.5] transition-all duration-700"></div>
+                      <div className="flex justify-between items-start mb-6 relative z-10">
+                        <div className="w-14 h-14 bg-emerald-600 text-white rounded-3xl flex items-center justify-center font-black text-xl shadow-xl shadow-emerald-900/20 uppercase">
+                          {res.applicantName?.charAt(0)}
+                        </div>
+                        <span className="text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-sm bg-emerald-50 text-emerald-600 border border-emerald-100">
+                          GENERAL
+                        </span>
+                      </div>
+                      <div className="space-y-1 mb-6 relative z-10">
+                        <h3 className="text-2xl font-black text-idara-navy truncate">{res.applicantName}</h3>
+                        <p className="text-emerald-600 font-bold text-sm truncate">{res.applicantEmail}</p>
+                        <div className="flex items-center gap-2 text-gray-400 text-xs font-bold mt-2">
+                           <Smartphone className="w-3 h-3 text-emerald-500" />
+                           {res.applicantPhone || 'N/A'}
+                        </div>
+                      </div>
+                      <div className="bg-emerald-50/50 rounded-4xl p-6 mb-8 border border-emerald-100 relative z-10 grow">
+                        <div className="mb-4">
+                            <span className="text-[10px] font-black text-emerald-600 uppercase tracking-widest block mb-1">Area of Interest</span>
+                            <p className="font-black text-idara-navy bg-white/50 p-3 rounded-2xl border border-dotted border-emerald-200">
+                                {res.coverLetter?.split('\n')[0] || "General Request"}
+                            </p>
+                        </div>
+                        <div className="pt-2 border-t border-emerald-100">
+                           <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest block mb-1">Full Context</span>
+                           <p className="text-xs text-gray-600 font-medium line-clamp-4 italic">
+                              {res.coverLetter || 'No details provided'}
+                           </p>
+                        </div>
+                      </div>
+                      <div className="flex flex-wrap gap-3 relative z-10 mt-auto">
+                        {res.resumeUrl && (
+                          <a href={res.resumeUrl} target="_blank" rel="noopener noreferrer" className="flex-1 bg-white border-2 border-emerald-600 text-emerald-600 font-black py-3 rounded-2xl hover:bg-emerald-600 hover:text-white transition-all text-xs flex items-center justify-center gap-2"><FileText className="w-4 h-4" /> CV</a>
+                        )}
+                        <button onClick={() => markForInterview(res)} className="flex-1 bg-idara-navy text-white font-black py-3 rounded-2xl hover:bg-emerald-600 transition-all text-xs flex items-center justify-center gap-2"><Calendar className="w-4 h-4" /> Onboard</button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           )}
 

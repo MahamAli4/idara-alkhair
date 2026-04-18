@@ -123,7 +123,7 @@ export default function TechnicalTrainingCentersPage() {
                              {/* Line 2: just teach skills, */}
                              <div className="flex flex-col lg:flex-row lg:items-center -mt-2">
                                 <span className="text-5xl md:text-7xl lg:text-[95px] font-black italic leading-tight tracking-tighter">just teach</span>
-                                <div className="flex items-center lg:ml-8 mt-10 lg:mt-30 pr-8 border-r-[4px] border-idara-navy h-fit">
+                                <div className="flex items-center lg:ml-8 mt-10 lg:mt-30 pr-8 border-r-4 border-idara-navy h-fit">
                                      <span className="text-xl md:text-2xl lg:text-3xl font-bold italic">skills,</span>
                                 </div>
                              </div>

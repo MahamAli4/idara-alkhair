@@ -136,6 +136,22 @@ model DonationNotification {
   @@map("donation_notifications")
 }
 
+model VolunteerApplication {
+  id             Int      @id @default(autoincrement())
+  applicantName  String
+  applicantEmail String
+  volunteerName  String
+  volunteerEmail String
+  volunteerAge   String
+  availability   String
+  status         String   @default("PENDING")
+  createdAt      DateTime @default(now())
+  interviewDate  String?
+  interviewTime  String?
+
+  @@map("volunteer_applications")
+}
+
 enum UserRole {
   ADMIN
   USER
@@ -159,19 +175,4 @@ enum ApplicationStatus {
   INTERVIEW
   HIRED
   REJECTED
-}
-model VolunteerApplication {
-  id                 Int      @id @default(autoincrement())
-  applicantName      String
-  applicantEmail     String
-  volunteerName      String
-  volunteerEmail     String
-  volunteerAge       String
-  availability       String   // Array of strings joined by comma
-  status             String   @default("PENDING")
-  interviewDate      String?  // For scheduling orientation/chat
-  interviewTime      String?  // For scheduling orientation/chat
-  createdAt          DateTime @default(now())
-
-  @@map("volunteer_applications")
 }
