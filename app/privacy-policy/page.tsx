@@ -12,7 +12,7 @@ export default function PrivacyPolicyPage() {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="relative h-[80vh] flex items-center mt-[80px] md:mt-[100px] overflow-hidden">
+            <section className="relative h-[60vh] flex items-center mt-[80px] md:mt-[100px] overflow-hidden">
                 {/* Background Image */}
                 <div className="absolute inset-0 z-0">
                     <img
@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
                 </div>
                 
                 {/* Gradient Overlay left-to-right (Blue to transparent) */}
-                <div className="absolute inset-0 z-0 bg-linear-to-r from-idara-navy via-idara-navy/80 to-transparent"></div>
+                {/* <div className="absolute inset-0 z-0 bg-linear-to-r from-idara-navy via-idara-navy/80 to-transparent"></div> */}
 
                 {/* Content */}
                 <div className="container mx-auto px-4 relative z-10 w-full flex justify-center items-center h-full">
@@ -144,7 +144,7 @@ export default function PrivacyPolicyPage() {
                         
                         {/* Right Column Graphic */}
                         {/* Using order-first on mobile to put image on top, it stays on right for desktop */}
-                        <div className="w-full flex justify-center items-center py-5 lg:py-0 order-first lg:order-0">
+                        <div className="w-full flex justify-center lg:justify-start items-center py-5 lg:py-0 order-first lg:order-0 lg:-ml-16">
                             {/* Circle container */}
                             <div className="relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] md:w-[500px] md:h-[500px] lg:w-[450px] lg:h-[450px] xl:w-[550px] xl:h-[550px] shrink-0">
                                 

@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { ArrowRight } from 'lucide-react';
 
 export default function TechnicalTrainingCentersPage() {
     useEffect(() => {
@@ -35,7 +36,7 @@ export default function TechnicalTrainingCentersPage() {
                     alt="Technical Training Centers"
                     className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                <div className="absolute inset-0 flex items-center justify-center">
                     <div className="max-w-6xl mx-auto text-center px-4" data-aos="zoom-in">
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white tracking-tight">
                             Technical <span className="text-idara-orange">Technical</span> Centers
@@ -100,58 +101,63 @@ export default function TechnicalTrainingCentersPage() {
             </section>
 
             {/* ===== ENROLLMENT SECTION ===== */}
-            <section className="bg-white overflow-hidden">
+            <section className="bg-white overflow-hidden lg:pt-32 pb-0">
                 <div className="container mx-auto px-4">
                     {/* Enroll Now Button - Positioned Higher */}
-                    <div className="flex justify-center mb-16 md:mb-24">
-                        <button className="bg-idara-orange text-white px-10 py-3 rounded-full font-black text-xl md:text-2xl shadow-xl hover:bg-orange-600 hover:scale-105 transition-all active:scale-95" data-aos="zoom-in">
+                    <div className="flex justify-center mb-24 lg:mb-20">
+                        <button className="bg-idara-orange text-white px-12 py-4 rounded-full font-black text-xl md:text-2xl shadow-xl hover:bg-orange-600 hover:scale-105 transition-all active:scale-95 flex items-center gap-3 group" data-aos="zoom-in">
                             Enroll Now
+                            <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                         </button>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 lg:items-center relative max-w-7xl mx-auto">
-                        {/* Decorative Shape: Large Yellow Triangle */}
-                        <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-full mb-10 w-0 h-0 border-l-40 border-l-transparent border-b-40 border-b-idara-yellow transform rotate-[-15deg] hidden lg:block" data-aos="fade-down"></div>
+                    <div className="relative">
+                        {/* Decorative Shape: Large Yellow Triangle at Top */}
+                        <div className="absolute left-[45%] -top-20 w-0 h-0 border-l-25 border-l-transparent border-r-25 border-r-transparent border-b-45 border-b-idara-yellow transform rotate-15 hidden lg:block" data-aos="fade-down" data-aos-delay="400"></div>
+                        
+                        {/* Decorative Shape: Cyan Triangle Left */}
+                        <div className="absolute left-0 top-0 w-0 h-0 border-r-40 border-r-transparent border-b-40 border-b-idara-cyan hidden lg:block" data-aos="fade-right" data-aos-delay="600"></div>
 
-                        {/* Left Section: Typography */}
-                        <div className="flex flex-col space-y-0 text-idara-navy select-none" data-aos="fade-right">
-                             {/* Line 1: We don't */}
-                             <div>
-                                <span className="text-3xl md:text-3xl lg:text-4xl font-bold italic ml-12 opacity-90">We don't</span>
-                             </div>
-                             
-                             {/* Line 2: just teach skills, */}
-                             <div className="flex flex-col lg:flex-row lg:items-center -mt-2">
-                                <span className="text-5xl md:text-7xl lg:text-[95px] font-black italic leading-tight tracking-tighter">just teach</span>
-                                <div className="flex items-center lg:ml-8 mt-10 lg:mt-30 pr-8 border-r-4 border-idara-navy h-fit">
-                                     <span className="text-xl md:text-2xl lg:text-3xl font-bold italic">skills,</span>
+                        <div className="grid grid-cols-1 lg:grid-cols-2 lg:items-end relative">
+                            {/* Left Section: Typography */}
+                            <div className="flex flex-col space-y-0 text-[#012060] select-none z-10 pb-10 md:pb-20 lg:pb-32" data-aos="fade-right">
+                                 {/* Line 1: We don't */}
+                                 <div className="mb-0">
+                                    <span className="text-2xl md:text-3xl lg:text-4xl font-bold italic opacity-90 ml-20 md:ml-45">We don't</span>
+                                 </div>
+                                 
+                                 {/* Line 2: just teach skills, */}
+                                 <div className="flex items-baseline gap-2 -mt-2">
+                                    <span className="text-5xl md:text-7xl lg:text-[90px] font-black italic ml-20 md:ml-40 leading-none tracking-tighter">just teach</span>
+                                    <span className="text-xl md:text-2xl lg:text-3xl font-bold italic mb-2 md:mb-4">skills,</span>
+                                 </div>
+
+                                 {/* Line 3: We create livelihoods */}
+                                 <div className="flex flex-col mt-4 lg:mt-8">
+                                    <div className="mb-1">
+                                        <span className="text-2xl md:text-3xl lg:text-4xl font-bold italic ml-8 md:ml-24 opacity-90">We create</span>
+                                    </div>
+                                    <span className="text-5xl md:text-7xl lg:text-[90px] font-black italic leading-none tracking-tighter">livelihoods</span>
+                                 </div>
+                            </div>
+
+                            {/* Right Section: Focus Image & Shapes */}
+                            <div className="relative mt-20 lg:mt-0 flex justify-end items-end" data-aos="fade-left">
+                                {/* Focal Image with embedded shapes */}
+                                <div className="relative max-w-[850px] w-full translate-y-1">
+                                    <img 
+                                        src="/website-media/technicaltrainingcenters/centerimage.png" 
+                                        alt="Students working" 
+                                        className="w-full h-auto object-contain relative z-10 drop-shadow-2xl"
+                                    />
+                                    
+                                    {/* Additional Navy Bar Accent matching the image design */}
+                                    {/* <div className="absolute -right-4 lg:-right-8 top-10 w-12 md:w-20 h-40 md:h-72 bg-[#012060] rounded-full z-20 shadow-2xl hidden md:block" data-aos="fade-left" data-aos-delay="300"></div>
+                                     */}
+                                    {/* Additional Yellow Circle Accent matching the image design */}
+                                    {/* <div className="absolute -right-4 lg:-right-8 bottom-10 w-16 md:w-24 h-16 md:h-24 bg-idara-yellow rounded-full z-20 shadow-2xl hidden md:block" data-aos="zoom-in" data-aos-delay="500"></div> */}
                                 </div>
-                             </div>
-
-                             {/* Line 3: We create livelihoods */}
-                             <div className="flex flex-col mt-4 lg:mt-8">
-                                <div className="mb-2">
-                                    <span className="text-2xl md:text-3xl lg:text-4xl font-bold italic lg:ml-24 opacity-90">We create</span>
-                                </div>
-                                <span className="text-5xl md:text-7xl lg:text-[95px] font-black italic leading-tight tracking-tighter">livelihoods</span>
-                             </div>
-                        </div>
-
-                        {/* Right Section: Focus Image & Shapes */}
-                        <div className="relative mt-20 lg:mt-0" data-aos="fade-left">
-                            {/* Focal Image */}
-                            <img 
-                                src="/website-media/technicaltrainingcenters/centerimage.png" 
-                                alt="Students working" 
-                                className="w-full h-auto object-contain relative z-10 drop-shadow-2xl"
-                            />
-                            
-                            {/* Brand Shapes - Restored to match image */}
-                            {/* <div className="absolute -left-8 md:-left-12 top-1/2 -translate-y-1/2 w-0 h-0 border-l-40 md:border-l-60 border-l-transparent border-b-40 md:border-b-60 border-b-idara-cyan transform -rotate-45 z-0"></div>
-                            
-                            <div className="absolute -right-4 lg:-right-10 top-[40%] w-10 md:w-16 h-40 md:h-64 bg-[#0a2351] rounded-full z-20 shadow-lg"></div>
-                            
-                            <div className="absolute -right-4 lg:-right-10 bottom-[10%] w-12 md:w-20 h-12 md:h-20 bg-idara-yellow rounded-full z-20 shadow-lg"></div> */}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -165,7 +171,7 @@ export default function TechnicalTrainingCentersPage() {
                         alt="Activities 1"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-idara-navy/10 group-hover:bg-transparent transition-colors duration-500"></div>
+                    {/* <div className="absolute inset-0 bg-idara-navy/10 group-hover:bg-transparent transition-colors duration-500"></div> */}
                 </div>
                 <div className="flex-2 relative overflow-hidden h-full"> {/* Middle image is wider */}
                     <img
@@ -173,7 +179,7 @@ export default function TechnicalTrainingCentersPage() {
                         alt="Activities 2"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-idara-navy/10 group-hover:bg-transparent transition-colors duration-500"></div>
+                    {/* <div className="absolute inset-0 bg-idara-navy/10 group-hover:bg-transparent transition-colors duration-500"></div> */}
                     {/* Seamless Blending Overlays */}
                     {/* <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-idara-navy/20 to-transparent"></div>
                     <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-idara-navy/20 to-transparent"></div> */}
@@ -184,7 +190,7 @@ export default function TechnicalTrainingCentersPage() {
                         alt="Activities 3"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-idara-navy/10 group-hover:bg-transparent transition-colors duration-500"></div>
+                    {/* <div className="absolute inset-0 bg-idara-navy/10 group-hover:bg-transparent transition-colors duration-500"></div> */}
                 </div>
             </section>
 

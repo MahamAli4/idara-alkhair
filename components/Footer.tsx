@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Facebook, Instagram, Youtube, Linkedin, MapPin, Phone, Mail } from 'lucide-react';
+import { Facebook, Instagram, Youtube, Linkedin, MapPin, Phone, Mail, Briefcase } from 'lucide-react';
 
 import { usePathname } from 'next/navigation';
 
@@ -46,6 +46,13 @@ const Footer: React.FC = () => {
 
                     {/* RIGHT SECTION */}
                     <div className="space-y-6 md:space-y-8 md:pl-10 lg:pl-20">
+                        {/* Donate Now Button Moved to Top */}
+                        <div className="pb-1">
+                           <a href="/donate" className="inline-block text-center bg-idara-orange text-white px-5 md:px-8 py-2 rounded-md font-bold text-xl md:text-1xl shadow-lg hover:bg-orange-600 transition-all w-full sm:w-auto transform hover:scale-105">
+                                Donate Now
+                           </a>
+                        </div>
+
                         {/* Contact Info with Cyan Icons */}
                         <div className="space-y-4 md:space-y-5">
                             <div className="flex items-center gap-3 md:gap-4">
@@ -72,18 +79,24 @@ const Footer: React.FC = () => {
                                     info@iak.ngo
                                 </a>
                             </div>
+
+                            <div className="flex items-center gap-3 md:gap-4">
+                                <div className="bg-idara-cyan p-1.5 rounded-sm shrink-0">
+                                    <Briefcase size={18} className="text-[#0a2351] fill-current" />
+                                </div>
+                                <a href="/careers" className="text-base md:text-lg lg:text-xl font-bold hover:text-idara-cyan transition-colors">
+                                    Careers
+                                </a>
+                            </div>
                         </div>
 
-                        {/* Action Buttons - Cyan & White & Orange */}
+                        {/* Action Buttons - Cyan & White */}
                         <div className="flex flex-col sm:flex-row flex-wrap gap-4 pt-2 md:pt-4">
                             <a href="/gallery" className="inline-block text-center bg-white text-[#0a2351] px-6 md:px-8 py-3 rounded-md font-black text-lg md:text-xl shadow-lg hover:bg-gray-100 transition-all w-full sm:w-auto">
                                 Gallery
                             </a>
                             <a href="/privacy-policy" className="inline-block text-center bg-idara-cyan text-white px-6 md:px-8 py-3 rounded-md font-black text-lg md:text-xl shadow-lg hover:bg-[#00acc1] transition-all w-full sm:w-auto">
                                 Privacy Policy
-                            </a>
-                            <a href="/donate" className="inline-block text-center bg-idara-orange text-white px-6 md:px-8 py-3 rounded-md font-black text-lg md:text-xl shadow-lg hover:bg-orange-600 transition-all w-full sm:w-auto">
-                                Donate Now
                             </a>
                         </div>
 

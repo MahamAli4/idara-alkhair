@@ -18,9 +18,9 @@ const AboutHero = () => {
                 <h1
                     data-aos="fade-up"
                     data-aos-duration="400"
-                    className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tight"
+                    className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight"
                 >
-                    About <span className="text-idara-orange font-black">Us</span>
+                    About <span className="text-idara-orange font-bold">Us</span>
                 </h1>
             </div>
 
