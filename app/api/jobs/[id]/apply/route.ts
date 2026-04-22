@@ -4,13 +4,14 @@ import prisma from '@/lib/prisma';
 // ✅ POST method - Job apply ke liye
 export async function POST(
   request: Request,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await context.params;
     const body = await request.json();
     const { captchaToken, ...app } = body;
 
-    console.log('Apply API called for job:', params.id);
+    console.log('Apply API called for job:', id);
 
     if (!captchaToken) {
       return NextResponse.json({ error: "Captcha token missing" }, { status: 400 });
@@ -21,7 +22,7 @@ export async function POST(
       return NextResponse.json({ error: "Captcha verification failed" }, { status: 400 });
     }
 
-    const jobId = params.id;
+    const jobId = id;
     if (!jobId) {
       return NextResponse.json({ error: "Job ID is missing" }, { status: 400 });
     }
@@ -66,10 +67,11 @@ export async function POST(
 // ✅ DELETE method - Job delete ke liye (YEH ADD KAREIN)
 export async function DELETE(
   request: Request,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
-    const jobId = parseInt(params.id);
+    const { id } = await context.params;
+    const jobId = parseInt(id);
 
     // Check if job exists
     const job = await prisma.jobPost.findUnique({

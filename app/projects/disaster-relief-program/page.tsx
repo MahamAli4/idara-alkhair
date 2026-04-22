@@ -120,7 +120,7 @@ export default function DisasterReliefProgramPage() {
 
             {/* Main Full-Width Image */}
             <section 
-                className="w-full h-[400px] md:h-[700px] overflow-hidden my-16 md:my-24"
+                className="w-full h-[400px] md:h-[700px] overflow-hidden mt-16 md:mt-24 mb-0"
                 data-aos="fade-up"
             >
                 <img
@@ -132,7 +132,7 @@ export default function DisasterReliefProgramPage() {
 
             {/* ===== FULL-WIDTH BOTTOM IMAGE ===== */}
             <section 
-                className="relative mt-5.5 w-full overflow-hidden h-55 md:h-80"
+                className="relative mt-0 w-full overflow-hidden h-55 md:h-80"
                 data-aos="fade-up"
             >
                 <img

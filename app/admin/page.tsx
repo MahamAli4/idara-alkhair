@@ -906,7 +906,7 @@ export default function AdminPage() {
                   <Calendar className="w-8 h-8 text-idara-orange" />
                   Schedule Meet
                 </h3>
-                <p className="text-[10px] text-idara-orange font-black uppercase tracking-[0.2em] opacity-80">
+                <p className="text-sm md:text-base text-idara-orange font-black uppercase tracking-[0.2em] opacity-80">
                   Career Portal • {selectedAppForInterview?.job?.title || selectedAppForInterview?.position}
                 </p>
               </div>
@@ -926,7 +926,7 @@ export default function AdminPage() {
                 
                 <div className="grid grid-cols-1 gap-6">
                   <div className="group">
-                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-3 ml-2 group-focus-within:text-idara-orange transition-colors">Select Interview Date</label>
+                    <label className="block text-sm md:text-base font-black text-gray-400 uppercase tracking-widest mb-3 ml-2 group-focus-within:text-idara-orange transition-colors">Select Interview Date</label>
                     <div className="relative">
                       <input 
                         type="date" 
@@ -937,7 +937,7 @@ export default function AdminPage() {
                     </div>
                   </div>
                   <div className="group">
-                    <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-3 ml-2 group-focus-within:text-idara-orange transition-colors">Select Preferred Time</label>
+                    <label className="block text-sm md:text-base font-black text-gray-400 uppercase tracking-widest mb-3 ml-2 group-focus-within:text-idara-orange transition-colors">Select Preferred Time</label>
                     <div className="relative">
                       <input 
                         type="time" 
@@ -979,7 +979,7 @@ export default function AdminPage() {
         {/* Sidebar - Mobile aur Desktop dono ke liye */}
         <aside className={`
           fixed lg:static inset-y-0 left-0 z-40
-          w-72 bg-white/80 backdrop-blur-2xl transform transition-all duration-500 ease-in-out border-r border-gray-100
+          w-80 xl:w-[350px] bg-white/80 backdrop-blur-2xl transform transition-all duration-500 ease-in-out border-r border-gray-100
           ${sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
           lg:flex lg:flex-col
           mt-16 lg:mt-0 shadow-[20px_0_40px_-20px_rgba(0,0,0,0.03)]
@@ -987,7 +987,7 @@ export default function AdminPage() {
           <div className="hidden lg:block p-10">
             <div className="flex flex-col gap-1">
               <h1 className="text-2xl font-black text-idara-navy tracking-tight">Admin</h1>
-              <p className="text-[10px] font-black text-idara-orange uppercase tracking-[.3em] opacity-80">Workspace v2.0</p>
+              <p className="text-sm md:text-base font-black text-idara-orange uppercase tracking-[.3em] opacity-80">Workspace v2.0</p>
             </div>
           </div>
           <nav className="flex-1 px-6">
@@ -1001,7 +1001,7 @@ export default function AdminPage() {
                     }`}
                 >
                   <LayoutDashboard className={`w-5 h-5 transition-transform duration-500 ${activeTab === 'dashboard' ? 'scale-110' : 'group-hover:rotate-12'}`} /> 
-                  <span className="font-black text-sm tracking-tight text-inherit">Dashboard</span>
+                  <span className="font-black text-base md:text-lg tracking-tight text-inherit">Dashboard</span>
                   {activeTab === 'dashboard' && <div className="absolute right-0 top-0 bottom-0 w-1 bg-idara-orange"></div>}
                 </button>
               </li>
@@ -1014,7 +1014,7 @@ export default function AdminPage() {
                     }`}
                 >
                   <Mail className={`w-5 h-5 transition-transform duration-500 ${activeTab === 'emails' ? 'scale-110' : 'group-hover:rotate-12'}`} /> 
-                  <span className="font-black text-sm tracking-tight">Messages</span>
+                  <span className="font-black text-base md:text-lg tracking-tight">Messages</span>
                   {activeTab === 'emails' && <div className="absolute right-0 top-0 bottom-0 w-1 bg-idara-orange"></div>}
                 </button>
               </li>
@@ -1027,7 +1027,7 @@ export default function AdminPage() {
                     }`}
                 >
                   <Briefcase className={`w-5 h-5 transition-transform duration-500 ${activeTab === 'addjob' ? 'scale-110' : 'group-hover:rotate-12'}`} />
-                  <span className="font-black text-sm tracking-tight">Add Job</span>
+                  <span className="font-black text-base md:text-lg tracking-tight">Add Job</span>
                   {activeTab === 'addjob' && <div className="absolute right-0 top-0 bottom-0 w-1 bg-idara-orange"></div>}
                 </button>
               </li>
@@ -1040,7 +1040,7 @@ export default function AdminPage() {
                     }`}
                 >
                   <Clock className={`w-5 h-5 transition-transform duration-500 ${activeTab === 'recentjobs' ? 'scale-110' : 'group-hover:rotate-12'}`} />
-                  <span className="font-black text-sm tracking-tight">Recent Jobs</span>
+                  <span className="font-black text-base md:text-lg tracking-tight">Recent Jobs</span>
                   {activeTab === 'recentjobs' && <div className="absolute right-0 top-0 bottom-0 w-1 bg-idara-orange"></div>}
                 </button>
               </li>
@@ -1053,7 +1053,7 @@ export default function AdminPage() {
                     }`}
                 >
                   <Archive className={`w-5 h-5 transition-transform duration-500 ${activeTab === 'oldjobs' ? 'scale-110' : 'group-hover:rotate-12'}`} />
-                  <span className="font-black text-sm tracking-tight">Old Jobs</span>
+                  <span className="font-black text-base md:text-lg tracking-tight">Old Jobs</span>
                   {activeTab === 'oldjobs' && <div className="absolute right-0 top-0 bottom-0 w-1 bg-idara-orange"></div>}
                 </button>
               </li>
@@ -1066,7 +1066,7 @@ export default function AdminPage() {
                     }`}
                 >
                   <FileText className={`w-5 h-5 transition-transform duration-500 ${activeTab === 'jobresponse' ? 'scale-110' : 'group-hover:rotate-12'}`} />
-                  <span className="font-black text-sm tracking-tight">Job Responses</span>
+                  <span className="font-black text-base md:text-lg tracking-tight">Job Responses</span>
                   {activeTab === 'jobresponse' && <div className="absolute right-0 top-0 bottom-0 w-1 bg-idara-orange"></div>}
                 </button>
               </li>
@@ -1079,7 +1079,7 @@ export default function AdminPage() {
                     }`}
                 >
                   <Users className={`w-5 h-5 transition-transform duration-500 ${activeTab === 'jobapplications' ? 'scale-110' : 'group-hover:rotate-12'}`} />
-                  <span className="font-black text-sm tracking-tight">Job Applications</span>
+                  <span className="font-black text-base md:text-lg tracking-tight">Job Applications</span>
                   {activeTab === 'jobapplications' && <div className="absolute right-0 top-0 bottom-0 w-1 bg-emerald-500"></div>}
                 </button>
               </li>
@@ -1092,7 +1092,7 @@ export default function AdminPage() {
                     }`}
                 >
                   <Users className={`w-5 h-5 transition-transform duration-500 ${activeTab === 'candidates' ? 'scale-110' : 'group-hover:rotate-12'}`} />
-                  <span className="font-black text-sm tracking-tight">Candidates</span>
+                  <span className="font-black text-base md:text-lg tracking-tight">Candidates</span>
                   {activeTab === 'candidates' && <div className="absolute right-0 top-0 bottom-0 w-1 bg-idara-orange"></div>}
                 </button>
               </li>
@@ -1105,7 +1105,7 @@ export default function AdminPage() {
                     }`}
                 >
                   <Calendar className={`w-5 h-5 transition-transform duration-500 ${activeTab === 'interview' ? 'scale-110' : 'group-hover:rotate-12'}`} />
-                  <span className="font-black text-sm tracking-tight">Interview</span>
+                  <span className="font-black text-base md:text-lg tracking-tight">Interview</span>
                   {activeTab === 'interview' && <div className="absolute right-0 top-0 bottom-0 w-1 bg-idara-orange"></div>}
                 </button>
               </li>
@@ -1118,7 +1118,7 @@ export default function AdminPage() {
                     }`}
                 >
                   <CheckCircle className={`w-5 h-5 transition-transform duration-500 ${activeTab === 'hired' ? 'scale-110' : 'group-hover:rotate-12'}`} />
-                  <span className="font-black text-sm tracking-tight">Hired</span>
+                  <span className="font-black text-base md:text-lg tracking-tight">Hired</span>
                   {activeTab === 'hired' && <div className="absolute right-0 top-0 bottom-0 w-1 bg-idara-orange"></div>}
                 </button>
               </li>
@@ -1131,7 +1131,7 @@ export default function AdminPage() {
                     }`}
                 >
                   <Heart className={`w-5 h-5 transition-transform duration-500 ${activeTab === 'volunteers' ? 'scale-110' : 'group-hover:rotate-12'}`} />
-                  <span className="font-black text-sm tracking-tight">Volunteers</span>
+                  <span className="font-black text-base md:text-lg tracking-tight">Volunteers</span>
                   {activeTab === 'volunteers' && <div className="absolute right-0 top-0 bottom-0 w-1 bg-idara-orange"></div>}
                 </button>
               </li>
@@ -1146,7 +1146,7 @@ export default function AdminPage() {
             >
               <LogOut className="w-4 h-4" /> Sign Out
             </button>
-            <p className="text-[9px] text-center text-gray-300 font-bold uppercase tracking-widest mt-6">
+            <p className="text-sm md:text-base text-center text-gray-300 font-bold uppercase tracking-widest mt-6">
               © 2026 Idara Al-Khair • Core
             </p>
           </div>
@@ -1177,11 +1177,11 @@ export default function AdminPage() {
                 </div>
                 <div className="flex items-center gap-4 relative z-10">
                    <div className="flex flex-col items-end">
-                      <span className="text-[10px] font-black text-green-500 uppercase tracking-widest flex items-center gap-1.5">
+                      <span className="text-sm md:text-base font-black text-green-500 uppercase tracking-widest flex items-center gap-1.5">
                         <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
                         System Operational
                       </span>
-                      <p className="text-[10px] font-bold text-gray-300 uppercase tracking-widest mt-1">Refreshed: {new Date().toLocaleTimeString()}</p>
+                      <p className="text-sm md:text-base font-bold text-gray-300 uppercase tracking-widest mt-1">Refreshed: {new Date().toLocaleTimeString()}</p>
                    </div>
                 </div>
               </div>
@@ -1206,10 +1206,10 @@ export default function AdminPage() {
                     </div>
                     <div>
                       <p className="text-4xl font-black text-idara-navy mb-1 tracking-tighter">{stat.val}</p>
-                      <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest">{stat.label}</p>
+                      <p className="text-sm md:text-base font-black text-gray-400 uppercase tracking-widest">{stat.label}</p>
                     </div>
                     <div className="mt-4 pt-4 border-t border-gray-50 flex items-center justify-between">
-                       <span className="text-[9px] font-bold text-gray-300 uppercase tracking-widest">{stat.trend}</span>
+                       <span className="text-sm md:text-base font-bold text-gray-300 uppercase tracking-widest">{stat.trend}</span>
                        <TrendingUp className="w-3 h-3 text-green-400" />
                     </div>
                   </div>
@@ -1222,7 +1222,7 @@ export default function AdminPage() {
                 <div className="lg:col-span-2 space-y-6">
                   <div className="flex justify-between items-center px-4">
                     <h3 className="text-xl sm:text-2xl font-black text-idara-navy">Recent Inquiries</h3>
-                    <button onClick={() => setActiveTab("emails")} className="text-[10px] font-black text-idara-orange uppercase tracking-widest hover:underline flex items-center gap-2">
+                    <button onClick={() => setActiveTab("emails")} className="text-sm md:text-base font-black text-idara-orange uppercase tracking-widest hover:underline flex items-center gap-2">
                       View All <ArrowRight className="w-3 h-3" />
                     </button>
                   </div>
@@ -1243,8 +1243,8 @@ export default function AdminPage() {
                                 </div>
                              </div>
                              <div className="flex flex-col items-end gap-2">
-                                <span className="text-[9px] font-black bg-emerald-50 text-emerald-600 px-3 py-1 rounded-full uppercase tracking-widest">New Message</span>
-                                <p className="text-[9px] font-bold text-gray-300 uppercase tracking-widest">{new Date(m.createdAt).toLocaleDateString()}</p>
+                                <span className="text-sm md:text-base font-black bg-emerald-50 text-emerald-600 px-3 py-1 rounded-full uppercase tracking-widest">New Message</span>
+                                <p className="text-sm md:text-base font-bold text-gray-300 uppercase tracking-widest">{new Date(m.createdAt).toLocaleDateString()}</p>
                              </div>
                           </div>
                         ))
@@ -1265,7 +1265,7 @@ export default function AdminPage() {
                       >
                         <div>
                           <p className="font-black tracking-tight">Create Listing</p>
-                          <p className="text-[10px] font-bold text-white/50 uppercase tracking-widest mt-1">Post a new job vacancy</p>
+                          <p className="text-sm md:text-base font-bold text-white/50 uppercase tracking-widest mt-1">Post a new job vacancy</p>
                         </div>
                         <Briefcase className="w-6 h-6 group-hover/btn:translate-x-1 transition-transform" />
                       </button>
@@ -1275,12 +1275,12 @@ export default function AdminPage() {
                       >
                         <div>
                           <p className="font-black tracking-tight">Onboard Squad</p>
-                          <p className="text-[10px] font-bold text-white/50 uppercase tracking-widest mt-1">Manage volunteer apps</p>
+                          <p className="text-sm md:text-base font-bold text-white/50 uppercase tracking-widest mt-1">Manage volunteer apps</p>
                         </div>
                         <Heart className="w-6 h-6 group-hover/btn:translate-x-1 transition-transform" />
                       </button>
                     </div>
-                    <p className="text-[9px] font-black text-white/20 uppercase tracking-[0.5em] text-center mt-10">Idara Control Center</p>
+                    <p className="text-sm md:text-base font-black text-white/20 uppercase tracking-[0.5em] text-center mt-10">Idara Control Center</p>
                   </div>
                 </div>
               </div>
@@ -1353,11 +1353,11 @@ export default function AdminPage() {
                         </div>
                         <div className="mt-4 flex items-center justify-between border-t border-gray-50 pt-4">
                           {m.preferredDate ? (
-                            <p className="text-[10px] font-black text-green-600 bg-green-50 px-2 py-1 rounded-full uppercase tracking-wider">
+                            <p className="text-sm md:text-base font-black text-green-600 bg-green-50 px-2 py-1 rounded-full uppercase tracking-wider">
                               📅 {m.preferredDate}
                             </p>
                           ) : <div />}
-                          <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">
+                          <p className="text-sm md:text-base font-bold text-gray-400 uppercase tracking-wider">
                             {new Date(m.createdAt).toLocaleDateString()}
                           </p>
                         </div>
@@ -1493,10 +1493,10 @@ export default function AdminPage() {
                       <h3 className="font-black text-2xl text-idara-navy mb-2 group-hover:text-idara-orange transition-colors relative z-10">{job.title}</h3>
 
                       <div className="flex flex-wrap gap-2 mb-6 relative z-10">
-                        <span className="flex items-center bg-gray-100 px-3 py-1.5 rounded-full text-[10px] font-black text-gray-600 uppercase tracking-wider">
+                        <span className="flex items-center bg-gray-100 px-3 py-1.5 rounded-full text-sm md:text-base font-black text-gray-600 uppercase tracking-wider">
                           📍 {job.location}
                         </span>
-                        <span className="flex items-center bg-idara-navy text-white px-3 py-1.5 rounded-full text-[10px] font-black uppercase tracking-wider">
+                        <span className="flex items-center bg-idara-navy text-white px-3 py-1.5 rounded-full text-sm md:text-base font-black uppercase tracking-wider">
                           🕒 {job.jobType?.replace("_", " ")}
                         </span>
                       </div>
@@ -1504,10 +1504,10 @@ export default function AdminPage() {
                       <p className="text-sm text-gray-500 line-clamp-3 mb-6 leading-relaxed relative z-10">{job.description}</p>
 
                       <div className="pt-6 border-t border-gray-50 flex items-center justify-between relative z-10">
-                        <div className="text-[10px] text-green-600 font-black flex items-center bg-green-50 px-3 py-1.5 rounded-full uppercase tracking-wider">
+                        <div className="text-sm md:text-base text-green-600 font-black flex items-center bg-green-50 px-3 py-1.5 rounded-full uppercase tracking-wider">
                           READY
                         </div>
-                        <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">
+                        <p className="text-sm md:text-base font-bold text-gray-400 uppercase tracking-wider">
                           {job.createdAt ? new Date(job.createdAt).toLocaleDateString() : ""}
                         </p>
                       </div>
@@ -1563,10 +1563,10 @@ export default function AdminPage() {
                       <h3 className="font-black text-2xl text-gray-400 mb-2 group-hover:text-idara-navy transition-colors relative z-10">{job.title}</h3>
 
                       <div className="flex flex-wrap gap-2 mb-6 relative z-10">
-                        <span className="flex items-center bg-gray-50 px-3 py-1.5 rounded-full text-[10px] font-black text-gray-400 uppercase tracking-wider">
+                        <span className="flex items-center bg-gray-50 px-3 py-1.5 rounded-full text-sm md:text-base font-black text-gray-400 uppercase tracking-wider">
                           📍 {job.location}
                         </span>
-                        <span className="flex items-center bg-gray-50 text-gray-400 px-3 py-1.5 rounded-full text-[10px] font-black uppercase tracking-wider">
+                        <span className="flex items-center bg-gray-50 text-gray-400 px-3 py-1.5 rounded-full text-sm md:text-base font-black uppercase tracking-wider">
                           🕒 {job.jobType?.replace("_", " ")}
                         </span>
                       </div>
@@ -1574,10 +1574,10 @@ export default function AdminPage() {
                       <p className="text-sm text-gray-400 line-clamp-3 mb-6 leading-relaxed relative z-10">{job.description}</p>
 
                       <div className="pt-6 border-t border-gray-50 flex items-center justify-between relative z-10">
-                        <div className="text-[10px] text-gray-400 font-black flex items-center bg-gray-100 px-3 py-1.5 rounded-full uppercase tracking-wider">
+                        <div className="text-sm md:text-base text-gray-400 font-black flex items-center bg-gray-100 px-3 py-1.5 rounded-full uppercase tracking-wider">
                           ARCHIVED
                         </div>
-                        <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">
+                        <p className="text-sm md:text-base font-bold text-gray-400 uppercase tracking-wider">
                           {job.createdAt ? new Date(job.createdAt).toLocaleDateString() : ""}
                         </p>
                       </div>
@@ -1629,7 +1629,7 @@ export default function AdminPage() {
                           <div className="w-14 h-14 bg-[#012060] text-white rounded-3xl flex items-center justify-center font-black text-xl shadow-xl shadow-blue-900/20 uppercase">
                             {res.applicantName?.charAt(0)}
                           </div>
-                          <span className={`text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-sm ${
+                          <span className={`text-sm md:text-base font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-sm ${
                             res.status === 'HIRED' ? 'bg-emerald-50 text-emerald-600 border border-emerald-100' : 
                             res.status === 'REJECTED' ? 'bg-rose-50 text-rose-600 border border-rose-100' : 
                             res.status === 'INTERVIEW' ? 'bg-blue-50 text-blue-600 border border-blue-100' :
@@ -1650,12 +1650,12 @@ export default function AdminPage() {
 
                         <div className="bg-gray-50 rounded-4xl p-6 mb-8 border border-gray-100 relative z-10 grow">
                           <div className="mb-4">
-                              <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest block mb-1">Applying For</span>
+                              <span className="text-sm md:text-base font-black text-gray-400 uppercase tracking-widest block mb-1">Applying For</span>
                               <p className="font-black text-idara-navy truncate">{res.job?.title || 'Unknown Position'}</p>
                           </div>
                           
                           <div className="pt-2 border-t border-gray-100">
-                             <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest block mb-1">Message / Area of Interest</span>
+                             <span className="text-sm md:text-base font-black text-gray-400 uppercase tracking-widest block mb-1">Message / Area of Interest</span>
                              <p className="text-xs text-gray-600 font-medium line-clamp-4 italic bg-white/50 p-3 rounded-2xl border border-dotted border-gray-200">
                                 {res.coverLetter || 'No message provided'}
                              </p>
@@ -1683,7 +1683,7 @@ export default function AdminPage() {
                           )}
                         </div>
 
-                        <div className="flex items-center justify-between mt-8 pt-4 border-t border-gray-50 relative z-10 text-[10px] text-gray-400 font-black uppercase tracking-widest">
+                        <div className="flex items-center justify-between mt-8 pt-4 border-t border-gray-50 relative z-10 text-sm md:text-base text-gray-400 font-black uppercase tracking-widest">
                            <div className="flex items-center gap-2">
                               <Calendar className="w-3 h-3 text-idara-orange" />
                               {new Date(res.createdAt).toLocaleDateString()}
@@ -1736,7 +1736,7 @@ export default function AdminPage() {
                         <div className="w-14 h-14 bg-emerald-600 text-white rounded-3xl flex items-center justify-center font-black text-xl shadow-xl shadow-emerald-900/20 uppercase">
                           {res.applicantName?.charAt(0)}
                         </div>
-                        <span className="text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-sm bg-emerald-50 text-emerald-600 border border-emerald-100">
+                        <span className="text-sm md:text-base font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-sm bg-emerald-50 text-emerald-600 border border-emerald-100">
                           GENERAL
                         </span>
                       </div>
@@ -1750,13 +1750,13 @@ export default function AdminPage() {
                       </div>
                       <div className="bg-emerald-50/50 rounded-4xl p-6 mb-8 border border-emerald-100 relative z-10 grow">
                         <div className="mb-4">
-                            <span className="text-[10px] font-black text-emerald-600 uppercase tracking-widest block mb-1">Area of Interest</span>
+                            <span className="text-sm md:text-base font-black text-emerald-600 uppercase tracking-widest block mb-1">Area of Interest</span>
                             <p className="font-black text-idara-navy bg-white/50 p-3 rounded-2xl border border-dotted border-emerald-200">
                                 {res.coverLetter?.split('\n')[0] || "General Request"}
                             </p>
                         </div>
                         <div className="pt-2 border-t border-emerald-100">
-                           <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest block mb-1">Full Context</span>
+                           <span className="text-sm md:text-base font-black text-gray-400 uppercase tracking-widest block mb-1">Full Context</span>
                            <p className="text-xs text-gray-600 font-medium line-clamp-4 italic">
                               {res.coverLetter || 'No details provided'}
                            </p>
@@ -1789,7 +1789,7 @@ export default function AdminPage() {
                         <Heart className="w-8 h-8 text-white" />
                         Scale Orientation
                       </h3>
-                      <p className="text-[10px] text-white/70 font-black uppercase tracking-[0.2em]">
+                      <p className="text-sm md:text-base text-white/70 font-black uppercase tracking-[0.2em]">
                         Volunteer Registration • {selectedVolForAction?.volunteerName}
                       </p>
                     </div>
@@ -1806,7 +1806,7 @@ export default function AdminPage() {
 
                       <div className="grid grid-cols-1 gap-6">
                         <div className="group">
-                          <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-3 ml-2 group-focus-within:text-idara-orange transition-colors">Date for Orientation</label>
+                          <label className="block text-sm md:text-base font-black text-gray-400 uppercase tracking-widest mb-3 ml-2 group-focus-within:text-idara-orange transition-colors">Date for Orientation</label>
                           <input 
                             type="date" 
                             value={volActionDate}
@@ -1815,7 +1815,7 @@ export default function AdminPage() {
                           />
                         </div>
                         <div className="group">
-                          <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-3 ml-2 group-focus-within:text-idara-orange transition-colors">Select Time</label>
+                          <label className="block text-sm md:text-base font-black text-gray-400 uppercase tracking-widest mb-3 ml-2 group-focus-within:text-idara-orange transition-colors">Select Time</label>
                           <input 
                             type="time" 
                             value={volActionTime}
@@ -1899,7 +1899,7 @@ export default function AdminPage() {
                             {vol.volunteerName}
                           </h3>
                           {vol.status !== 'PENDING' && (
-                            <span className={`text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-sm ${
+                            <span className={`text-sm md:text-base font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-sm ${
                               vol.status === 'APPROVED' ? 'bg-emerald-50 text-emerald-600 border border-emerald-100' : 
                               vol.status === 'REJECTED' ? 'bg-rose-50 text-rose-600 border border-rose-100' : 
                               'bg-amber-50 text-amber-600 border border-amber-100'
@@ -1913,24 +1913,24 @@ export default function AdminPage() {
 
                       <div className="bg-gray-50 rounded-4xl p-6 mb-8 space-y-4 border border-gray-100 relative z-10">
                         <div className="flex justify-between text-sm">
-                          <span className="font-bold text-gray-400 uppercase tracking-widest text-[10px]">Volunteer Age</span>
+                          <span className="font-bold text-gray-400 uppercase tracking-widest text-sm md:text-base">Volunteer Age</span>
                           <span className="font-black text-idara-navy">{vol.volunteerAge} Years</span>
                         </div>
                         <div className="flex justify-between text-sm">
-                          <span className="font-bold text-gray-400 uppercase tracking-widest text-[10px]">Applied By</span>
+                          <span className="font-bold text-gray-400 uppercase tracking-widest text-sm md:text-base">Applied By</span>
                           <span className="font-black text-idara-navy">{vol.applicantName}</span>
                         </div>
                         {vol.interviewDate && (
                           <div className="flex justify-between text-sm text-amber-600 bg-amber-50 px-3 py-2 rounded-xl border border-amber-100">
-                            <span className="font-bold uppercase tracking-widest text-[10px]">Meet Scheduled</span>
+                            <span className="font-bold uppercase tracking-widest text-sm md:text-base">Meet Scheduled</span>
                             <span className="font-black">{vol.interviewDate} @ {vol.interviewTime}</span>
                           </div>
                         )}
                         <div className="pt-2">
-                          <span className="font-bold text-gray-400 uppercase tracking-widest text-[10px] block mb-2">Availability</span>
+                          <span className="font-bold text-gray-400 uppercase tracking-widest text-sm md:text-base block mb-2">Availability</span>
                           <div className="flex flex-wrap gap-2">
                             {vol.availability.split(',').map((avail: string) => (
-                              <span key={avail} className="bg-white border border-gray-200 px-3 py-1 rounded-full text-[10px] font-black text-gray-600 transition-all group-hover:border-idara-orange/30 group-hover:bg-orange-50/50">
+                              <span key={avail} className="bg-white border border-gray-200 px-3 py-1 rounded-full text-sm md:text-base font-black text-gray-600 transition-all group-hover:border-idara-orange/30 group-hover:bg-orange-50/50">
                                 {avail.trim()}
                               </span>
                             ))}
@@ -1964,11 +1964,11 @@ export default function AdminPage() {
                       </div>
 
                       <div className="flex items-center justify-between mt-8 pt-4 border-t border-gray-50 relative z-10">
-                        <div className="flex items-center gap-2 text-[10px] font-black text-gray-400 uppercase tracking-widest">
+                        <div className="flex items-center gap-2 text-sm md:text-base font-black text-gray-400 uppercase tracking-widest">
                           <CheckCircle className={`w-3 h-3 ${vol.status === 'APPROVED' ? 'text-emerald-500' : 'text-gray-300'}`} />
                           {vol.status === 'PENDING' ? 'Awaiting Action' : vol.status.replace('_', ' ')}
                         </div>
-                        <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">
+                        <span className="text-sm md:text-base font-bold text-gray-400 uppercase tracking-widest">
                           {new Date(vol.createdAt).toLocaleDateString()}
                         </span>
                       </div>
@@ -2116,12 +2116,12 @@ export default function AdminPage() {
                     <table className="w-full min-w-full">
                       <thead className="bg-idara-navy text-white">
                         <tr>
-                          <th className="px-8 py-6 text-left text-[10px] font-black uppercase tracking-[0.2em] opacity-60">ID</th>
-                          <th className="px-8 py-6 text-left text-[10px] font-black uppercase tracking-[0.2em] opacity-60">Candidate</th>
-                          <th className="px-8 py-6 text-left text-[10px] font-black uppercase tracking-[0.2em] opacity-60">Contact</th>
-                          <th className="px-8 py-6 text-left text-[10px] font-black uppercase tracking-[0.2em] opacity-60">Position</th>
-                          <th className="px-8 py-6 text-left text-[10px] font-black uppercase tracking-[0.2em] opacity-60">Status</th>
-                          <th className="px-8 py-6 text-left text-[10px] font-black uppercase tracking-[0.2em] opacity-60">Actions</th>
+                          <th className="px-8 py-6 text-left text-sm md:text-base font-black uppercase tracking-[0.2em] opacity-60">ID</th>
+                          <th className="px-8 py-6 text-left text-sm md:text-base font-black uppercase tracking-[0.2em] opacity-60">Candidate</th>
+                          <th className="px-8 py-6 text-left text-sm md:text-base font-black uppercase tracking-[0.2em] opacity-60">Contact</th>
+                          <th className="px-8 py-6 text-left text-sm md:text-base font-black uppercase tracking-[0.2em] opacity-60">Position</th>
+                          <th className="px-8 py-6 text-left text-sm md:text-base font-black uppercase tracking-[0.2em] opacity-60">Status</th>
+                          <th className="px-8 py-6 text-left text-sm md:text-base font-black uppercase tracking-[0.2em] opacity-60">Actions</th>
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-gray-100">
@@ -2140,15 +2140,15 @@ export default function AdminPage() {
                             </td>
                             <td className="px-8 py-6 whitespace-nowrap">
                               <div className="text-sm font-bold text-idara-orange">{candidate.email}</div>
-                              <div className="text-[10px] text-gray-400 font-medium">{candidate.phone || "No Phone"}</div>
+                              <div className="text-sm md:text-base text-gray-400 font-medium">{candidate.phone || "No Phone"}</div>
                             </td>
                             <td className="px-8 py-6 whitespace-nowrap">
-                              <span className="bg-gray-100 px-3 py-1.5 rounded-full text-[10px] font-black text-gray-600 uppercase tracking-wider">
+                              <span className="bg-gray-100 px-3 py-1.5 rounded-full text-sm md:text-base font-black text-gray-600 uppercase tracking-wider">
                                 {candidate.position}
                               </span>
                             </td>
                             <td className="px-8 py-6 whitespace-nowrap">
-                              <span className={`inline-flex items-center px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-wider ${candidate.status === "interview_scheduled"
+                              <span className={`inline-flex items-center px-4 py-2 rounded-xl text-sm md:text-base font-black uppercase tracking-wider ${candidate.status === "interview_scheduled"
                                 ? 'bg-blue-100 text-blue-800'
                                 : candidate.status === "hired"
                                   ? 'bg-green-100 text-green-800'
@@ -2190,7 +2190,7 @@ export default function AdminPage() {
 
                   {/* Table Footer with Summary */}
                   <div className="bg-gray-50/50 px-8 py-6 border-t border-gray-100">
-                    <div className="flex items-center justify-between text-[10px] font-black uppercase tracking-widest text-gray-400">
+                    <div className="flex items-center justify-between text-sm md:text-base font-black uppercase tracking-widest text-gray-400">
                       <div className="flex items-center gap-8">
                         <span className="flex items-center gap-2">Total <span className="text-idara-navy">{candidates.length}</span></span>
                         <span className="flex items-center gap-2">Interview <span className="text-idara-orange">{candidates.filter(c => c.status === "interview_scheduled").length}</span></span>
@@ -2244,7 +2244,7 @@ export default function AdminPage() {
                           </div>
                         </div>
                         <div className="text-right">
-                          <span className="bg-blue-100 text-blue-800 text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-wider">
+                          <span className="bg-blue-100 text-blue-800 text-sm md:text-base font-black px-3 py-1.5 rounded-full uppercase tracking-wider">
                             Interview Team
                           </span>
                         </div>
@@ -2252,13 +2252,13 @@ export default function AdminPage() {
 
                       <div className="p-6 bg-gray-50 rounded-4xl border border-gray-100 mb-8">
                         <div className="flex items-center justify-between mb-4">
-                          <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest italic">Applied For</p>
+                          <p className="text-sm md:text-base font-black text-gray-400 uppercase tracking-widest italic">Applied For</p>
                           <p className="text-idara-navy font-black text-sm">{candidate.jobTitle}</p>
                         </div>
                         
                         {(candidate.interviewDate || candidate.interviewTime) && (
                           <div className="pt-4 border-t border-gray-200">
-                            <p className="text-green-600 font-black text-[10px] uppercase tracking-[0.2em] mb-2">Confirmed Schedule</p>
+                            <p className="text-green-600 font-black text-sm md:text-base uppercase tracking-[0.2em] mb-2">Confirmed Schedule</p>
                             <div className="flex gap-4">
                               <p className="text-idara-navy font-black">📅 {candidate.interviewDate}</p>
                               <p className="text-idara-navy font-black">🕒 {candidate.interviewTime}</p>
@@ -2335,7 +2335,7 @@ export default function AdminPage() {
                           </div>
                         </div>
                         <div className="text-right">
-                          <span className="bg-green-100 text-green-800 text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-wider">
+                          <span className="bg-green-100 text-green-800 text-sm md:text-base font-black px-3 py-1.5 rounded-full uppercase tracking-wider">
                             Officially Hired
                           </span>
                         </div>
@@ -2343,11 +2343,11 @@ export default function AdminPage() {
 
                       <div className="p-6 bg-green-50/50 rounded-4xl border border-green-100 mb-8 relative z-10">
                         <div className="flex items-center justify-between mb-2">
-                          <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest italic">Position</p>
+                          <p className="text-sm md:text-base font-black text-gray-400 uppercase tracking-widest italic">Position</p>
                           <p className="text-green-700 font-black text-sm">{candidate.jobTitle}</p>
                         </div>
                         <div className="flex items-center justify-between">
-                          <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest italic">Hired Date</p>
+                          <p className="text-sm md:text-base font-black text-gray-400 uppercase tracking-widest italic">Hired Date</p>
                           <p className="text-idara-navy font-black text-sm">{new Date(candidate.hiredAt).toLocaleDateString()}</p>
                         </div>
                       </div>

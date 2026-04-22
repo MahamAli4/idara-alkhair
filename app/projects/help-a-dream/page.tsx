@@ -24,7 +24,7 @@ export default function HelpADreamPage() {
 
             {/* ===== HERO BANNER ===== */}
             <section 
-                className="relative mt-20 w-full overflow-hidden h-[80vh]"
+                className="relative mt-20 w-full overflow-hidden h-[60vh]"
                 data-aos="fade"
             >
                 <img

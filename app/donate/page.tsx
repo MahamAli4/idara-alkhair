@@ -180,7 +180,7 @@ export default function DonatePage() {
                                 key={i}
                                 data-aos="fade-down"
                                 data-aos-delay={i * 200}
-                                className={`${item.color} w-[150px] h-[180px] md:w-[170px] md:h-[200px] rounded-b-[90px] flex items-center justify-center p-5 shadow-lg transform transition-transform hover:scale-105`}
+                                className={`${item.color} w-[calc(50%-12px)] sm:w-[150px] h-[180px] md:w-[170px] md:h-[200px] rounded-b-[90px] flex items-center justify-center p-5 shadow-lg transform transition-transform hover:scale-105`}
                             >
                                 <p className="text-white text-center text-sm md:text-base font-semibold leading-tight">
                                     {item.text}
@@ -217,7 +217,7 @@ export default function DonatePage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
                         {/* Bank Transfer 1 */}
                         <div 
-                            className="bg-white border-2 border-gray-100 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all group relative overflow-hidden"
+                            className="bg-white border-2 border-gray-100 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all group relative overflow-x-auto"
                             data-aos="fade-right"
                             data-aos-delay="200"
                         >
@@ -261,7 +261,7 @@ export default function DonatePage() {
 
                         {/* Bank Transfer 2 */}
                         <div 
-                            className="bg-white border-2 border-gray-100 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all group relative overflow-hidden"
+                            className="bg-white border-2 border-gray-100 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all group relative overflow-x-auto"
                             data-aos="fade-left"
                             data-aos-delay="400"
                         >

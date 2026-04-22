@@ -26,7 +26,7 @@ export default function ShopPage() {
             {/* ===== HERO BANNER ===== */}
             {/* Using fade-in for the banner */}
             <section 
-                className="relative mt-[80px] w-full overflow-hidden h-[80vh]"
+                className="relative mt-[80px] w-full overflow-hidden h-[60vh]"
                 data-aos="fade"
             >
                 <img
@@ -132,7 +132,7 @@ export default function ShopPage() {
                         <img
                             src="/website-media/shoppage/image01.jpg"
                             alt="Instagram"
-                            className="w-full h-[500px] md:h-[800px] object-cover rounded-lg"
+                            className="w-full h-[50vh] xl:h-[70vh] object-cover rounded-lg"
                         />
                     </div>
 

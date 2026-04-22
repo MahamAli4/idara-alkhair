@@ -51,7 +51,7 @@ export default function CareersPage() {
             <Navbar />
 
             {/* ===== HERO SECTION ===== */}
-            <section className="relative h-[450px] md:h-[60vh] flex items-center justify-center mt-20">
+            <section className="relative min-h-[450px] md:h-[60vh] flex items-center justify-center mt-20">
                 <div className="absolute inset-0 z-0">
                     <Image 
                         src="/images/hero.png" 
@@ -287,7 +287,7 @@ export default function CareersPage() {
             </section>
 
             {/* ===== BOTTOM TEAL LAB SECTION ===== */}
-            <section className="relative h-[400px] w-full overflow-hidden">
+            <section className="relative min-h-[400px] w-full overflow-hidden">
                 <Image 
                     src="/website-media/itinstitute/image01.jpg" 
                     alt="Center view" 
