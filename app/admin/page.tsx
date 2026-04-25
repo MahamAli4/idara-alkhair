@@ -1006,6 +1006,15 @@ export default function AdminPage() {
                 </button>
               </li>
               <li>
+                <a
+                  href="/admin/cms"
+                  className="w-full text-left px-5 py-4 rounded-2xl flex flex-row items-center gap-4 transition-all duration-300 relative group overflow-hidden whitespace-nowrap text-gray-400 hover:bg-gray-50 hover:text-idara-navy"
+                >
+                  <FileText className="w-5 h-5 transition-transform duration-500 group-hover:rotate-12" />
+                  <span className="font-black text-base md:text-lg tracking-tight">Content Pages</span>
+                </a>
+              </li>
+              <li>
                 <button
                   onClick={() => { setActiveTab("emails"); setSidebarOpen(false); }}
                   className={`w-full text-left px-5 py-4 rounded-2xl flex flex-row items-center gap-4 transition-all duration-300 relative group overflow-hidden whitespace-nowrap ${activeTab === "emails"

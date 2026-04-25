@@ -1,7 +1,7 @@
 import React from 'react';
 
 const GalleryGrid = () => {
-    // Selection of images from the website-media/gallery folder
+    // Selection of images from the website-media/gallery folder (14 total)
     const galleryImages = [
         "/website-media/gallery/pic1.jpeg",
         "/website-media/gallery/pic2.jpeg",
@@ -14,83 +14,80 @@ const GalleryGrid = () => {
         "/website-media/gallery/pic9.jpeg",
         "/website-media/gallery/pic10.jpeg",
         "/website-media/gallery/pic11.jpeg",
-        null, // Missing 12
-        null, // Missing 13
-        "/website-media/gallery/pic14.jpeg" // Box 14
+        "/website-media/gallery/pic12.jpeg",
+        "/website-media/gallery/pic13.jpeg",
+        "/website-media/gallery/pic14.jpeg"
     ];
 
     return (
         <section className="py-20 bg-white relative overflow-hidden">
             
-            {/* Decorative Shape: Cyan Circle (Right) */}
-            <div 
-                className="absolute right-[-40px] top-[50%] w-[120px] h-[120px] bg-idara-cyan rounded-full z-20 opacity-100 hidden lg:block"
-                data-aos="zoom-in"
-                data-aos-delay="500"
-            ></div>
+            {/* --- EXACT SHAPES FROM SCREENSHOT --- */}
             
-            {/* Decorative Shape: Navy Pill & Yellow Dot (Left) */}
-            <div className="absolute left-6 bottom-[5%] z-20 hidden lg:block" data-aos="fade-up">
-                <div className="w-10 h-48 bg-[#012060] rounded-full mb-6 relative">
-                    {/* Floating Yellow Triangle on Pill */}
-                    <div className="absolute -top-4 -right-4 w-0 h-0 border-r-20 border-r-transparent border-b-20 border-b-idara-yellow transform -rotate-12"></div>
-                </div>
-                <div className="w-10 h-10 bg-idara-yellow rounded-full shadow-lg"></div>
+            {/* 1. Left Side: Navy Bar + Yellow Circle (!) */}
+            <div className="absolute left-[19%] bottom-[15%] md:flex flex-col-reverse items-center gap-3 z-20 hidden">
+                <div className="w-10 h-48 bg-[#012060] rounded-full"></div>
+                <div className="w-10 h-10 bg-idara-yellow rounded-full"></div>
             </div>
+
+            {/* 2. Middle Right: Large Cyan Circle */}
+            <div className="absolute top-[45%] right-[15%] w-15 h-15 md:w-40 md:h-40 bg-idara-cyan rounded-full z-20 opacity-100 hidden md:block"></div>
+
+            {/* 3. Center Yellow Triangle (Near Big Image) */}
+            <div className="absolute top-[48%] left-[64%] w-12 h-12 md:w-20 md:h-20 bg-idara-yellow opacity-90 z-30 hidden md:block" style={{ clipPath: 'polygon(100% 100%, 0 0, 0 100%)' }}></div>
+
+            {/* 4. Small Yellow Triangle (Near Bottom Row) */}
+            <div className="absolute bottom-[8%] left-[46%] w-6 h-6 md:w-10 md:h-10 bg-idara-yellow opacity-90 z-20 hidden md:block" style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }}></div>
 
             <div className="container mx-auto px-4 relative z-10">
                 {/* Section Title */}
                 <div className="text-center mb-16" data-aos="fade-down">
-                    <h2 className="text-4xl md:text-5xl font-black tracking-tight text-[#012060]">
-                        Some <span className="text-idara-orange">Glimpses</span> of <span className="text-idara-orange">Idara Al-Khair</span>
+                    <h2 className="text-4xl md:text-6xl font-black tracking-tight text-[#012060]">
+                        Some <span className="text-idara-orange">Glimpses</span> of <span className="text-idara-orange font-black">Idara Al-Khair</span>
                     </h2>
                 </div>
 
-                {/* Grid Layout - 4-Column Strict Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 auto-rows-[220px] md:auto-rows-[280px]">
+                {/* Grid Layout - Matching Screenshot Exactly */}
+                <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 auto-rows-[200px] md:auto-rows-[250px]">
                     
-                    {/* ITEMS 1-8: Standard 1x1 */}
-                    {galleryImages.slice(0, 8).map((src, idx) => (
-                        <div key={idx} className="relative group overflow-hidden rounded-sm" data-aos="fade-up" data-aos-delay={idx * 100}>
-                            <img src={src!} alt={`Gallery ${idx + 1}`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                            <div className="absolute inset-0 bg-[#012060]/10 group-hover:bg-transparent transition-colors duration-500"></div>
+                    {/* ROW 1: 4 Images (1-4) */}
+                    {galleryImages.slice(0, 4).map((src, idx) => (
+                        <div key={idx} className="relative group overflow-hidden rounded-xs" data-aos="fade-up" data-aos-delay={idx * 50}>
+                            <img src={src} alt={`Gallery ${idx + 1}`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                         </div>
                     ))}
 
-                    {/* ITEM 9: Huge Image (3x2) spanning across col 1-3, row 3-4 */}
-                    <div className="lg:col-span-3 lg:row-span-2 relative group overflow-hidden rounded-sm" data-aos="zoom-in">
-                        <img src={galleryImages[8]!} alt="Gallery 9" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                        <div className="absolute inset-0 bg-[#012060]/10 group-hover:bg-transparent transition-colors duration-500"></div>
+                    {/* ROW 2: 4 Images (5-8) */}
+                    {galleryImages.slice(4, 8).map((src, idx) => (
+                        <div key={idx + 4} className="relative group overflow-hidden rounded-xs" data-aos="fade-up" data-aos-delay={(idx + 4) * 50}>
+                            <img src={src} alt={`Gallery ${idx + 5}`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                        </div>
+                    ))}
+
+                    {/* ROW 3 & 4: Huge Image (9) on left + 2 Stacked on right */}
+                    <div className="lg:col-span-3 lg:row-span-2 relative group overflow-hidden rounded-xs" data-aos="zoom-in">
+                        <img src={galleryImages[8]} alt="Gallery 9" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     </div>
 
-                    {/* ITEM 10: Stacked Portrait (Col 4, Row 3) */}
-                    <div className="relative group overflow-hidden rounded-sm" data-aos="fade-left">
-                        <img src={galleryImages[9]!} alt="Gallery 10" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                        <div className="absolute top-2 left-2 w-0 h-0 border-l-30 border-l-transparent border-b-30 border-b-idara-yellow transform -rotate-45 z-10 opacity-80"></div>
+                    <div className="relative group overflow-hidden rounded-xs" data-aos="fade-left">
+                        <img src={galleryImages[9]} alt="Gallery 10" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     </div>
 
-                    {/* ITEM 11: Stacked Portrait (Col 4, Row 4) */}
-                    <div className="relative group overflow-hidden rounded-sm" data-aos="fade-left" data-aos-delay="200">
-                        <img src={galleryImages[10]!} alt="Gallery 11" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div className="relative group overflow-hidden rounded-xs" data-aos="fade-left" data-aos-delay="100">
+                        <img src={galleryImages[10]} alt="Gallery 11" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     </div>
 
-                    {/* BOTTOM ROW (Box 12, 13, 14) */}
-                    {/* Box 12: Placeholder */}
-                    <div className="lg:col-span-1 relative bg-gray-50 rounded-sm flex items-center justify-center border-2 border-dashed border-gray-200 overflow-hidden" data-aos="fade-up">
-                        <span className="text-gray-300 font-bold uppercase tracking-wider text-sm">Image Coming Soon</span>
+                    {/* ROW 5: 3 Images (12, 13, 14) - Adjusted for 4-column span */}
+                    <div className="lg:col-span-1 relative group overflow-hidden rounded-xs" data-aos="fade-up">
+                        <img src={galleryImages[11]} alt="Gallery 12" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     </div>
 
-                    {/* Box 13: Placeholder - Wide */}
-                    <div className="lg:col-span-2 relative bg-gray-50 rounded-sm flex items-center justify-center border-2 border-dashed border-gray-200" data-aos="fade-up" data-aos-delay="100">
-                        <span className="text-gray-300 font-bold uppercase tracking-wider text-sm">Gallery Updating...</span>
-                        {/* Decorative Yellow Triangle */}
-                        <div className="absolute bottom-4 right-4 w-0 h-0 border-r-25 border-r-transparent border-b-25 border-b-idara-yellow transform rotate-45 opacity-50"></div>
+                    <div className="lg:col-span-2 relative group overflow-hidden rounded-xs" data-aos="fade-up" data-aos-delay="100">
+                        <img src={galleryImages[12]} alt="Gallery 13" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     </div>
 
-                    {/* Box 14: New Image pic14 */}
-                    <div className="relative group overflow-hidden rounded-sm" data-aos="fade-up" data-aos-delay="200">
-                        <img src={galleryImages[13]!} alt="Gallery 14" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                        <div className="absolute inset-0 bg-[#012060]/10 group-hover:bg-transparent transition-colors duration-500"></div>
+                    <div className="lg:col-span-1 relative group overflow-hidden rounded-xs" data-aos="fade-up" data-aos-delay="200">
+                        <img src={galleryImages[13]} alt="Gallery 14" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     </div>
 
                 </div>

@@ -1,24 +1,17 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { 
-    Megaphone, 
-    Code2, 
-    Monitor, 
-    BrainCircuit, 
-    PenTool, 
-    Clapperboard, 
-    Languages, 
-    ShieldCheck, 
     ArrowRight 
 } from 'lucide-react';
 
 export default function ITInstitutePage() {
+    const [cmsData, setCmsData] = useState<any>({});
     
     useEffect(() => {
         AOS.init({
@@ -27,154 +20,139 @@ export default function ITInstitutePage() {
             easing: 'ease-in-out',
             offset: 80,
         });
+        fetchCMSContent();
     }, []);
 
-    const courses = [
-        { name: "Digital Marketing", icon: Megaphone },
-        { name: "Web Development", icon: Code2 },
-        { name: "CIT Fundamentals", icon: Monitor },
-        { name: "AI Communication & Visualization", icon: BrainCircuit },
-        { name: "Graphic Designing", icon: PenTool },
-        { name: "Video Editing", icon: Clapperboard },
-        { name: "English Language", icon: Languages },
-        { name: "Cyber Security", icon: ShieldCheck }
+    const fetchCMSContent = async () => {
+        try {
+            const res = await fetch('/api/admin/content?pageName=it-institute', { cache: 'no-store' });
+            if (res.ok) {
+                const data = await res.json();
+                if (Array.isArray(data)) {
+                    const formattedData = data.reduce((acc: any, item: any) => {
+                        acc[item.key] = item.value;
+                        return acc;
+                    }, {});
+                    setCmsData(formattedData);
+                }
+            }
+        } catch (err) {
+            console.error("CMS load failed", err);
+        }
+    };
+
+    const courseImages = [
+        "/website-media/itinstitute/digital-marketing.jpg",
+        "/website-media/itinstitute/cit-fundamentals.jpg",
+        "/website-media/itinstitute/ai-Communication.jpg",
+        "/website-media/itinstitute/graphic-designing.jpg",
+        "/website-media/itinstitute/english-language.jpg",
+        "/website-media/itinstitute/cyber-security.jpg"
     ];
 
     return (
         <main className="overflow-x-hidden bg-white">
             <Navbar />
 
-            <section 
-                className="relative mt-20 w-full overflow-hidden h-[40vh] md:h-[75vh]"
-                data-aos="fade"
-            >
+            {/* ===== HERO BANNER - With Blue Left Shade ===== */}
+            <section className="relative mt-20 w-full h-[40vh] md:h-[70vh] overflow-hidden" data-aos="fade">
                 <img
-                    src="/website-media/itinstitute/ait.jpeg"
-                    alt="IT Institute Classroom"
+                    src={cmsData['hero-image'] || "/website-media/itinstitute/ait.jpeg"}
+                    alt="IT Institute"
                     className="w-full h-full object-cover"
                 />
-
-                {/* Left Side Blue Transparency Shade (matching image) */}
-                <div className="absolute inset-0 bg-linear-to-r from-[#012060]/80 via-[#012060]/40 to-transparent"></div>
-
-                <div className="absolute inset-0 flex items-center justify-center px-4">
-                    <div className="max-w-5xl mx-auto text-center px-4">
-                        <h1 
-                            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white text-center tracking-tighter"
-                            data-aos="zoom-out"
-                            data-aos-delay="200"
-                        >
-                            IT <span className="text-idara-orange">Institute</span>
-                        </h1>
-                    </div>
+                {/* Dark Blue Left Shade from Screenshot */}
+                <div className="absolute inset-0 bg-linear-to-r from-[#012060]/90 via-[#012060]/40 to-transparent z-10"></div>
+                
+                <div className="absolute inset-0 flex items-center justify-center z-20">
+                    <h1 className="text-6xl md:text-8xl font-black text-white text-center tracking-tighter drop-shadow-2xl">
+                        IT <span className="text-idara-orange">INSTITUTE</span>
+                    </h1>
                 </div>
             </section>
 
-            {/* ===== CONTENT & CARDS SECTION ===== */}
-            <section className="relative w-full overflow-hidden min-h-screen">
-                {/* Background with Transparent Shade */}
-                <div 
-                    className="absolute inset-0 z-0 bg-cover bg-center bg-fixed opacity-100"
-                    style={{ backgroundImage: "url('/website-media/itinstitute/aitback.jpeg')" }}
-                >
-                    <div className="absolute inset-0 bg-white/90 backdrop-blur-[2px]"></div>
+            {/* ===== CONTENT SECTION ===== */}
+            <section className="relative w-full py-16 md:py-24 bg-white">
+                
+                {/* --- EXACT SHAPES FROM SCREENSHOT --- */}
+                
+                {/* 1. Top Right Cyan Triangle */}
+                <div className="absolute top-[10%] right-[12%] w-10 h-10 md:w-16 md:h-16 bg-idara-cyan opacity-90 z-20 hidden md:block" style={{ clipPath: 'polygon(100% 0, 0% 100%, 100% 100%)' }}></div>
+
+                {/* 2. Middle Right Bar + Circle (!) */}
+                <div className="absolute top-[20%] right-[8%] md:flex flex-col items-center gap-2 z-20 hidden">
+                    <div className="w-10 h-40 bg-[#012060] rounded-full"></div>
+                    <div className="w-10 h-10 bg-idara-yellow rounded-full"></div>
                 </div>
 
-                <div className="container mx-auto px-6 md:px-12 py-16 md:py-24 relative z-10">
-                    {/* Decorative Shapes Layer */}
-                    <div className="hidden lg:block">
-                        {/* Top Right Shapes */}
-                        <div className="absolute right-20 top-60 w-0 h-0 border-l-60 border-l-transparent border-r-40 border-r-transparent border-b-50 border-b-idara-cyan transform rotate-15" data-aos="fade-left"></div>
-                        <div className="absolute right-0 top-90 w-12 h-40 bg-[#012060] rounded-full shadow-lg" data-aos="fade-left" data-aos-delay="200"></div>
-                        <div className="absolute right-0 top-[550px] w-16 h-16 bg-idara-yellow rounded-full shadow-lg" data-aos="zoom-in" data-aos-delay="400"></div>
-                        
-                        {/* Middle Right Circle */}
-                        <div className="absolute -right-20 top-[60%] w-48 h-48 bg-idara-cyan/30 rounded-full blur-3xl opacity-50"></div>
-                        <div className="absolute -right-10 top-[65%] w-24 h-24 bg-idara-cyan rounded-full shadow-xl" data-aos="zoom-in"></div>
+                {/* 3. Large Cyan Circle (Middle Right) */}
+                <div className="absolute top-[50%] right-[5%] w-20 h-20 md:w-28 md:h-28 bg-idara-cyan rounded-full opacity-90 z-20 hidden md:block"></div>
 
-                        {/* Bottom Right Shape */}
-                        <div className="absolute right-80 bottom-90 w-0 h-0 border-l-40 border-l-transparent border-r-40 border-r-transparent border-b-80 border-b-idara-yellow transform -rotate-25" data-aos="fade-up"></div>
+                {/* 4. Yellow Triangle (Bottom Right of Grid) */}
+                <div className="absolute bottom-[10%] right-[10%] w-12 h-12 md:w-20 md:h-20 bg-idara-yellow opacity-90 z-20 hidden md:block" style={{ clipPath: 'polygon(100% 100%, 0 0, 0 100%)' }}></div>
 
-                        {/* Middle Left Triangle */}
-                        <div className="absolute left-10 top-[40%] w-0 h-0 border-r-45 border-r-transparent border-b-45 border-b-idara-yellow transform -rotate-12" data-aos="fade-right"></div>
-                        
-                        {/* Bottom Left Shapes */}
-                        <div className="absolute left-6 bottom-0 z-0 w-12 h-64 bg-[#012060] rounded-full shadow-xl" data-aos="fade-right" data-aos-delay="300"></div>
-                        <div className="absolute left-3 bottom-70 w-20 h-20 bg-idara-yellow rounded-full shadow-xl" data-aos="zoom-in" data-aos-delay="500"></div>
-                        {/* <div className="absolute left-90 bottom-[550px] w-0 h-0 border-r-[35px] border-r-transparent border-b-[35px] border-b-idara-cyan" data-aos="fade-right"></div> */}
-                    </div>
+                {/* 5. Bottom Left Bar + Circle (!) */}
+                <div className="absolute bottom-[10%] left-[5%] md:flex flex-col-reverse items-center gap-3 z-20 hidden">
+                    <div className="w-8 h-48 bg-[#012060] rounded-full"></div>
+                    <div className="w-10 h-10 bg-idara-yellow rounded-full"></div>
+                </div>
 
-                    {/* Header Intro - Wider width matching header */}
-                    <div className="max-w-full mx-auto mb-12 md:mb-16">
-                        <h2 
-                            className="text-4xl md:text-5xl lg:text-5xl font-extrabold text-[#012060] leading-tight mb-4 tracking-tight"
-                            data-aos="fade-right"
-                        >
+                {/* 6. Small Yellow Triangle (Bottom Center) */}
+                <div className="absolute bottom-[40%] left-[45%] w-6 h-6 md:w-10 md:h-10 bg-idara-yellow opacity-90 z-20 hidden md:block" style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }}></div>
+
+                <div className="container mx-auto px-4 relative z-10">
+                    <div className="max-w-full mx-auto mb-16 px-6">
+                        <h2 className="text-4xl md:text-7xl font-black text-[#012060] mb-4 tracking-tighter">
                             Digital Skills for <span className="text-idara-orange">a Digital World</span>
                         </h2>
-                        <p className="text-gray-700 text-lg md:text-xl font-medium mb-4 max-w-5xl" data-aos="fade-up">
+                        <p className="text-gray-700 text-lg md:text-xl font-medium max-w-5xl leading-relaxed mb-6">
                             The IT Institute prepares students for modern careers by providing training in essential digital and technology-based skills.
                         </p>
-                        <div className="flex flex-wrap items-center gap-x-2 text-lg" data-aos="fade-up">
-                            <span className="text-idara-orange font-bold">Focus Areas :-</span>
-                            <span className="text-gray-800 font-semibold text-lg md:text-xl">Computer Literacy - IT & Software Basics - Freelancing & Digital Skills</span>
+                        <div className="flex flex-wrap items-center gap-x-2 text-lg md:text-xl mb-4">
+                            <span className="text-idara-orange font-black uppercase tracking-widest text-base md:text-lg">Focus Areas :-</span>
+                            <span className="text-[#012060] font-bold">Computer Literacy - IT & Software Basics - Freelancing & Digital Skills</span>
                         </div>
-                        <p className="text-gray-700 font-medium text-lg md:text-xl mt-1" data-aos="fade-up">
-                            Our goal is to prepare youth for sustainable income opportunities in today's digital economy.
-                        </p>
                     </div>
 
-                    {/* Cards Grid & CTA - Narrower width than text */}
+                    {/* Image Grid */}
                     <div className="max-w-5xl mx-auto">
-                        <div className="flex flex-wrap justify-center gap-6 md:gap-x-10 md:gap-y-8 mb-16">
-                            {courses.map((course, idx) => {
-                                const Icon = course.icon;
-                                return (
-                                    <div 
-                                        key={idx} 
-                                        className="bg-[#012060] text-white p-8 md:p-10 rounded-[2.5rem] flex flex-col items-center text-center shadow-2xl hover:scale-105 transition-all duration-300 group relative overflow-hidden w-full md:w-[calc(50%-1.25rem)] lg:w-[calc(33.33%-1.75rem)]"
-                                        data-aos="fade-up"
-                                        data-aos-delay={idx * 50}
-                                    >
-                                        {/* Subtle Shine Effect */}
-                                        <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-white/5 rotate-45 group-hover:left-full transition-all duration-700"></div>
-                                        
-                                        <div className="mb-6 group-hover:scale-110 transition-transform duration-300">
-                                            <Icon size={70} strokeWidth={1} className="text-white opacity-90" />
-                                        </div>
-                                        <h3 className="text-2xl md:text-3xl font-black mb-2 leading-tight uppercase tracking-wide">
-                                            {course.name}
-                                        </h3>
-                                        <p className="text-idara-cyan font-bold text-lg">
-                                            (Basic & Advanced)
-                                        </p>
-                                    </div>
-                                );
-                            })}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10 justify-items-center mb-16">
+                            {courseImages.map((img, idx) => (
+                                <div 
+                                    key={idx} 
+                                    className="w-full max-w-[320px] shadow-2xl rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 bg-white"
+                                    data-aos="zoom-in"
+                                    data-aos-delay={idx * 100}
+                                >
+                                    <img 
+                                        src={img} 
+                                        alt="Course Card"
+                                        className="w-full h-auto block"
+                                    />
+                                </div>
+                            ))}
                         </div>
 
-                        {/* Enroll Now Button */}
+                        {/* Enroll Button */}
                         <div className="flex justify-center" data-aos="zoom-in">
-                            <button className="bg-idara-orange text-white px-12 py-4 rounded-full font-black text-2xl shadow-xl hover:bg-orange-600 hover:scale-105 transition-all active:scale-95 flex items-center gap-3">
+                            <button className="bg-idara-orange text-white px-16 py-4 rounded-xl font-black text-2xl shadow-2xl hover:scale-105 transition-all active:scale-95">
                                 Enroll Now
-                                <ArrowRight className="w-6 h-6" />
                             </button>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* ===== FULL-WIDTH BOTTOM IMAGE ===== */}
-            <section 
-                className="relative mt-0 w-full overflow-hidden h-[40vh] md:h-[60vh]"
-                data-aos="fade-up"
-            >
+            {/* ===== BOTTOM LAB IMAGE WITH INTENSE CYAN SHADE ===== */}
+            <section className="relative w-full h-[40vh] md:h-[60vh] overflow-hidden" data-aos="fade-up">
                 <img
-                    src="/website-media/itinstitute/footerimage.jpg"
-                    alt="IT Institute students working"
+                    src="/website-media/itinstitute/before-footer.jpg"
+                    alt="IT Lab"
                     className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-idara-cyan/60 mix-blend-multiply"></div>
+                {/* Intense Cyan/Teal Shade from Screenshot */}
+                <div className="absolute inset-0 bg-idara-cyan/60 mix-blend-multiply z-10"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-[#012060]/30 to-transparent z-20"></div>
             </section>
 
             <Footer />

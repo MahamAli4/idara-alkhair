@@ -18,9 +18,9 @@ const HowToHelp: React.FC = () => {
   }, []);
 
   const helpOptions = [
-    { title: "Donate", image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&auto=format&fit=crop", href: "/donate" },
-    { title: "Sponsor a Child", image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop", href: "/contact" },
-    { title: "Volunteer", image: "https://images.unsplash.com/photo-1559027615-cd9d7a9bbc52?q=80&w=2070&auto=format&fit=crop", href: "/contact/volunteer-form" }
+    { title: "Donate", image: "/website-media/homepage/card01.jpg", href: "/donate" },
+    { title: "Sponsor a Child", image: "/website-media/homepage/card02.jpeg", href: "/contact" },
+    { title: "Volunteer", image: "/website-media/homepage/card03.jpeg", href: "/contact/volunteer-form" }
   ];
 
   return (
@@ -30,47 +30,48 @@ const HowToHelp: React.FC = () => {
       <div className="container mx-auto px-4 text-center mb-16">
         <h2
           data-aos="fade-up"
-          className="text-4xl md:text-5xl lg:text-7xl font-bold text-[#012060] mb-3"
+          className="text-4xl md:text-5xl lg:text-6xl font-black text-[#012060] mb-4 tracking-tight"
         >
-          How You Can <span className="text-[#f15a24]">Help?</span>
+          How You Can <span className="text-idara-orange">Help?</span>
         </h2>
 
         <p
           data-aos="fade-up"
           data-aos-delay="150"
-          className="text-lg md:text-[1.5rem] text-gray-700 mx-auto"
+          className="text-lg md:text-2xl text-gray-700 mx-auto font-medium"
         >
-          Your support can <span className="font-semibold">change lives</span>, immediately and forever.
+          Your support can <span className="font-bold text-[#012060]">change lives</span>, immediately and forever.
         </p>
       </div>
 
       {/* Cards */}
-      <div className="container mx-auto px-4 relative z-30 mb-20 md:-mb-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 lg:gap-20 max-w-[320px] md:max-w-7xl mx-auto">
+      <div className="container mx-auto px-4 relative z-30 mb-20 md:-mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 lg:gap-16 max-w-7xl mx-auto">
 
           {helpOptions.map((option, index) => (
             <div
               key={index}
               data-aos="zoom-in"
               data-aos-delay={index * 200}
-              className="flex flex-col items-center"
+              className="flex flex-col items-center group"
             >
-              <div className="relative w-full aspect-3/4 border-10 border-white shadow-2xl overflow-hidden bg-white group">
+              <div className="relative w-full aspect-3/4 border-12 border-white shadow-2xl overflow-hidden bg-white transition-all duration-500 hover:-translate-y-4">
 
                 <img
                   src={option.image}
                   alt={option.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-idara-cyan/45 mix-blend-multiply"></div>
+                {/* Vibrant Blue Overlay - Matching Screenshot */}
+                <div className="absolute inset-0 bg-idara-cyan/50 mix-blend-multiply transition-opacity group-hover:opacity-40"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-[#012060]/40 to-transparent opacity-60"></div>
 
-                {/* Button */}
-                <div className="absolute bottom-0 left-0 right-0 p-1 bg-white">
+                {/* Bottom Label/Button Area */}
+                <div className="absolute bottom-0 left-0 right-0 p-1.5 bg-white">
                   <Link 
                     href={option.href}
-                    className="block w-full py-3 bg-white text-gray-800 font-black text-xl md:text-2xl uppercase tracking-tighter hover:bg-idara-cyan/45 transition-colors text-center no-underline"
+                    className="block w-full py-4 bg-white text-[#012060] font-black text-xl md:text-2xl uppercase tracking-tighter hover:text-idara-orange transition-all text-center no-underline border-2 border-transparent hover:border-idara-orange/20 rounded-sm"
                   >
                     {option.title}
                   </Link>

@@ -176,3 +176,16 @@ enum ApplicationStatus {
   HIRED
   REJECTED
 }
+
+model WebsiteContent {
+  id        Int      @id @default(autoincrement())
+  pageName  String   // e.g., 'medical-center'
+  key       String   // e.g., 'hero-title'
+  value     String   @db.Text // Stores text or image URL
+  type      String   // 'TEXT', 'IMAGE', 'COLOR'
+  styles    Json?    // Optional: Stores colors, font sizes, etc.
+  updatedAt DateTime @updatedAt
+
+  @@unique([pageName, key])
+  @@map("page_contents")
+}
