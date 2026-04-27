@@ -58,6 +58,7 @@ const Navbar: React.FC = () => {
     const projectLinks = [
         { name: 'Technical Training Centers', href: '/projects/technical-training-centers', icon: Wrench },
         { name: 'Medical Center', href: '/projects/medical-center', icon: Stethoscope },
+        { name: 'North City Hospital', href: '/projects/north-city-hospital', icon: Stethoscope },
         { name: 'IT Institute', href: '/projects/it-institute', icon: Monitor },
         { name: 'Help a Dream', href: '/projects/help-a-dream', icon: Zap },
         { name: 'Food Support Program', href: '/projects/food-support-program', icon: Utensils },

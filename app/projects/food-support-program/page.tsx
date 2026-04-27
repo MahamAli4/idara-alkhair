@@ -42,78 +42,112 @@ export default function FoodSupportProgramPage() {
     const accentColor = cmsData['content-heading-color'] || '#ed7d31';
 
     return (
-        <main className="overflow-x-hidden bg-white">
+        <main className="overflow-x-hidden bg-white font-montserrat">
             <Navbar />
 
-            {/* ===== HERO BANNER ===== */}
-            <section 
-                className="relative mt-20 w-full overflow-hidden h-[60vh]"
-                data-aos="fade"
-            >
+            {/* ===== HERO BANNER - With Blue Shade on Left ===== */}
+            <section className="relative mt-20 w-full h-[40vh] md:h-[70vh] overflow-hidden" data-aos="fade">
                 <img
-                    src={cmsData['hero-image'] || "/website-media/foodsupportprogram/banner.jpg"}
-                    alt="Food Support Program"
+                    src="/website-media/foodsupportprogram/hero-banner.jpg"
+                    alt="Food Support Program Hero"
                     className="w-full h-full object-cover"
                 />
+                {/* Intense Blue Shade on Left */}
+                <div className="absolute inset-0 bg-linear-to-r from-[#012060]/85 via-[#012060]/40 to-transparent z-10"></div>
 
-                <div className="absolute inset-0 flex items-center justify-center px-4 text-center">
-                    <h1 
-                        className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white tracking-tighter drop-shadow-2xl"
-                        data-aos="zoom-out-up"
-                    >
-                        <span style={{ color: heroColor }}>{cmsData['hero-title']?.split(' ')[0] || 'Food'}</span> 
-                        {' '}{cmsData['hero-title']?.split(' ').slice(1).join(' ') || 'Support Program'}
+                <div className="absolute inset-0 flex items-center justify-center z-20">
+                    <h1 className="text-4xl md:text-8xl font-black text-white tracking-tighter text-center drop-shadow-2xl">
+                        Food <span style={{ color: heroColor }}>Support</span> Program
                     </h1>
                 </div>
             </section>
 
-            {/* ===== FULL BACKGROUND IMAGE SECTION ===== */}
-            <section className="relative w-full min-h-screen overflow-hidden">
-                <img
-                    src={cmsData['middle-image'] || "/images/centerimage.png"}
-                    alt="Background"
-                    className="absolute inset-0 w-full h-full object-cover"
-                    data-aos="zoom-out"
-                    data-aos-duration="2000"
-                />
-                <div className="absolute inset-0 bg-white/40"></div>
+            {/* ===== MAIN CONTENT SECTION ===== */}
+            <section className="relative w-full min-h-screen bg-white overflow-hidden py-10 md:py-0">
 
-                <div className="relative z-10 container mx-auto px-6 md:px-12 pt-16 pb-12">
-                    <div className="max-w-4xl" data-aos="fade-right">
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                            <span className="text-[#012060]">{cmsData['content-heading-black'] || 'Fighting Hunger'} </span>
-                            <span style={{ color: accentColor }} className="font-black">{cmsData['content-heading-orange'] || 'with Dignity'}</span>
+                {/* 1. Black & White Crowd Background */}
+                <div className="absolute inset-0 z-0">
+                    <img
+                        src="/website-media/foodsupportprogram/BG.png"
+                        alt="Background"
+                        className="w-full h-full object-cover grayscale opacity-100"
+                    />
+                    <div className="absolute inset-0 bg-white/50"></div>
+                </div>
+
+                {/* 2. CORRECTED YELLOW SHAPE (Restored Color & Proportion) */}
+                {/* <div className="absolute top-0 left-0 w-[90%] h-[95%] bg-[#ffc000] rounded-br-[60%] z-10 hidden md:block opacity-100"></div> */}
+
+                <div className="container mx-auto px-4 md:px-12 relative z-20">
+
+                    {/* Top Content Area */}
+                    <div className="pt-20 md:pt-32 max-w-full relative z-30">
+                        <h2 className="text-4xl md:text-5xl lg:text-7xl font-black mb-6 tracking-tighter leading-[0.95]" data-aos="fade-right">
+                            <span className="text-[#012060]">Fighting Hunger </span>
+                            <span style={{ color: accentColor }}>with Dignity</span>
                         </h2>
 
-                        <p className="text-black text-lg md:text-xl leading-relaxed mb-6 max-w-3xl font-medium">
-                            {cmsData['content-description'] || 'No family should sleep hungry. Our Food Support Program provides daily meals, monthly ration distributions, and seasonal food drives to families facing food insecurity.'}
+                        <p className="text-[#012060] text-lg md:text-2xl font-bold max-w-3xl mb-8 leading-relaxed" data-aos="fade-right" data-aos-delay="200">
+                            {cmsData['content-description'] || "No family should sleep hungry. Our Food Support Program provides daily meals, monthly ration distributions, and seasonal food drives to families facing food insecurity."}
                         </p>
 
-                        <p className="text-lg md:text-xl">
-                            <span style={{ color: accentColor }} className="font-bold">Program Highlights :-</span>
-                            <span className="text-black font-semibold">
-                                {" "}{cmsData['services-list'] || 'Daily meals for students & staff · Monthly ration packs · Ramadan & emergency food drives'}
-                            </span>
-                        </p>
+                        <div className="text-lg md:text-xl font-black" data-aos="fade-right" data-aos-delay="400">
+                            <span className="text-idara-orange uppercase tracking-widest">Program Highlights :-</span>
+                            <span className="text-[#012060] ml-2">Daily meals for students & staff - Monthly ration packs - Ramadan & emergency food drives.</span>
+                        </div>
                     </div>
 
-                    {/* OVERLAY QUOTE */}
-                    <div className="mt-20 max-w-4xl mx-auto">
-                        <p className="leading-[1.1] font-montserrat select-none">
-                            <span style={{ color: accentColor }} className="font-black text-4xl md:text-6xl" data-aos="fade-up">"Your support</span><br />
-                            <span className="text-[#012060] font-black text-6xl md:text-8xl" data-aos="fade-up" data-aos-delay="200">ensures</span><br />
-                            <span className="text-[#ffc000] font-black text-4xl md:text-5xl" data-aos="fade-up" data-aos-delay="400">no plate remain</span><br />
-                            <span className="text-[#012060] font-black text-6xl md:text-9xl" data-aos="fade-up" data-aos-delay="600">empty"</span>
-                        </p>
+                    {/* Middle Flex Area: Quote + Girl Image (Dominant Right) */}
+                    <div className="flex flex-col lg:flex-row items-center justify-between mt-16 md:mt-24 lg:mt-32">
+
+                        {/* QUOTE (Left Side - 40%) */}
+                        <div className="w-full lg:w-[50%] relative z-40 mb-16 lg:mb-0">
+                            <p className="leading-none font-black select-none tracking-tighter text-left">
+                                <span className="text-idara-orange text-2xl md:text-4xl lg:text-5xl" data-aos="fade-up">"Your support</span><br />
+                                <span className="text-[#012060] text-5xl md:text-7xl lg:text-9xl" data-aos="fade-up" data-aos-delay="200">ensures</span><br />
+                                <span className="text-[#ffc000] text-2xl md:text-4xl lg:text-5xl" data-aos="fade-up" data-aos-delay="400">no plate remain</span><br />
+                                <span className="text-[#012060] text-5xl md:text-7xl lg:text-9xl" data-aos="fade-up" data-aos-delay="600">empty"</span>
+                            </p>
+                        </div>
+
+                        {/* GIRL IMAGE (Right Side - 60%) - Responsive Scaled */}
+                        <div className="w-full lg:w-[60%] relative flex justify-end items-start mt-10 lg:mt-[-200px]">
+
+                            {/* --- SMALLER DECORATIVE SHAPES --- */}
+                            {/* Cyan Triangle (Top Right) */}
+                            <div className="absolute top-[10%] right-[30%] w-10 h-10 md:w-14 md:h-14 bg-idara-cyan opacity-100 z-30" style={{ clipPath: 'polygon(100% 0, 0% 100%, 100% 100%)' }} data-aos="zoom-in"></div>
+
+                            {/* Navy Bar (Pill) - Slimmer */}
+                            <div className="absolute top-[35%] right-[0%] w-12 md:w-15 h-44 md:h-[300px] bg-[#012060] rounded-full z-10" data-aos="fade-left"></div>
+
+                            {/* Yellow Circle - Smaller */}
+                            <div className="absolute bottom-[15%] right-[0%] w-10 h-10 md:w-20 md:h-20 bg-idara-yellow rounded-full z-30 shadow-2xl" data-aos="zoom-in" data-aos-delay="300"></div>
+
+                            {/* Yellow Triangle (Middle) - Smaller */}
+                            <div className="absolute top-[45%] left-[5%] w-8 h-8 md:w-12 md:h-12 bg-idara-yellow z-30" style={{ clipPath: 'polygon(100% 100%, 0 0, 0 100%)' }}></div>
+
+                            {/* Orange Triangle (Bottom Left) - Smaller */}
+                            <div className="absolute bottom-[15%] left-[15%] w-10 h-10 md:w-14 md:h-14 bg-idara-orange z-30" style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }}></div>
+
+                            {/* THE HUGE GIRL IMAGE (Responsive Scaled) */}
+                            <div className="relative z-20 w-full lg:w-[130%] lg:-mr-32 xl:-mr-48" data-aos="fade-left" data-aos-duration="1500">
+                                <img
+                                    src="/website-media/foodsupportprogram/kids.png"
+                                    alt="Smiling Girl"
+                                    className="w-full h-auto drop-shadow-8xl"
+                                />
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </section>
 
-            {/* ===== BOTTOM IMAGE (Full Width) ===== */}
+            {/* ===== BOTTOM IMAGE ===== */}
             <section className="relative w-full overflow-hidden leading-0" data-aos="fade-up">
                 <img
-                    src={cmsData['footer-image'] || "/website-media/foodsupportprogram/footer.jpg"}
-                    alt="Footer Banner"
+                    src="/website-media/foodsupportprogram/footer.jpg"
+                    alt="Food Distribution"
                     className="w-full h-auto object-cover"
                 />
             </section>

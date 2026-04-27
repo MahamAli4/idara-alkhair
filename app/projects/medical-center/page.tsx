@@ -87,12 +87,12 @@ export default function MedicalCenterPage() {
                 <div className="relative mb-0 mt-20" data-aos="fade-up">
                     {/* Main Image Wrapper */}
                     <div className="relative w-full rounded-[3rem] overflow-hidden shadow-2xl">
-                        <img 
-                            src={cmsData['middle-image'] || "/images/medicalcenter.png"} 
-                            alt="Medical Staff" 
+                        <img
+                            src={cmsData['middle-image'] || "/images/medicalcenter.png"}
+                            alt="Medical Staff"
                             className="w-full h-auto min-h-[400px] object-cover"
                         />
-                        
+
                         {/* Gradient Overlay for Text Readability */}
                         <div className="absolute inset-0 bg-linear-to-tr from-transparent via-transparent to-[#012060]/40"></div>
 
@@ -119,9 +119,9 @@ export default function MedicalCenterPage() {
 
             {/* ===== FULL WIDTH BOTTOM IMAGE SECTION ===== */}
             <div className="w-full overflow-hidden leading-0" data-aos="fade-up">
-                <img 
-                    src="/images/medicalfooter.jpg" 
-                    alt="Medical Service" 
+                <img
+                    src="/images/medicalfooter.jpg"
+                    alt="Medical Service"
                     className="w-full h-[500px] md:h-[600px] object-cover shadow-none"
                 />
             </div>

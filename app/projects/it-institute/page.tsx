@@ -6,13 +6,13 @@ import 'aos/dist/aos.css';
 
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { 
-    ArrowRight 
+import {
+    ArrowRight
 } from 'lucide-react';
 
 export default function ITInstitutePage() {
     const [cmsData, setCmsData] = useState<any>({});
-    
+
     useEffect(() => {
         AOS.init({
             duration: 900,
@@ -63,7 +63,7 @@ export default function ITInstitutePage() {
                 />
                 {/* Dark Blue Left Shade from Screenshot */}
                 <div className="absolute inset-0 bg-linear-to-r from-[#012060]/90 via-[#012060]/40 to-transparent z-10"></div>
-                
+
                 <div className="absolute inset-0 flex items-center justify-center z-20">
                     <h1 className="text-6xl md:text-8xl font-black text-white text-center tracking-tighter drop-shadow-2xl">
                         IT <span className="text-idara-orange">INSTITUTE</span>
@@ -73,9 +73,9 @@ export default function ITInstitutePage() {
 
             {/* ===== CONTENT SECTION ===== */}
             <section className="relative w-full py-16 md:py-24 bg-white">
-                
+
                 {/* --- EXACT SHAPES FROM SCREENSHOT --- */}
-                
+
                 {/* 1. Top Right Cyan Triangle */}
                 <div className="absolute top-[10%] right-[12%] w-10 h-10 md:w-16 md:h-16 bg-idara-cyan opacity-90 z-20 hidden md:block" style={{ clipPath: 'polygon(100% 0, 0% 100%, 100% 100%)' }}></div>
 
@@ -118,14 +118,14 @@ export default function ITInstitutePage() {
                     <div className="max-w-5xl mx-auto">
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10 justify-items-center mb-16">
                             {courseImages.map((img, idx) => (
-                                <div 
-                                    key={idx} 
+                                <div
+                                    key={idx}
                                     className="w-full max-w-[320px] shadow-2xl rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 bg-white"
                                     data-aos="zoom-in"
                                     data-aos-delay={idx * 100}
                                 >
-                                    <img 
-                                        src={img} 
+                                    <img
+                                        src={img}
                                         alt="Course Card"
                                         className="w-full h-auto block"
                                     />
