@@ -19,12 +19,8 @@ services:
     environment:
       - DATABASE_URL=postgresql://postgres:password@db:5432/iak_db?schema=public
       - JWT_SECRET=abracadabra-dev-secret
-      - WATCHPACK_POLLING=true
-      - CHOKIDAR_USEPOLLING=true
     depends_on:
       - db
-    volumes:
-      - .:/app
 
 volumes:
   postgres_data:
