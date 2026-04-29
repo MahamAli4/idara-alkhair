@@ -19,15 +19,15 @@ const WhoWeAre: React.FC = () => {
     const yearsOfService = currentYear - 1987;
 
     return (
-        <section className="bg-idara-navy relative z-10">
-            <div className="container mx-auto ">
+        <section className="bg-idara-navy relative z-10 py-10 lg:py-0">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <div className="flex flex-col lg:flex-row items-stretch bg-idara-navy overflow-hidden rounded-[30px] shadow-2xl">
+                <div className="flex flex-col lg:flex-row items-stretch bg-idara-navy overflow-hidden rounded-3xl lg:rounded-[30px] shadow-2xl">
 
                     {/* Left Image */}
                     <div 
                         data-aos="fade-right"
-                        className="lg:w-1/2 w-full relative min-h-[450px] lg:min-h-full"
+                        className="lg:w-1/2 w-full relative min-h-[350px] sm:min-h-[450px] lg:min-h-full"
                     >
                         <img
                             src="/website-media/homepage/centerimage.jpg"
@@ -40,7 +40,7 @@ const WhoWeAre: React.FC = () => {
                     {/* Right Text Content */}
                     <div 
                         data-aos="fade-left"
-                        className="lg:w-1/2 w-full flex flex-col justify-center text-white p-8 lg:p-12"
+                        className="lg:w-1/2 w-full flex flex-col justify-center text-white p-6 sm:p-8 lg:p-12"
                     >
                         <div className="max-w-full">
 
@@ -57,7 +57,7 @@ const WhoWeAre: React.FC = () => {
                             <p 
                                 data-aos="fade-up"
                                 data-aos-delay="200"
-                                className="text-[1.1rem] lg:text-[1.25rem] leading-relaxed mb-5 opacity-90 font-medium"
+                                className="text-base sm:text-lg lg:text-[1.25rem] leading-relaxed mb-6 opacity-90 font-medium"
                             >
                                 Idara Al-Khair Welfare Society is a trusted non-profit organization
                                 working across Pakistan to uplift underprivileged communities. Since
@@ -70,7 +70,7 @@ const WhoWeAre: React.FC = () => {
                             <p 
                                 data-aos="fade-up"
                                 data-aos-delay="300"
-                                className="text-[1.1rem] lg:text-[1.25rem] italic font-semibold text-[#ffd033] mb-12 leading-snug"
+                                className="text-base sm:text-lg lg:text-[1.25rem] italic font-semibold text-[#ffd033] mb-8 lg:mb-12 leading-snug"
                             >
                                 "We believe charity should not only relieve pain, but also restore hope."
                             </p>
@@ -79,35 +79,35 @@ const WhoWeAre: React.FC = () => {
                             <div 
                                 data-aos="zoom-in"
                                 data-aos-delay="400"
-                                className="grid grid-cols-3 gap-4 lg:gap-6 mb-5"
+                                className="grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6 mb-8 lg:mb-10"
                             >
 
-                                <div className="bg-idara-cyan aspect-square flex flex-col items-center justify-center p-4 rounded-[12px] text-center shadow-lg transition-all hover:-translate-y-2 hover:shadow-idara-cyan/30">
-                                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-black ">{yearsOfService} +</h3>
-                                    <p className="text-[0.8rem] lg:text-[1.5rem] font-bold uppercase tracking-wide">
+                                <div className="bg-idara-cyan aspect-square flex flex-col items-center justify-center p-2 sm:p-4 rounded-[12px] text-center shadow-lg transition-all hover:-translate-y-2 hover:shadow-idara-cyan/30">
+                                    <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-black">{yearsOfService} +</h3>
+                                    <p className="text-[10px] xs:text-[12px] sm:text-base lg:text-[1.2rem] font-bold uppercase tracking-wide">
                                         Years
                                     </p>
-                                    <p className="text-[10px] sm:text-[0.6rem] lg:text-[0.7rem] font-bold opacity-80 mt-1 uppercase leading-tight text-black">
+                                    <p className="hidden xs:block text-[8px] sm:text-[10px] lg:text-[0.7rem] font-bold opacity-80 mt-1 uppercase leading-tight text-black">
                                         of continuous <br className="hidden sm:block" /> service
                                     </p>
                                 </div>
 
-                                <div className="bg-idara-orange aspect-square flex flex-col items-center justify-center p-4 rounded-[12px] text-center shadow-lg transition-all hover:-translate-y-2 hover:shadow-idara-orange/30">
-                                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-black">850 K</h3>
-                                    <p className="text-[0.8rem] lg:text-[1rem] font-bold uppercase tracking-wide">
-                                        Individuals
+                                <div className="bg-idara-orange aspect-square flex flex-col items-center justify-center p-2 sm:p-4 rounded-[12px] text-center shadow-lg transition-all hover:-translate-y-2 hover:shadow-idara-orange/30">
+                                    <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-black">850 K</h3>
+                                    <p className="text-[10px] xs:text-[12px] sm:text-base lg:text-[1.2rem] font-bold uppercase tracking-wide">
+                                        Lives
                                     </p>
-                                    <p className="text-[10px] sm:text-[0.6rem] lg:text-[0.7rem] text-black font-bold opacity-80 mt-1 uppercase leading-tight">
+                                    <p className="hidden xs:block text-[8px] sm:text-[10px] lg:text-[0.7rem] text-black font-bold opacity-80 mt-1 uppercase leading-tight">
                                         supported
                                     </p>
                                 </div>
 
-                                <div className="bg-idara-yellow aspect-square flex flex-col items-center justify-center p-4 rounded-[12px] text-center shadow-lg transition-all hover:-translate-y-2 hover:shadow-idara-yellow/30">
-                                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-black mb-1">6000</h3>
-                                    <p className="text-[0.8rem] lg:text-[1rem] font-bold uppercase tracking-wide">
+                                <div className="bg-idara-yellow aspect-square flex flex-col items-center justify-center p-2 sm:p-4 rounded-[12px] text-center shadow-lg transition-all hover:-translate-y-2 hover:shadow-idara-yellow/30">
+                                    <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-black">6000</h3>
+                                    <p className="text-[10px] xs:text-[12px] sm:text-base lg:text-[1.2rem] font-bold uppercase tracking-wide">
                                         Students
                                     </p>
-                                    <p className="text-[10px] sm:text-[0.6rem] lg:text-[0.7rem] text-black font-bold opacity-80 mt-1 uppercase leading-tight">
+                                    <p className="hidden xs:block text-[8px] sm:text-[10px] lg:text-[0.7rem] text-black font-bold opacity-80 mt-1 uppercase leading-tight">
                                         currently <br className="hidden sm:block" /> benefiting
                                     </p>
                                 </div>
@@ -117,15 +117,15 @@ const WhoWeAre: React.FC = () => {
                             <div 
                                 data-aos="fade-up"
                                 data-aos-delay="500"
-                                className="bg-[#a5c3f7] text-white py-8 px-10 rounded-[18px] text-center shadow-2xl relative overflow-hidden group"
+                                className="bg-[#a5c3f7] text-white py-6 lg:py-8 px-6 lg:px-10 rounded-[18px] text-center shadow-2xl relative overflow-hidden group"
                             >
                                 <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
 
-                                <h4 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black leading-tight relative z-10 italic">
+                                <h4 className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-black leading-tight relative z-10 italic">
                                     Multiple Welfare Programs
                                 </h4>
 
-                                <p className="text-[0.6rem] lg:text-[0.9rem] font-black opacity-70 uppercase tracking-[0.15em] mt-1 relative z-10 text-black">
+                                <p className="text-[8px] sm:text-[10px] lg:text-[0.9rem] font-black opacity-70 uppercase tracking-[0.15em] mt-1 relative z-10 text-black">
                                     OPERATING NATIONWIDE
                                 </p>
                             </div>

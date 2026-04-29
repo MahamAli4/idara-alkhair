@@ -47,13 +47,13 @@ export default function HelpADreamPage() {
 
             {/* ===== HERO BANNER ===== */}
             <section 
-                className="relative mt-20 w-full overflow-hidden h-[60vh]"
+                className="relative mt-0 md:mt-20 w-full h-[40vh] md:h-[60vh] overflow-hidden"
                 data-aos="fade"
             >
                 <img
                     src={cmsData['hero-image'] || "/website-media/helpadream/banner.jpg"}
                     alt="Help a Dream"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover block"
                 />
                 <div className="absolute inset-0 bg-[#012060]/10 text-center flex items-center justify-center">
                     <h1 

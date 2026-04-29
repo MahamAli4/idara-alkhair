@@ -88,18 +88,18 @@ export default function DonatePage() {
             <Navbar />
 
             {/* ===== HERO BANNER ===== */}
-            <section className="relative mt-[80px] w-full overflow-hidden h-[80vh]">
+            <section className="relative mt-0 md:mt-[80px] w-full overflow-hidden h-[40vh] md:h-[80vh]">
                 <img
                     src="/website-media/donatenow/header.jpg"
                     alt="Donate Now"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover block"
                     data-aos="fade"
                 />
                 <div className="absolute inset-0 bg-[#012060]/10"></div>
               
                 <div className="absolute inset-0 flex items-center justify-center">
                     <h1 
-                        className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white text-center tracking-tighter"
+                        className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white text-center tracking-tighter px-4"
                         data-aos="zoom-in"
                         data-aos-delay="200"
                     >
@@ -151,8 +151,8 @@ export default function DonatePage() {
             </section>
 
             {/* ===== WHERE YOUR DONATION GOES ===== */}
-            <div className="bg-white py-6 -mt-12 relative z-20">
-                <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center" data-aos="fade-up">
+            <div className="bg-white py-6 mt-0 md:-mt-12 relative z-20">
+                <h3 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-center px-4" data-aos="fade-up">
                     <span className="text-[#012060]">Where Your </span>
                     <span className="text-idara-orange">Donation Goes</span>
                 </h3>
@@ -169,7 +169,7 @@ export default function DonatePage() {
 
                 <div className="relative z-10 container mx-auto px-6 md:px-12 py-14 md:py-20">
                     {/* Four Impact Shapes - Dropping in staggered */}
-                    <div className="flex flex-wrap justify-center gap-6 md:gap-8 -mt-20 mb-13 max-w-4xl mx-auto">
+                    <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 mt-0 md:-mt-20 mb-8 sm:mb-13 max-w-4xl mx-auto">
                         {[
                             { text: "Educating underprivileged children", color: "bg-idara-orange" },
                             { text: "Feeding families facing hunger", color: "bg-idara-yellow" },
@@ -180,9 +180,9 @@ export default function DonatePage() {
                                 key={i}
                                 data-aos="fade-down"
                                 data-aos-delay={i * 200}
-                                className={`${item.color} w-[calc(50%-12px)] sm:w-[150px] h-[180px] md:w-[170px] md:h-[200px] rounded-b-[90px] flex items-center justify-center p-5 shadow-lg transform transition-transform hover:scale-105`}
+                                className={`${item.color} w-[calc(50%-8px)] sm:w-[150px] h-[150px] sm:h-[180px] md:w-[170px] md:h-[200px] rounded-b-[90px] flex items-center justify-center p-4 sm:p-5 shadow-lg transform transition-transform hover:scale-105`}
                             >
-                                <p className="text-white text-center text-sm md:text-base font-semibold leading-tight">
+                                <p className="text-white text-center text-xs sm:text-sm md:text-base font-semibold leading-tight">
                                     {item.text}
                                 </p>
                             </div>
@@ -217,24 +217,24 @@ export default function DonatePage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
                         {/* Bank Transfer 1 */}
                         <div 
-                            className="bg-white border-2 border-gray-100 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all group relative overflow-x-auto"
+                            className="bg-white border-2 border-gray-100 rounded-3xl p-5 sm:p-8 shadow-xl hover:shadow-2xl transition-all group relative overflow-x-auto"
                             data-aos="fade-right"
                             data-aos-delay="200"
                         >
-                            <div className="flex items-start gap-6 relative z-10">
+                            <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 relative z-10">
                                 <div className="relative shrink-0">
-                                    <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center text-[#012060] group-hover:bg-[#012060] group-hover:text-white transition-colors duration-300">
-                                        <Smartphone className="w-8 h-8" />
+                                    <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gray-100 rounded-2xl flex items-center justify-center text-[#012060] group-hover:bg-[#012060] group-hover:text-white transition-colors duration-300">
+                                        <Smartphone className="w-7 h-7 sm:w-8 sm:h-8" />
                                     </div>
                                     <div className="absolute -bottom-2 -right-2 w-7 h-7 bg-emerald-500 rounded-full border-4 border-white flex items-center justify-center">
                                         <CheckCircle className="w-4 h-4 text-white" />
                                     </div>
                                 </div>
-                                <div>
-                                    <h4 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-[#012060] mb-4">Bank Transfer 1</h4>
+                                <div className="w-full">
+                                    <h4 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-black text-[#012060] mb-3 sm:mb-4">Bank Transfer 1</h4>
                                     <div className="space-y-2">
                                         <p className="text-gray-500 text-sm font-semibold uppercase tracking-wider">Title Of Account:</p>
-                                        <p className="text-[#012060] font-bold text-lg mb-4">Idara Al-Khair Welfare Society</p>
+                                        <p className="text-[#012060] font-bold text-base sm:text-lg mb-3 sm:mb-4">Idara Al-Khair Welfare Society</p>
                                         
                                         <div className="grid grid-cols-1 gap-3">
                                             <div className="p-3 bg-gray-50 rounded-xl">
@@ -251,7 +251,7 @@ export default function DonatePage() {
                                             </div>
                                             <div className="p-3 bg-gray-50 rounded-xl border border-idara-orange/20">
                                                 <p className="text-idara-orange text-[11px] uppercase font-bold tracking-widest">IBAN</p>
-                                                <p className="text-gray-800 font-bold text-sm tracking-tighter">PK85MEZN0001330101018353</p>
+                                                <p className="text-gray-800 font-bold text-sm tracking-tighter break-all">PK85MEZN0001330101018353</p>
                                             </div>
                                         </div>
                                     </div>
@@ -261,24 +261,24 @@ export default function DonatePage() {
 
                         {/* Bank Transfer 2 */}
                         <div 
-                            className="bg-white border-2 border-gray-100 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all group relative overflow-x-auto"
+                            className="bg-white border-2 border-gray-100 rounded-3xl p-5 sm:p-8 shadow-xl hover:shadow-2xl transition-all group relative overflow-x-auto"
                             data-aos="fade-left"
                             data-aos-delay="400"
                         >
-                            <div className="flex items-start gap-6 relative z-10">
+                            <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 relative z-10">
                                 <div className="relative shrink-0">
-                                    <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center text-[#012060] group-hover:bg-[#012060] group-hover:text-white transition-colors duration-300">
-                                        <Wallet className="w-8 h-8" />
+                                    <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gray-100 rounded-2xl flex items-center justify-center text-[#012060] group-hover:bg-[#012060] group-hover:text-white transition-colors duration-300">
+                                        <Wallet className="w-7 h-7 sm:w-8 sm:h-8" />
                                     </div>
                                     <div className="absolute -bottom-2 -right-2 w-7 h-7 bg-emerald-500 rounded-full border-4 border-white flex items-center justify-center">
                                         <CheckCircle className="w-4 h-4 text-white" />
                                     </div>
                                 </div>
-                                <div>
-                                    <h4 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-[#012060] mb-4">Bank Transfer 2</h4>
+                                <div className="w-full">
+                                    <h4 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-black text-[#012060] mb-3 sm:mb-4">Bank Transfer 2</h4>
                                     <div className="space-y-2">
                                         <p className="text-gray-500 text-sm font-semibold uppercase tracking-wider">Title Of Account:</p>
-                                        <p className="text-[#012060] font-bold text-lg mb-4">Idara Al-Khair Welfare Society</p>
+                                        <p className="text-[#012060] font-bold text-base sm:text-lg mb-3 sm:mb-4">Idara Al-Khair Welfare Society</p>
                                         
                                         <div className="grid grid-cols-1 gap-3">
                                             <div className="p-3 bg-gray-50 rounded-xl">
@@ -295,7 +295,7 @@ export default function DonatePage() {
                                             </div>
                                             <div className="p-3 bg-gray-50 rounded-xl border border-idara-orange/20">
                                                 <p className="text-idara-orange text-[11px] uppercase font-bold tracking-widest">IBAN</p>
-                                                <p className="text-gray-800 font-bold text-sm tracking-tighter">PK87MUCB0005501010008429</p>
+                                                <p className="text-gray-800 font-bold text-sm tracking-tighter break-all">PK87MUCB0005501010008429</p>
                                             </div>
                                         </div>
                                     </div>
@@ -311,14 +311,14 @@ export default function DonatePage() {
             </section>
 
             {/* ===== FINAL CTA BUTTON ===== */}
-            <section className="py-10 flex justify-center" data-aos="zoom-in-up">
+            {/* <section className="py-10 flex justify-center" data-aos="zoom-in-up">
                 <button 
                     onClick={() => setIsModalOpen(true)}
                     className="bg-[#012060] text-white px-14 py-4 rounded-lg font-black text-xl md:text-2xl shadow-2xl hover:scale-105 active:scale-95 transition-all tracking-tight border-2 border-[#012060]"
                 >
                     Donate Now
                 </button>
-            </section>
+            </section> */}
 
             {/* ===== DONATION MODAL ===== */}
             {isModalOpen && (

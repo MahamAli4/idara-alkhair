@@ -72,26 +72,26 @@ const Navbar: React.FC = () => {
     };
 
     return (
-        <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-sm py-3 md:py-5">
-            <div className="container mx-auto px-4 flex items-center justify-between">
+        <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-sm py-3 md:py-4 lg:py-5">
+            <div className="container mx-auto px-4 sm:px-6 flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="shrink-0 z-50 relative">
                     <img
                         src="/logo.png"
                         alt="IDARA AL-KHAIR"
-                        className="h-[50px] md:h-[75px] w-auto transition-transform duration-300"
+                        className="h-[45px] xs:h-[55px] sm:h-[65px] md:h-[75px] w-auto transition-transform duration-300"
                     />
                 </Link>
 
                 {/* Desktop Navbar Links */}
                 <div className="hidden lg:flex flex-1 justify-center">
-                    <ul className="flex items-center space-x-2">
+                    <ul className="flex items-center space-x-1 xl:space-x-2">
                         {navLinks.map((link) => (
                             <li key={link.href} className="relative group">
                                 {link.name === 'Projects' ? (
                                     <>
                                         <button
-                                            className={`nav-link-custom flex items-center ${pathname.startsWith('/projects') ? 'active' : ''}`}
+                                            className={`nav-link-custom flex items-center px-3 py-2 text-[15px] xl:text-[16px] ${pathname.startsWith('/projects') ? 'active' : ''}`}
                                         >
                                             {link.name}
                                             <ChevronDown className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:rotate-180" />
@@ -121,7 +121,7 @@ const Navbar: React.FC = () => {
                                 ) : link.name === 'Contact Us' ? (
                                     <>
                                         <button
-                                            className={`nav-link-custom flex items-center ${pathname.startsWith('/contact') ? 'active' : ''}`}
+                                            className={`nav-link-custom flex items-center px-3 py-2 text-[15px] xl:text-[16px] ${pathname.startsWith('/contact') ? 'active' : ''}`}
                                         >
                                             {link.name}
                                             <ChevronDown className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:rotate-180" />
@@ -151,7 +151,7 @@ const Navbar: React.FC = () => {
                                 ) : (
                                     <Link
                                         href={link.href}
-                                        className={`nav-link-custom ${pathname === link.href ? 'active' : ''}`}
+                                        className={`nav-link-custom px-3 py-2 text-[15px] xl:text-[16px] ${pathname === link.href ? 'active' : ''}`}
                                     >
                                         {link.name}
                                     </Link>
@@ -163,7 +163,7 @@ const Navbar: React.FC = () => {
 
                 {/* Desktop Action Button */}
                 <div className="hidden lg:block z-50 relative">
-                    <Link href="/donate" className="btn-donate no-underline shadow-md hover:shadow-lg transition-all duration-300">
+                    <Link href="/donate" className="btn-donate no-underline shadow-md hover:shadow-lg transition-all duration-300 text-sm xl:text-base px-4 xl:px-6 py-2 xl:py-2.5">
                         Donate Now
                     </Link>
                 </div>
@@ -187,10 +187,10 @@ const Navbar: React.FC = () => {
 
             {/* Mobile Navigation Drawer */}
             <div
-                className={`fixed top-0 right-0 h-full w-[85%] max-w-[350px] bg-white z-40 transform transition-transform duration-300 ease-in-out lg:hidden flex flex-col shadow-2xl ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+                className={`fixed top-0 right-0 h-full w-[90%] xs:w-[85%] max-w-[350px] bg-white z-40 transform transition-transform duration-300 ease-in-out lg:hidden flex flex-col shadow-2xl ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
                     }`}
             >
-                <div className="flex-1 overflow-y-auto pt-[90px] pb-6 px-4">
+                <div className="flex-1 overflow-y-auto pt-[80px] sm:pt-[100px] pb-6 px-4 sm:px-6">
                     <ul className="flex flex-col">
                         {navLinks.map((link) => (
                             <li key={link.href} className="border-b border-gray-100 last:border-0">
@@ -198,7 +198,7 @@ const Navbar: React.FC = () => {
                                     <div className="flex flex-col">
                                         <button
                                             onClick={() => toggleMobileDropdown('Projects')}
-                                            className="flex items-center justify-between w-full text-left text-[17px] font-semibold text-[#012060] hover:text-idara-orange transition-colors py-4 px-2"
+                                            className="flex items-center justify-between w-full text-left text-[16px] sm:text-[18px] font-semibold text-[#012060] hover:text-idara-orange transition-colors py-4 px-2"
                                         >
                                             {link.name}
                                             <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${openMobileDropdown === 'Projects' ? 'rotate-180 text-idara-orange' : ''}`} />
@@ -228,7 +228,7 @@ const Navbar: React.FC = () => {
                                     <div className="flex flex-col">
                                         <button
                                             onClick={() => toggleMobileDropdown('Contact')}
-                                            className="flex items-center justify-between w-full text-left text-[17px] font-semibold text-[#012060] hover:text-idara-orange transition-colors py-4 px-2"
+                                            className="flex items-center justify-between w-full text-left text-[16px] sm:text-[18px] font-semibold text-[#012060] hover:text-idara-orange transition-colors py-4 px-2"
                                         >
                                             {link.name}
                                             <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${openMobileDropdown === 'Contact' ? 'rotate-180 text-idara-orange' : ''}`} />
@@ -257,7 +257,7 @@ const Navbar: React.FC = () => {
                                 ) : (
                                     <Link
                                         href={link.href}
-                                        className={`block py-4 px-2 text-[17px] font-semibold transition-colors ${pathname === link.href ? 'text-idara-orange' : 'text-[#012060] hover:text-idara-orange'}`}
+                                        className={`block py-4 px-2 text-[16px] sm:text-[18px] font-semibold transition-colors ${pathname === link.href ? 'text-idara-orange' : 'text-[#012060] hover:text-idara-orange'}`}
                                     >
                                         {link.name}
                                     </Link>
@@ -268,13 +268,13 @@ const Navbar: React.FC = () => {
                 </div>
 
                 {/* Mobile Drawer Bottom Action */}
-                <div className="p-6 border-t border-gray-100 bg-gray-50">
+                <div className="p-6 sm:p-8 border-t border-gray-100 bg-gray-50">
                     <Link
                         href="/donate"
                         onClick={() => setIsMobileMenuOpen(false)}
-                        className="flex items-center justify-center w-full py-3 px-6 bg-idara-orange text-white font-bold rounded-md shadow-md hover:bg-orange-600 transition-colors"
+                        className="flex items-center justify-center w-full py-3.5 px-6 bg-idara-orange text-white font-bold rounded-md shadow-md hover:bg-orange-600 transition-colors text-base sm:text-lg"
                     >
-                        <Heart size={18} className="mr-2" />
+                        <Heart size={20} className="mr-2" />
                         Donate Now
                     </Link>
                 </div>

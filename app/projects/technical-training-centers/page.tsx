@@ -54,15 +54,15 @@ export default function TechnicalTrainingCentersPage() {
             <Navbar />
 
             {/* ===== HERO BANNER ===== */}
-            <section className="relative mt-[80px] md:mt-[100px] w-full overflow-hidden h-[40vh] md:h-[60vh]">
+            <section className="relative mt-0 md:mt-[100px] w-full h-[40vh] md:h-[60vh] overflow-hidden">
                 <img
                     src={cmsData['hero-image'] || "/website-media/technicaltrainingcenters/banner.jpg"}
                     alt="Technical Training Centers"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover block"
                 />
-                <div className="absolute inset-0 flex items-center justify-center">
+                <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
                     <div className="max-w-6xl mx-auto text-center px-4" data-aos="zoom-in">
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white tracking-tight">
+                        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white tracking-tight drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
                             <span style={{ color: heroColor }}>{cmsData['hero-title']?.split(' ')[0] || 'Technical'}</span> 
                             {' '}{cmsData['hero-title']?.split(' ').slice(1).join(' ') || 'Training Centers'}
                         </h1>
@@ -71,18 +71,18 @@ export default function TechnicalTrainingCentersPage() {
             </section>
 
             {/* ===== SKILLS INTRO ===== */}
-            <section className="container mx-auto px-4 py-12 md:py-20">
+            <section className="container mx-auto px-4 py-8 sm:py-12 md:py-20">
                 <div className="max-w-4xl">
-                    <h2 className="text-4xl md:text-6xl font-black text-[#012060] leading-[1.1] mb-6" data-aos="fade-right">
+                    <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-[#012060] leading-[1.1] mb-4 sm:mb-6" data-aos="fade-right">
                         <span>{cmsData['content-heading-black'] || 'Skills That Create'}</span>
                         <br />
                         <span style={{ color: accentColor }}>{cmsData['content-heading-orange'] || 'Independence'}</span>
                     </h2>
-                    <p className="text-gray-600 text-lg md:text-xl font-medium mb-6 max-w-3xl" data-aos="fade-up">
+                    <p className="text-gray-600 text-base sm:text-lg md:text-xl font-medium mb-4 sm:mb-6 max-w-3xl" data-aos="fade-up">
                         {cmsData['content-description'] || 'Our Technical Training Centers equip youth with practical, job-ready skills that lead to employment and self-reliance.'}
                     </p>
-                    <div className="flex flex-wrap items-center gap-2 text-lg md:text-xl" data-aos="fade-up" data-aos-delay="200">
-                        <span style={{ color: accentColor }} className="font-bold uppercase tracking-wider text-base">Courses Include:-</span>
+                    <div className="flex flex-col sm:flex-row flex-wrap sm:items-center gap-1 sm:gap-2 text-base sm:text-lg md:text-xl" data-aos="fade-up" data-aos-delay="200">
+                        <span style={{ color: accentColor }} className="font-bold uppercase tracking-wider text-sm sm:text-base">Courses Include:-</span>
                         <span className="text-[#012060] font-semibold">{cmsData['services-list'] || 'Electrical & Mechanical Training · Vocational Skills · Hands-on Practical Learning'}</span>
                     </div>
                 </div>
@@ -90,13 +90,13 @@ export default function TechnicalTrainingCentersPage() {
 
             {/* ===== COURSE GRID ===== */}
             <section className="container mx-auto px-4 relative">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 max-w-10xl mx-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-10 max-w-10xl mx-auto">
                     {courses.slice(0, 4).map((course, idx) => (
-                        <div key={idx} className="relative group overflow-hidden rounded-sm h-[200px] shadow-md border-b-4 border-transparent hover:border-idara-orange transition-all duration-300" data-aos="fade-up" data-aos-delay={idx * 100}>
+                        <div key={idx} className="relative group overflow-hidden rounded-sm h-[180px] sm:h-[200px] shadow-md border-b-4 border-transparent hover:border-idara-orange transition-all duration-300" data-aos="fade-up" data-aos-delay={idx * 100}>
                             <img src={course.image} alt={course.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                             <div className={`absolute inset-0 ${course.color} transition-opacity group-hover:opacity-60`}></div>
                             <div className="absolute inset-0 flex items-center justify-center p-4">
-                                <h4 className="text-white font-black text-xl md:text-2xl text-center leading-tight drop-shadow-lg group-hover:scale-105 transition-transform duration-300">
+                                <h4 className="text-white font-black text-lg sm:text-xl md:text-2xl text-center leading-tight drop-shadow-lg group-hover:scale-105 transition-transform duration-300">
                                     {course.name}
                                 </h4>
                             </div>
@@ -104,13 +104,13 @@ export default function TechnicalTrainingCentersPage() {
                     ))}
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 max-w-5xl mx-auto mt-6 md:mt-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-10 max-w-5xl mx-auto mt-4 sm:mt-6 md:mt-8">
                     {courses.slice(4).map((course, idx) => (
-                        <div key={idx} className="relative group overflow-hidden rounded-sm h-[200px] shadow-md border-b-4 border-transparent hover:border-idara-orange transition-all duration-300" data-aos="fade-up" data-aos-delay={idx * 100 + 400}>
+                        <div key={idx} className="relative group overflow-hidden rounded-sm h-[180px] sm:h-[200px] shadow-md border-b-4 border-transparent hover:border-idara-orange transition-all duration-300" data-aos="fade-up" data-aos-delay={idx * 100 + 400}>
                             <img src={course.image} alt={course.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                             <div className={`absolute inset-0 ${course.color} transition-opacity group-hover:opacity-60`}></div>
                             <div className="absolute inset-0 flex items-center justify-center p-4">
-                                <h4 className="text-white font-black text-xl md:text-2xl text-center leading-tight drop-shadow-lg group-hover:scale-105 transition-transform duration-300">
+                                <h4 className="text-white font-black text-lg sm:text-xl md:text-2xl text-center leading-tight drop-shadow-lg group-hover:scale-105 transition-transform duration-300">
                                     {course.name}
                                 </h4>
                             </div>
@@ -120,35 +120,41 @@ export default function TechnicalTrainingCentersPage() {
             </section>
 
             {/* ===== ENROLLMENT SECTION ===== */}
-            <section className="bg-white overflow-hidden lg:pt-32 pb-0">
+            <section className="bg-white overflow-hidden pt-12 md:pt-20 lg:pt-32 pb-0">
                 <div className="container mx-auto px-4 pb-0">
-                    <div className="flex justify-center mb-24 lg:mb-20">
-                        <button className="bg-idara-orange text-white px-12 py-4 rounded-full font-black text-xl md:text-2xl shadow-xl hover:bg-orange-600 hover:scale-105 transition-all active:scale-95 flex items-center gap-3 group" data-aos="zoom-in">
+                    <div className="flex justify-center mb-12 sm:mb-16 md:mb-24 lg:mb-20">
+                        <a
+                            href="https://docs.google.com/forms/d/1gpDmT9OM_s_I4u6LJWB-HmHa2ltjQNLUlEDuCia60Ws/viewform"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-idara-orange text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full font-black text-lg sm:text-xl md:text-2xl shadow-xl hover:bg-orange-600 hover:scale-105 transition-all active:scale-95 flex items-center gap-2 sm:gap-3 group"
+                            data-aos="zoom-in"
+                        >
                             Enroll Now
-                            <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-                        </button>
+                            <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" />
+                        </a>
                     </div>
 
                     <div className="relative">
                         <div className="grid grid-cols-1 lg:grid-cols-2 lg:items-end relative">
                             <div className="flex flex-col space-y-0 text-[#012060] select-none z-10 pb-10 md:pb-20 lg:pb-32" data-aos="fade-right">
                                  <div className="mb-0">
-                                    <span className="text-2xl md:text-3xl lg:text-4xl font-bold italic opacity-90 ml-20 md:ml-45">We don't</span>
+                                    <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold italic opacity-90 ml-4 sm:ml-8 md:ml-45">We don't</span>
                                  </div>
-                                 <div className="flex items-baseline gap-2 -mt-2">
-                                    <span className="text-5xl md:text-7xl lg:text-[90px] font-black italic ml-20 md:ml-40 leading-none tracking-tighter">just teach</span>
-                                    <span className="text-xl md:text-2xl lg:text-3xl font-bold italic mb-2 md:mb-4">skills,</span>
+                                 <div className="flex items-baseline gap-2 -mt-1 sm:-mt-2">
+                                    <span className="text-4xl sm:text-5xl md:text-7xl lg:text-[90px] font-black italic ml-4 sm:ml-8 md:ml-40 leading-none tracking-tighter">just teach</span>
+                                    <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold italic mb-1 sm:mb-2 md:mb-4">skills,</span>
                                  </div>
-                                 <div className="flex flex-col mt-4 lg:mt-8">
+                                 <div className="flex flex-col mt-3 sm:mt-4 lg:mt-8">
                                     <div className="mb-1">
-                                        <span className="text-2xl md:text-3xl lg:text-4xl font-bold italic ml-8 md:ml-24 opacity-90">We create</span>
+                                        <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold italic ml-4 sm:ml-8 md:ml-24 opacity-90">We create</span>
                                     </div>
-                                    <span className="text-5xl md:text-7xl lg:text-[90px] font-black italic leading-none tracking-tighter">livelihoods</span>
+                                    <span className="text-4xl sm:text-5xl md:text-7xl lg:text-[90px] font-black italic ml-4 sm:ml-0 leading-none tracking-tighter">livelihoods</span>
                                  </div>
                             </div>
 
-                            <div className="relative mt-20 lg:mt-0 flex justify-end items-end" data-aos="fade-left">
-                                <div className="relative w-full translate-y-1">
+                            <div className="relative mt-12 sm:mt-16 lg:mt-0 flex justify-center lg:justify-end items-end" data-aos="fade-left">
+                                <div className="relative w-[90%] sm:w-full translate-y-1">
                                     <img 
                                         src={cmsData['middle-image'] || "/website-media/technicaltrainingcenters/centerimage.png"} 
                                         alt="Students working" 
@@ -162,7 +168,7 @@ export default function TechnicalTrainingCentersPage() {
             </section>
 
             {/* ===== BOTTOM COLLAGE (Full Width) ===== */}
-            <section className="flex flex-row w-full h-[450px] md:h-[500px] items-stretch overflow-hidden leading-0" data-aos="fade-up">
+            <section className="flex flex-row w-full h-[150px] sm:h-[250px] md:h-[500px] items-stretch overflow-hidden leading-0" data-aos="fade-up">
                 <div className="flex-1 relative overflow-hidden h-full">
                     <img
                         src={cmsData['footer-image-1'] || "/website-media/technicaltrainingcenters/footerimage.jpg"}

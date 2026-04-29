@@ -44,11 +44,11 @@ export default function DisasterReliefProgramPage() {
             <Navbar />
 
             {/* ===== HERO BANNER ===== */}
-            <section className="relative mt-20 w-full overflow-hidden h-[80vh]">
+            <section className="relative mt-0 md:mt-20 w-full h-[40vh] md:h-[80vh] overflow-hidden">
                 <img
                     src={cmsData['hero-image'] || "/website-media/disasterreliefprogram/bannerimagecopy.jpg"}
                     alt="Disaster Relief"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover block"
                 />
                 <div className="absolute inset-0 bg-[#012060]/10 flex items-center justify-center">
                     <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white text-center tracking-tighter drop-shadow-2xl" data-aos="zoom-in">

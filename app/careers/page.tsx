@@ -51,7 +51,7 @@ export default function CareersPage() {
             <Navbar />
 
             {/* ===== HERO SECTION ===== */}
-            <section className="relative min-h-[450px] md:h-[60vh] flex items-center justify-center mt-20">
+            <section className="relative h-[40vh] md:min-h-[450px] md:h-[60vh] flex items-center justify-center mt-0 md:mt-20">
                 <div className="absolute inset-0 z-0">
                     <Image 
                         src="/images/hero.png" 
@@ -61,25 +61,25 @@ export default function CareersPage() {
                         priority
                     />
                     <div className="absolute inset-0 bg-black/10 flex flex-col items-center justify-center">
-                         <h2 className="text-white/40 text-7xl md:text-[14rem] font-black absolute top-10 select-none pointer-events-none uppercase tracking-tighter opacity-10">MAKERSPACE</h2>
+                         <h2 className="text-white/40 text-7xl md:text-[14rem] font-black absolute top-10 select-none pointer-events-none uppercase tracking-tighter opacity-10 hidden md:block">MAKERSPACE</h2>
                     </div>
                 </div>
                 
                 <div className="container mx-auto px-6 relative z-10 text-center" data-aos="zoom-out">
-                    <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold text-white tracking-tight">
+                    <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-8xl font-bold text-white tracking-tight">
                         Build your <span className="text-idara-orange">Career at AIT</span>
                     </h1>
                 </div>
             </section>
 
             {/* ===== INTRODUCTION SECTION ===== */}
-            <section className="py-20 bg-white">
-                <div className="container mx-auto">
-                    <h2 className="text-3xl md:text-6xl font-black text-idara-navy mb-12 leading-none" data-aos="fade-up">
+            <section className="py-10 sm:py-14 md:py-20 bg-white">
+                <div className="container mx-auto px-4">
+                    <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-black text-idara-navy mb-6 sm:mb-10 md:mb-12 leading-none" data-aos="fade-up">
                         Careers at <span className="text-idara-orange">Al-Khair Welfare Society</span>
                     </h2>
                     
-                    <div className="space-y-8 text-gray-700 leading-relaxed text-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div className="space-y-4 sm:space-y-6 md:space-y-8 text-gray-700 leading-relaxed text-base sm:text-lg md:text-xl" data-aos="fade-up" data-aos-delay="200">
                         <p className="font-medium text-gray-600">
                             At Idara Al-Khair (IAK), we don't just offer jobs — we create opportunities to make a real difference. As a part of Idara Al-Khair, 
                             our mission is to empower underserved communities through quality education and practical skills.
@@ -94,9 +94,9 @@ export default function CareersPage() {
             </section>
 
             {/* ===== PERFECT MATCH COLLAGE SECTION ===== */}
-            <section className="relative">
-                <div className="container mx-auto">
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-20 lg:gap-x-12">
+            <section className="relative overflow-hidden">
+                <div className="container mx-auto px-4">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-10 sm:gap-y-14 md:gap-y-20 lg:gap-x-12">
                         
                         {/* FIRST COLUMN - Image 1 & Looking For & Buttons */}
                         <div className="lg:col-span-4 space-y-8">
@@ -114,7 +114,7 @@ export default function CareersPage() {
 
                             {/* Who we are looking for? */}
                             <div className="space-y-4" data-aos="fade-up">
-                                <h3 className="text-3xl md:text-4xl font-black text-[#012060]">
+                                <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#012060]">
                                     Who we are <span className="text-idara-orange">looking for?</span>
                                 </h3>
                                 <p className="text-gray-500 font-bold">We welcome individuals who are:</p>
@@ -152,10 +152,10 @@ export default function CareersPage() {
                         </div>
 
                         {/* MIDDLE COLUMN - Be a part & Image 2 */}
-                        <div className="lg:col-span-4 lg:pt-0">
+                        <div className="lg:col-span-4 lg:pt-0 overflow-hidden">
                             {/* Be a part of change */}
                             <div className="space-y-0" data-aos="fade-up">
-                                <h3 className="text-3xl md:text-4xl font-black text-[#012060]">
+                                <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#012060]">
                                     Be a part of <span className="text-idara-orange">change</span>
                                 </h3>
                                 <p className="text-gray-500 font-bold leading-relaxed max-w-sm">
@@ -190,7 +190,7 @@ export default function CareersPage() {
                         <div className="lg:col-span-4 space-y-0 lg:pt-15">
                             {/* Why join us? */}
                             <div className="space-y-4 relative" data-aos="fade-left">
-                                <h3 className="text-3xl md:text-4xl font-black text-[#012060]">
+                                <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#012060]">
                                     Why <span className="text-idara-orange">join us?</span>
                                 </h3>
                                 <ul className="space-y-2 text-gray-600 font-bold">
@@ -233,8 +233,8 @@ export default function CareersPage() {
             {/* ===== OPEN POSITIONS SECTION (BACKEND JOBS) ===== */}
             <section className="pb-24 bg-gray-50/50">
                 <div className="container mx-auto px-6 max-w-7xl">
-                    <div className="text-center mb-16" data-aos="fade-up">
-                        <h2 className="text-4xl md:text-6xl font-black text-idara-navy mb-4">
+                    <div className="text-center mb-10 sm:mb-14 md:mb-16" data-aos="fade-up">
+                        <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-idara-navy mb-4">
                             Open <span className="text-idara-orange">Positions</span>
                         </h2>
                         <p className="text-gray-500 font-bold max-w-2xl mx-auto italic">

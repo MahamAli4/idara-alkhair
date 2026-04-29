@@ -14,6 +14,11 @@ const montserrat = Montserrat({
 export const metadata = {
     title: 'IDARA AL-KHAIR | Welfare Society',
     description: 'Official Digital Ecosystem of Idara Al-Khair Welfare Society.',
+    icons: {
+        icon: '/logo.png',
+        shortcut: '/logo.png',
+        apple: '/logo.png',
+    },
 };
 
 export const viewport = {

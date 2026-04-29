@@ -21,5 +21,5 @@ RUN npx prisma generate
 # Expose the port Next.js runs on
 EXPOSE 3000
 
-# Start the application in dev mode
-CMD ["npm", "run", "dev"]
+# Start the application in production mode
+CMD ["npm", "run", "start"]

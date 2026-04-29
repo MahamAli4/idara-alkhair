@@ -20,7 +20,7 @@ const GalleryGrid = () => {
     ];
 
     return (
-        <section className="py-20 bg-white relative overflow-hidden">
+        <section className="py-10 sm:py-16 md:py-20 bg-white relative overflow-hidden">
             
             {/* --- EXACT SHAPES FROM SCREENSHOT --- */}
             
@@ -42,52 +42,69 @@ const GalleryGrid = () => {
             <div className="container mx-auto px-4 relative z-10">
                 {/* Section Title */}
                 <div className="text-center mb-16" data-aos="fade-down">
-                    <h2 className="text-4xl md:text-6xl font-black tracking-tight text-[#012060]">
+                    <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-black tracking-tight text-[#012060]">
                         Some <span className="text-idara-orange">Glimpses</span> of <span className="text-idara-orange font-black">Idara Al-Khair</span>
                     </h2>
                 </div>
 
-                {/* Grid Layout - Matching Screenshot Exactly */}
-                <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 auto-rows-[200px] md:auto-rows-[250px]">
-                    
-                    {/* ROW 1: 4 Images (1-4) */}
-                    {galleryImages.slice(0, 4).map((src, idx) => (
-                        <div key={idx} className="relative group overflow-hidden rounded-xs" data-aos="fade-up" data-aos-delay={idx * 50}>
-                            <img src={src} alt={`Gallery ${idx + 1}`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                {/* Grid Layout - Mobile: 2 cols natural height | lg: 4-col fixed-row masonry */}
+                <div className="max-w-6xl mx-auto">
+
+                    {/* Mobile / Tablet: simple 2-column grid with uniform aspect ratio cells */}
+                    <div className="grid grid-cols-2 sm:grid-cols-2 gap-2 lg:hidden">
+                        {galleryImages.map((src, idx) => (
+                            <div key={idx} className="relative overflow-hidden rounded-sm group aspect-4/3" data-aos="fade-up" data-aos-delay={idx * 40}>
+                                <img
+                                    src={src}
+                                    alt={`Gallery ${idx + 1}`}
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 block"
+                                />
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Desktop (lg+): original masonry grid with fixed row heights */}
+                    <div className="hidden lg:grid grid-cols-4 gap-2 auto-rows-[250px]">
+                        
+                        {/* ROW 1: 4 Images (1-4) */}
+                        {galleryImages.slice(0, 4).map((src, idx) => (
+                            <div key={idx} className="relative group overflow-hidden rounded-xs" data-aos="fade-up" data-aos-delay={idx * 50}>
+                                <img src={src} alt={`Gallery ${idx + 1}`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                            </div>
+                        ))}
+
+                        {/* ROW 2: 4 Images (5-8) */}
+                        {galleryImages.slice(4, 8).map((src, idx) => (
+                            <div key={idx + 4} className="relative group overflow-hidden rounded-xs" data-aos="fade-up" data-aos-delay={(idx + 4) * 50}>
+                                <img src={src} alt={`Gallery ${idx + 5}`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                            </div>
+                        ))}
+
+                        {/* ROW 3 & 4: Huge Image (9) on left + 2 Stacked on right */}
+                        <div className="col-span-3 row-span-2 relative group overflow-hidden rounded-xs" data-aos="zoom-in">
+                            <img src={galleryImages[8]} alt="Gallery 9" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                         </div>
-                    ))}
 
-                    {/* ROW 2: 4 Images (5-8) */}
-                    {galleryImages.slice(4, 8).map((src, idx) => (
-                        <div key={idx + 4} className="relative group overflow-hidden rounded-xs" data-aos="fade-up" data-aos-delay={(idx + 4) * 50}>
-                            <img src={src} alt={`Gallery ${idx + 5}`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                        <div className="relative group overflow-hidden rounded-xs" data-aos="fade-left">
+                            <img src={galleryImages[9]} alt="Gallery 10" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                         </div>
-                    ))}
 
-                    {/* ROW 3 & 4: Huge Image (9) on left + 2 Stacked on right */}
-                    <div className="lg:col-span-3 lg:row-span-2 relative group overflow-hidden rounded-xs" data-aos="zoom-in">
-                        <img src={galleryImages[8]} alt="Gallery 9" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                    </div>
+                        <div className="relative group overflow-hidden rounded-xs" data-aos="fade-left" data-aos-delay="100">
+                            <img src={galleryImages[10]} alt="Gallery 11" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                        </div>
 
-                    <div className="relative group overflow-hidden rounded-xs" data-aos="fade-left">
-                        <img src={galleryImages[9]} alt="Gallery 10" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                    </div>
+                        {/* ROW 5: 3 Images (12, 13, 14) */}
+                        <div className="col-span-1 relative group overflow-hidden rounded-xs" data-aos="fade-up">
+                            <img src={galleryImages[11]} alt="Gallery 12" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                        </div>
 
-                    <div className="relative group overflow-hidden rounded-xs" data-aos="fade-left" data-aos-delay="100">
-                        <img src={galleryImages[10]} alt="Gallery 11" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                    </div>
+                        <div className="col-span-2 relative group overflow-hidden rounded-xs" data-aos="fade-up" data-aos-delay="100">
+                            <img src={galleryImages[12]} alt="Gallery 13" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                        </div>
 
-                    {/* ROW 5: 3 Images (12, 13, 14) - Adjusted for 4-column span */}
-                    <div className="lg:col-span-1 relative group overflow-hidden rounded-xs" data-aos="fade-up">
-                        <img src={galleryImages[11]} alt="Gallery 12" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                    </div>
-
-                    <div className="lg:col-span-2 relative group overflow-hidden rounded-xs" data-aos="fade-up" data-aos-delay="100">
-                        <img src={galleryImages[12]} alt="Gallery 13" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                    </div>
-
-                    <div className="lg:col-span-1 relative group overflow-hidden rounded-xs" data-aos="fade-up" data-aos-delay="200">
-                        <img src={galleryImages[13]} alt="Gallery 14" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                        <div className="col-span-1 relative group overflow-hidden rounded-xs" data-aos="fade-up" data-aos-delay="200">
+                            <img src={galleryImages[13]} alt="Gallery 14" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                        </div>
                     </div>
 
                 </div>

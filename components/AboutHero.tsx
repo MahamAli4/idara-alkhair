@@ -2,14 +2,14 @@ import React from 'react';
 
 const AboutHero = () => {
     return (
-        <section className="relative h-[60vh] flex items-center justify-center overflow-hidden mt-[80px] md:mt-[100px]">
+        <section className="relative h-[40vh] md:h-[60vh] flex items-center justify-center overflow-hidden mt-0 md:mt-[80px] lg:mt-[100px]">
 
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <img
                     src="/website-media/about-us/topbanner.jpg"
                     alt="Idara Al-Khair Students"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover block"
                 />
             </div>
 
@@ -18,7 +18,7 @@ const AboutHero = () => {
                 <h1
                     data-aos="fade-up"
                     data-aos-duration="400"
-                    className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight"
+                    className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight"
                 >
                     About <span className="text-idara-orange font-bold">Us</span>
                 </h1>
