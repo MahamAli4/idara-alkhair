@@ -8,7 +8,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export default function ShopPage() {
-    
+
     // Initialize AOS
     useEffect(() => {
         AOS.init({
@@ -25,8 +25,8 @@ export default function ShopPage() {
 
             {/* ===== HERO BANNER ===== */}
             {/* Using fade-in for the banner */}
-            <section 
-                className="relative mt-[80px] w-full overflow-hidden h-[60vh]"
+            <section
+                className="relative w-full overflow-hidden h-[70vh]"
                 data-aos="fade"
             >
                 <img
@@ -37,9 +37,9 @@ export default function ShopPage() {
 
                 <div className="absolute inset-0 flex items-center justify-center px-4">
                     <div className="max-w-5xl mx-auto text-center px-4">
-                        <h1 
+                        <h1
                             className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white text-center tracking-tighter"
-                            data-aos="zoom-in" 
+                            data-aos="zoom-in"
                             data-aos-delay="200"
                         >
                             IAK <span className="text-idara-orange">Shops</span>
@@ -51,14 +51,14 @@ export default function ShopPage() {
             {/* ===== MISSION STATEMENT ===== */}
             <section className="container mx-auto px-6 md:px-12 py-16 md:py-24">
                 <div className="max-w-4xl">
-                    <h2 
+                    <h2
                         className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-6"
                         data-aos="slide-up"
                     >
                         <span className="text-[#012060]">Purpose‐Driven </span>
                         <span className="text-idara-orange font-extrabold">Shopping</span>
                     </h2>
-                    <p 
+                    <p
                         className="text-black mt-6 text-lg text-center whitespace-nowrap"
                         data-aos="fade-up"
                         data-aos-delay="300"
@@ -69,7 +69,7 @@ export default function ShopPage() {
             </section>
 
             <div className="flex justify-center py-10 relative">
-                <div 
+                <div
                     className="w-[90%] md:w-[70%] rounded-lg -mt-14 overflow-visible shadow-[0_-10px_20px_rgba(0,0,0,0.25),-10px_0_20px_rgba(0,0,0,0.2),10px_0_20px_rgba(0,0,0,0.2)] relative"
                     data-aos="fade-up"
                 >
@@ -113,8 +113,8 @@ export default function ShopPage() {
                 </div>
             </div>
 
-            <section className="bg-gray-300 py-16 md:py-45 -mt-10 md:-mt-29">
-                <h2 
+            <section className="bg-gray-300 py-16 md:py-50 -mt-10 md:-mt-29">
+                <h2
                     className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mt-4 md:-mt-23 text-center text-[#012060]"
                     data-aos="fade-right"
                 >
@@ -126,41 +126,41 @@ export default function ShopPage() {
                 <div className="flex flex-col justify-center py-10 relative">
                     {/* Big main image */}
                     <div 
-                        className="w-[95%] md:w-[85%] -mt-20 md:-mt-75 overflow-hidden relative mx-auto"
+                        className="w-[95%] md:w-[85%] -mt-20 md:-mt-75 overflow-hidden relative mx-auto rounded-lg group cursor-pointer"
                         data-aos="zoom-out"
                     >
                         <img
                             src="/website-media/shoppage/image01.jpg"
                             alt="Instagram"
-                            className="w-full h-[50vh] xl:h-[70vh] object-cover rounded-lg"
+                            className="w-full h-[50vh] xl:h-[70vh] object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                     </div>
 
                     {/* Three grid images - staggered animation */}
                     <div className="flex flex-wrap md:flex-nowrap justify-center gap-4 md:gap-6 -mt-10 md:-mt-35 relative z-10 px-4 md:px-0">
-                        <img
-                            src="/website-media/shoppage/image02.jpg"
-                            alt="Grid 1"
-                            className="w-[45%] md:w-[25%] h-auto object-cover rounded-xl border-4 border-white shadow-lg"
-                            data-aos="fade-up"
-                            data-aos-delay="100"
-                        />
-                        <img
-                            src="/website-media/shoppage/image03.jpg"
-                            alt="Grid 2"
-                            className="w-[45%] md:w-[25%] h-auto object-cover rounded-xl border-4 border-white shadow-lg"
-                            data-aos="fade-up"
-                            data-aos-delay="300"
-                        />
-                        <img
-                            src="/website-media/shoppage/image04.jpg"
-                            alt="Grid 3"
-                            className="w-[45%] md:w-[25%] h-auto object-cover rounded-xl border-4 border-white shadow-lg"
-                            data-aos="fade-up"
-                            data-aos-delay="500"
-                        />
+                        <div className="w-[45%] md:w-[25%] overflow-hidden rounded-xl border-4 border-white shadow-lg group cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                            <img
+                                src="/website-media/shoppage/image02.jpg"
+                                alt="Grid 1"
+                                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
+                            />
+                        </div>
+                        <div className="w-[45%] md:w-[25%] overflow-hidden rounded-xl border-4 border-white shadow-lg group cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+                            <img
+                                src="/website-media/shoppage/image03.jpg"
+                                alt="Grid 2"
+                                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
+                            />
+                        </div>
+                        <div className="w-[45%] md:w-[25%] overflow-hidden rounded-xl border-4 border-white shadow-lg group cursor-pointer" data-aos="fade-up" data-aos-delay="500">
+                            <img
+                                src="/website-media/shoppage/image04.jpg"
+                                alt="Grid 3"
+                                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
+                            />
+                        </div>
                     </div>
-                    <div 
+                    <div
                         className="flex justify-center mt-8"
                         data-aos="zoom-in"
                         data-aos-anchor-placement="top-bottom"

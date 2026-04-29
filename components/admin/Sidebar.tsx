@@ -26,7 +26,6 @@ const Sidebar: React.FC = () => {
 
   const menuItems = [
     { title: 'Dashboard', icon: LayoutDashboard, path: '/admin' },
-    { title: 'Content Pages', icon: FileText, path: '/admin/cms' },
     { title: 'Messages', icon: MessageSquare, path: '/admin/messages' },
     { title: 'Add Job', icon: PlusCircle, path: '/admin/add-job' },
     { title: 'Recent Jobs', icon: Briefcase, path: '/admin/recent-jobs' },
@@ -37,6 +36,7 @@ const Sidebar: React.FC = () => {
     { title: 'Interview', icon: Calendar, path: '/admin/interview' },
     { title: 'Hired', icon: UserCheck, path: '/admin/hired' },
     { title: 'Volunteers', icon: UserPlus, path: '/admin/volunteers' },
+    { title: 'Content Pages', icon: FileText, path: '/admin/cms' },
   ];
 
   return (

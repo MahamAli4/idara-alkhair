@@ -119,10 +119,10 @@ export default function EducationSchoolsCollegesPage() {
 
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
                         {[1,2,3].map((img, i) => (
-                            <div key={i} className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white" data-aos="zoom-in">
+                            <div key={i} className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white group cursor-pointer" data-aos="zoom-in">
                                 <img
                                     src={cmsData[`gallery-image-${img}`] || `/website-media/educationschool&college/image0${img}.${img === 3 ? 'jpg' : 'jpeg'}`}
-                                    className="w-full h-40 sm:h-52 object-cover"
+                                    className="w-full h-40 sm:h-52 object-cover transition-transform duration-500 group-hover:scale-110"
                                 />
                             </div>
                         ))}

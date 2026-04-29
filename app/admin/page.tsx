@@ -622,13 +622,27 @@ export default function AdminPage() {
     }
   };
 
-  // ✅ LOADING SCREEN WHILE CHECKING AUTH
+  // ✅ PROFESSIONAL LOADING SCREEN
   if (authChecking) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-gray-100">
-        <div className="flex flex-col items-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-600 mb-4"></div>
-          <p className="text-gray-600 font-medium">Verifying session...</p>
+      <div className="flex items-center justify-center min-h-screen bg-linear-to-br from-idara-navy via-[#0c1f6d] to-[#03114b]">
+        <div className="relative flex flex-col items-center">
+          {/* Outer Ring */}
+          <div className="w-24 h-24 rounded-full border-4 border-white/5 border-t-idara-orange animate-spin duration-1000"></div>
+          
+          {/* Inner Pulsing Circle */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 animate-pulse">
+            <div className="w-8 h-8 bg-idara-orange rounded-full blur-md opacity-50"></div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <h3 className="text-white text-xl font-bold tracking-widest uppercase opacity-90">Verifying Access</h3>
+            <div className="flex justify-center gap-1 mt-2">
+              <span className="w-1.5 h-1.5 bg-idara-orange rounded-full animate-bounce [animation-delay:-0.3s]"></span>
+              <span className="w-1.5 h-1.5 bg-idara-orange rounded-full animate-bounce [animation-delay:-0.15s]"></span>
+              <span className="w-1.5 h-1.5 bg-idara-orange rounded-full animate-bounce"></span>
+            </div>
+          </div>
         </div>
 
         {/* --- CUSTOM TOAST CONTAINER --- */}
