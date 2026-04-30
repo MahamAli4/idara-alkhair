@@ -89,18 +89,18 @@ const RealStories: React.FC = () => {
           {/* RIGHT MAP */}
           <div
             data-aos="zoom-in"
-            className="w-full lg:w-1/2 flex justify-center items-center overflow-hidden"
+            className="w-full lg:w-1/2 flex justify-center items-center"
           >
-            <div className="relative w-full max-w-[600px] lg:max-w-[1200px] flex items-center justify-center transform scale-95 xs:scale-100 sm:scale-110 lg:scale-[1.2]">
+            <div className="relative w-full max-w-[650px] lg:max-w-[1300px] flex items-center justify-center transform scale-100 sm:scale-110 lg:scale-[1.15] lg:translate-x-10">
 
               {/* Glow */}
-              <div className="absolute inset-0 bg-blue-500/15 blur-[100px] sm:blur-[150px] rounded-full"></div>
+              <div className="absolute inset-0 bg-blue-500/10 blur-[120px] sm:blur-[180px] rounded-full"></div>
 
               {/* Map Image */}
               <img
                 src="/website-media/homepage/pakistanmap.png"
                 alt="Pakistan Map Collage"
-                className="w-full h-auto drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] lg:drop-shadow-[0_40px_60px_rgba(0,0,0,0.6)]"
+                className="w-full h-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.4)] lg:drop-shadow-[0_60px_90px_rgba(0,0,0,0.5)]"
               />
 
             </div>

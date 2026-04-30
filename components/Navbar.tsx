@@ -14,16 +14,21 @@ import {
     LifeBuoy,
     Heart,
     ChevronDown,
+    ChevronRight,
     Menu,
     X,
     ClipboardCheck,
-    Mail
+    Mail,
+    BookOpen,
+    ShieldCheck,
+    Activity
 } from 'lucide-react';
 
 const Navbar: React.FC = () => {
     const pathname = usePathname();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(null);
+    const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
 
     // Close mobile menu when route changes
     useEffect(() => {
@@ -46,7 +51,7 @@ const Navbar: React.FC = () => {
     const navLinks = [
         { name: 'Home', href: '/' },
         { name: 'About Us', href: '/about' },
-        { name: 'Projects', href: '/projects' },
+        { name: 'Projects', dropdown: true },
         { name: 'Contact Us', href: '/contact' },
     ];
 
@@ -55,16 +60,42 @@ const Navbar: React.FC = () => {
         { name: 'Contact Us', href: '/contact', icon: Mail },
     ];
 
-    const projectLinks = [
-        { name: 'Technical Training Centers', href: '/projects/technical-training-centers', icon: Wrench },
-        { name: 'Medical Center', href: '/projects/medical-center', icon: Stethoscope },
-        { name: 'North City Hospital', href: '/projects/north-city-hospital', icon: Stethoscope },
-        { name: 'IT Institute', href: '/projects/it-institute', icon: Monitor },
-        { name: 'Help a Dream', href: '/projects/help-a-dream', icon: Zap },
-        { name: 'Food Support Program', href: '/projects/food-support-program', icon: Utensils },
-        { name: 'Education Schools & Colleges', href: '/projects/education-schools-colleges', icon: GraduationCap },
-        { name: 'DISASTER RELIEF PROGRAM', href: '/projects/disaster-relief-program', icon: LifeBuoy },
-        { name: 'Shop Page', href: '/projects/shop', icon: ShoppingBag },
+    const projectSections = [
+        {
+            id: 'medical',
+            title: "Medical",
+            icon: Stethoscope,
+            links: [
+                { name: 'Medical Center', href: '/projects/medical-center', icon: Stethoscope },
+                { name: 'North City Hospital', href: '/projects/north-city-hospital', icon: Activity },
+            ]
+        },
+        {
+            id: 'welfare',
+            title: "Welfare Program",
+            icon: Heart,
+            links: [
+                { name: 'Food Support Program', href: '/projects/food-support-program', icon: Utensils },
+                { name: 'Help a Dream', href: '/projects/help-a-dream', icon: Zap },
+                { name: 'Disaster Relief Program', href: '/projects/disaster-relief-program', icon: LifeBuoy },
+            ]
+        },
+        {
+            id: 'academic',
+            title: "Academic",
+            icon: GraduationCap,
+            links: [
+                { name: 'Education Schools & Colleges', href: '/projects/education-schools-colleges', icon: BookOpen },
+                { name: 'IT Institute', href: '/projects/it-institute', icon: Monitor },
+                { name: 'Technical Training Centers', href: '/projects/technical-training-centers', icon: Wrench },
+            ]
+        },
+        {
+            id: 'shop',
+            title: "Shop",
+            icon: ShoppingBag,
+            href: '/projects/shop'
+        }
     ];
 
     const toggleMobileDropdown = (dropdownName: string) => {
@@ -87,8 +118,8 @@ const Navbar: React.FC = () => {
                 <div className="hidden lg:flex flex-1 justify-center">
                     <ul className="flex items-center space-x-1 xl:space-x-2">
                         {navLinks.map((link) => (
-                            <li key={link.href} className="relative group">
-                                {link.name === 'Projects' ? (
+                            <li key={link.name} className="relative group">
+                                {link.dropdown && link.name === 'Projects' ? (
                                     <>
                                         <button
                                             className={`nav-link-custom flex items-center px-3 py-2 text-[15px] xl:text-[16px] ${pathname.startsWith('/projects') ? 'active' : ''}`}
@@ -97,25 +128,55 @@ const Navbar: React.FC = () => {
                                             <ChevronDown className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:rotate-180" />
                                         </button>
 
-                                        {/* Projects Dropdown Menu */}
-                                        <div className="absolute top-full left-0 w-80 bg-white shadow-lg rounded-md overflow-hidden transform scale-95 opacity-0 invisible group-hover:scale-100 group-hover:opacity-100 group-hover:visible transition-all duration-300 origin-top-left z-50 mt-2 border-t-4 border-orange-500">
-                                            <div className="py-2">
-                                                {projectLinks.map((project) => {
-                                                    const Icon = project.icon;
-                                                    return (
+                                        {/* Multilevel Nested Dropdown */}
+                                        <div className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-xl py-3 transform scale-95 opacity-0 invisible group-hover:scale-100 group-hover:opacity-100 group-hover:visible transition-all duration-300 origin-top-left z-50 mt-4 border border-gray-100">
+                                            {projectSections.map((section) => (
+                                                <div 
+                                                    key={section.id} 
+                                                    className="relative group/sub"
+                                                    onMouseEnter={() => section.links && setActiveSubMenu(section.id)}
+                                                    onMouseLeave={() => setActiveSubMenu(null)}
+                                                >
+                                                    {section.href ? (
                                                         <Link
-                                                            key={project.href}
-                                                            href={project.href}
-                                                            className="group/item flex items-center px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors border-b border-gray-100 last:border-0"
+                                                            href={section.href}
+                                                            className="flex items-center justify-between px-5 py-3 text-sm font-semibold text-gray-700 hover:bg-orange-50 hover:text-idara-orange transition-all"
                                                         >
-                                                            <span className="mr-3 text-gray-400 group-hover/item:text-orange-500 transition-colors duration-300 group-hover/item:translate-x-1">
-                                                                <Icon size={18} />
-                                                            </span>
-                                                            <span className="text-sm font-medium">{project.name}</span>
+                                                            <div className="flex items-center">
+                                                                <section.icon size={18} className="mr-3 text-gray-400 group-hover/sub:text-idara-orange" />
+                                                                {section.title}
+                                                            </div>
                                                         </Link>
-                                                    );
-                                                })}
-                                            </div>
+                                                    ) : (
+                                                        <div className="flex items-center justify-between px-5 py-3 text-sm font-semibold text-gray-700 hover:bg-orange-50 hover:text-idara-orange transition-all cursor-pointer">
+                                                            <div className="flex items-center">
+                                                                <section.icon size={18} className="mr-3 text-gray-400 group-hover/sub:text-idara-orange" />
+                                                                {section.title}
+                                                            </div>
+                                                            <ChevronRight size={14} className="text-gray-400 group-hover/sub:text-idara-orange transition-transform group-hover/sub:translate-x-1" />
+                                                        </div>
+                                                    )}
+
+                                                    {/* Second Level Dropdown (Sub-menu) */}
+                                                    {section.links && (
+                                                        <div className="absolute top-0 left-full w-64 bg-white shadow-2xl rounded-xl py-3 ml-2 transform scale-95 opacity-0 invisible group-hover/sub:scale-100 group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-300 origin-left border border-gray-100">
+                                                            <div className="px-5 py-2 mb-2 border-b border-gray-50">
+                                                                <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest">{section.title} Programs</p>
+                                                            </div>
+                                                            {section.links.map((link, lIdx) => (
+                                                                <Link
+                                                                    key={lIdx}
+                                                                    href={link.href}
+                                                                    className="flex items-center px-5 py-2.5 text-[13px] font-medium text-gray-600 hover:bg-orange-50 hover:text-idara-orange transition-colors"
+                                                                >
+                                                                    <link.icon size={16} className="mr-3 text-gray-300" />
+                                                                    {link.name}
+                                                                </Link>
+                                                            ))}
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            ))}
                                         </div>
                                     </>
                                 ) : link.name === 'Contact Us' ? (
@@ -128,7 +189,7 @@ const Navbar: React.FC = () => {
                                         </button>
 
                                         {/* Contact Dropdown Menu */}
-                                        <div className="absolute top-full left-0 w-80 bg-white shadow-lg rounded-md overflow-hidden transform scale-95 opacity-0 invisible group-hover:scale-100 group-hover:opacity-100 group-hover:visible transition-all duration-300 origin-top-left z-50 mt-2 border-t-4 border-orange-500">
+                                        <div className="absolute top-full left-0 w-80 bg-white shadow-lg rounded-md overflow-hidden transform scale-95 opacity-0 invisible group-hover:scale-100 group-hover:opacity-100 group-hover:visible transition-all duration-300 origin-top-left z-50 mt-2 border-t-4 border-idara-orange">
                                             <div className="py-2">
                                                 {contactLinks.map((item) => {
                                                     const Icon = item.icon;
@@ -136,9 +197,9 @@ const Navbar: React.FC = () => {
                                                         <Link
                                                             key={item.href}
                                                             href={item.href}
-                                                            className="group/item flex items-center px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors border-b border-gray-100 last:border-0"
+                                                            className="group/item flex items-center px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-idara-orange transition-colors border-b border-gray-100 last:border-0"
                                                         >
-                                                            <span className="mr-3 text-gray-400 group-hover/item:text-orange-500 transition-colors duration-300 group-hover/item:translate-x-1">
+                                                            <span className="mr-3 text-gray-400 group-hover/item:text-idara-orange transition-colors duration-300 group-hover/item:translate-x-1">
                                                                 <Icon size={18} />
                                                             </span>
                                                             <span className="text-sm font-medium">{item.name}</span>
@@ -150,7 +211,7 @@ const Navbar: React.FC = () => {
                                     </>
                                 ) : (
                                     <Link
-                                        href={link.href}
+                                        href={link.href || '#'}
                                         className={`nav-link-custom px-3 py-2 text-[15px] xl:text-[16px] ${pathname === link.href ? 'active' : ''}`}
                                     >
                                         {link.name}
@@ -193,8 +254,8 @@ const Navbar: React.FC = () => {
                 <div className="flex-1 overflow-y-auto pt-[80px] sm:pt-[100px] pb-6 px-4 sm:px-6">
                     <ul className="flex flex-col">
                         {navLinks.map((link) => (
-                            <li key={link.href} className="border-b border-gray-100 last:border-0">
-                                {link.name === 'Projects' ? (
+                            <li key={link.name} className="border-b border-gray-100 last:border-0">
+                                {link.dropdown && link.name === 'Projects' ? (
                                     <div className="flex flex-col">
                                         <button
                                             onClick={() => toggleMobileDropdown('Projects')}
@@ -204,23 +265,50 @@ const Navbar: React.FC = () => {
                                             <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${openMobileDropdown === 'Projects' ? 'rotate-180 text-idara-orange' : ''}`} />
                                         </button>
 
-                                        {/* Mobile Projects Dropdown Items */}
-                                        <div className={`overflow-hidden transition-all duration-300 ease-in-out ${openMobileDropdown === 'Projects' ? 'max-h-[800px] opacity-100 mb-2' : 'max-h-0 opacity-0'}`}>
-                                            <div className="pl-4 pr-2 flex flex-col space-y-1 pb-2">
-                                                {projectLinks.map((project) => {
-                                                    const Icon = project.icon;
-                                                    const isActive = pathname === project.href;
-                                                    return (
-                                                        <Link
-                                                            key={project.href}
-                                                            href={project.href}
-                                                            className={`flex items-start py-3 px-3 rounded-lg transition-colors ${isActive ? 'bg-orange-50 text-idara-orange' : 'text-gray-600 hover:bg-gray-50 hover:text-idara-orange'}`}
-                                                        >
-                                                            <Icon size={18} className={`mr-3 mt-0.5 shrink-0 ${isActive ? 'text-idara-orange' : 'text-gray-400'}`} />
-                                                            <span className="text-sm font-medium leading-tight">{project.name}</span>
-                                                        </Link>
-                                                    );
-                                                })}
+                                        {/* Mobile Projects Nested Sub-menus */}
+                                        <div className={`overflow-hidden transition-all duration-300 ease-in-out ${openMobileDropdown === 'Projects' ? 'max-h-[1500px] opacity-100 mb-2' : 'max-h-0 opacity-0'}`}>
+                                            <div className="pl-4 pr-2 flex flex-col space-y-2 pb-4">
+                                                {projectSections.map((section) => (
+                                                    <div key={section.id} className="flex flex-col">
+                                                        {section.href ? (
+                                                            <Link
+                                                                href={section.href}
+                                                                className="flex items-center py-3 px-3 rounded-lg text-gray-700 font-bold hover:bg-orange-50 hover:text-idara-orange transition-colors"
+                                                            >
+                                                                <section.icon size={18} className="mr-3 text-gray-400" />
+                                                                {section.title}
+                                                            </Link>
+                                                        ) : (
+                                                            <div className="flex flex-col">
+                                                                <button
+                                                                    onClick={() => toggleMobileDropdown(`ProjectSub_${section.id}`)}
+                                                                    className="flex items-center justify-between w-full py-3 px-3 rounded-lg text-gray-700 font-bold hover:bg-gray-50 hover:text-idara-orange transition-colors"
+                                                                >
+                                                                    <div className="flex items-center">
+                                                                        <section.icon size={18} className="mr-3 text-gray-400" />
+                                                                        {section.title}
+                                                                    </div>
+                                                                    <ChevronDown size={16} className={`transition-transform ${openMobileDropdown === `ProjectSub_${section.id}` ? 'rotate-180 text-idara-orange' : ''}`} />
+                                                                </button>
+                                                                {section.links && (
+                                                                    <div className={`overflow-hidden transition-all duration-300 ${openMobileDropdown === `ProjectSub_${section.id}` ? 'max-h-96 opacity-100 mb-2' : 'max-h-0 opacity-0'}`}>
+                                                                        <div className="pl-8 flex flex-col space-y-1">
+                                                                            {section.links.map((link, lIdx) => (
+                                                                                <Link
+                                                                                    key={lIdx}
+                                                                                    href={link.href}
+                                                                                    className="flex items-center py-2.5 px-3 rounded-lg text-[13px] font-medium text-gray-500 hover:text-idara-orange hover:bg-orange-50 transition-colors"
+                                                                                >
+                                                                                    {link.name}
+                                                                                </Link>
+                                                                            ))}
+                                                                        </div>
+                                                                    </div>
+                                                                )}
+                                                            </div>
+                                                        )}
+                                                    </div>
+                                                ))}
                                             </div>
                                         </div>
                                     </div>
@@ -256,7 +344,7 @@ const Navbar: React.FC = () => {
                                     </div>
                                 ) : (
                                     <Link
-                                        href={link.href}
+                                        href={link.href || '#'}
                                         className={`block py-4 px-2 text-[16px] sm:text-[18px] font-semibold transition-colors ${pathname === link.href ? 'text-idara-orange' : 'text-[#012060] hover:text-idara-orange'}`}
                                     >
                                         {link.name}

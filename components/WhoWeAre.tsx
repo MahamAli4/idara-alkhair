@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Link from 'next/link';
 
 const WhoWeAre: React.FC = () => {
 
@@ -113,11 +114,12 @@ const WhoWeAre: React.FC = () => {
                                 </div>
                             </div>
 
-                            {/* Bottom Bar */}
-                            <div 
+                            {/* Bottom Bar / Button */}
+                            <Link 
+                                href="#projects-section"
                                 data-aos="fade-up"
                                 data-aos-delay="500"
-                                className="bg-[#a5c3f7] text-white py-6 lg:py-8 px-6 lg:px-10 rounded-[18px] text-center shadow-2xl relative overflow-hidden group"
+                                className="bg-[#a5c3f7] text-white py-6 lg:py-8 px-6 lg:px-10 rounded-[18px] text-center shadow-2xl relative overflow-hidden group block cursor-pointer no-underline"
                             >
                                 <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
 
@@ -128,7 +130,7 @@ const WhoWeAre: React.FC = () => {
                                 <p className="text-[8px] sm:text-[10px] lg:text-[0.9rem] font-black opacity-70 uppercase tracking-[0.15em] mt-1 relative z-10 text-black">
                                     OPERATING NATIONWIDE
                                 </p>
-                            </div>
+                            </Link>
 
                         </div>
                     </div>
